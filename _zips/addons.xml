@@ -895,12 +895,17 @@ Initial Version
     </news>
 </addon>
 
-    <addon id="repository.twilight0" name="Twilight0 Addon Repository" version="1.0.0" provider-name="Twilight0">
+    <addon id="repository.twilight0" name="Twilight0 Addon Repository" version="1.1.0" provider-name="Twilight0">
         <extension point="xbmc.addon.repository" name="Twilight0 Addon Repository">
             <info compressed="false">http://raw.githubusercontent.com/Twilight0/repo.twilight0/master/_zips/addons.xml</info>
             <checksum>http://raw.githubusercontent.com/Twilight0/repo.twilight0/master/_zips/addons.xml.md5</checksum>
             <datadir zip="true">http://raw.githubusercontent.com/Twilight0/repo.twilight0/master/_zips/</datadir>
             <hashes>false</hashes>
+            <dir>
+                <info compressed="false">https://raw.githubusercontent.com/Twilight0/repo.twilight0.libs/master/_zips/addons.xml</info>
+                <checksum>https://raw.githubusercontent.com/Twilight0/repo.twilight0.libs/master/_zips/addons.xml.md5</checksum>
+                <datadir zip="true">https://raw.githubusercontent.com/Twilight0/repo.twilight0.libs/master/_zips/</datadir>
+            </dir>
         </extension>
         <extension point="xbmc.addon.metadata">
             <summary>Repository for various of my add-ons</summary>
@@ -922,165 +927,6 @@ Initial Version
 	</extension>
 </addon>
 
-<addon id="script.module.ordereddict" name="ordereddict" version="1.1" provider-name="neverreply">
-  <requires>
-    <import addon="xbmc.python" version="2.24.0"/>
-  </requires>
-  <extension point="xbmc.python.module" library="resources/lib/"/>
-  <extension point="xbmc.addon.metadata">
-    <summary>ordereddict 1.1</summary>
-    <description>ordereddict 1.1</description>
-    <platform>all</platform>
-    <license>MIT</license>
-    <source>https://pypi.python.org/pypi/ordereddict</source>
-    <website>https://github.com/neverreply/repo</website>
-  </extension>
-</addon>
-
-<addon id="script.module.pycountry" name="pycountry" version="17.5.14" provider-name="back-to">
-  <requires>
-    <import addon="xbmc.python" version="2.19.0"/>
-  </requires>
-  <extension point="xbmc.python.module" library="lib"/>
-  <extension point="xbmc.addon.metadata">
-    <summary>pycountry repacked for Kodi</summary>
-    <source>https://bitbucket.org/flyingcircus/pycountry</source>
-    <platform>all</platform>
-    <license>GNU Lesser General Public License, Version 2.1</license>
-  </extension>
-</addon>
-
-<addon id="script.module.shutil_which" name="shutil_which" version="3.5.1" provider-name="neverreply">
-  <requires>
-    <import addon="xbmc.python" version="2.24.0"/>
-  </requires>
-  <extension point="xbmc.python.module" library="lib"/>
-  <extension point="xbmc.addon.metadata">
-    <platform>all</platform>
-    <language></language>
-    <summary>shutil_which</summary>
-    <license>MIT</license>
-    <source>https://pypi.python.org/pypi/backports.shutil_which</source>
-    <assets>
-      <icon>resources/icon.png</icon>
-    </assets>
-  </extension>
-</addon>
-
-<addon id="script.module.streamlink.base" name="Streamlink Library" version="2017.07.19.1" provider-name="neverreply">
-  <requires>
-    <import addon="xbmc.python" version="2.24.0"/>
-    <import addon="script.module.requests" version="2.9.1"/>
-    <import addon="script.module.shutil_which" version="3.5.1"/>
-    <import addon="script.module.futures" version="2.2.0"/>
-    <import addon="script.module.ordereddict" version="1.1"/>
-    <import addon="script.module.pycountry" version="17.5.14"/>
-    <import addon="script.module.singledispatch" version="3.4.0.3"/>
-    <import addon="script.module.streamlink.crypto" version="1.1.0"/>
-    <import addon="service.streamlink.plugins" version="1.0.0"/>
-  </requires>
-  <extension point="xbmc.python.module" library="resources/lib/"/>
-  <extension point="xbmc.addon.metadata">
-    <summary>Streamlink Library</summary>
-    <description>Streamlink Library for Kodi</description>
-    <platform>all</platform>
-    <license>Simplified BSD</license>
-    <source>https://github.com/streamlink/streamlink</source>
-    <website>https://github.com/neverreply/script.module.streamlink.base</website>
-    <language></language>
-    <assets>
-      <icon>resources/icon.png</icon>
-    </assets>
-    <news>
-    2017.07.19
-    - Fixed temp folder on Android
-    2017.07.17.2
-    - update import
-    2017.07.17.1
-    - Merged Plugins into the same Kodi Plugin
-    2017.07.17
-    - streamlink 5f658c8199690253dde8868b7ae0714f0cc5d88a
-    - Renamed crypto.py -> cryptofix.py
-    - use pycountry and streamlink.crypto
-    2017.07.13
-    - streamlink 5cc7793ff07e6eb9841287ed30fc7414379c7649
-    </news>
-  </extension>
-</addon>
-
-<addon id="script.module.streamlink.crypto" name="streamlink.crypto" version="1.1.0" provider-name="streamlink.crypto">
-  <requires>
-    <import addon="xbmc.python" version="2.14.0"/>
-  </requires>
-  <extension point="xbmc.python.module" library="lib" />
-  <extension point="xbmc.addon.metadata">
-    <summary>Pure Python implementation of the cryptographic libraries required by Streamlink</summary>
-    <source>https://github.com/beardypig/script.module.streamlink.crypto</source>
-    <platform>all</platform>
-    <license>MIT</license>
-  </extension>
-</addon>
-
-<addon id="script.module.sublib" name="Sublib Module" provider-name="hbiyik" version="0.0.1">
-    <requires>
-		<import addon="xbmc.python" version="2.1.0"/>
-	</requires>
-	<extension point="xbmc.python.module" library="lib" />
-	<extension point="xbmc.addon.metadata">
-		<platform>all</platform>
-		<summary lang="en">Subtitle Library to create subtitle addons easy and fast</summary>
-		<summary lang="tr">Altyazı eklentisi geliştirmek için sublib kütüphanesi</summary>
-		<description lang="en">Sublib Module</description>
-		<license>GNU General Public License, v2</license>
-		<forum>https://github.com/hbiyik/script.module.sublib/issues</forum>
-		<website>https://github.com/hbiyik/script.module.sublib</website>
-		<email>huseyinbiyik@hotmail.com</email>
-	</extension>
-</addon>
-
-<addon id="script.module.tulip" name="Tulip Routine Libraries" version="1.2.4" provider-name="Twilight0">
-	<requires>
-		<import addon="xbmc.python" version="2.24.0"/>
-		<import addon="script.module.requests" optional="true"/>
-	</requires>
-	<extension point="xbmc.python.module" library="lib" />
-	<extension point="xbmc.addon.metadata">
-		<summary lang="en">Tulip Helper module</summary>
-		<description lang="en">Tulip Routine Libraries are based on Lambda's "lamlib". It has some additions, most being in control module.</description>
-		<platform>all</platform>
-		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
-		<source>https://github.com/Twilight0/script.module.tulip</source>
-	</extension>
-</addon>
-
-<addon id="script.module.unshortenit" name="Unshortenit Module" version="0.3.0" provider-name="Jeff Kehler, Twilight0">
-	<requires>
-		<import addon="xbmc.python" version="2.1.0"/>
-		<import addon="script.module.requests" version="2.12.4"/>
-	</requires>
-	<extension point="xbmc.python.module" library="lib" />
-	<extension point="xbmc.addon.metadata">
-		<summary lang="en">Unshortenit Module</summary>
-		<description lang="en">Unshortenit Module to reveal links from popular url shortener services</description>
-		<platform>all</platform>
-		<license>MIT</license>
-		<source>https://pypi.python.org/pypi/unshortenit/0.3.0</source>
-	</extension>
-</addon>
-
-<addon id="script.module.websocketclient" name="websocket-client" version="0.44.0" provider-name="neverreply">
-  <requires>
-    <import addon="xbmc.python" version="2.19.0"/>
-  </requires>
-  <extension point="xbmc.python.module" library="lib"/>
-  <extension point="xbmc.addon.metadata">
-    <summary>websocket-client repacked for Kodi</summary>
-    <source>https://github.com/websocket-client/websocket-client</source>
-    <platform>all</platform>
-    <license>GNU Lesser General Public License v3.0</license>
-  </extension>
-</addon>
-
 <addon id="service.rytecepgdownloader" name="Rytec EPG Downloader" version="16.5.9.1" provider-name="Jin">
     <requires>
         <import addon="xbmc.python" version="2.14.0"/>
@@ -1093,79 +939,5 @@ Initial Version
         <description>XMLTV EPG Downloader. Activation Code: 3025</description>
         <forum>http://kodinerds.net</forum>
     </extension>
-</addon>
-
-<addon id="service.streamlink.plugins" name="Streamlink Plugins" version="1.0.1" provider-name="Twilight0">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-  </requires>
-  <extension point="xbmc.service"/>
-  <extension point="xbmc.addon.metadata">
-    <summary>Streamlink Plugins</summary>
-    <description>Copy your custom streamlink plugins in this Kodi plugin.</description>
-    <platform>all</platform>
-    <license></license>
-    <source></source>
-    <website></website>
-    <language></language>
-  </extension>
-</addon>
-
-<addon id="service.streamlink.proxy" name="Streamlink Proxy" version="3.0.5.1" provider-name="neverreply">
-  <requires>
-    <import addon="xbmc.python" version="2.24.0"/>
-    <import addon="script.module.streamlink.base" version="2017.07.19"/>
-  </requires>
-  <extension point="xbmc.service" library="resources/lib/service.py" start="[login|startup]" />
-  <extension point="xbmc.addon.metadata">
-    <platform>all</platform>
-    <language></language>
-    <summary>Streamlink Proxy</summary>
-    <description>Streamlink Proxy for Kodi</description>
-    <platform>all</platform>
-    <license>GPLv3</license>
-    <source>https://github.com/neverreply/service.streamlink.proxy</source>
-    <website>https://github.com/neverreply/service.streamlink.proxy</website>
-    <assets>
-      <icon>resources/icon.png</icon>
-    </assets>
-    <news>
-    3.0.5
-    - added an option to redirect the hls url instead of writing it into the buffer,
-      it does not work for every stream but it should be faster where it works.
-    3.0.4
-    - update params: q for quality
-    - try buffer instead of shutil again
-    3.0.3
-    - Fixed issue where Kodi wouldn't close
-    3.0.2
-    - Fixed Kodi Error after an update.
-    - log cleanup
-    3.0.1
-    - try shutil for stream.open
-    3.0.0
-    - First Version
-    </news>
-  </extension>
-</addon>
-
-<addon id="service.subtitles.subtitles.gr" name="Subtitles.gr" version="1.2.5" provider-name="Twilight0">
-	<requires>
-		<import addon="xbmc.python" version="2.24.0"/>
-		<import addon="script.module.tulip" version="1.0.7" />
-	</requires>
-	<extension point="xbmc.subtitle.module" library="service.py">
-	</extension>
-	<extension point="xbmc.addon.metadata">
-		<summary lang="en">Subtitles.gr</summary>
-		<description lang="en">Search and download subtitles from subtitles.gr, xsubs.tv and subztv.club</description>
-		<description lang="el">Εύρεση και λήψη υποτίτλων από τα subtitles.gr, xsubs.tv και subztv.club</description>
-		<disclaimer lang="en">This service is only for Greek subtitles and not published nor endorsed by subtitles.gr, xsubs.tv and subztv.club</disclaimer>
-		<disclaimer lang="el">Υπηρεσία μόνο ελληνικών υποτίτλων που δεν έχει δημοσιευθεί ούτε εγκριθεί από τα subtitles.gr, xsubs.tv και subztv.club</disclaimer>
-		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
-		<website>http://www.subtitles.gr/</website>
-		<platform>all</platform>
-		<language>el</language>
-	</extension>
 </addon>
 </addons>
