@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.module.streamlink.base" name="Streamlink Library" version="2017.07.19" provider-name="neverreply">
+<addon id="script.module.streamlink.base" name="Streamlink Library" version="2017.07.19.1" provider-name="neverreply">
   <requires>
     <import addon="xbmc.python" version="2.24.0"/>
     <import addon="script.module.requests" version="2.9.1"/>
@@ -10,7 +10,6 @@
     <import addon="script.module.singledispatch" version="3.4.0.3"/>
     <import addon="script.module.streamlink.crypto" version="1.1.0"/>
     <import addon="service.streamlink.plugins" version="1.0.0"/>
-    <import addon="repository.neverreply" />
   </requires>
   <extension point="xbmc.python.module" library="resources/lib/"/>
   <extension point="xbmc.addon.metadata">
