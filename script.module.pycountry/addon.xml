@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.module.pycountry" name="pycountry" version="17.5.14" provider-name="back-to">
+  <requires>
+    <import addon="xbmc.python" version="2.19.0"/>
+  </requires>
+  <extension point="xbmc.python.module" library="lib"/>
+  <extension point="xbmc.addon.metadata">
+    <summary>pycountry repacked for Kodi</summary>
+    <source>https://bitbucket.org/flyingcircus/pycountry</source>
+    <platform>all</platform>
+    <license>GNU Lesser General Public License, Version 2.1</license>
+  </extension>
+</addon>

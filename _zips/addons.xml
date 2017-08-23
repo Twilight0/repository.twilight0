@@ -922,6 +922,106 @@ Initial Version
 	</extension>
 </addon>
 
+<addon id="script.module.ordereddict" name="ordereddict" version="1.1" provider-name="neverreply">
+  <requires>
+    <import addon="xbmc.python" version="2.24.0"/>
+  </requires>
+  <extension point="xbmc.python.module" library="resources/lib/"/>
+  <extension point="xbmc.addon.metadata">
+    <summary>ordereddict 1.1</summary>
+    <description>ordereddict 1.1</description>
+    <platform>all</platform>
+    <license>MIT</license>
+    <source>https://pypi.python.org/pypi/ordereddict</source>
+    <website>https://github.com/neverreply/repo</website>
+  </extension>
+</addon>
+
+<addon id="script.module.pycountry" name="pycountry" version="17.5.14" provider-name="back-to">
+  <requires>
+    <import addon="xbmc.python" version="2.19.0"/>
+  </requires>
+  <extension point="xbmc.python.module" library="lib"/>
+  <extension point="xbmc.addon.metadata">
+    <summary>pycountry repacked for Kodi</summary>
+    <source>https://bitbucket.org/flyingcircus/pycountry</source>
+    <platform>all</platform>
+    <license>GNU Lesser General Public License, Version 2.1</license>
+  </extension>
+</addon>
+
+<addon id="script.module.shutil_which" name="shutil_which" version="3.5.1" provider-name="neverreply">
+  <requires>
+    <import addon="xbmc.python" version="2.24.0"/>
+  </requires>
+  <extension point="xbmc.python.module" library="lib"/>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <language></language>
+    <summary>shutil_which</summary>
+    <license>MIT</license>
+    <source>https://pypi.python.org/pypi/backports.shutil_which</source>
+    <assets>
+      <icon>resources/icon.png</icon>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="script.module.streamlink.base" name="Streamlink Library" version="2017.07.19" provider-name="neverreply">
+  <requires>
+    <import addon="xbmc.python" version="2.24.0"/>
+    <import addon="script.module.requests" version="2.9.1"/>
+    <import addon="script.module.shutil_which" version="3.5.1"/>
+    <import addon="script.module.futures" version="2.2.0"/>
+    <import addon="script.module.ordereddict" version="1.1"/>
+    <import addon="script.module.pycountry" version="17.5.14"/>
+    <import addon="script.module.singledispatch" version="3.4.0.3"/>
+    <import addon="script.module.streamlink.crypto" version="1.1.0"/>
+    <import addon="service.streamlink.plugins" version="1.0.0"/>
+    <import addon="repository.neverreply" />
+  </requires>
+  <extension point="xbmc.python.module" library="resources/lib/"/>
+  <extension point="xbmc.addon.metadata">
+    <summary>Streamlink Library</summary>
+    <description>Streamlink Library for Kodi</description>
+    <platform>all</platform>
+    <license>Simplified BSD</license>
+    <source>https://github.com/streamlink/streamlink</source>
+    <website>https://github.com/neverreply/script.module.streamlink.base</website>
+    <language></language>
+    <assets>
+      <icon>resources/icon.png</icon>
+    </assets>
+    <news>
+    2017.07.19
+    - Fixed temp folder on Android
+    2017.07.17.2
+    - update import
+    2017.07.17.1
+    - Merged Plugins into the same Kodi Plugin
+    2017.07.17
+    - streamlink 5f658c8199690253dde8868b7ae0714f0cc5d88a
+    - Renamed crypto.py -> cryptofix.py
+    - use pycountry and streamlink.crypto
+    2017.07.13
+    - streamlink 5cc7793ff07e6eb9841287ed30fc7414379c7649
+    </news>
+  </extension>
+</addon>
+
+<addon id="script.module.streamlink.crypto" name="streamlink.crypto" version="1.1.0" provider-name="streamlink.crypto">
+  <requires>
+    <import addon="xbmc.python" version="2.14.0"/>
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <summary>Pure Python implementation of the cryptographic libraries required by Streamlink</summary>
+    <source>https://github.com/beardypig/script.module.streamlink.crypto</source>
+    <platform>all</platform>
+    <license>MIT</license>
+  </extension>
+</addon>
+
 <addon id="script.module.sublib" name="Sublib Module" provider-name="hbiyik" version="0.0.1">
     <requires>
 		<import addon="xbmc.python" version="2.1.0"/>
@@ -969,6 +1069,19 @@ Initial Version
 	</extension>
 </addon>
 
+<addon id="script.module.websocketclient" name="websocket-client" version="0.44.0" provider-name="neverreply">
+  <requires>
+    <import addon="xbmc.python" version="2.19.0"/>
+  </requires>
+  <extension point="xbmc.python.module" library="lib"/>
+  <extension point="xbmc.addon.metadata">
+    <summary>websocket-client repacked for Kodi</summary>
+    <source>https://github.com/websocket-client/websocket-client</source>
+    <platform>all</platform>
+    <license>GNU Lesser General Public License v3.0</license>
+  </extension>
+</addon>
+
 <addon id="service.rytecepgdownloader" name="Rytec EPG Downloader" version="16.5.9.1" provider-name="Jin">
     <requires>
         <import addon="xbmc.python" version="2.14.0"/>
@@ -996,6 +1109,45 @@ Initial Version
     <source></source>
     <website></website>
     <language></language>
+  </extension>
+</addon>
+
+<addon id="service.streamlink.proxy" name="Streamlink Proxy" version="3.0.5" provider-name="neverreply">
+  <requires>
+    <import addon="xbmc.python" version="2.24.0"/>
+    <import addon="script.module.streamlink.base" version="2017.07.19"/>
+    <import addon="repository.neverreply" />
+  </requires>
+  <extension point="xbmc.service" library="resources/lib/service.py" start="[login|startup]" />
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <language></language>
+    <summary>Streamlink Proxy</summary>
+    <description>Streamlink Proxy for Kodi</description>
+    <platform>all</platform>
+    <license>GPLv3</license>
+    <source>https://github.com/neverreply/service.streamlink.proxy</source>
+    <website>https://github.com/neverreply/service.streamlink.proxy</website>
+    <assets>
+      <icon>resources/icon.png</icon>
+    </assets>
+    <news>
+    3.0.5
+    - added an option to redirect the hls url instead of writing it into the buffer,
+      it does not work for every stream but it should be faster where it works.
+    3.0.4
+    - update params: q for quality
+    - try buffer instead of shutil again
+    3.0.3
+    - Fixed issue where Kodi wouldn't close
+    3.0.2
+    - Fixed Kodi Error after an update.
+    - log cleanup
+    3.0.1
+    - try shutil for stream.open
+    3.0.0
+    - First Version
+    </news>
   </extension>
 </addon>
 

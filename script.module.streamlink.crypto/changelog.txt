@@ -1,0 +1,5 @@
+[B]Version 1.1.0[/B]
+ * Addition of RSA and PKCS1_v1_5 to support the daisuki plugin.
+
+[B]Version 1.0.0[/B]
+ * Initial release
