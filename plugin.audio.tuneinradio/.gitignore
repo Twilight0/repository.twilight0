@@ -1,0 +1,8 @@
+.directory
+.DS_Store
+.tags
+.tags_sorted_by_file
+resources/*.pyc
+resources/*.pyo
+resources/lib/*.pyc
+resources/lib/*.pyo

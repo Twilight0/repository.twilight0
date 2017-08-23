@@ -1,0 +1,10 @@
+05-08-2017 - [B]1.1.0[/B]
+- Added OST music menu
+- Code cosmetics
+
+22-03-2017 - [B]1.0.1[/B]
+- Small bug fix for 3rd party channels
+- Fix in translation string for 3rd party YT channels
+
+18-03-2017 - [B]1.0.0[/B]
+- Initial version

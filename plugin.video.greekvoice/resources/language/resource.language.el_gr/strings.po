@@ -1,0 +1,87 @@
+# Addon Name: Greek Voice Live
+# Addon id: plugin.video.greekvoice
+# Addon Provider: Thgiliwt
+msgid ""
+msgstr ""
+"Project-Id-Version: Greek Voice\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2016-06-22 11:29+0000\n"
+"Last-Translator: thgiliwt\n"
+"Language-Team: English (http://www.domain.com)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgctxt "#30001"
+msgid "TV Channels"
+msgstr "Τηλεοπτικά Κανάλια"
+
+msgctxt "#30002"
+msgid "Radio Stations"
+msgstr "Ραδιοφωνικοί Σταθμοί"
+
+msgctxt "#30003"
+msgid "Miscellaneous"
+msgstr "Διάφορες επιλογές"
+
+msgctxt "#30004"
+msgid "Settings"
+msgstr "Ρυθμίσεις"
+
+msgctxt "#30005"
+msgid "Actions"
+msgstr "Ενέργειες"
+
+msgctxt "#30006"
+msgid "Youtube API Keys Setup"
+msgstr "Ρύθμιση κλειδιών του Youtube API"
+
+msgctxt "#30007"
+msgid "This action will overwrite existing Youtube API keys and will log you out if already logged in"
+msgstr "Αυτή η ενέργεια θα τροποποιήσει υπάρχουσες ρυθμίσεις των κλειδιών του Youtube και θα σας βγάλει εκτός συνδεδεμένης κατάστασης"
+
+msgctxt "#30008"
+msgid "Proceed?"
+msgstr "Εκτέλεση;"
+
+msgctxt "#30009"
+msgid "Success"
+msgstr "Επιτυχία"
+
+msgctxt "#30010"
+msgid "Cancelled"
+msgstr "Ακύρωση"
+
+msgctxt "#30011"
+msgid "This action will log you out if already logged in"
+msgstr "Αυτή η ενέργεια θα σας βγάλει εκτός συνδεδεμένης κατάστασης"
+
+msgctxt "#30012"
+msgid "This action will install and setup Youtube addon"
+msgstr "Αυτή η ενέργεια θα εγκαταστήσει και θα ρυθμίσει το πρόσθετο Youtube"
+
+msgctxt "#30013"
+msgid "Keys setup"
+msgstr "Ρύθμιση κλειδιών"
+
+msgctxt "#30014"
+msgid "Youtube channel"
+msgstr "Κανάλι Youtube"
+
+msgctxt "#30015"
+msgid ""
+msgstr ""
+
+msgctxt "#30016"
+msgid ""
+msgstr ""
+
+msgctxt "#30017"
+msgid ""
+msgstr ""
+
+msgctxt "#30018"
+msgid ""
+msgstr ""

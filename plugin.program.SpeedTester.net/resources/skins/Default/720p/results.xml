@@ -1,0 +1,65 @@
+<window id="9999">
+	<defaultcontrol always="false">200</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>385</posx>
+		<posy>95</posy>
+	</coordinates>
+	<include>dialogeffect</include>
+	<controls>
+		<control type="group">
+			<include>VisibleFadeEffect</include>
+			<control type="image">
+				<description>Background Image</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>510</width>
+				<height>530</height>
+				<texture border="40">ContentPanel.png</texture>
+			</control>
+			<control type="image">
+				<description>Dialog Header image</description>
+				<posx>40</posx>
+				<posy>16</posy>
+				<width>450</width>
+				<height>40</height>
+				<texture>dialogheader.png</texture>
+			</control>
+			<control type="label" id="100">
+				<description>header label</description>
+				<posx>40</posx>
+				<posy>20</posy>
+				<width>450</width>
+				<height>30</height>
+				<font>font13_title</font>
+				<label>Unleash EmbER!</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>darkorange</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="button">
+				<description>Close Window button</description>
+				<posx>420</posx>
+				<posy>15</posy>
+				<width>64</width>
+				<height>32</height>
+				<label>-</label>
+				<font>-</font>
+				<onclick>PreviousMenu</onclick>
+				<texturefocus border="5">MenuItemFOshadow_lt.png</texturefocus>
+				<texturenofocus border="5">MenuItemNFshadow_lt.png</texturenofocus>
+				<visible>system.getbool(input.enablemouse)</visible>
+			</control>
+		</control>
+		<control type="image" id="9000">
+			<description>RESULT</description>
+			<posx>191</posx>
+			<posy>316</posy>
+			<width>128</width>
+			<height>128</height>
+			<texture>qr_code.png</texture>
+			<aspectratio>keep</aspectratio>
+		</control>
+	</controls>
+</window>

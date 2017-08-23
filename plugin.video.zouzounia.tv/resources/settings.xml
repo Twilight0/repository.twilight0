@@ -1,0 +1,7 @@
+<settings>
+    <category label="Misc">
+        <setting id="third_party" label="30015" type="bool" default="true"/>
+        <setting id="pagination" label="30016" type="bool" default="true" visible="false"/>
+        <setting label="30005" type="action" action="RunPlugin(plugin://$ID/?action=cache_clear)"/>
+    </category>
+</settings>

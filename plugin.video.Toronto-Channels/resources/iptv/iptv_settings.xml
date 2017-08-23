@@ -1,0 +1,20 @@
+<settings>
+    <setting id="epgCache" value="true" />
+    <setting id="epgPath" value="" />
+    <setting id="epgPathType" value="0" />
+    <setting id="epgTSOverride" value="false" />
+    <setting id="epgTimeShift" value="0.000000" />
+    <setting id="epgUrl" value="" />
+    <setting id="logoBaseUrl" value="" />
+    <setting id="logoFromEpg" value="1" />
+    <setting id="logoPath" value="" />
+    <setting id="logoPathType" value="1" />
+    <setting id="m3uCache" value="true" />
+    <setting id="m3uPath" value="" />
+    <setting id="m3uPathType" value="1" />
+    <setting id="m3uUrl" value="http://alivegr.net/raw/tc.m3u" />
+    <setting id="sep1" value="" />
+    <setting id="sep2" value="" />
+    <setting id="sep3" value="" />
+    <setting id="startNum" value="1" />
+</settings>

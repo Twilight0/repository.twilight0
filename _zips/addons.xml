@@ -1,0 +1,943 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addons>
+<addon id="plugin.audio.eradio.gr" version="1.1.2" name="E-Radio" provider-name="Twilight0">
+	<requires>
+		<import addon="xbmc.python" version="2.24.0" />
+		<import addon="script.module.tulip" version="1.0.6" />
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="addon.py">
+		<provides>audio</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">E-Radio addon for Kodi</summary>
+		<description lang="en">Tunein to greek radios and listen live</description>
+		<description lang="el">Με το E-Radio ακούτε όλα τα ελληνικά ραδιόφωνα</description>
+		<disclaimer lang="en">This addon is not published nor endorsed by e-radio.gr</disclaimer>
+		<disclaimer lang="el">Το πρόσθετο αυτό δεν έχει δημοσιευθεί ούτε εγκριθεί από το e-radio.gr</disclaimer>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+		<source>https://github.com/lambda81/plugin.audio.eradio.gr</source>
+		<website>http://www.e-radio.gr/</website>
+		<news>
+[B]1.1.2[/B]
+- Cosmetics
+
+[B]1.1.1[/B]
+- Rebased to used tulip libraries
+
+[B]1.1.0[/B]
+- Tweaked sections
+- Added add-on screenshots
+
+[B]1.0.1[/B]
+- Code cosmetics
+
+[B]1.0.0[/B]
+- Initial version
+		</news>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+			<screenshot>resources/screenshots/screenshot-01.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-02.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-03.jpg</screenshot>
+		</assets>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="plugin.audio.somafm.com" name="SomaFM Radio" version="1.1.1" provider-name="Twilight0">
+    <requires>
+        <import addon="xbmc.python" version="2.24.0"/>
+        <import addon="script.module.tulip" version="1.2.1"/>
+        <import addon="script.module.html2text"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="addon.py">
+        <provides>audio</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary lang="en">SomaFM music addon</summary>
+        <description lang="en">What exactly is SomaFM? We're a listener-supported, commercial-free internet-only radio station. This means no advertising or annoying commercial interruptions. Our mission is to search out and expose great new music to people who otherwise may never encounter it. Over 20 unique channels of listener-supported, commercial-free, underground/alternative radio broadcasting from San Francisco. All music hand-picked by SomaFM's award-winning DJs and music directors. Please consider donating at https://somafm.com to keep this service alive!Please consider donating by visiting http://somafm.com</description>
+        <summary lang="el">Πρόσθετο μουσικής SomaFM</summary>
+        <description lang="el">Το ραδιόφωνο SomaFM είναι μια υπηρεσία μουσικής και ραδιοφώνου που υποστηρίζεται πλήρως από τους ακροατές της. Παρακαλώ επισκευθείτε την σελίδα http://somafm.com και πραγματοποιήστε μία δωρεά για την υποστήριξη της υπηρεσίας.</description>
+        <disclaimer lang="en">This addon is not developed nor endorsed by SomaFM webmasters/authors/owners/directors</disclaimer>
+        <disclaimer lang="el">Η παρούσα μικροεφαρμογή δεν αναπτύσεται ούτε έχει εγκριθεί από τους διαχειριστές/υπεύθυνους/ιδιοκτήτες της υπηρεσίας SomaFM.</disclaimer>
+        <license>GNU GPL, version 2 or later</license>
+        <website>http://somafm.com</website>
+        <news>
+1.1.1 (19-08-2017)
+- Fix for indexer switcher when playling a station
+- Added option for disable switcher in stations' index
+- Added option for setting indexer method from settings
+
+1.1.0 (23-07-2017)
+- Removed station info context menu (choose song info instead)
+- Option to hide song info &amp; utilize caching
+- Option to hide station name
+
+1.0.2 (04-Jul-2017)
+- Fix for forgotten key in indexer's list &amp; sort method
+
+1.0.1 (03-Jul-2017)
+- Fix for sort method
+- Info meta changes
+
+1.0.0 (02-Jul-2017)
+- Initial Version
+Features:
+- All stations by SomaFM
+- Quality selector... prompt, auto, highest/lowest mp3, highest/lowest aac
+- Sort by name, popularity, genre
+- Station info
+        </news>
+        <!-- <broken>Addon not ready yet.</broken> -->
+    </extension>
+</addon>
+
+<addon id="plugin.audio.tuneinradio" name="TuneIn Radio" version="3.0.2" provider-name="brianhornsby">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0"/>
+		<import addon="script.module.simplejson" version="2.0.10"/>
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>audio</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<summary lang="bg">Радио TuneIn</summary>
+		<summary lang="de">TuneIn Radio</summary>
+		<summary lang="el">Ραδιόφωνο TuneIn</summary>
+		<summary lang="en">TuneIn Radio</summary>
+		<summary lang="es">TuneIn Radio</summary>
+		<summary lang="ru">Радио TuneIn</summary>
+		<summary lang="zh_TW">TuneIn 收音機</summary>
+		<description lang="bg">Радио TuneIn е безплатна услуга, която ви позволява да слушате всичко, независимо къде се намирате. Каквото желаете - музика, спорт или новини. Радио TuneIn предлага над 50 000 станции от които да избирате. Можете да намерите местните станции или да откриете нови станции от целия свят. Радио TuneIn ви отвежда точно където желаете да сте.</description>
+		<description lang="de">TuneIn Radio ist ein kostenloser Service, mit dem Sie alles in der Welt, wo immer Sie sind, hören können. Ob Sie Musik, Sport, Nachrichten oder aktuelle Ereignisse hören wollen. TuneIn Radio hält über 50.000 Sender für Sie bereit. Von der Suche nach lokalen Sender, bis zum entdecken neue Sender aus der ganzen Welt. TuneIn Radio bringt Sie, wohin sie wollen.</description>
+		<description lang="el">Το ραδιόφωνο TuneIn είναι μία δωρεάν υπηρεσία το οποίο σας επιτρέπει να ακούτε οποιοδήποτε σταθμό από όλο τον κόσμο, από όπου και αν βρίσκεστε. Ακόμη και αν θέλετε να ακούσετε μουσική, αθλητικά γεγονότα, ειδήσεις και άλλα γεγονότα, το ραδιόφωνο TuneIn προσφέρει πάνω από 50.000 σταθμούς για εσάς να διαλέξετε. Είτε θέλετε να ακούσετε τοπικούς σταθμούς είτε να ανακαλύψετε νέους από όλο τον κόσμο, το ραδιόφωνο TuneIn σας πηγαίνει όπου θελήσετε να βρεθείτε.</description>
+		<description lang="en">TuneIn Radio is a free service that lets you listen to anything in the world from wherever you are. Whether you want to hear music, sports, news or current events. TuneIn Radio offers over 50,000 stations for you to choose from. From finding local stations to discovering new stations from around the world, TuneIn Radio brings you to where you want to be.</description>
+		<description lang="es">TuneIn Radio es un servicio gratuito que le permite escuchar cualquier cosa, de cualquier parte del mundo y desde donde quiera que usted se encuentre. Tanto si desea escuchar música, deportes, noticias o los últimos acontecimientos. TuneIn Radio le ofrece más de 50.000 emisoras entre las que elegir. Desde emisoras locales hasta las nuevas emisoras que aparecen por todo el mundo. TuneIn Radio le lleva allí donde quiera estar.</description>
+		<description lang="ru">Радио TuneIn является бесплатным сервисом, который позволяет Вам слушать все, независимо от того, где Вы находитесь. Все, что пожелаете - музыка, спорт или новости. Радио TuneIn предлагает более 50 000 станций на выбор. От поиска локальных станций до открытия новых станций по всему миру. Радио TuneIn перенесет вас куда пожелаете.</description>
+		<description lang="zh_TW">TuneIn 收音機是一項免費的串流服務，無論你身處世界任何地方都能讓您收聽到任何內容。盡管您要收聽的是音樂、體育、新聞、或時事節目。 TuneIn 收音機提供了超過 50,000 個電台任您選擇。由搜尋本地電台至發掘世界各地新的電台，TuneIn 收音機都能帶你去到你要去的地方。</description>
+		<language></language>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+		<forum>http://forum.kodi.tv/showthread.php?tid=119315</forum>
+		<website>http://brianhornsby.com/kodi_addons/tuneinradio</website>
+		<source>https://github.com/brianhornsby/plugin.audio.tuneinradio</source>
+	</extension>
+</addon>
+
+<addon id="plugin.program.log-viewer" name="Log Viewer" version="0.1.0~alpha1" provider-name="Twilight0">
+    <requires>
+        <import addon="xbmc.python" version="2.24.0"/>
+        <import addon="script.module.tulip" version="1.2.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="addon.py">
+        <provides>executable</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary lang="en">Log Viewer program addon</summary>
+        <!--<description lang="en"></description>-->
+        <!--<disclaimer lang="en"></disclaimer>-->
+        <!--<summary lang="el"></summary>-->
+        <!--<description lang="el"></description>-->
+        <!--<disclaimer lang="el"></disclaimer>-->
+        <license>GNU GPL, version 2</license>
+        <website>https://twitter.com/TwilightZer0</website>
+        <!--<forum></forum>-->
+        <!--<source></source>-->
+        <news>
+0.1.0~alpha1 (07-08-2017)
+Initial Version
+        </news>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
+
+<addon id="plugin.program.SpeedTester.net" name="SpeedTester.net" version="1.0.2" provider-name="Twilight0">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">SpeedTester.net</summary>
+    <description lang="en">SpeedTester.net will give you accurate Internet speed-ping test results.</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.alphatv.gr" version="1.1.3" name="ALPHA Player" provider-name="Twilight0">
+	<requires>
+		<import addon="xbmc.python" version="2.24.0" />
+		<import addon="script.module.tulip" version="1.0.6" />
+		<import addon="plugin.video.youtube" version="5.2.1" optional="true" />
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="addon.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">ALPHA Player addon for Kodi</summary>
+		<description lang="en">ALPHA live and on-demand broadcasts</description>
+		<description lang="el">Ζωνταντές και on demand υπηρεσίες του ALPHA</description>
+		<disclaimer lang="en">This addon offers content available in Greece and is not published nor endorsed by alphatv.gr</disclaimer>
+		<disclaimer lang="el">Το πρόσθετο αυτό προσφέρει περιεχόμενο διαθέσιμο στην Ελλάδα και δεν έχει δημοσιευθεί ούτε εγκριθεί από το alphatv.gr</disclaimer>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+		<source>https://github.com/lambda81/plugin.video.alphatv.gr</source>
+		<website>http://www.alphatv.gr/</website>
+		<news>
+[B]1.1.3[/B]
+- Minor fix on live resolver
+- Code cosmetics
+
+[B]1.1.2[/B]
+- Minor fix on live resolver
+- Code cosmetics
+
+[B]1.1.1[/B]
+- Rebased to use tulip libraries
+
+[B]1.1.0[/B]
+- Re-work of main menu
+- Added sections for ALPHA CYPRUS
+- Fixed all issues related with web site changes
+- Added add-on screenshots
+
+[B]1.0.2[/B]
+- Fixed issue with tv shows
+- Fixed issue with archive
+- Tweaked live stream
+
+[B]1.0.1[/B]
+- Filter previews of episodes
+- Code cosmetics
+
+[B]1.0.0[/B]
+- Initial version
+		</news>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+			<screenshot>resources/screenshots/screenshot-01.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-02.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-03.jpg</screenshot>
+		</assets>
+		<platform>all</platform>
+		<language>el</language>
+		<forum></forum>
+		<email></email>
+	</extension>
+</addon>
+
+<addon id="plugin.video.antenna.gr" version="1.1.2" name="ANT1 Player" provider-name="Twilight0">
+	<requires>
+		<import addon="xbmc.python" version="2.24.0" />
+		<import addon="script.module.tulip" version="1.0.6" />
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="addon.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">ANT1 Player addon for Kodi</summary>
+		<description lang="en">ANT1 live and on-demand broadcasts</description>
+		<description lang="el">Ζωνταντές και on demand υπηρεσίες του ANT1</description>
+		<disclaimer lang="en">This addon offers content available in Greece and is not published nor endorsed by antenna.gr</disclaimer>
+		<disclaimer lang="el">Το πρόσθετο αυτό προσφέρει περιεχόμενο διαθέσιμο στην Ελλάδα και δεν έχει δημοσιευθεί ούτε εγκριθεί από το antenna.gr</disclaimer>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+		<!--<source></source>-->
+		<website>http://www.antenna.gr/</website>
+		<news>
+[B]1.1.2[/B]
+- Cosmetics
+
+[B]1.1.1[/B]
+- Rebased to utilize tulip libraries
+
+[B]1.1.0[/B]
+- Tweaked sections
+- Added new add-on screenshots
+
+[B]1.0.2[/B]
+- Re-work of addon (new API)
+- Re-work of artwork (new indent)
+
+[B]1.0.1[/B]
+- Code cosmetics
+
+[B]1.0.0[/B]
+- Initial version
+		</news>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+			<screenshot>resources/screenshots/screenshot-01.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-02.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-03.jpg</screenshot>
+		</assets>
+		<platform>all</platform>
+		<language>el</language>
+		<!--<forum></forum>-->
+		<!--<email></email>-->
+	</extension>
+</addon>
+
+<addon id="plugin.video.ert.gr" version="1.3.1" name="ERT Player" provider-name="Twilight0">
+	<requires>
+		<import addon="xbmc.python" version="2.24.0" />
+		<import addon="script.module.tulip" version="1.2.2" />
+		<import addon="plugin.video.youtube" version="5.4.0" />
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="addon.py">
+		<provides>video audio</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">ERT Player addon for Kodi</summary>
+		<description lang="en">ERT live and on-demand broadcasts</description>
+		<description lang="el">Ζωνταντές και on demand υπηρεσίες της ΕΡΤ</description>
+		<disclaimer lang="en">This addon offers content available in Greece and is not published nor endorsed by ert.gr</disclaimer>
+		<disclaimer lang="el">Το πρόσθετο αυτό προσφέρει περιεχόμενο διαθέσιμο στην Ελλάδα και δεν έχει δημοσιευθεί ούτε εγκριθεί από το ert.gr</disclaimer>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+		<!--<source></source>-->
+		<website>http://www.ert.gr/</website>
+		<news>
+[B]1.3.1[/B]
+- Minor tweak in radios indexer when behaving as music addon
+- Changed logos for live tv stations
+- Added fanart in live tv channels similar to ert's web site
+- Tweaked live resolvers with new geoloc provider
+
+[B]1.3.0[/B]
+- Fix for live resolvers (both internal &amp; youtube's)
+- Fixed some indexers' links
+
+[B]1.2.6[/B]
+- Minor tweak in indexer for main radio stations
+
+[B]1.2.5[/B]
+- Various tweaks here &amp; there
+- Tweaked live resolver
+
+[B]1.2.4[/B]
+- Minor tweak in main indexer
+- Minor code cosmetics
+
+[B]1.2.3[/B]
+- Re-work on main radio streams' resolvers
+
+[B]1.2.2[/B]
+- Rework of web tv urls
+- Clear cache function (root context menu only)
+- Added ability to bookmark radio stations
+
+[B]1.2.1[/B]
+- Added audio content type parameter
+- Implemented corresponding code accordingly
+
+[B]1.2.0[/B]
+- New artwork
+- Added ERT Play
+- Added radio stations
+- Code cosmetics
+
+[B]1.1.1[/B]
+- Reworked to utilized tulip libraries
+
+[B]1.1.0[/B]
+- Re-work of main menu
+- Fixed issue with geoblocked videos (failed everywhere)
+- Added new artwork and screenshots
+
+[B]1.0.2[/B]
+- Tweaked ERT live channels
+- Code cosmetics
+
+[B]1.0.1[/B]
+- Tweaked ERT live channels
+- Code cosmetics
+
+[B]1.0.0[/B]
+- Initial version
+		</news>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+		</assets>
+		<platform>all</platform>
+		<language>el</language>
+		<forum></forum>
+	</extension>
+</addon>
+
+<addon id="plugin.video.euronews.com" version="1.1.2" name="Euronews" provider-name="Twilight0">
+	<requires>
+		<import addon="xbmc.python" version="2.24.0"/>
+		<import addon="script.module.tulip" version="1.0.6"/>
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="addon.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Euronews addon for Kodi</summary>
+		<description lang="en">Euronews, the most watched news channel in Europe, covers international news in various languages.[CR]With 400 journalists from more than 30 nationalities, Euronews offers a unique, independent and totally impartial perspective on world events.[CR]Available languages: English, French, German, Greek, Hungarian, Italian, Portuguese, Russian, Spanish, Turkish and Ukrainian</description>
+		<disclaimer lang="en">This addon is not published nor endorsed by euronews.com</disclaimer>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+		<!--<source></source>-->
+		<website>http://www.euronews.com/</website>
+		<news>
+[B]1.1.2[/B]
+- Fixed Live Resolver
+
+[B]1.1.1[/B]
+- Rebased to utilize tulip libraries
+
+[B]1.1.0[/B]
+- Tweaked sections
+- Added add-on screenshots
+
+[B]1.0.0[/B]
+- Initial version
+		</news>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+			<screenshot>resources/screenshots/screenshot-01.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-02.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-03.jpg</screenshot>
+		</assets>
+		<platform>all</platform>
+		<language></language>
+		<forum></forum>
+		<email></email>
+	</extension>
+</addon>
+
+<addon id="plugin.video.fittube.tv" name="FitTube TV" version="1.0.0" provider-name="FitTube Inc., Twilight0">
+    <requires>
+        <import addon="xbmc.python" version="2.20.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="addon.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary lang="en">FitTube TV addon</summary>
+        <description lang="en">
+            FitTube is an addon that brings content from the FitTube App and website FitTube.TV.\n
+            Courtesy of the FitTube Team. Please visit FitTube.TV website and upload your fitness videos and they will appear in the addon.\n
+            Compatible from Kodi Isengard (15.X) and above.
+        </description>
+        <license>GNU GPL, version 2 or later</license>
+    </extension>
+</addon>
+
+<addon id="plugin.video.greekvoice" name="Greek Voice" version="2.0.2" provider-name="Twilight0">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="script.greekvoice.artwork" version="1.1.0"/>
+        <import addon="plugin.video.youtube" version="5.2.1"/>
+        <import addon="script.module.tulip" version="1.1.4"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="addon.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary lang="en_GB">Greek Voice Live addon</summary>
+        <description lang="en_GB">This addon offers live streaming content from the WPSO website</description>
+        <summary lang="el_GR">Πρόσθετο Greek Voice Live, ζωντανή Ελληνική φωνή</summary>
+        <description lang="el_GR">Το πρόσθετο αυτό προσφέρει ζωντανές ροές από το site WPSO</description>
+        <license>GNU General Public License, v2</license>
+        <website>http://wpso.com/</website>
+        <email>angelo@greekvoice.us</email>
+        <news>
+[B]2.0.2 (19-Aug-2018)[/B]
+- Tweaked icon method call
+
+[B]2.0.1 (03-Aug-2018)[/B]
+- Updated stream url for tilemousiki
+- Minor code cosmetics
+
+[B]2.0.0 (30-Jun-2017)[/B]
+- Simplified Youtube setup function
+- Re-organized main menu
+- Utilizing tulip libraries
+
+[B]1.1.1 (27-Apr-2017)[/B]
+- New stream urls
+
+[B]1.1.0 (06-Mar-2017)[/B]
+- Removed greek voice 2
+- Fixed guide
+- Fixed compatibility with older versions of Kodi
+
+[B]1.0.8 (06-Jan-2017)[/B]
+- Fixed error in addon.xml
+
+[B]1.0.7 (29-Dec-2016)[/B]
+- Improved youtube setup function
+
+[B]1.0.6.1 (20-Dec-2016)[/B]
+- Minor fix for artwork dependency
+
+[B]1.0.6 (19-Dec-2016)[/B]
+- New Youtube API keys setup function
+- Localized a lot of strings
+
+[B]1.0.6 (08-Dec-2016)[/B]
+- Update link for Tilemousiki 2 HD
+
+[B]1.0.5 (29-Oct-2016)[/B]
+- Removed requests dependency
+- Several other insignificant changes
+
+[B]1.0.4 (27-Sep-2016)[/B]
+- Fixed typeerror in code
+
+[B]1.0.3 (23-Sep-2016)[/B]
+- New link Tilemousiki 2 HD
+
+[B]1.0.2 (11-Sep-2016)[/B]
+- Aligned some tv guide text to left
+
+[B]1.0.1 (11-Sep-2016)[/B]
+- Weekend TV guide shift to next "paragraph"
+
+[B]1.0.0 (11-Sep-2016)[/B]
+- Initial Version
+- Featuring 5 main Live TV &amp; 3 Live Radio Channels
+- TV Guide parsed from the website
+        </news>
+    </extension>
+</addon>
+
+<addon id="plugin.video.hng" name="Heroes and Generals" version="1.1.0" provider-name="Twilight0">
+    <requires>
+        <import addon="xbmc.python" version="2.20.0"/>
+        <import addon="plugin.video.youtube" version="5.2.1"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="hng.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary lang="en">Heroes and Generals addon</summary>
+        <description lang="en">This addon is not developed, nor endorsed by Reto-Moto ApS</description>
+        <summary lang="el">Πρόσθετο Heroes and Generals</summary>
+        <description lang="el">Το πρόσθετο αυτό δεν αναπτύσεται ούτε αναγνωρίζεται από την Reto-Moto ApS</description>
+        <license>GNU GPL, version 2 or later</license>
+        <website>https://heroesandgenerals.com</website>
+    </extension>
+    <news>
+05-08-2017 - [B]1.1.0[/B]
+- Added OST music menu
+- Code cosmetics
+
+22-03-2017 - [B]1.0.1[/B]
+- Small bug fix for 3rd party channels
+- Fix in translation string for 3rd party YT channels
+
+18-03-2017 - [B]1.0.0[/B]
+- Initial version
+    </news>
+</addon>
+
+<addon id="plugin.video.listrunner" name="List Runner" version="3.1.3" provider-name="Twilight0">
+    <requires>
+        <import addon="xbmc.python" version="2.24.0"/>
+        <import addon="script.module.tulip" version="1.2.0"/>
+        <import addon="script.module.youtube.dl" version="16.1026.0" optional="true"/>
+        <import addon="script.module.urlresolver" version="3.0.26" optional="true"/>
+        <import addon="plugin.video.youtube" optional="true" version="5.3.6"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="addon.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary lang="en">List Runner addon</summary>
+        <description lang="en">List Runner is an addon capable of loading custom m3u or youtube playlists. Can utilize youtube-dl or urlresolver for streams that need resolving (both are optional, installable through the addon's settings menu).</description>
+        <summary lang="el">Πρόσθετο List Runner</summary>
+        <description lang="el">Το πρόσθετο List Runner έχει την δυνατότητα αναπαραγωγής βίντεο μέσω λιστών αναπαραγωγής, της μορφής m3u ή λίστας αναπαραγωγής Youtube. Χρησιμοποιεί τα πρόσθετα youtube-dl ή urlresolver όπου χρειαστεί (και τα δύο είναι προαιρετικά, με δυνατότητα εγκατάστασης μέσω των ρυθμίσεων του προσθέτου).</description>
+        <source>https://github.com/Twilight0/plugin.video.listrunner</source>
+        <news>
++ 3.1.3 (23-08-2017)
+- Cosmetics
+
++ 3.1.2 (16-07-2017)
+- Minor bug fixes
+
++ 3.1.1 (16-07-2017)
+- Minor bug fix in nullify function
+
++ 3.1.0 (16-07-2017)
+- Renamed to ListRunner (same id)
+- Various bug fixes here &amp; there
+- Improved regex pattern
+- Now depends on tulip libraries
+
++ 3.0.2 (11-01-2017)
+- Further improvements in regex pattern
+- Cachetodisc True for all cases
+
++ 3.0.1 (11-01-2017)
+- Cache clear function
+- Setsetting to "ALL" group if the user changes list and selected group not in groups of the new list
+
++ 3.0.0 (10-01-2017)
+- Ability to load youtube playlist urls
+- Bug fixes
+- Changed addon name to (Play)List Runner (id = "plugin.video.listrunner")
+- Improved regex patterns
+- Reverted to old method of resolver installation
+- Code cosmetics
+        </news>
+        <license>GNU GPL, version 2 or later</license>
+    </extension>
+</addon>
+
+<addon id="plugin.video.montreal.greek-tv" name="Montreal Greek TV" version="1.2.0" provider-name="Twilight0">
+    <requires>
+        <import addon="xbmc.python" version="2.25.0"/>
+        <import addon="script.module.requests" version="2.12.4"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="addon.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary lang="en_GB">Montreal Greek TV addon</summary>
+        <description lang="en_GB">Montreal Greek TV add-on for Kodi featuring Live TV, Radio and Video on demand streams from Montreal, Quebec, Canada. Montreal Greek Television is broadcasting in-house locally-produced Canadian programming in the Greek language from the Greek Community of Greater Montreal.</description>
+        <summary lang="el_gr">Πρόσθετο Montreal Greek TV</summary>
+        <description lang="el_gr">Το πρόσθετο Montreal Greek TV για το σύστημα πολυμέσων Kodi προσφέρει ζωντανή τηλεόραση, ραδιόφωνο και ροές κατ' απαίτηση από το Μόντρεαλ, Κεμπέκ, Καναδά. Η Τηλεόραση Montreak Greek εκπέμπει περιεχόμενο τοπικής παραγωγής εις την Ελληνική γλώσσα από την Ελληνική κοινότητα της ευρύτερης περιοχής του Μόντρεαλ.</description>
+        <language>en el</language>
+        <license>GNU General Public License, v3</license>
+        <news>
+1.2.0 (02-08-2017)
+- Made several changes to comply with Kodi addon submission rules
+- Removed request function from client module, using requests library instead
+- Made icons non-transparent
+
+1.1.0 (16-07-2017)
+- Made items' info remotely hosted
+
+1.0.2 (19-06-2017)
+- New radio stream
+
+1.0.1 (25-05-2017)
+- Minor changes to artwork
+
+1.0.0 (08-05-2017)
+- Initial Version
+        </news>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+        <website>http://www.greekradio.net/</website>
+        <email>twilight@freemail.gr</email>
+        <source>https://github.com/Twilight0/plugin.video.montreal.greek-tv/</source>
+    </extension>
+</addon>
+
+<addon id="plugin.video.novasports.gr" version="1.1.2" name="Novasports.gr" provider-name="Twilight0">
+	<requires>
+		<import addon="xbmc.python" version="2.24.0" />
+		<import addon="script.module.tulip" version="1.0.6"/>
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="addon.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Novasports.gr addon for Kodi</summary>
+		<description lang="en">On-demand Videos and TV Shows from novasports.gr</description>
+		<description lang="el">Βίντεο on demand και εκπομπές από το novasports.gr</description>
+		<disclaimer lang="en">This addon offers content available in Greece and is not published nor endorsed by novasports.gr</disclaimer>
+		<disclaimer lang="el">Το πρόσθετο αυτό προσφέρει περιεχόμενο διαθέσιμο στην Ελλάδα και δεν έχει δημοσιευθεί ούτε εγκριθεί από το novasports.gr</disclaimer>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+		<!--<source></source>-->
+		<website>http://www.novasports.gr/</website>
+		<news>
+[B]1.1.2[/B]
+- Cosmetics
+
+[B]1.1.1[/B]
+- Rebased to utilize tulip libraries
+
+[B]1.1.0[/B]
+- Tweaked sections
+- Added add-on screenshots
+
+[B]1.0.0[/B]
+- Initial version
+		</news>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+			<screenshot>resources/screenshots/screenshot-01.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-02.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-03.jpg</screenshot>
+		</assets>
+		<platform>all</platform>
+		<language>el</language>
+		<forum></forum>
+		<email></email>
+	</extension>
+</addon>
+
+<addon id="plugin.video.pylearner" name="PyLearner" version="2.1.1" provider-name="Twilight0">
+    <requires>
+        <import addon="xbmc.python" version="2.20.0"/>
+        <import addon="plugin.video.youtube" version="5.2.1"/>
+        <import addon="script.module.parsedom" version="2.5.2"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="addon.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary lang="en">PyLearner addon</summary>
+        <description lang="en">This addon offers Python learning courses from various youtube channels</description>
+        <summary lang="el">Πρόσθετο PyLearner</summary>
+        <description lang="el">Το πρόσθετο αυτό περιέχει λίστες και βίντεο με μαθήματα της γλώσσας Python όπως και άλλες γλώσσες</description>
+        <license>GNU General Public License, v2</license>
+        <website>https://twitter.com/TwilightZer0</website>
+        <forum>https://forumshttps://forum.kodi.tv/showthread.php?tid=290843</forum>
+        <news>
+[B]2.1.1 (23-Jun-2017)[/B]
+- Minor fix in addon.xml
+
+[B]2.1.0 (19-Jun-2017)[/B]
+- New location of playlists
+- Removed redundant youtube addon install function
+
+[B]2.0.0 (29-Dec-2016)[/B]
+- Introduced set of videos &amp; playlists in greek language
+- Youtube Keys setup setting/function
+        </news>
+    </extension>
+</addon>
+
+<addon id="plugin.video.skai.gr" version="1.1.2" name="SKAI Player" provider-name="Twilight0">
+	<requires>
+		<import addon="xbmc.python" version="2.24.0" />
+		<import addon="script.module.tulip" version="1.0.6" />
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="addon.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">SKAI Player addon for Kodi</summary>
+		<description lang="en">SKAI live and on-demand broadcasts</description>
+		<description lang="el">Ζωνταντές και on demand υπηρεσίες του SKAI</description>
+		<disclaimer lang="en">This addon offers content available in Greece and is not published nor endorsed by skai.gr</disclaimer>
+		<disclaimer lang="el">Το πρόσθετο αυτό προσφέρει περιεχόμενο διαθέσιμο στην Ελλάδα και δεν έχει δημοσιευθεί ούτε εγκριθεί από το skai.gr</disclaimer>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+		<!--<source></source>-->
+		<website>http://www.skai.gr/</website>
+		<news>
+[B]1.1.2[/B]
+- Cosmetics
+
+[B]1.1.1[/B]
+- Rebased to utilize tulip libraries
+
+[B]1.1.0[/B]
+- Tweaked sections
+- Added add-on screenshots
+
+[B]1.0.0[/B]
+- Initial version
+		</news>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+			<screenshot>resources/screenshots/screenshot-01.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-02.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-03.jpg</screenshot>
+		</assets>
+		<platform>all</platform>
+		<language>el</language>
+		<forum></forum>
+		<email></email>
+	</extension>
+</addon>
+
+<addon id="plugin.video.star.gr" version="1.2.0" name="STAR Player" provider-name="Twilight0">
+	<requires>
+		<import addon="xbmc.python" version="2.24.0" />
+		<import addon="script.module.tulip" version="1.2.2" />
+		<import addon="plugin.video.youtube" version="5.4.0" optional="true"/>
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="addon.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">STAR Player addon for Kodi</summary>
+		<description lang="en">STAR live and on-demand broadcasts</description>
+		<description lang="el">Ζωνταντές και on demand υπηρεσίες του STAR</description>
+		<disclaimer lang="en">This addon offers content available in Greece and is not published nor endorsed by star.gr</disclaimer>
+		<disclaimer lang="el">Το πρόσθετο αυτό προσφέρει περιεχόμενο διαθέσιμο στην Ελλάδα και δεν έχει δημοσιευθεί ούτε εγκριθεί από το star.gr</disclaimer>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+		<source>https://github.com/lambda81/plugin.video.star.gr</source>
+		<website>http://www.star.gr/</website>
+		<news>
+[B]1.2.0[/B]
+- Added Web TV section
+- Added context menu with clear cache function (root menu only)
+- Misc code tweaks here &amp; there
+
+[B]1.1.1[/B]
+- Rebased to utilize tulip libraries
+
+[B]1.1.0[/B]
+- Tweaked sections
+- Added add-on screenshots
+
+[B]1.0.0[/B]
+- Initial version
+		</news>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+		</assets>
+		<platform>all</platform>
+		<language>el</language>
+		<forum></forum>
+		<email></email>
+	</extension>
+</addon>
+
+<addon id="plugin.video.Toronto-Channels" name="Toronto-Channels" version="1.3.2" provider-name="Twilight0">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="addon.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary lang="en">Toronto Channels addon</summary>
+        <description lang="en">This addon offers live streaming content mainly in Greek language</description>
+        <summary lang="el">Πρόσθετο Toronto Channels</summary>
+        <description lang="el">Το πρόσθετο αυτό παρέχει ζωντανό περιεχόμενο κυρίως εις την Ελληνική γλώσσα</description>
+        <license>GNU General Public License, v2</license>
+        <news>
+1.3.2 (15-08-2017)
+- Updated EUGO24 url
+
+1.3.1 (28-07-2017)
+- Fix for LIFE HD url
+- Fix for listitem conflicts
+
+1.3.0 (27-07-2017)
+- New stream Eugo24
+- IPTV simple client list is now remotely hosted
+- Tweaked icons for transparency
+- Various other tweaks &amp; cosmetics
+
+1.2.0 (17-07-2017)
+- New stream ~ Netv Toronto 2
+- Various tweaks
+- Auto activate iptv simple client on setup
+- Added option for HLS (alternative) streams
+- Deprecated LIFE HD stream
+
+1.1.0 (24-03-2017)
+- Added Life HD Network
+- Added Greek Translation
+- Added IPTV Simple Client setup function
+- Code cosmetics
+- Removed Auto-View
+
+1.0.9 (04-02-2017)
+- Fixed Radio's title
+
+1.0.8 (05-12-2016)
+- New fanart
+- Code cosmetics
+        </news>
+        <website>http://netvtoronto.com/</website>
+    </extension>
+</addon>
+
+<addon id="plugin.video.zouzounia.tv" name="Zouzounia TV" version="1.0.2" provider-name="Twilight0">
+    <requires>
+        <import addon="xbmc.python" version="2.20.0"/>
+        <import addon="plugin.video.youtube" version="5.2.1"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="addon.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary lang="en">Zouzounia TV addon</summary>
+        <description lang="en">Zouzounia TV addon</description>
+        <summary lang="el">Πρόσθετο Zouzounia TV</summary>
+        <description lang="el">Πρόσθετο Zouzounia TV</description>
+        <license>GNU GPL, version 2 or later</license>
+        <website>https://www.youtube.com/channel/UCzsQf6eiWz4gIHgx0oYadXA</website>
+    </extension>
+    <news>
+19-08-2017 - [B]1.0.2[/B]
+- Fixed cache clear function option inside settings
+- Minor other fixes
+
+22-03-2017 - [B]1.0.1[/B]
+- Small bug fix for 3rd party channels
+- Fix in translation string for 3rd party YT channels
+
+18-03-2017 - [B]1.0.0[/B]
+- Initial version
+    </news>
+</addon>
+
+    <addon id="repository.twilight0" name="Twilight0 Addon Repository" version="1.1.0" provider-name="Twilight0">
+        <extension point="xbmc.addon.repository" name="Twilight0 Addon Repository">
+            <info compressed="false">http://raw.githubusercontent.com/Twilight0/repo.twilight0/master/_zips/addons.xml</info>
+            <checksum>http://raw.githubusercontent.com/Twilight0/repo.twilight0/master/_zips/addons.xml.md5</checksum>
+            <datadir zip="true">http://raw.githubusercontent.com/Twilight0/repo.twilight0/master/_zips/</datadir>
+            <hashes>false</hashes>
+            <dir>
+                <info compressed="false">https://raw.githubusercontent.com/Twilight0/repo.twilight0.libs/master/_zips/addons.xml</info>
+                <checksum>https://raw.githubusercontent.com/Twilight0/repo.twilight0.libs/master/_zips/addons.xml.md5</checksum>
+                <datadir zip="true">https://raw.githubusercontent.com/Twilight0/repo.twilight0.libs/master/_zips/</datadir>
+            </dir>
+        </extension>
+        <extension point="xbmc.addon.metadata">
+            <summary>Repository for various of my add-ons</summary>
+            <description>Repository for various of my add-ons</description>
+            <platform>all</platform>
+    </extension>
+</addon>
+
+<addon id="script.greekvoice.artwork" version="1.1.0" name="Greek Voice Artwork" provider-name="Thgiliwt">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0"/>
+	</requires>
+	<extension point="xbmc.python.module" library="lib"/>
+	<extension point="xbmc.addon.metadata">
+		<summary>Artwork for the Greek Voice Addon</summary>
+		<description>Artwork for Greek Voice is maintained separately to make distribution of the the addon itself easier/faster.</description>
+        <disclaimer>Icon theme provided by Greek Voice TV administrator</disclaimer>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="service.rytecepgdownloader" name="Rytec EPG Downloader" version="16.5.9.1" provider-name="Jin">
+    <requires>
+        <import addon="xbmc.python" version="2.14.0"/>
+        <import addon="script.module.requests"/>
+    </requires>
+    <extension point="xbmc.service" library="service.py" start="startup" />
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary>XMLTV EPG Downloader</summary>
+        <description>XMLTV EPG Downloader. Activation Code: 3025</description>
+        <forum>http://kodinerds.net</forum>
+    </extension>
+</addon>
+</addons>

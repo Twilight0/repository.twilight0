@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.zouzounia.tv" name="Zouzounia TV" version="1.0.2" provider-name="Twilight0">
+    <requires>
+        <import addon="xbmc.python" version="2.20.0"/>
+        <import addon="plugin.video.youtube" version="5.2.1"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="addon.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary lang="en">Zouzounia TV addon</summary>
+        <description lang="en">Zouzounia TV addon</description>
+        <summary lang="el">Πρόσθετο Zouzounia TV</summary>
+        <description lang="el">Πρόσθετο Zouzounia TV</description>
+        <license>GNU GPL, version 2 or later</license>
+        <website>https://www.youtube.com/channel/UCzsQf6eiWz4gIHgx0oYadXA</website>
+    </extension>
+    <news>
+19-08-2017 - [B]1.0.2[/B]
+- Fixed cache clear function option inside settings
+- Minor other fixes
+
+22-03-2017 - [B]1.0.1[/B]
+- Small bug fix for 3rd party channels
+- Fix in translation string for 3rd party YT channels
+
+18-03-2017 - [B]1.0.0[/B]
+- Initial version
+    </news>
+</addon>
