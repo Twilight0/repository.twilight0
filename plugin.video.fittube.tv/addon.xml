@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.fittube.tv" name="FitTube TV" version="1.0.0" provider-name="FitTube Inc., Twilight0">
+    <requires>
+        <import addon="xbmc.python" version="2.20.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="addon.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary lang="en">FitTube TV addon</summary>
+        <description lang="en">
+            FitTube is an addon that brings content from the FitTube App and website FitTube.TV.\n
+            Courtesy of the FitTube Team. Please visit FitTube.TV website and upload your fitness videos and they will appear in the addon.\n
+            Compatible from Kodi Isengard (15.X) and above.
+        </description>
+        <license>GNU GPL, version 2 or later</license>
+    </extension>
+</addon>

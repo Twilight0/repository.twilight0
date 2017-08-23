@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="script.module.sublib" name="Sublib Module" provider-name="hbiyik" version="0.0.1">
+    <requires>
+		<import addon="xbmc.python" version="2.1.0"/>
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<summary lang="en">Subtitle Library to create subtitle addons easy and fast</summary>
+		<summary lang="tr">Altyazı eklentisi geliştirmek için sublib kütüphanesi</summary>
+		<description lang="en">Sublib Module</description>
+		<license>GNU General Public License, v2</license>
+		<forum>https://github.com/hbiyik/script.module.sublib/issues</forum>
+		<website>https://github.com/hbiyik/script.module.sublib</website>
+		<email>huseyinbiyik@hotmail.com</email>
+	</extension>
+</addon>

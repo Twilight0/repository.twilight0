@@ -1,0 +1,6 @@
+<settings>
+    <category label="Misc">
+        <setting id="third_party" label="30015" type="bool" default="true"/>
+        <setting label="30005" type="action" action="RunPlugin(plugin://plugin.video.hng/?action=cache_clear)"/>
+    </category>
+</settings>

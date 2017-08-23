@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<settings>
+    <category label="30005">
+        <setting visible="true" label="30006" type="action" action="RunPlugin(plugin://plugin.video.greekvoice/?action=yt_setup)"/>
+    </category>
+</settings>

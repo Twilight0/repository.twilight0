@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.AliveGR.artwork" version="2.1.1" name="AliveGR Artwork" provider-name="Thgiliwt">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0"/>
+	</requires>
+	<extension point="xbmc.python.module" library="lib"/>
+	<extension point="xbmc.addon.metadata">
+		<summary>Artwork for the AliveGR Addons</summary>
+		<description>Artwork for AliveGR is maintained separately to make distribution of the the addon itself easier/faster.</description>
+        <disclaimer>Icon theme found at public domain, free for non-commercial use</disclaimer>
+		<platform>all</platform>
+	</extension>
+</addon>

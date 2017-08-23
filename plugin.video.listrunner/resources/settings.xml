@@ -1,0 +1,20 @@
+<settings>
+    <category label="30001">
+        <setting label="30032" type="lsep"/>
+        <setting label="30002" type="lsep"/>
+        <setting id="local_or_remote" type="enum" label="30005" lvalues="30003|30004|30022" default="1"/>
+        <setting id="local" label="30006" type="file" default="" visible="eq(-1,0)"/>
+        <setting id="remote" label="30007" type="text" default="" visible="eq(-2,1)"/>
+        <setting id="youtube_url" label="30023" type="text" default="" visible="eq(-3,2)"/>
+        <setting label="30018" type="lsep"/>
+        <setting id="youtube" type="bool" label="30014" default="true"/>
+        <setting label="30024" type="lsep" visible="eq(-6,2)"/>
+        <setting id="caching" label="30025" type="number" default="1" visible="eq(-7,2)"/>
+        <setting type="action" label="30027" action="RunPlugin(plugin://$ID?action=cache_clear)" visible="eq(-8,2)"/>
+        <setting id="group" label="Group" type="text" default="ALL" visible="false"/>
+    </category>
+    <category label="30008">
+        <setting type="action" label="30009" action="RunPlugin(plugin://$ID?action=install_youtube-dl)"/>
+        <setting type="action" label="30010" action="RunPlugin(plugin://$ID?action=install_urlresolver)"/>
+    </category>
+</settings>

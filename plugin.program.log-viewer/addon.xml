@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.program.log-viewer" name="Log Viewer" version="0.1.0~alpha1" provider-name="Twilight0">
+    <requires>
+        <import addon="xbmc.python" version="2.24.0"/>
+        <import addon="script.module.tulip" version="1.2.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="addon.py">
+        <provides>executable</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary lang="en">Log Viewer program addon</summary>
+        <!--<description lang="en"></description>-->
+        <!--<disclaimer lang="en"></disclaimer>-->
+        <!--<summary lang="el"></summary>-->
+        <!--<description lang="el"></description>-->
+        <!--<disclaimer lang="el"></disclaimer>-->
+        <license>GNU GPL, version 2</license>
+        <website>https://twitter.com/TwilightZer0</website>
+        <!--<forum></forum>-->
+        <!--<source></source>-->
+        <news>
+0.1.0~alpha1 (07-08-2017)
+Initial Version
+        </news>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>

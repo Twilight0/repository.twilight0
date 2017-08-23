@@ -1,0 +1,68 @@
+[B]2.1.1 (23-Jun-2017)[/B]
+- Minor fix in addon.xml
+
+[B]2.1.0 (19-Jun-2017)[/B]
+- New location of playlists
+- Removed redundant youtube addon install function
+
+[B]2.0.0 (29-Dec-2016)[/B]
+- Introduced set of videos & playlists in greek language
+- Youtube Keys setup function
+- Code cosmetics
+- Title Colourization
+
+[B]1.2.2.1 (24-Nov-2016)[/B]
+- Minor bug fix once again for direct playable videos
+
+[B]1.2.2 (24-Nov-2016)[/B]
+- Utilizing youtube addon for streams & removed youtube-dl
+- Made Isengard+ compatible.
+
+[B]1.2.1 (08-Nov-2016)[/B]
+- Removed urlresolver and used youtube-dl instead. Faster resolving
+- Re-fixed full screen video titling and thumbnail.
+
+[B]1.2.0 (08-Nov-2016)[/B]
+- Utilizing urlresolver for directly playable Youtube streams
+  > Removed replace method for above mentioned streams
+  > Replaced PlayMedia call with urlresolver for playing above mentioned streams
+- Colourized cheatsheet output
+
+[B]1.1.1 (06-Nov-2016)[/B]
+- Small fix for directly playable youtube videos.
+- Replace method introduced allowing easier manipulation of remote playlists
+
+[B]1.1.0 (05-Nov-2016)[/B]
+- Removed requests dependency
+- Items list is now hosted remotely to allow easy changes and it is loaded with parsedom
+- Main menu code rework
+- Actions code rework
+- Added TotalRevolution's playlists
+- Various bug fixes
+- Compatible as Jarvis and above
+
+[B]1.0.6 (06-Oct-2016)[/B]
+- Missed an indice
+
+[B]1.0.5 (26-Sep-2016)[/B]
+- Added playlists from Kodification
+- Removed "auto" key-value pairs from items as I am not going to use after all.
+  > Use "play from here" context menu instead.
+
+[B]1.0.4 (17-Sep-2016)[/B]
+- Missed an indice for the last playlist
+
+[B]1.0.3 (17-Sep-2016)[/B]
+- New videos from Derek Banas
+- Cheat Sheet in Text Box View (next version will become colourized)
+- Changed plugin call parameters
+
+[B]1.0.2 (14-Sep-2016)[/B]
+- Fix for "zero 2 hero" non-playable videos
+
+[B]1.0.1 (13-Sep-2016)[/B]
+- Changed the icon a little bit
+- Added link pointing to support thread
+
+[B]1.0.0 (13-Sep-2016)[/B]
+- Initial Version

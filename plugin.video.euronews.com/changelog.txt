@@ -1,0 +1,12 @@
+[B]1.1.2[/B]
+- Fixed Live Resolver
+
+[B]1.1.1[/B]
+- Rebased to utilize tulip libraries
+
+[B]1.1.0[/B]
+- Tweaked sections
+- Added add-on screenshots
+
+[B]1.0.0[/B]
+- Initial version

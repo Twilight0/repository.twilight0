@@ -1,0 +1,88 @@
+# Addon Name: PyLearner
+# Addon id: plugin.video.pylearner
+# Addon Provider: Twilight0
+msgid ""
+msgstr ""
+"Project-Id-Version: PyLearner\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2016-06-22 11:29+0000\n"
+"Last-Translator: twilight0\n"
+"Language-Team: English (http://www.domain.com)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgctxt "#30001"
+msgid "General"
+msgstr "General"
+
+msgctxt "#30002"
+msgid "Language Selector for set of playlists"
+msgstr "Language Selector for set of playlists"
+
+msgctxt "#30003"
+msgid "English"
+msgstr "English"
+
+msgctxt "#30004"
+msgid "Greek"
+msgstr "Greek"
+
+msgctxt "#30005"
+msgid "Actions"
+msgstr "Actions"
+
+msgctxt "#30006"
+msgid "Youtube API Keys Setup"
+msgstr "Youtube API Keys Setup"
+
+msgctxt "#30007"
+msgid "This action will overwrite existing Youtube API keys and will log you out if already logged in"
+msgstr "This action will overwrite existing Youtube API keys and will log you out if already logged in"
+
+msgctxt "#30008"
+msgid "Proceed?"
+msgstr "Proceed?"
+
+msgctxt "#30009"
+msgid "Success"
+msgstr "Success"
+
+msgctxt "#30010"
+msgid "Cancelled"
+msgstr "Cancelled"
+
+msgctxt "#30011"
+msgid "This action will log you out if already logged in"
+msgstr "This action will log you out if already logged in"
+
+msgctxt "#30012"
+msgid "This action will install and setup Youtube addon"
+msgstr "This action will install and setup Youtube addon"
+
+msgctxt "#30013"
+msgid "Keys setup"
+msgstr "Keys setup"
+
+msgctxt "#30014"
+msgid "Settings"
+msgstr "Settings"
+
+msgctxt "#30015"
+msgid ""
+msgstr ""
+
+msgctxt "#30016"
+msgid ""
+msgstr ""
+
+msgctxt "#30017"
+msgid ""
+msgstr ""
+
+msgctxt "#30018"
+msgid ""
+msgstr ""
+
