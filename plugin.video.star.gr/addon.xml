@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.star.gr" version="1.2.0" name="STAR Player" provider-name="Twilight0">
+<addon id="plugin.video.star.gr" version="1.2.1" name="STAR Player" provider-name="Twilight0">
 	<requires>
 		<import addon="xbmc.python" version="2.24.0" />
 		<import addon="script.module.tulip" version="1.2.2" />
-		<import addon="plugin.video.youtube" version="5.4.0" optional="true"/>
+		<import addon="plugin.video.youtube" version="5.4.0"/>
 	</requires>
 	<extension point="xbmc.python.pluginsource" library="addon.py">
 		<provides>video</provides>
@@ -18,6 +18,10 @@
 		<source>https://github.com/lambda81/plugin.video.star.gr</source>
 		<website>http://www.star.gr/</website>
 		<news>
+[B]1.2.1[/B]
+- Fixed playback for youtube, web tv videos
+- Made youtube addon mandatory
+
 [B]1.2.0[/B]
 - Added Web TV section
 - Added context menu with clear cache function (root menu only)
@@ -39,7 +43,7 @@
 		</assets>
 		<platform>all</platform>
 		<language>el</language>
-		<forum></forum>
-		<email></email>
+		<!--<forum></forum>-->
+		<!--<email></email>-->
 	</extension>
 </addon>

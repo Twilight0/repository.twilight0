@@ -70,10 +70,7 @@ elif action == 'news':
     star.Indexer().news()
 
 elif action == 'play':
-    star.Indexer().play(url)
-
-elif action == 'yt_play':
-    star.Indexer().yt_play(title, url)
+    star.Indexer().play(title, image, url)
 
 elif action == 'cache_clear':
     from tulip import cache

@@ -225,15 +225,26 @@ class Indexer:
             return
 
         for i in self.list:
-            i.update({'action': 'yt_play', 'isFolder': 'False'})
+            i.update({'action': 'play', 'isFolder': 'False'})
 
         directory.add(self.list, content='episodes')
 
     def news(self):
+
         self.episodes(self.news_link, self.news_image)
 
-    def play(self, url):
-        directory.resolve(url)
+    def play(self, title, image, url):
+
+        if len(url) == 11:
+
+            from youtube_resolver import resolve as yt_resolve
+            link = yt_resolve(url)
+            stream = link[1]['url']
+            directory.resolve(stream, meta={'title': title}, icon=image)
+
+        else:
+
+            directory.resolve(url)
 
     def _webtv(self):
 
@@ -272,6 +283,7 @@ class Indexer:
         for item in items:
 
             try:
+
                 title = item['Title'].strip()
                 title = client.replaceHTMLCodes(title)
                 title = title.encode('utf-8')
@@ -288,6 +300,7 @@ class Indexer:
                 image = image.encode('utf-8')
 
                 self.list.append({'title': title, 'url': url, 'image': image})
+
             except:
                 pass
 
@@ -296,13 +309,16 @@ class Indexer:
     def _episodes(self, url, image):
 
         try:
+
             result = client.request(url, mobile=True)
             result = json.loads(result)
             items = result['videosprogram']
+
         except:
             return
 
         for item in items:
+
             try:
                 title = item['Title'].strip()
                 title = client.replaceHTMLCodes(title)
@@ -314,6 +330,7 @@ class Indexer:
                 url = url.encode('utf-8')
 
                 self.list.append({'title': title, 'url': url, 'image': image})
+
             except:
                 pass
 
@@ -350,6 +367,7 @@ class Indexer:
             title = name + ' - ' + control.lang(32008) + ' - ' + datestr
             link = client.parseDOM(episode, 'article', ret='onclick')[0]
             link = re.findall("'(.+?)'", link)[0]
+            # link = urljoin('http://https://www.youtube.com/embed/', link)
             image = client.parseDOM(episode, 'img', ret='src')[0]
 
             data = dict(
@@ -381,11 +399,14 @@ class Indexer:
             [i.join() for i in threads]
 
             items = self.data
+
         except:
             return
 
         for item in items:
+
             try:
+
                 item = json.loads(item)
 
                 # videos = item['videosprogram'][0]['VideoID']
@@ -406,7 +427,9 @@ class Indexer:
                 image = image.encode('utf-8')
 
                 self.list.append({'title': title, 'url': url, 'image': image})
+
             except:
+
                 pass
 
         return self.list
@@ -418,9 +441,3 @@ class Indexer:
             self.data[i] = result
         except:
             return
-
-    def yt_play(self, title, url):
-
-        from tulip import youtube
-
-        youtube.youtube(key=self.youtube_key).play(name=title, url=url)
