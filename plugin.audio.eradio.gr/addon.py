@@ -24,11 +24,10 @@ from resources.lib import eradio
 params = dict(urlparse.parse_qsl(sys.argv[2].replace('?','')))
 
 action = params.get('action')
-
 url = params.get('url')
 
 
-if action == None:
+if action is None:
     eradio.indexer().root()
 
 elif action == 'addBookmark':
@@ -45,7 +44,11 @@ elif action == 'bookmarks':
 elif action == 'radios':
     eradio.indexer().radios(url)
 
+elif action == 'dev_picks':
+    eradio.indexer().dev_picks()
+
 elif action == 'play':
     eradio.indexer().play(url)
 
-
+elif action == 'dev_play':
+    eradio.indexer().dev_play(url)

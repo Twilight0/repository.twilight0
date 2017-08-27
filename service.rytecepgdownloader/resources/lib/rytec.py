@@ -27,10 +27,9 @@ class RYTEC:
         
         try:
             r = requests.get(common.bdecode(self.epgsources), headers=self.headers)
-            if r.status_code == 200:
-                sources_list = r.text.splitlines()
-                random.shuffle(sources_list)
-                #sources_list = gzip.GzipFile(fileobj=StringIO(r.content)).read().splitlines()
+            sources_list = r.text.splitlines()
+            random.shuffle(sources_list)
+            #sources_list = gzip.GzipFile(fileobj=StringIO(r.content)).read().splitlines()
         except Exception as e:
             common.log('[Rytec EPG Downloader]: error in get sources list')
             common.log(e)
@@ -74,12 +73,13 @@ class RYTEC:
         
         try:
             root = ET.fromstring(data)
-            for source in root.findall('source'):
-                sd = source.find('description').text
-                url = source.find('url').text
-                if description == sd:
-                    epg_url = url
-                    break
+            for cat in root.findall('sourcecat'):
+                for source in cat:
+                    sd = source.find('description').text
+                    url = source.find('url').text
+                    if description == sd.strip():
+                        epg_url = url
+                        break
         except Exception as e:
             common.log('[Rytec EPG Downloader]: error in get epg url')
             common.log(e)
@@ -107,8 +107,11 @@ class RYTEC:
                                 common.log('[Rytec EPG Downloader]: epg download failed')
                                 break
                                 return ret
-                        common.log('[Rytec EPG Downloader]: epg download complete')
                         f.close()
+                        if not xbmcvfs.exists(xml_file):
+                            common.log('[Rytec EPG Downloader]: no permission to write file to disk')
+                        else:
+                            common.log('[Rytec EPG Downloader]: epg download complete')
                         ret = True
                 else:
                     common.log('[Rytec EPG Downloader]: epg url offline')

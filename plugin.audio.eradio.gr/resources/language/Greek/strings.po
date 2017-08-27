@@ -39,3 +39,7 @@ msgstr "Προσθήκη στους σελιδοδείκτες"
 msgctxt "#32502"
 msgid "Remove from bookmarks"
 msgstr "Αφαίρεση από σελιδοδείκτες"
+
+msgctxt "#32503"
+msgid "Developer's picks"
+msgstr "Οι επιλογές του προγραμματιστή"

@@ -75,26 +75,32 @@ class indexer:
 
         categories = cache.get(self.item_list_1, 24, self.categories_link)
 
-        if categories == None: return
+        if categories is None:
+            return
 
-        for i in categories: i.update({'icon': 'categories.png', 'action': 'radios'})
+        for i in categories:
+            i.update({'icon': 'categories.png', 'action': 'radios'})
 
         regions = cache.get(self.item_list_1, 24, self.regions_link)
 
-        if regions == None: return
+        if regions is None:
+            return
 
-        for i in regions: i.update({'icon': 'regions.png', 'action': 'radios'})
+        for i in regions:
+            i.update({'icon': 'regions.png', 'action': 'radios'})
 
-        self.list = radios + categories + regions
+        misc = [{'title': 32503, 'action': 'dev_picks', 'icon': 'recommended.png'}]
+
+        self.list = radios + misc + categories + regions
 
         directory.add(self.list, content='files')
-        return self.list
 
     def bookmarks(self):
 
         self.list = bookmarks.get()
 
-        if self.list == None: return
+        if self.list is None:
+            return
 
         for i in self.list:
             bookmark = dict((k, v) for k, v in i.iteritems() if not k == 'next')
@@ -104,14 +110,15 @@ class indexer:
         self.list = sorted(self.list, key=lambda k: k['title'].lower())
 
         directory.add(self.list, infotype='Music')
-        return self.list
 
     def radios(self, url):
         self.list = cache.get(self.item_list_2, 1, url)
 
-        if self.list == None: return
+        if self.list is None:
+            return
 
-        for i in self.list: i.update({'action': 'play', 'isFolder': 'False'})
+        for i in self.list:
+            i.update({'action': 'play', 'isFolder': 'False'})
 
         for i in self.list:
             bookmark = dict((k, v) for k, v in i.iteritems() if not k == 'next')
@@ -119,16 +126,49 @@ class indexer:
             i.update({'cm': [{'title': 32501, 'query': {'action': 'addBookmark', 'url': json.dumps(bookmark)}}]})
 
         directory.add(self.list, infotype='Music')
+
+    def _devpicks(self):
+
+        xml = client.request('http://alivegr.net/raw/radios.xml')
+
+        items = client.parseDOM(xml, 'station', attrs={'enable': '1'})
+
+        for item in items:
+
+            name = client.parseDOM(item, 'name')[0]
+            logo = client.parseDOM(item, 'logo')[0]
+            url = client.parseDOM(item, 'url')[0]
+
+            self.list.append({'title': name, 'image': logo, 'url': url})
+
         return self.list
 
+    def dev_picks(self):
+
+        self.list = cache.get(self._devpicks, 6)
+
+        if self.list is None:
+            return
+
+        for i in self.list:
+            i.update({'action': 'dev_play', 'isFolder': 'False'})
+
+        directory.add(self.list)
+
     def play(self, url):
+
         resolved = self.resolve(url)
 
-        if resolved == None: return
+        if resolved is None:
+            return
 
         title, url, image = resolved
 
         directory.resolve(url, {'title': title}, image)
+
+    def dev_play(self, url):
+
+        directory.resolve(url)
 
     def item_list_1(self, url):
         try:
@@ -167,6 +207,7 @@ class indexer:
         return self.list
 
     def item_list_2(self, url):
+
         try:
             result = client.request(url, mobile=True)
             result = json.loads(result)
@@ -176,6 +217,7 @@ class indexer:
             return
 
         for item in items:
+
             try:
                 title = item['name'].strip()
                 title = client.replaceHTMLCodes(title)
@@ -198,8 +240,27 @@ class indexer:
 
         return self.list
 
+    def misc_list(self):
+
+        xml = client.request('http://alivegr.net/raw/radios.xml')
+
+        items = client.parseDOM(xml, 'station', attrs={'enable': '1'})
+
+        for item in items:
+
+            name = client.parseDOM(item, 'name')[0]
+            logo = client.parseDOM(item, 'logo')[0]
+            url = client.parseDOM(item, 'url')[0]
+
+            self.list.append({'title': name, 'icon': logo, 'url': url})
+
+        return self.list
+
+
     def resolve(self, url):
+
         try:
+
             url = self.resolve_link % url
 
             result = client.request(url, mobile=True)
@@ -226,5 +287,7 @@ class indexer:
             image = image.encode('utf-8')
 
             return (title, url, image)
+
         except:
+
             pass

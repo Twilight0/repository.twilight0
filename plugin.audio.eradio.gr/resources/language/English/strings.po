@@ -39,3 +39,7 @@ msgstr ""
 msgctxt "#32502"
 msgid "Remove from bookmarks"
 msgstr ""
+
+msgctxt "#32503"
+msgid "Developer's picks"
+msgstr ""

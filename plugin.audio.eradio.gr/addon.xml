@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.audio.eradio.gr" version="1.1.2" name="E-Radio" provider-name="Twilight0">
+<addon id="plugin.audio.eradio.gr" version="1.2.0" name="E-Radio" provider-name="Twilight0">
 	<requires>
 		<import addon="xbmc.python" version="2.24.0" />
 		<import addon="script.module.tulip" version="1.0.6" />
@@ -14,9 +14,13 @@
 		<disclaimer lang="en">This addon is not published nor endorsed by e-radio.gr</disclaimer>
 		<disclaimer lang="el">Το πρόσθετο αυτό δεν έχει δημοσιευθεί ούτε εγκριθεί από το e-radio.gr</disclaimer>
 		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
-		<source>https://github.com/lambda81/plugin.audio.eradio.gr</source>
+		<source>https://github.com/Twilight0/plugin.audio.eradio.gr</source>
 		<website>http://www.e-radio.gr/</website>
 		<news>
+[B]1.2.0]/B]
+- Added developer's picks radio stations (outside of eradio's scope)
+- Added link for source code.
+
 [B]1.1.2[/B]
 - Cosmetics
 

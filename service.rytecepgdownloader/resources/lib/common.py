@@ -58,7 +58,8 @@ def get_description_url(description):
     try:
         epg_url = bdecode(addon.getSetting(description))
     except:
-        print '[Rytec EPG Downloader]: no epg url found in settings', description
+        log('[Rytec EPG Downloader]: no epg url found in settings')
+        log(description)
     return epg_url
 
 def save_epg_url(epg_url, description):
@@ -122,7 +123,7 @@ def download_allowed(a):
     gmt = time.gmtime()
     if gmt.tm_hour > 2 and gmt.tm_hour < 7:
         if not a:
-            print '[Rytec EPG Downloader]: epg download not allowed between 3 and 7 GMT'
+            log('[Rytec EPG Downloader]: epg download not allowed between 3 and 7 GMT')
         return False
     else:
         return True
@@ -153,7 +154,7 @@ def blocked(a):
             return False
         else:
             if not a:
-                print '[Rytec EPG Downloader]: %sh blocked' % (24 - (t / 3600))
+                log('[Rytec EPG Downloader]: %sh blocked' % (24 - (t / 3600)))
             return True
     else:
         return True
@@ -180,10 +181,16 @@ def merge_epg():
     i=1
     total = len(files)
     for xmltv in files:
-        if (xmltv.endswith('.gz') or xmltv.endswith('.xml')) and not xmltv.startswith('merged_epg.xml'):
+        if (xmltv.endswith('.gz') or xmltv.endswith('.xml') or xmltv.endswith('.xz')) and not xmltv.startswith('merged_epg.xml'):
             try:
                 if xmltv.endswith('.gz'):
                     inF = gzip.GzipFile(fileobj=StringIO(xbmcvfs.File(os.path.join(xml_path,xmltv)).read()))
+                elif xmltv.endswith('.xz'):
+                    try:
+                        import lzma
+                    except ImportError:
+                        from backports import lzma
+                    inF = lzma.open(xbmcvfs.File(os.path.join(xml_path,xmltv)), 'rb')
                 else:
                     inF = xbmcvfs.File(os.path.join(xml_path,xmltv))
                 b = inF.read()

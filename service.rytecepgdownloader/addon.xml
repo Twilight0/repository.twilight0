@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="service.rytecepgdownloader" name="Rytec EPG Downloader" version="16.5.9.1" provider-name="Jin">
+<addon id="service.rytecepgdownloader" name="Rytec EPG Downloader" version="17.8.18" provider-name="Jin">
     <requires>
         <import addon="xbmc.python" version="2.14.0"/>
         <import addon="script.module.requests"/>
     </requires>
     <extension point="xbmc.service" library="service.py" start="startup" />
     <extension point="xbmc.addon.metadata">
+        <news>
+- fixed/updated sources scraper
+NOTE: Due to updates by rytec, this addon might completely break in a couple of months
+        </news>
         <platform>all</platform>
-        <summary>XMLTV EPG Downloader</summary>
-        <description>XMLTV EPG Downloader. Activation Code: 3025</description>
-        <forum>http://kodinerds.net</forum>
+        <summary>XMLTV EPG Downloader. Activation code 3025</summary>
+        <description>XMLTV EPG Downloader. Activation code 3025</description>
     </extension>
 </addon>
