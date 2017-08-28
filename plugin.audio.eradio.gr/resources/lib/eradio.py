@@ -17,7 +17,7 @@
 
 import json
 # noinspection PyUnresolvedReferences
-from tulip import bookmarks, directory, client, cache
+from tulip import bookmarks, directory, client, cache, control
 
 
 class indexer:
@@ -39,34 +39,34 @@ class indexer:
 
         radios = [
             {
-                'title': 32001,
+                'title': control.lang(32001),
                 'action': 'radios',
                 'url': self.all_link,
                 'icon': 'all.png'
             },
 
             {
-                'title': 32002,
+                'title': control.lang(32002),
                 'action': 'bookmarks',
                 'icon': 'bookmarks.png'
             },
 
             {
-                'title': 32003,
+                'title': control.lang(32003),
                 'action': 'radios',
                 'url': self.trending_link,
                 'icon': 'trending.png'
             },
 
             {
-                'title': 32004,
+                'title': control.lang(32004),
                 'action': 'radios',
                 'url': self.popular_link,
                 'icon': 'popular.png'
             },
 
             {
-                'title': 32005,
+                'title': control.lang(32005),
                 'action': 'radios',
                 'url': self.new_link,
                 'icon': 'new.png'
@@ -89,7 +89,7 @@ class indexer:
         for i in regions:
             i.update({'icon': 'regions.png', 'action': 'radios'})
 
-        misc = [{'title': 32503, 'action': 'dev_picks', 'icon': 'recommended.png'}]
+        misc = [{'title': control.lang(32503), 'action': 'dev_picks', 'icon': 'recommended.png'}]
 
         self.list = radios + misc + categories + regions
 
