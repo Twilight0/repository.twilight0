@@ -20,8 +20,10 @@ import json
 from tulip import bookmarks, directory, client, cache, control
 
 
-class indexer:
+class Indexer:
+
     def __init__(self):
+
         self.list = []
         self.base_link = 'http://eradio.mobi'
         self.image_link = 'http://cdn.e-radio.gr/logos/%s'
@@ -153,7 +155,12 @@ class indexer:
         for i in self.list:
             i.update({'action': 'dev_play', 'isFolder': 'False'})
 
-        directory.add(self.list)
+        for i in self.list:
+            bookmark = dict((k, v) for k, v in i.iteritems() if not k == 'next')
+            bookmark['bookmark'] = i['url']
+            i.update({'cm': [{'title': 32501, 'query': {'action': 'addBookmark', 'url': json.dumps(bookmark)}}]})
+
+        directory.add(self.list, infotype='Music')
 
     def play(self, url):
 
@@ -256,7 +263,6 @@ class indexer:
 
         return self.list
 
-
     def resolve(self, url):
 
         try:
@@ -282,7 +288,8 @@ class indexer:
             image = item['logo']
             image = self.image_link % image
             image = image.replace('/promo/', '/500/')
-            if image.endswith('/nologo.png'): image = '0'
+            if image.endswith('/nologo.png'):
+                image = '0'
             image = client.replaceHTMLCodes(image)
             image = image.encode('utf-8')
 

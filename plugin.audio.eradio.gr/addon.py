@@ -28,7 +28,7 @@ url = params.get('url')
 
 
 if action is None:
-    eradio.indexer().root()
+    eradio.Indexer().root()
 
 elif action == 'addBookmark':
     from tulip import bookmarks
@@ -39,16 +39,16 @@ elif action == 'deleteBookmark':
     bookmarks.delete(url)
 
 elif action == 'bookmarks':
-    eradio.indexer().bookmarks()
+    eradio.Indexer().bookmarks()
 
 elif action == 'radios':
-    eradio.indexer().radios(url)
+    eradio.Indexer().radios(url)
 
 elif action == 'dev_picks':
-    eradio.indexer().dev_picks()
+    eradio.Indexer().dev_picks()
 
 elif action == 'play':
-    eradio.indexer().play(url)
+    eradio.Indexer().play(url)
 
 elif action == 'dev_play':
-    eradio.indexer().dev_play(url)
+    eradio.Indexer().dev_play(url)
