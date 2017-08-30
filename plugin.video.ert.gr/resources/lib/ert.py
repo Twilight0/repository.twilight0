@@ -32,7 +32,7 @@ class indexer:
         self.news_link = 'http://webtv.ert.gr/category/eidiseis/'
         self.info_link = 'http://webtv.ert.gr/category/ert-enimerosi/'
         self.weather_link = 'http://webtv.ert.gr/category/kairos/'
-        self.documentary_link = 'http://webtv.ert.gr/category/ntokimanter/'
+        self.documentary_link = 'http://webtv.ert.gr/tag/ntokimanter/'
         self.culture_link = 'http://webtv.ert.gr/tag/politismos/'
         self.cartoons_link = 'http://webtv.ert.gr/category/paidika/'
         self.entertainment_link = 'http://webtv.ert.gr/tag/psichagogia/'
