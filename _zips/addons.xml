@@ -948,7 +948,7 @@ Initial Version
     </extension>
 </addon>
 
-<addon id="script.greekvoice.artwork" version="1.1.0" name="Greek Voice Artwork" provider-name="Thgiliwt">
+<addon id="script.greekvoice.artwork" version="1.2.0" name="Greek Voice Artwork" provider-name="Twilight0">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0"/>
 	</requires>
