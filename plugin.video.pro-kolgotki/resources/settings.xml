@@ -1,0 +1,7 @@
+<settings>
+    <category label="Misc">
+        <setting id="third_party" label="30015" type="bool" default="true"/>
+        <setting label="30005" type="action" action="RunPlugin(plugin://plugin.video.pro-kolgotki/?action=cache_clear)"/>
+        <setting id="warning" label="Warning" type="bool" default="true" visible="false"/>
+    </category>
+</settings>
