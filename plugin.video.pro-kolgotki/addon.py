@@ -222,7 +222,7 @@ def main():
         {
             'title': 30004,
             'action': 'settings',
-            'icon': 'settings.jpg'
+            'icon': 'settings.png'
         }
     ]
 
@@ -245,7 +245,10 @@ if action is None:
                 heading=control.lang(30016), line1=control.lang(30017), line2='', line3='',
                 yeslabel=control.lang(30018), nolabel=control.lang(30019)
         ):
-            control.setSetting('warning', 'false')
+            if control.setting('first_time') == 'true':
+                control.setSetting('warning', 'false')
+            else:
+                control.setSetting('warning', 'true')
             main()
         else:
             import sys

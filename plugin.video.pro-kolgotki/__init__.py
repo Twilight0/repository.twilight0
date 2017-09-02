@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 """
-    Heroes & Generals Addon
+    Pro-Kolgotki Addon
     Author: Twilight0
 
         This program is free software: you can redistribute it and/or modify

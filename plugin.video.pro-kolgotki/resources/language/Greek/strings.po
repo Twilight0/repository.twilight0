@@ -1,5 +1,5 @@
-# Addon Name: Heroes and Generals
-# Addon id: plugin.video.hng
+# Addon Name: Pro-Kolgotki
+# Addon id: plugin.video.pro-kolgotki
 # Addon Provider: Twilight0
 msgid ""
 msgstr ""
@@ -89,3 +89,7 @@ msgstr "Εντάξει, άσε με να μπω"
 msgctxt "#30019"
 msgid "No, please let me out"
 msgstr "Όχι, παρακαλώ ακύρωσε την είσοδο"
+
+msgctxt "#30020"
+msgid "Do not disable first time warning"
+msgstr "Μην απενεργοποιήσεις την προειδοποίηση πρώτης φοράς"
