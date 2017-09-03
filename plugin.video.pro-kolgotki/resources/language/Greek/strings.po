@@ -91,5 +91,5 @@ msgid "No, please let me out"
 msgstr "Όχι, παρακαλώ ακύρωσε την είσοδο"
 
 msgctxt "#30020"
-msgid "Do not disable first time warning"
-msgstr "Μην απενεργοποιήσεις την προειδοποίηση πρώτης φοράς"
+msgid "Show 18+ warning"
+msgstr "Δείξε την προειδοποίηση ανηλίκων"

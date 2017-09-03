@@ -91,5 +91,5 @@ msgid "No, please let me out"
 msgstr ""
 
 msgctxt "#30020"
-msgid "Do not disable first time warning"
+msgid "Show 18+ warning"
 msgstr ""
