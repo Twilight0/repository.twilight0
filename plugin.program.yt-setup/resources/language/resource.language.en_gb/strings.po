@@ -1,0 +1,95 @@
+# Addon Name: Youtube Setup
+# Addon id: plugin.program.yt-setup
+# Addon Provider: Twilight0
+msgid ""
+msgstr ""
+"Project-Id-Version: Youtube Setup\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2016-06-22 11:29+0000\n"
+"Last-Translator: twilight0\n"
+"Language-Team: English (http://www.domain.com)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: el\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgctxt "#30001"
+msgid "Please run addon from its icon, do not import it"
+msgstr ""
+
+msgctxt "#30002"
+msgid "Paths"
+msgstr ""
+
+msgctxt "#30003"
+msgid "Local/Remote path, keys file selector"
+msgstr ""
+
+msgctxt "#30004"
+msgid "Local"
+msgstr ""
+
+msgctxt "#30005"
+msgid "Remote"
+msgstr ""
+
+msgctxt "#30006"
+msgid "Local Path (include Local Network)"
+msgstr ""
+
+msgctxt "#30007"
+msgid "Remote Path (Internet address)"
+msgstr ""
+
+msgctxt "#30008"
+msgid "Path or Address haven't been set"
+msgstr ""
+
+msgctxt "#30009"
+msgid "Open settings window?"
+msgstr ""
+
+msgctxt "#30010"
+msgid "Something's wrong!"
+msgstr ""
+
+msgctxt "#30011"
+msgid "Incorrect settings or files detected"
+msgstr ""
+
+msgctxt "#30012"
+msgid "Youtube Setup addon is now ready to store your keys"
+msgstr ""
+
+msgctxt "#30013"
+msgid "Proceed"
+msgstr ""
+
+msgctxt "#30014"
+msgid "Cancel"
+msgstr ""
+
+msgctxt "#30015"
+msgid "Success!"
+msgstr ""
+
+msgctxt "#30016"
+msgid "Open settings window"
+msgstr ""
+
+msgctxt "#30017"
+msgid "Current settings will be overwritten!"
+msgstr ""
+
+msgctxt "#30018"
+msgid "[COLOR white]Please re-run addon after applying the settings[/COLOR]"
+msgstr ""
+
+msgctxt "#30019"
+msgid "Open Youtube settings window"
+msgstr ""
+
+msgctxt "#30020"
+msgid "Execute setup"
+msgstr ""

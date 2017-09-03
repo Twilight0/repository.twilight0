@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.program.yt-setup" name="Youtube Setup" version="1.0.0" provider-name="Twilight0">
+    <requires>
+        <import addon="xbmc.python" version="2.24.0"/>
+        <import addon="plugin.video.youtube" version="5.4.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="addon.py">
+        <provides>executable</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary lang="en">Youtube Setup program addon</summary>
+        <description lang="en">This addon will help you setup Youtube api keys.</description>
+        <disclaimer lang="en">This addon is provided "as is". Please read LICENCE for more details.</disclaimer>
+        <summary lang="el">Βοηθητικό πρόσθετο ρύθμισης Youtube</summary>
+        <description lang="el">Το πρόσθετο αυτό θα σας βοηθήσει να ρυθμίσετε τα κλειδιά API του Youtube.</description>
+        <disclaimer lang="el">Το παρόν πρόσθετο παρέχεται "όπως είναι". Παρακαλώ διαβάστε το αρχείο LICENCE για περισσότερες λεπτομέρειες.</disclaimer>
+        <license>GNU GPL, version 2</license>
+        <website>https://twitter.com/TwilightZer0</website>
+        <source>https://github.com/Twilight0/plugin.program.yt-setup</source>
+        <news>
+[B]+ 1.0.0[/B] ~ (04-09-2017)
+- Initial Version
+        </news>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>

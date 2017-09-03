@@ -1,0 +1,96 @@
+# Addon Name: Youtube Setup
+# Addon id: plugin.program.yt-setup
+# Addon Provider: Twilight0
+msgid ""
+msgstr ""
+"Project-Id-Version: Youtube Setup\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2016-06-22 11:29+0000\n"
+"Last-Translator: twilight0\n"
+"Language-Team: English (http://www.domain.com)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: el\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgctxt "#30001"
+msgid "Please run addon from its icon, do not import it"
+msgstr "Παρακαλώ τρέξτε αυτό το πρόσθετο από το εικονίδιό του, μην το εισάγετε"
+
+msgctxt "#30002"
+msgid "Paths"
+msgstr "Διαδρομές"
+
+msgctxt "#30003"
+msgid "Local/Remote path, keys file selector"
+msgstr "Επιλογέας τοπικής/απομακρυσμένης λίστας αναπαραγωγής"
+
+msgctxt "#30004"
+msgid "Local"
+msgstr "Τοπική"
+
+msgctxt "#30005"
+msgid "Remote"
+msgstr "Απομακρυσμένη"
+
+msgctxt "#30006"
+msgid "Local Path (include Local Network)"
+msgstr "Τοπική Διαδρομή (περιλαμβάνεται το Τοπικό Δίκτυο"
+
+msgctxt "#30007"
+msgid "Remote Path (Internet address)"
+msgstr "Απομακρυσμένη Διαδρομή (διαδίκτυο)"
+
+msgctxt "#30008"
+msgid "Path or Address haven't been set"
+msgstr "Δεν έχει ρυθμιστεί διαδρομή ή διεύθυνση"
+
+msgctxt "#30009"
+msgid "Open settings window?"
+msgstr "Εμφάνιση παραθύρου ρυθμίσεων;"
+
+msgctxt "#30010"
+msgid "Something's wrong!"
+msgstr "Κάτι πήγε λάθος"
+
+msgctxt "#30011"
+msgid "Incorrect settings or files detected"
+msgstr "Εντοπίστηκαν λανθασμένες ρυθμίσεις ή μορφή αρχείου"
+
+msgctxt "#30012"
+msgid "Youtube Setup addon is now ready to store your keys"
+msgstr "Το πρόσθετο Youtube Setup είναι έτοιμο να αποθηκεύσει τα κλειδιά"
+
+msgctxt "#30013"
+msgid "Proceed"
+msgstr "Προχώρα"
+
+msgctxt "#30014"
+msgid "Cancel"
+msgstr "Ακύρωση"
+
+msgctxt "#30015"
+msgid "Success!"
+msgstr "Επιτυχία!"
+
+msgctxt "#30016"
+msgid "Open settings window"
+msgstr "Άνοιγμα παραθύρου ρυθμίσεων"
+
+msgctxt "#30017"
+msgid "Current settings will be overwritten!"
+msgstr "Οι τρέχουσες ρυθμίσεις θα διαγραφούν!"
+
+msgctxt "#30018"
+msgid "[COLOR white]Please re-run addon after applying the settings[/COLOR]"
+msgstr "[COLOR white]Παρακαλώ εκτελέστε το πρόσθετο ξανά αφού εφαρμοστούν οι ρυθμίσεις[/COLOR]"
+
+msgctxt "#30019"
+msgid "Open Youtube settings window"
+msgstr "Άνοιγμα παραθύρου ρυθμίσεων του Youtube"
+
+msgctxt "#30020"
+msgid "Execute setup"
+msgstr "Εκτέλεση ρύθμισης"
+
