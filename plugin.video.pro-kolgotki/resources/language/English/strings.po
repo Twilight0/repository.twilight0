@@ -63,7 +63,7 @@ msgid "No bookmarks were found"
 msgstr ""
 
 msgctxt "#30013"
-msgid "3rd party Youtube Channels"
+msgid "Other Youtube Channels"
 msgstr ""
 
 msgctxt "#30014"
@@ -92,4 +92,24 @@ msgstr ""
 
 msgctxt "#30020"
 msgid "Show 18+ warning"
+msgstr ""
+
+msgctxt "#30021"
+msgid "Setup Youtube keys"
+msgstr ""
+
+msgctxt "#30022"
+msgid "This action will overwrite existing Youtube API keys and will log you out if already logged in"
+msgstr ""
+
+msgctxt "#30023"
+msgid "Proceed?"
+msgstr ""
+
+msgctxt "#30024"
+msgid "Cancelled"
+msgstr ""
+
+msgctxt "#30025"
+msgid "This action will log you out if already logged in"
 msgstr ""

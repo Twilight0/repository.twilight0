@@ -61,17 +61,17 @@ def third_party():
         }
         ,
         {
-            'title': 'Jenny Smith',
+            'title': 'Jeny Smith',
             'icon': 'https://yt3.ggpht.com/-hXeRc4Fw_xw/AAAAAAAAAAI/AAAAAAAAAAA/tPbQ_JwDx5w/s256-c-k-no-mo-rj-c0xffffff/photo.jpg',
             'url': 'plugin://plugin.video.youtube/channel/UCHYnTMm5xqESRSyiJhkfvng/',
             'fanart': 'https://yt3.ggpht.com/f8xlLtJzh80mmhkBN4Ebt1X9ATH1jBBwJe9hI2LHdAD2afKdI5cCfPD6KFGR17NriKhBIORN=w1280'
         }
         ,
         {
-            'title': 'Maria Corazon',
-            'icon': 'https://yt3.ggpht.com/-qGZ5TI9nePw/AAAAAAAAAAI/AAAAAAAAAAA/wBI3QIwC0TU/s256-c-k-no-mo-rj-c0xffffff/photo.jpg',
-            'url': 'plugin://plugin.video.youtube/channel/UCxtdrcrbK86XEX8gK-WiTFg/',
-            'fanart': 'https://yt3.ggpht.com/S6FscqGLRYCnjsCswI47Ig-rOija_zdwNhcxuuf3OVZ3jvwG9V8Z4A8ERvZHou5zV0snfWy5KA=w1280'
+            'title': 'Japanese Pantyhose Girl M',
+            'icon': 'https://yt3.ggpht.com/-HnhnxkNcKLo/AAAAAAAAAAI/AAAAAAAAAAA/4gV_E-3xC5g/s256-c-k-no-mo-rj-c0xffffff/photo.jpg',
+            'url': 'plugin://plugin.video.youtube/channel/UC8jWEO1g4hSi-ijULN5RSnQ/',
+            'fanart': 'https://yt3.ggpht.com/kNm5-KmNLz36YxX9k3EEPDNiTfz7Jd4yBhUWi3iI3muwWbdQcEm9mVDq-RIAtIlLNsYVmLOwgxQ=w1280'
         }
         ,
         {
@@ -101,9 +101,17 @@ def third_party():
             'url': 'plugin://plugin.video.youtube/channel/UCFprvvanH9ThTv9zO-pjOpA/',
             'fanart': 'https://yt3.ggpht.com/b-1oT1vhkzDuCYJVvY1OS6fGgXPX9FA9PwbHCS8UNb3_OMzha6E-4o1ezA0V0nJ-AUzf_RAF4w=w1280'
         }
+        ,
+        {
+            'title': 'K Pare',
+            'icon': 'https://yt3.ggpht.com/-E7rOo5LjZKE/AAAAAAAAAAI/AAAAAAAAAAA/Tns4oPbqdFw/s256-c-k-no-mo-rj-c0xffffff/photo.jpg',
+            'url': 'plugin://plugin.video.youtube/channel/UCquyyh8B4kst3pRqr-6xDbg/',
+            'fanart': control.addonInfo('fanart')
+        }
     ]
 
     for channel in channels:
+
         li = control.item(label=channel['title'], iconImage=channel['icon'])
         li.setArt({'fanart': channel['fanart']})
         li.addContextMenuItems([(control.lang(30006), 'RunPlugin({0}?action=addBookmark)'.format(sysaddon))])
@@ -117,12 +125,12 @@ def third_party():
 
 def playlists():
 
-    _list = cache.get(_playlists, 24)
+    list_ = cache.get(_playlists, 24)
 
-    for p in _list:
+    for p in list_:
         p.update({'action': 'youtube'})
 
-    for p in _list:
+    for p in list_:
         bookmark = dict((k, v) for k, v in p.iteritems() if not k == 'next')
         bookmark['bookmark'] = p['url']
         bm_cm = {'title': 30006, 'query': {'action': 'addBookmark', 'url': json.dumps(bookmark)}}
@@ -130,20 +138,20 @@ def playlists():
         cache_clear = {'title': 30005, 'query': {'action': 'cache_clear'}}
         p.update({'cm': [refresh, cache_clear, bm_cm]})
 
-    directory.add(_list)
+    directory.add(list_)
 
 
 def _youtube(plink):
 
-    _list = cache.get(youtube.youtube(key=key).playlist, 12, plink)
+    list_ = cache.get(youtube.youtube(key=key).playlist, 12, plink)
 
-    if _list is None:
+    if list_ is None:
         return
 
-    for i in _list:
+    for i in list_:
         i.update({'action': 'play', 'isFolder': 'False'})
 
-    for item in _list:
+    for item in list_:
         bookmark = dict((k, v) for k, v in item.iteritems() if not k == 'next')
         bookmark['bookmark'] = item['url']
         bm_cm = {'title': 30006, 'query': {'action': 'addBookmark', 'url': json.dumps(bookmark)}}
@@ -151,7 +159,7 @@ def _youtube(plink):
         cache_clear = {'title': 30005, 'query': {'action': 'cache_clear'}}
         item.update({'cm': [refresh, cache_clear, bm_cm]})
 
-    directory.add(_list)
+    directory.add(list_)
 
 
 def videos():
@@ -227,14 +235,51 @@ def main():
     ]
 
     if control.setting('third_party') == 'false':
-        del menu[-2]
+        list_ = [d for d in menu if d.get('title') != 30013]
+    else:
+        list_ = menu
 
     cc = {'title': 30005, 'query': {'action': 'cache_clear'}}
 
-    for item in menu:
+    for item in list_:
         item.update({'cm': [cc]})
 
-    directory.add(menu)
+    directory.add(list_)
+
+
+def yt_setup():
+
+    # Please do not copy these keys, instead create your own with this tutorial:
+    # http://forum.kodi.tv/showthread.php?tid=267160&pid=2299960#pid2299960
+
+    api_keys = {
+        'enablement': 'true',
+        'id': '498788153161-pe356urhr0uu2m98od6f72k0vvcdsij0.apps.googleusercontent.com',
+        'api_key': 'AIzaSyA8k1OyLGf03HBNl0byD511jr9cFWo2GR4',
+        'secret': 'e6RBIFCVh1Fm-IX87PVJjgUu'
+    }
+
+    def seq():
+        control.addon('plugin.video.youtube').setSetting('youtube.api.enable', api_keys['enablement'])
+        control.addon('plugin.video.youtube').setSetting('youtube.api.id', api_keys['id'])
+        control.addon('plugin.video.youtube').setSetting('youtube.api.key', api_keys['api_key'])
+        control.addon('plugin.video.youtube').setSetting('youtube.api.secret', api_keys['secret'])
+        control.dialog.notification(heading=control.addonInfo('name'), message=control.lang(30024), time=3000, sound=False)
+
+    def cancelled():
+        return control.dialog.notification(heading=control.addonInfo('name'), message=control.lang(30010), time=3000, sound=False)
+
+    if control.addon('plugin.video.youtube').getSetting('youtube.api.enable') == 'true':
+        if control.dialog.yesno(heading=control.addonInfo('name'), line1=control.lang(30022), line2=control.lang(30023)):
+            seq()
+        else:
+            cancelled()
+    else:
+        if control.dialog.yesno(heading=control.addonInfo('name'), line1=control.lang(30025), line2=control.lang(30023)):
+            seq()
+        else:
+            cancelled()
+
 
 ########################################################################################################################
 
@@ -293,6 +338,10 @@ elif action == 'deleteBookmark':
 elif action == 'settings':
 
     control.openSettings()
+
+elif action == 'yt_setup':
+
+    yt_setup()
 
 elif action == 'cache_clear':
 

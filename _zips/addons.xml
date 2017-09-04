@@ -720,7 +720,7 @@ Initial Version
 	</extension>
 </addon>
 
-<addon id="plugin.video.pro-kolgotki" name="Pro Kolgotki" version="2.0.2" provider-name="Twilight0">
+<addon id="plugin.video.pro-kolgotki" name="Pro Kolgotki" version="2.0.3" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.20.0"/>
         <import addon="plugin.video.youtube" version="5.4.0"/>
@@ -735,10 +735,18 @@ Initial Version
         <summary lang="el">Πρόσθετο Pro Kolgotki</summary>
         <description lang="el">Το πρόσθετο αυτό ενδέχεται να περιέχει βίντεο που είναι κατάλληλα μόνο για ενήλικες. Προχωρήστε μόνο αν είστε άνω των 18 ετών</description>
         <license>GNU GPL, version 2 or later</license>
+        <size>133900</size>
         <website>http://pro-kolgotki.com/</website>
         <source>https://github.com/Twilight0/plugin.video.pro-kolgotki</source>
     </extension>
     <news>
+04-09-2017 - [B]2.0.3[/B]
+- Removed Maria Corazon's channel, she removed all of her content
+- Added two more channels in 3rd party section
+- Fixed a translation string
+- Added youtube keys setup function
+- Reordered settings items
+
 03-09-2017 - [B]2.0.2[/B]
 - Simplified adult warning behaviour
 

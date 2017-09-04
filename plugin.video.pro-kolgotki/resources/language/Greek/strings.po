@@ -63,8 +63,8 @@ msgid "No bookmarks were found"
 msgstr "Δεν βρέθηκαν σελιδοδείκτες"
 
 msgctxt "#30013"
-msgid "3rd party H&G Youtube Channels"
-msgstr "Άλλα κανάλια Youtube χρηστών"
+msgid "Other Youtube Channels"
+msgstr "Άλλα κανάλια Youtube"
 
 msgctxt "#30014"
 msgid "Misc"
@@ -93,3 +93,23 @@ msgstr "Όχι, παρακαλώ ακύρωσε την είσοδο"
 msgctxt "#30020"
 msgid "Show 18+ warning"
 msgstr "Δείξε την προειδοποίηση ανηλίκων"
+
+msgctxt "#30021"
+msgid "Setup Youtube keys"
+msgstr "Ρύθμιση κλειδιών Youtube"
+
+msgctxt "#30022"
+msgid "This action will overwrite existing Youtube API keys and will log you out if already logged in"
+msgstr "Αυτή η ενέργεια θα διορθώσει τα υπάρχοντα κλειδιά και θα σας βγάλει από συνδεδεμένη κατάσταση εάν και εφόσον"
+
+msgctxt "#30023"
+msgid "Proceed?"
+msgstr "Επιβεβαίωση;"
+
+msgctxt "#30024"
+msgid "Cancelled"
+msgstr "Ακύρωση"
+
+msgctxt "#30025"
+msgid "This action will log you out if already logged in"
+msgstr "Αυτή η ενέργεια θα σας βγάλει από συνδεδεμένη κατάσταση εάν και εφόσον"
