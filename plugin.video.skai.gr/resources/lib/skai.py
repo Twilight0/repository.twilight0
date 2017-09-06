@@ -16,7 +16,6 @@
 '''
 
 import urlparse, urllib, json, datetime, re
-# noinspection PyUnresolvedReferences
 from tulip import bookmarks, directory, client, cache, workers
 
 
@@ -86,12 +85,13 @@ class indexer:
         ]
 
         directory.add(self.list, content='videos')
-        return self.list
 
     def bookmarks(self):
+
         self.list = bookmarks.get()
 
-        if self.list == None: return
+        if self.list is None:
+            return
 
         for i in self.list:
             bookmark = dict((k, v) for k, v in i.iteritems() if not k == 'next')
@@ -101,12 +101,13 @@ class indexer:
         self.list = sorted(self.list, key=lambda k: k['title'].lower())
 
         directory.add(self.list, content='videos')
-        return self.list
 
     def archive(self):
+
         self.list = cache.get(self.item_list_3, 24, self.archive_link)
 
-        if self.list == None: return
+        if self.list is None:
+            return
 
         for i in self.list: i.update({'action': 'reverseEpisodes'})
 
@@ -116,12 +117,13 @@ class indexer:
             i.update({'cm': [{'title': 32501, 'query': {'action': 'addBookmark', 'url': json.dumps(bookmark)}}]})
 
         directory.add(self.list, content='videos')
-        return self.list
 
     def tvshows(self):
+
         self.list = cache.get(self.item_list_1, 24, self.tvshows_link)
 
-        if self.list == None: return
+        if self.list is None:
+            return
 
         for i in self.list: i.update({'action': 'episodes'})
 
@@ -133,12 +135,13 @@ class indexer:
         self.list = sorted(self.list, key=lambda k: k['title'].lower())
 
         directory.add(self.list, content='videos')
-        return self.list
 
     def podcasts(self):
+
         self.list = cache.get(self.item_list_1, 24, self.podcasts_link)
 
-        if self.list == None: return
+        if self.list is None:
+            return
 
         for i in self.list: i.update({'action': 'episodes'})
 
@@ -150,20 +153,20 @@ class indexer:
         self.list = sorted(self.list, key=lambda k: k['title'].lower())
 
         directory.add(self.list, content='videos')
-        return self.list
 
     def episodes(self, url, reverse=False):
+
         self.list = cache.get(self.item_list_2, 1, url)
 
-        if self.list == None: return
+        if self.list is None:
+            return
 
         for i in self.list: i.update({'action': 'play', 'isFolder': 'False'})
 
-        if reverse == True:
+        if reverse is True:
             self.list = self.list[::-1]
 
         directory.add(self.list, content='videos')
-        return self.list
 
     def popular(self):
         self.episodes(self.popular_link)
@@ -181,6 +184,7 @@ class indexer:
         directory.resolve(self.resolve_live(), meta={'title': 'SKAI'})
 
     def item_list_1(self, url):
+
         try:
             u = []
             d = datetime.datetime.utcnow()
@@ -220,8 +224,10 @@ class indexer:
                 image = client.replaceHTMLCodes(image)
                 image = image.encode('utf-8')
 
-                if image in str(self.list): raise Exception()
-                if not 'mmid=' in url: raise Exception()
+                if image in str(self.list):
+                    raise Exception()
+                if not 'mmid=' in url:
+                    raise Exception()
 
                 self.list.append({'title': title, 'url': url, 'image': image})
             except:
@@ -232,7 +238,7 @@ class indexer:
     def item_list_2(self, url):
         try:
             try:
-                mid = urlparse.parse_qs(urlparse.urlparse(url).query)['mmid'][0]
+                # mid = urlparse.parse_qs(urlparse.urlparse(url).query)['mmid'][0]
                 url = client.request(url)
                 url = client.parseDOM(url, 'li', ret='id', attrs={'class': 'active_sub'})[0]
                 url = self.episodes_link % url
@@ -308,20 +314,29 @@ class indexer:
         return self.list
 
     def resolve(self, url):
+
         try:
+
             try:
-                if not url.startswith('rtmp'): raise Exception()
+                if not url.startswith('rtmp'):
+                    raise Exception()
 
                 p = re.findall('/([a-zA-Z0-9]{3,}\:)', url)
-                if len(p) > 0: url = url.replace(p[0], ' playpath=%s' % p[0])
+
+                if len(p) > 0:
+                    url = url.replace(p[0], ' playpath=%s' % p[0])
+
                 url += ' timeout=10'
 
                 return url
-            except:
-                pass
 
-            return url
+            except Exception:
+
+                link = 'plugin://plugin.video.youtube/play/?video_id={0}'.format(url)
+                return link
+
         except:
+
             return
 
     def resolve_live(self):
@@ -349,6 +364,7 @@ class indexer:
             return
 
     def thread(self, url, i):
+
         try:
             result = client.request(url)
             self.data[i] = result
