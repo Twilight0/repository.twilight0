@@ -16,6 +16,7 @@
 '''
 
 import control, client
+import re
 
 
 def local(path):
@@ -43,7 +44,14 @@ def local(path):
 
 def remote(address):
 
-    text = client.request(address)
+    if 'pastebin' in address and not 'raw' in address:
+        url = re.sub(r'(^.+?\.com/)(\w+)', r'\1raw/\2', address)
+    elif 'debian' in address and not 'plain' in address:
+        url = re.sub(r'(^.+?\.net/)(\w+)', r'\1plain/\2',address)
+    else:
+        url = address
+
+    text = client.request(url)
 
     if not text:
         return
@@ -110,7 +118,10 @@ def seq():
         ):
 
             setup(result)
-            wizard()
+            if control.setting('wizard') == 'true':
+                wizard()
+            else:
+                pass
 
         else:
 

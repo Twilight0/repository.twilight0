@@ -2,6 +2,7 @@
 <settings>
     <category label="30002">
         <setting type="lsep" label="30018"/>
+        <setting id="wizard" label="30021" type="bool" default="true"/>
         <setting id="local_or_remote" type="enum" label="30003" lvalues="30004|30005" default="0"/>
         <setting id="local" label="30006" type="file" default="" visible="eq(-1,0)"/>
         <setting id="remote" label="30007" type="text" default="" visible="eq(-2,1)"/>

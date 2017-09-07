@@ -7,6 +7,9 @@
 msgid ""
 msgstr ""
 
+msgctxt "#30402"
+msgid "Success"
+msgstr "Επιτυχία"
 
 msgctxt "#32001"
 msgid "Live"
@@ -39,6 +42,10 @@ msgstr "Αθλητικά"
 msgctxt "#32008"
 msgid "Bookmarks"
 msgstr "Σελιδοδείκτες"
+
+msgctxt "#32009"
+msgid "Clear function cache"
+msgstr "Καθαρισμός προσωρινής μνήμης"
 
 msgctxt "#32500"
 msgid "Next..."

@@ -18,14 +18,19 @@
 
 import urlparse,sys
 
+from xbmc import getInfoLabel
 from resources.lib import skai
 
 
 params = dict(urlparse.parse_qsl(sys.argv[2].replace('?','')))
 
 action = params.get('action')
-
 url = params.get('url')
+
+fp = getInfoLabel('Container.FolderPath')
+
+if 'audio' in fp and action is None:
+    action = 'podcasts'
 
 
 if action is None:
@@ -72,4 +77,6 @@ elif action == 'live':
 elif action == 'play':
     skai.indexer().play(url)
 
-
+elif action == 'cache_clear':
+    from tulip import cache
+    cache.clear(withyes=False)

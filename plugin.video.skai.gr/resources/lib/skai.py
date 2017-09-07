@@ -84,6 +84,10 @@ class indexer:
             }
         ]
 
+        for item in self.list:
+            cache_clear = {'title': 32009, 'query': {'action': 'cache_clear'}}
+            item.update({'cm': [cache_clear]})
+
         directory.add(self.list, content='videos')
 
     def bookmarks(self):
@@ -238,7 +242,7 @@ class indexer:
     def item_list_2(self, url):
         try:
             try:
-                # mid = urlparse.parse_qs(urlparse.urlparse(url).query)['mmid'][0]
+                mid = urlparse.parse_qs(urlparse.urlparse(url).query)['mmid'][0]
                 url = client.request(url)
                 url = client.parseDOM(url, 'li', ret='id', attrs={'class': 'active_sub'})[0]
                 url = self.episodes_link % url
@@ -283,6 +287,8 @@ class indexer:
                 self.list.append({'title': title, 'url': url, 'image': image})
             except:
                 pass
+
+        print self.list
 
         return self.list
 
@@ -332,8 +338,11 @@ class indexer:
 
             except Exception:
 
-                link = 'plugin://plugin.video.youtube/play/?video_id={0}'.format(url)
-                return link
+                if len(url) == 11:
+                    link = 'plugin://plugin.video.youtube/play/?video_id={0}'.format(url)
+                    return link
+                else:
+                    return url
 
         except:
 

@@ -93,3 +93,7 @@ msgstr ""
 msgctxt "#30020"
 msgid "Execute setup"
 msgstr ""
+
+msgctxt "#30021"
+msgid "Run youtube's setup wizard after successful key application"
+msgstr ""
