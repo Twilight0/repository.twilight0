@@ -16,16 +16,14 @@
 '''
 
 
-import urlparse,sys
+import urlparse, sys
 
 from resources.lib import eradio
-
 
 params = dict(urlparse.parse_qsl(sys.argv[2].replace('?','')))
 
 action = params.get('action')
 url = params.get('url')
-
 
 if action is None:
     eradio.Indexer().root()

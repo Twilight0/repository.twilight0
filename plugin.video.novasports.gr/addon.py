@@ -17,18 +17,14 @@
 
 
 import urlparse, sys
-
 from resources.lib import novasports
 
 params = dict(urlparse.parse_qsl(sys.argv[2].replace('?','')))
 
-
 action = params.get('action')
-
 url = params.get('url')
 
-
-if action == None:
+if action is None:
     novasports.indexer().root()
 
 elif action == 'categories':

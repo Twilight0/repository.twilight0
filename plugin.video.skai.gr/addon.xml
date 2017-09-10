@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.skai.gr" version="1.2.1" name="SKAI Player" provider-name="Twilight0">
+<addon id="plugin.video.skai.gr" version="1.2.2" name="SKAI Player" provider-name="Twilight0">
 	<requires>
 		<import addon="xbmc.python" version="2.24.0" />
 		<import addon="script.module.tulip" version="1.2.5" />
@@ -10,8 +10,9 @@
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en_GB">SKAI Player addon for Kodi</summary>
+		<summary lang="en_GR">Πρόσθετο SKAI Player για το Kodi</summary>
 		<description lang="en_GB">SKAI live and on-demand broadcasts</description>
-		<description lang="el_GR">Ζωνταντές και on demand υπηρεσίες του SKAI</description>
+		<description lang="el_GR">Ζωντανές και on demand υπηρεσίες του SKAI</description>
 		<disclaimer lang="en_GB">This addon offers content available in Greece and is not published nor endorsed by skai.gr</disclaimer>
 		<disclaimer lang="el_GR">Το πρόσθετο αυτό προσφέρει περιεχόμενο διαθέσιμο στην Ελλάδα και δεν έχει δημοσιευθεί ούτε εγκριθεί από το skai.gr</disclaimer>
         <language>en el</language>
@@ -20,6 +21,10 @@
 		<website>http://www.skai.gr/</website>
         <size>638740</size>
 		<news>
+[B]1.2.2[/B]
+- Cosmetics
+- Tweaks in addon.xml
+
 [B]1.2.1[/B]
 - Reverted an argument in items_list_2 method to former state
 - Fixed url returns to separate youtube from direct
@@ -51,7 +56,7 @@
 			<screenshot>resources/screenshots/screenshot-03.jpg</screenshot>
 		</assets>
 		<platform>all</platform>
-		<language>el</language>
+		<language>en el</language>
 		<!--<forum></forum>-->
 		<!--<email></email>-->
 	</extension>

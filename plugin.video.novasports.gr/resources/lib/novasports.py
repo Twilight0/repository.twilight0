@@ -70,6 +70,7 @@ class indexer:
 
 
     def categories(self):
+
         self.list = cache.get(self.item_list_1, 24, self.menus_link)
 
         if self.list == None: return

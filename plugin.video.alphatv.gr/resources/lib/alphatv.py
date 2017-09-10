@@ -21,9 +21,10 @@ from tulip import bookmarks, directory, client, cache, workers
 
 
 class indexer:
+
     def __init__(self):
-        self.list = [];
-        self.data = []
+
+        self.list = []; self.data = []
         self.base_link = 'http://www.alphatv.gr'
         self.tvshows_link = 'http://www.alphatv.gr/shows'
         self.cytvshows_link = 'http://www.alphacyprus.com.cy/shows'
@@ -43,53 +44,53 @@ class indexer:
                 'title': 32001,
                 'action': 'channels',
                 'icon': 'channels.png'
-            },
-
+            }
+            ,
             {
                 'title': 32002,
                 'action': 'tvshows',
                 'url': self.tvshows_link,
                 'icon': 'tvshows.png'
-            },
-
+            }
+            ,
             {
                 'title': 32003,
                 'action': 'tvshows',
                 'url': self.cytvshows_link,
                 'icon': 'tvshows.png'
-            },
-
+            }
+            ,
             {
                 'title': 32004,
                 'action': 'archive',
                 'url': self.tvshows_link,
                 'icon': 'archive.png'
-            },
-
+            }
+            ,
             {
                 'title': 32005,
                 'action': 'popularShows',
                 'icon': 'popular.png'
-            },
-
+            }
+            ,
             {
                 'title': 32006,
                 'action': 'popularEpisodes',
                 'icon': 'popular.png'
-            },
-
+            }
+            ,
             {
                 'title': 32007,
                 'action': 'news',
                 'icon': 'news.png'
-            },
-
+            }
+            ,
             {
                 'title': 32008,
                 'action': 'cynews',
                 'icon': 'news.png'
-            },
-
+            }
+            ,
             {
                 'title': 32009,
                 'action': 'bookmarks',
@@ -98,7 +99,6 @@ class indexer:
         ]
 
         directory.add(self.list, content='videos')
-        return self.list
 
     def channels(self):
 
@@ -107,8 +107,8 @@ class indexer:
                 'title': 32021,
                 'action': 'live',
                 'isFolder': 'False'
-            },
-
+            }
+            ,
             {
                 'title': 32022,
                 'action': 'live',
@@ -118,12 +118,13 @@ class indexer:
         ]
 
         directory.add(self.list, content='videos')
-        return self.list
 
     def bookmarks(self):
+
         self.list = bookmarks.get()
 
-        if self.list == None: return
+        if self.list is None:
+            return
 
         for i in self.list:
             bookmark = dict((k, v) for k, v in i.iteritems() if not k == 'next')
@@ -133,13 +134,13 @@ class indexer:
         self.list = sorted(self.list, key=lambda k: k['title'].lower())
 
         directory.add(self.list, content='videos')
-        return self.list
 
     def archive(self, url):
 
         self.list = cache.get(self.item_list, 24, url)
 
-        if self.list == None: return
+        if self.list is None:
+            return
 
         self.list = [i for i in self.list if '/agapimena/' in i['url']]
 
@@ -151,12 +152,13 @@ class indexer:
             i.update({'cm': [{'title': 32501, 'query': {'action': 'addBookmark', 'url': json.dumps(bookmark)}}]})
 
         directory.add(self.list, content='videos')
-        return self.list
 
     def tvshows(self, url):
+
         self.list = cache.get(self.item_list, 24, url)
 
-        if self.list == None: return
+        if self.list is None:
+            return
 
         self.list = [i for i in self.list if i['filter'] == True]
 
@@ -170,7 +172,6 @@ class indexer:
         self.list = sorted(self.list, key=lambda k: k['title'].lower())
 
         directory.add(self.list, content='videos')
-        return self.list
 
     def episodes(self, url, fulltitle=False, reverse=False):
 
@@ -188,7 +189,6 @@ class indexer:
             self.list = self.list[::-1]
 
         directory.add(self.list, content='videos')
-        return self.list
 
     def popularShows(self):
         self.episodes(self.shows_popular, fulltitle=True)
@@ -209,6 +209,7 @@ class indexer:
         directory.resolve(self.resolve_live(url), meta={'title': 'ALPHA'})
 
     def item_list(self, url):
+
         try:
             base_link = re.findall('(http(?:s|)://.+?)/', url)
 
@@ -403,6 +404,7 @@ class indexer:
                 pass
 
     def thread(self, i, url, post):
+
         try:
             result = client.request(url, post=post)
             self.data[i] = result

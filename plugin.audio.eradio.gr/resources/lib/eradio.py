@@ -16,7 +16,6 @@
 '''
 
 import json
-# noinspection PyUnresolvedReferences
 from tulip import bookmarks, directory, client, cache, control
 
 

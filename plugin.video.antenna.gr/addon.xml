@@ -1,22 +1,28 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.antenna.gr" version="1.1.2" name="ANT1 Player" provider-name="Twilight0">
+<addon id="plugin.video.antenna.gr" version="1.1.3" name="ANT1 Player" provider-name="Twilight0">
 	<requires>
 		<import addon="xbmc.python" version="2.24.0" />
-		<import addon="script.module.tulip" version="1.0.6" />
+		<import addon="script.module.tulip" version="1.2.5" />
 	</requires>
 	<extension point="xbmc.python.pluginsource" library="addon.py">
 		<provides>video</provides>
 	</extension>
 	<extension point="xbmc.addon.metadata">
-		<summary lang="en">ANT1 Player addon for Kodi</summary>
-		<description lang="en">ANT1 live and on-demand broadcasts</description>
-		<description lang="el">Ζωνταντές και on demand υπηρεσίες του ANT1</description>
-		<disclaimer lang="en">This addon offers content available in Greece and is not published nor endorsed by antenna.gr</disclaimer>
-		<disclaimer lang="el">Το πρόσθετο αυτό προσφέρει περιεχόμενο διαθέσιμο στην Ελλάδα και δεν έχει δημοσιευθεί ούτε εγκριθεί από το antenna.gr</disclaimer>
+		<summary lang="en_GB">ANT1 Player addon for Kodi</summary>
+		<description lang="en_GB">ANT1 live and on-demand broadcasts</description>
+		<description lang="el_GR">Ζωντανές και on demand υπηρεσίες του ANT1</description>
+		<disclaimer lang="en_GB">This addon offers content available in Greece and is not published nor endorsed by antenna.gr</disclaimer>
+		<disclaimer lang="el_GR">Το πρόσθετο αυτό προσφέρει περιεχόμενο διαθέσιμο στην Ελλάδα και δεν έχει δημοσιευθεί ούτε εγκριθεί από το antenna.gr</disclaimer>
+        <language>en el</language>
 		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
-		<!--<source></source>-->
+		<source>https://github.com/Twilight0/plugin.video.antenna.gr</source>
 		<website>http://www.antenna.gr/</website>
+        <size>692701</size>
 		<news>
+[B]1.1.3[/B]
+- Cosmetics
+- Tweaks in addon.xml
+
 [B]1.1.2[/B]
 - Cosmetics
 
@@ -45,7 +51,7 @@
 			<screenshot>resources/screenshots/screenshot-03.jpg</screenshot>
 		</assets>
 		<platform>all</platform>
-		<language>el</language>
+		<language>en el</language>
 		<!--<forum></forum>-->
 		<!--<email></email>-->
 	</extension>

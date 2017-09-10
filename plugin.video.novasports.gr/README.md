@@ -1,4 +1,4 @@
-======================
+
 Novasports.gr addon for Kodi
 ======================
 
@@ -17,7 +17,7 @@ Artwork
 ---------------------
 Artwork sourced from public domains:
 
-https://el.wikipedia.org/wiki/Novasports#/media/File:%CE%9Dova_Sports.png
+[https://el.wikipedia.org/wiki/Novasports#/media/File:%CE%9Dova_Sports.png]()https://el.wikipedia.org/wiki/Novasports#/media/File:%CE%9Dova_Sports.png)
 
 
 License

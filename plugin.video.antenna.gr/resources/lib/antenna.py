@@ -17,7 +17,6 @@
 
 
 import json, re
-# noinspection PyUnresolvedReferences
 from tulip import bookmarks, directory, client, cache, workers
 
 
@@ -35,7 +34,8 @@ class indexer:
         self.getlive_link = 'http://mservices.antenna.gr/services/mobile/getLiveStream.ashx?'
         self.live_link = 'http://antglantennatv-lh.akamaihd.net/i/live_1@421307/master.m3u8'
 
-    def root(self):    
+    def root(self):
+
         self.list = [
         {
         'title': 32001,
@@ -88,10 +88,9 @@ class indexer:
         ]
 
         directory.add(self.list, content='videos')
-        return self.list
-
 
     def bookmarks(self):
+
         self.list = bookmarks.get()
 
         if self.list == None: return
@@ -105,8 +104,6 @@ class indexer:
         self.list = [i for i in self.list if 'url' in i and self.episodes_link in i['url']]
 
         directory.add(self.list, content='videos')
-        return self.list
-
 
     def tvshows(self):
         self.list = cache.get(self.item_list_1, 24, self.tvshows_link)
@@ -123,8 +120,6 @@ class indexer:
         self.list = sorted(self.list, key=lambda k: k['title'].lower())
 
         directory.add(self.list, content='videos')
-        return self.list
-
 
     def archive(self):
         self.list = cache.get(self.item_list_1, 24, self.archive_link)
@@ -141,8 +136,6 @@ class indexer:
         self.list = sorted(self.list, key=lambda k: k['title'].lower())
 
         directory.add(self.list, content='videos')
-        return self.list
-
 
     def episodes(self, url, reverse=False):
         self.list = cache.get(self.item_list_1, 1, url)
@@ -155,8 +148,6 @@ class indexer:
             self.list = self.list[::-1]
 
         directory.add(self.list, content='videos')
-        return self.list
-
 
     def popular(self):
         self.episodes(self.popular_link)
@@ -181,8 +172,8 @@ class indexer:
     def live(self):
         directory.resolve(self.resolve_live(), meta={'title': 'ANT1'})
 
-
     def item_list_1(self, url):
+
         try:
             page = url + '&page=1'
 
@@ -252,11 +243,15 @@ class indexer:
         if url == None: url = ''
         url = re.findall('(?:\"|\')(http(?:s|)://.+?)(?:\"|\')', url)
         url = [i for i in url if '.m3u8' in i]
-        try: return url[-1]
-        except: return self.live_link
+
+        try:
+            return url[-1]
+        except:
+            return self.live_link
 
 
     def thread(self, url, i):
+
         try:
             result = client.request(url, mobile=True)
             self.data[i] = result
