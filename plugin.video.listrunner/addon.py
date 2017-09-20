@@ -42,9 +42,9 @@ def constructor():
 
     if control.setting('local_or_remote') == '0':
         try:
-            with open (control.setting('local')) as _file_:
-                text = _file_.read()
-                _file_.close()
+            with open (control.setting('local')) as f:
+                text = f.read()
+                f.close()
         except IOError:
             return 'null'
     elif control.setting('local_or_remote') == '1':
@@ -60,7 +60,7 @@ def constructor():
         return 'Youtube'
 
     result = text.replace('\t', ' ')
-    items = re.compile('EXTINF:(-? ?\d*)(.*?)$\n(.*?)$', re.U + re.S + re.M).findall(result)
+    items = re.compile('EXTINF:(-? ?\d*)(.*?)$\r?\n?(.*?)$', re.U + re.S + re.M).findall(result)
 
     for duration, item, link in items:
 

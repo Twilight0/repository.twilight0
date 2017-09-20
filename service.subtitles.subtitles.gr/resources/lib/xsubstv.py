@@ -56,7 +56,7 @@ class xsubstv:
             items = [i[1] for i in items if len(i[0]) > 0 and i[0][0] == episode][0]
             items = re.findall('(<sr .+?</sr>)', items)
         except:
-            return
+            return self.list
 
         for item in items:
             try:

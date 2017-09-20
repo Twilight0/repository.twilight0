@@ -15,10 +15,7 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 '''
 
-# noinspection PyUnresolvedReferences
-import xbmc
 import urllib, urllib2, urlparse, zipfile, StringIO, re, os
-# noinspection PyUnresolvedReferences
 from tulip import control, client
 
 
@@ -30,7 +27,7 @@ class subtitlesgr:
     def get(self, query):
 
         try:
-            filter = ['freeprojectx', 'subs4series', 'Εργαστήρι Υποτίτλων'.decode('utf-8')]
+            filtered = ['freeprojectx', 'subs4series', 'Εργαστήρι Υποτίτλων'.decode('utf-8')]
 
             query = ' '.join(urllib.unquote_plus(re.sub('%\w\w', ' ', urllib.quote_plus(query))).split())
 
@@ -54,7 +51,7 @@ class subtitlesgr:
                 except:
                     uploader = 'other'
 
-                if uploader in filter:
+                if uploader in filtered:
                     raise Exception()
 
                 if uploader == '':
@@ -91,15 +88,15 @@ class subtitlesgr:
         except:
             rating = 0
 
-        if (rating < 100):
+        if rating < 100:
             rating = 1
-        elif (rating >= 100 and rating < 200):
+        elif rating >= 100 and rating < 200:
             rating = 2
-        elif (rating >= 200 and rating < 300):
+        elif rating >= 200 and rating < 300:
             rating = 3
-        elif (rating >= 300 and rating < 400):
+        elif rating >= 300 and rating < 400:
             rating = 4
-        elif (rating >= 400):
+        elif rating >= 400:
             rating = 5
 
         return rating
@@ -112,14 +109,15 @@ class subtitlesgr:
             url = client.request(url, output='geturl')
 
             data = urllib2.urlopen(url, timeout=10).read()
-            zip = zipfile.ZipFile(StringIO.StringIO(data))
-            files = zip.namelist()
+            zip_file = zipfile.ZipFile(StringIO.StringIO(data))
+            files = zip_file.namelist()
             files = [i for i in files if i.startswith('subs/')]
             srt = [i for i in files if any(i.endswith(x) for x in ['.srt', '.sub'])]
             rar = [i for i in files if any(i.endswith(x) for x in ['.rar', '.zip'])]
 
             if len(srt) > 0:
-                result = zip.open(srt[0]).read()
+
+                result = zip_file.open(srt[0]).read()
 
                 subtitle = os.path.basename(srt[0])
 
@@ -130,9 +128,9 @@ class subtitlesgr:
 
                 return subtitle
 
-
             elif len(rar) > 0:
-                result = zip.open(rar[0]).read()
+
+                result = zip_file.open(rar[0]).read()
 
                 f = os.path.splitext(urlparse.urlparse(rar[0]).path)[1][1:]
                 f = os.path.join(path, 'file.%s' % f)
@@ -142,17 +140,27 @@ class subtitlesgr:
 
                 dirs, files = control.listDir(path)
 
-                print dirs, files
-
                 if len(files) == 0: return
 
-                control.execute('Extract("%s","%s")' % (f, path))
+                if f.lower().endswith('.rar'):
+
+                    uri = "rar://[%s]/%s.srt" % (f, url.rpartition('/')[2][:-4])
+                    content = control.openFile(uri).read()
+                    subtitle = control.transPath('special://temp/') + url.rpartition('/')[2][:-4] + '.srt'
+                    with open(subtitle, 'wb') as subFile:
+                        subFile.write(content)
+
+                    return subtitle
+
+                else:
+                    control.execute('Extract("%s","%s")' % (f, path))
 
                 for i in range(0, 10):
+
                     try:
                         dirs, files = control.listDir(path)
                         if len(files) > 1: break
-                        if xbmc.abortRequested is True:
+                        if control.aborted is True:
                             break
                         control.sleep(1000)
                     except:

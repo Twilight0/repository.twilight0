@@ -15,7 +15,6 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 '''
 
-# noinspection PyUnresolvedReferences
 import xbmc
 import urllib, re, os
 

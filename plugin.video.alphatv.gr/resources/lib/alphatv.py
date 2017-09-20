@@ -16,7 +16,6 @@
 '''
 
 import urlparse, json, re
-# noinspection PyUnresolvedReferences
 from tulip import bookmarks, directory, client, cache, workers
 
 
@@ -398,7 +397,7 @@ class indexer:
             try:
                 url = client.request(link)
                 url = re.findall('(?:\"|\')(http(?:s|)://.+?\.m3u8(?:.*?|))(?:\"|\')', url)[-1]
-                url = client.request(url, output='geturl')
+                url = client.request(url, output='geturl') + client.spoofer()
                 return url
             except:
                 pass

@@ -15,14 +15,12 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 '''
 
-# noinspection PyUnresolvedReferences
-import xbmc
 import urllib, urlparse, re, os
-# noinspection PyUnresolvedReferences
 from tulip import cache, cleantitle, client, control
 
 
 class subztvclub:
+
     def __init__(self):
         self.list = []
 
@@ -50,7 +48,7 @@ class subztvclub:
                 for i in url:
                     c = cache.get(self.cache, 2200, i)
 
-                    if not c == None:
+                    if c is not None:
                         if cleantitle.get(c[0]) == cleantitle.get(title) and c[1] == year:
                             try:
                                 item = self.r
@@ -81,9 +79,9 @@ class subztvclub:
                 for i in url:
                     c = cache.get(self.cache, 2200, i)
 
-                    if not c == None:
+                    if c is not None:
                         if cleantitle.get(c[0]) == cleantitle.get(title):
-                            item = i;
+                            item = i
                             break
 
                 item = '%s/seasons/%s/episodes/%s' % (item, season, episode)
@@ -115,6 +113,7 @@ class subztvclub:
         return self.list
 
     def cache(self, i):
+
         try:
             self.r = client.request(i)
             self.r = re.sub(r'[^\x00-\x7F]+', ' ', self.r)
@@ -125,7 +124,9 @@ class subztvclub:
             pass
 
     def download(self, path, url):
+
         try:
+
             result = client.request(url)
 
             f = os.path.splitext(urlparse.urlparse(url).path)[1][1:]
@@ -136,15 +137,30 @@ class subztvclub:
 
             dirs, files = control.listDir(path)
 
-            if len(files) == 0: return
+            if len(files) == 0:
+                return
 
-            control.execute('Extract("%s","%s")' % (f, path))
+            if f.lower().endswith(('.rar')):
+
+                uri = "rar://[%s]/%s.srt" % (f, url.rpartition('/')[2][:-4])
+                content = control.openFile(uri).read()
+                subtitle = control.transPath('special://temp/') + url.rpartition('/')[2][:-4] + '.srt'
+                with open(subtitle, 'wb') as subFile:
+                    subFile.write(content)
+
+                return subtitle
+
+            else:
+                control.execute('Extract("%s","%s")' % (f, path))
 
             for i in range(0, 10):
+
                 try:
                     dirs, files = control.listDir(path)
-                    if len(files) > 1: break
-                    if xbmc.abortRequested == True: break
+                    if len(files) > 1:
+                        break
+                    if control.aborted is True:
+                        break
                     control.sleep(1000)
                 except:
                     pass
@@ -156,5 +172,7 @@ class subztvclub:
             subtitle = os.path.join(path, subtitle.decode('utf-8'))
 
             return subtitle
+
         except:
+
             pass
