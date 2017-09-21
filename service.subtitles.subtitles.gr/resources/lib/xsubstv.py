@@ -23,6 +23,7 @@ from tulip import cache, cleantitle, client, control
 class xsubstv:
 
     def __init__(self):
+
         self.list = []
         self.user = control.setting('xsubstv.user')
         self.password = control.setting('xsubstv.pass')
@@ -30,6 +31,7 @@ class xsubstv:
     def get(self, query):
 
         try:
+
             title, season, episode = re.findall('(.+?) S(\d+)E(\d+)$', query)[0]
 
             season, episode = '%01d' % int(season), '%02d' % int(episode)
@@ -55,11 +57,15 @@ class xsubstv:
             items = [(client.parseDOM(i, 'etitle', ret='number'), i) for i in items]
             items = [i[1] for i in items if len(i[0]) > 0 and i[0][0] == episode][0]
             items = re.findall('(<sr .+?</sr>)', items)
+
         except:
+
             return self.list
 
         for item in items:
+
             try:
+
                 p = client.parseDOM(item, 'sr', ret='published_on')[0]
                 if p == '': raise Exception()
 
@@ -76,13 +82,17 @@ class xsubstv:
                 url = url.encode('utf-8')
 
                 self.list.append({'name': name, 'url': url, 'source': 'xsubstv', 'rating': 5})
+
             except:
+
                 pass
 
         return self.list
 
     def cache(self, url):
+
         try:
+
             result = client.request(url)
             result = re.sub(r'[^\x00-\x7F]+', ' ', result)
 
@@ -90,11 +100,15 @@ class xsubstv:
             result = [(i[0], cleantitle.get(i[1])) for i in result]
 
             return result
+
         except:
+
             pass
 
     def cookie(self):
+
         try:
+
             login = 'http://www.xsubs.tv/xforum/account/signin/'
 
             token = client.request(login)
@@ -106,8 +120,11 @@ class xsubstv:
             post = urllib.urlencode(post)
 
             c = client.request(login, post=post, headers=headers, output='cookie')
+
             return c
+
         except:
+
             pass
 
     def download(self, path, url):
@@ -132,11 +149,14 @@ class xsubstv:
 
             subtitle = os.path.join(path, subtitle.decode('utf-8'))
 
-            if not subtitle.endswith('.srt'): raise Exception()
+            if not subtitle.endswith('.srt'):
+                raise Exception()
 
             with open(subtitle, 'wb') as subFile:
                 subFile.write(result)
 
             return subtitle
+
         except:
+
             pass

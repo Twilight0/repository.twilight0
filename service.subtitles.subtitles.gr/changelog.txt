@@ -1,5 +1,6 @@
 [B]1.3.0[/B]
-- Added rarfile support thanks to ratmole
+- Added support for rar archives
+  > Idea was introduced by ratmole
 - Cosmetics
 
 [B]1.2.5[/B]

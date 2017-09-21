@@ -104,6 +104,7 @@ class subtitlesgr:
     def download(self, path, url):
 
         try:
+
             url = re.findall('/(\d+)/', url + '/', re.I)[-1]
             url = 'http://www.greeksubtitles.info/getp.php?id=%s' % url
             url = client.request(url, output='geturl')
@@ -142,37 +143,43 @@ class subtitlesgr:
 
                 if len(files) == 0: return
 
-                if f.lower().endswith('.rar'):
-
-                    uri = "rar://[%s]/%s.srt" % (f, url.rpartition('/')[2][:-4])
-                    content = control.openFile(uri).read()
-                    subtitle = control.transPath('special://temp/') + url.rpartition('/')[2][:-4] + '.srt'
-                    with open(subtitle, 'wb') as subFile:
-                        subFile.write(content)
-
-                    return subtitle
-
-                else:
+                if not f.lower().endswith('.rar'):
                     control.execute('Extract("%s","%s")' % (f, path))
 
                 for i in range(0, 10):
 
                     try:
-                        dirs, files = control.listDir(path)
-                        if len(files) > 1: break
+                        if f.lower().endswith('.rar'):
+                            uri = "rar://{0}/".format(urllib.quote(f))
+                            dirs, files = control.listDir(uri)
+                        else:
+                            dirs, files = control.listDir(path)
+                        if len(files) > 1:
+                            break
                         if control.aborted is True:
                             break
                         control.sleep(1000)
                     except:
                         pass
 
-                control.deleteFile(f)
-
                 subtitle = [i for i in files if any(i.endswith(x) for x in ['.srt', '.sub'])][0]
 
                 subtitle = os.path.join(path, subtitle.decode('utf-8'))
 
-                return subtitle
+                if f.lower().endswith('.rar'):
+
+                    content = control.openFile(uri + subtitle).read()
+
+                    with open(subtitle, 'wb') as subFile:
+                        subFile.write(content)
+
+                    control.deleteFile(f)
+
+                    return subtitle
+
+                else:
+                    control.deleteFile(f)
+                    return subtitle
 
         except:
             pass
