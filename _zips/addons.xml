@@ -1088,7 +1088,7 @@ NOTE: Due to updates by rytec, this addon might completely break in a couple of 
     </extension>
 </addon>
 
-<addon id="service.subtitles.subtitles.gr" name="Subtitles.gr" version="1.3.0" provider-name="Twilight0">
+<addon id="service.subtitles.subtitles.gr" name="Subtitles.gr" version="1.3.1" provider-name="Twilight0">
 	<requires>
 		<import addon="xbmc.python" version="2.24.0"/>
 		<import addon="script.module.tulip" version="1.2.6" />
@@ -1107,6 +1107,10 @@ NOTE: Due to updates by rytec, this addon might completely break in a couple of 
 		<platform>all</platform>
 		<language>el</language>
 		<news>
+[B]1.3.1[/B]
+- Fix for url encoder on Unix-like platforms
+- Cosmetics
+
 [B]1.3.0[/B]
 - Added support for rar archives
   > Idea was introduced by ratmole

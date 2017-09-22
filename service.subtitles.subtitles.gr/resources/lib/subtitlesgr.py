@@ -20,7 +20,6 @@ from tulip import control, client
 
 
 class subtitlesgr:
-
     def __init__(self):
         self.list = []
 
@@ -133,42 +132,50 @@ class subtitlesgr:
 
                 result = zip_file.open(rar[0]).read()
 
-                f = os.path.splitext(urlparse.urlparse(rar[0]).path)[1][1:]
-                f = os.path.join(path, 'file.%s' % f)
+                # f = os.path.splitext(urlparse.urlparse(url).path)[1][1:]
+                f = os.path.join(path, url.rpartition('/')[2])
 
                 with open(f, 'wb') as subFile:
                     subFile.write(result)
 
                 dirs, files = control.listDir(path)
 
-                if len(files) == 0: return
+                if len(files) == 0:
+                    return
 
                 if not f.lower().endswith('.rar'):
                     control.execute('Extract("%s","%s")' % (f, path))
 
-                for i in range(0, 10):
-
-                    try:
-                        if f.lower().endswith('.rar'):
-                            uri = "rar://{0}/".format(urllib.quote(f))
-                            dirs, files = control.listDir(uri)
-                        else:
-                            dirs, files = control.listDir(path)
-                        if len(files) > 1:
-                            break
-                        if control.aborted is True:
-                            break
-                        control.sleep(1000)
-                    except:
-                        pass
-
-                subtitle = [i for i in files if any(i.endswith(x) for x in ['.srt', '.sub'])][0]
-
-                subtitle = os.path.join(path, subtitle.decode('utf-8'))
+                if control.infoLabel('System.Platform.Windows'):
+                    conversion = urllib.quote
+                else:
+                    conversion = urllib.quote_plus
 
                 if f.lower().endswith('.rar'):
 
-                    content = control.openFile(uri + subtitle).read()
+                    uri = "rar://{0}/".format(conversion(f))
+                    dirs, files = control.listDir(uri)
+
+                else:
+
+                    for i in range(0, 10):
+
+                        try:
+                            dirs, files = control.listDir(path)
+                            if len(files) > 1:
+                                break
+                            if control.aborted is True:
+                                break
+                            control.wait(1)
+                        except:
+                            pass
+
+                filename = [i for i in files if any(i.endswith(x) for x in ['.srt', '.sub'])][0].decode('utf-8')
+                subtitle = os.path.join(path, filename)
+
+                if f.lower().endswith('.rar'):
+
+                    content = control.openFile(uri + filename).read()
 
                     with open(subtitle, 'wb') as subFile:
                         subFile.write(content)
@@ -178,7 +185,9 @@ class subtitlesgr:
                     return subtitle
 
                 else:
+
                     control.deleteFile(f)
+
                     return subtitle
 
         except:
