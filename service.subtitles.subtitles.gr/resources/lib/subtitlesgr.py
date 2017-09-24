@@ -15,11 +15,12 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 '''
 
-import urllib, urllib2, urlparse, zipfile, StringIO, re, os
+import urllib, urllib2, zipfile, StringIO, re, os
 from tulip import control, client
 
 
 class subtitlesgr:
+
     def __init__(self):
         self.list = []
 
@@ -30,7 +31,7 @@ class subtitlesgr:
 
             query = ' '.join(urllib.unquote_plus(re.sub('%\w\w', ' ', urllib.quote_plus(query))).split())
 
-            url = 'http://www.subtitles.gr/search.php?name=%s&sort=downloads+desc' % urllib.quote_plus(query)
+            url = 'http://www.subtitles.gr/search.php?name={0}&sort=downloads+desc'.format(urllib.quote_plus(query))
 
             result = client.request(url)
 
@@ -42,8 +43,11 @@ class subtitlesgr:
             return
 
         for item in items:
+
             try:
-                if not 'flags/el.gif' in item: raise Exception()
+
+                if not 'flags/el.gif' in item:
+                    raise Exception()
 
                 try:
                     uploader = client.parseDOM(item, 'a', attrs={'class': 'link_from'})[0].strip()
@@ -60,6 +64,7 @@ class subtitlesgr:
                     downloads = client.parseDOM(item, 'td', attrs={'class': 'latest_downloads'})[0]
                 except:
                     downloads = '0'
+
                 downloads = re.sub('[^0-9]', '', downloads)
 
                 name = client.parseDOM(item, 'a', attrs={'onclick': 'runme.+?'})[0]
@@ -76,12 +81,15 @@ class subtitlesgr:
                 rating = self._rating(downloads)
 
                 self.list.append({'name': name, 'url': url, 'source': 'subtitlesgr', 'rating': rating})
+
             except:
+
                 pass
 
         return self.list
 
     def _rating(self, downloads):
+
         try:
             rating = int(downloads)
         except:

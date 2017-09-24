@@ -97,3 +97,7 @@ msgstr "Εκτέλεση ρύθμισης"
 msgctxt "#30021"
 msgid "Run youtube's setup wizard after successful key application"
 msgstr "Εκτέλεση του ρυθμιστή youtube μετά απο επιτυχή εισαγωγή κλειδιών"
+
+msgctxt "#30022"
+msgid "Use plugin route method for setup on Youtube versions 5.4.3 and later"
+msgstr "Χρήση εγγενούς μεθόδου για την ρύθμιση σε εκδόσεις 5.4.3 και μετέπειτα του Youtube"

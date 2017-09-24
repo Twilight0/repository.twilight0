@@ -15,7 +15,8 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 '''
 
-import urllib, urlparse, re, os
+import urllib, re, os
+from urlparse import urljoin
 from tulip import cache, cleantitle, client, control
 
 
@@ -41,7 +42,7 @@ class subztvclub:
                 url = client.parseDOM(result, 'div', attrs={'id': 'movies'})[0]
                 url = re.findall('(/movies/\d+)', url)
                 url = [x for y, x in enumerate(url) if x not in url[:y]]
-                url = [urlparse.urljoin('http://subztv.club', i) for i in url]
+                url = [urljoin('http://subztv.club', i) for i in url]
                 url = url[:3]
 
                 for i in url:
@@ -72,7 +73,7 @@ class subztvclub:
                 url = client.parseDOM(result, 'div', attrs={'id': 'series'})[0]
                 url = re.findall('(/series/\d+)', url)
                 url = [x for y, x in enumerate(url) if x not in url[:y]]
-                url = [urlparse.urljoin('http://subztv.club', i) for i in url]
+                url = [urljoin('http://subztv.club', i) for i in url]
                 url = url[:3]
 
                 for i in url:

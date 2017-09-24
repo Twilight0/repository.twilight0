@@ -2,7 +2,7 @@
 
 '''
     Subtitles.gr
-    Author Thgiliwt
+    Author Twilight0
 
         License summary below, for more details please read license.txt file
 
@@ -23,3 +23,9 @@ import sys, urlparse
 syshandle = int(sys.argv[1])
 sysaddon = sys.argv[0]
 params = dict(urlparse.parse_qsl(sys.argv[2].replace('?','')))
+
+action = params.get('action')
+source = params.get('source')
+url = params.get('url')
+query = params.get('searchstring')
+langs = params.get('languages')

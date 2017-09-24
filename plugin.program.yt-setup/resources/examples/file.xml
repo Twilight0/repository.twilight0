@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <api_keys>
-    <enablement>true</enablement>
     <id>123456789012-abcdefghijklmnopqrstuvwxyz123456.apps.googleusercontent.com</id>
     <api_key>abcdefghijklmnopqrstuvwxyz12345678901234567890123456</api_key>
     <secret>abcdefghijkl-mnopqrstuvw</secret>

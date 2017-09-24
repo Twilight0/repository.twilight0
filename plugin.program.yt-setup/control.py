@@ -28,6 +28,7 @@ addon = xbmcaddon.Addon
 addonInfo = xbmcaddon.Addon().getAddonInfo
 
 condVisibility = xbmc.getCondVisibility
+infoLabel = xbmc.getInfoLabel
 sleep = xbmc.sleep
 execute = xbmc.executebuiltin
 monitor = xbmc.Monitor()

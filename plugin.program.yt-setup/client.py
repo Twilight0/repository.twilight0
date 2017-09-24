@@ -23,7 +23,8 @@ import re, sys, cookielib, time, random
 import urllib, urllib2, urlparse, HTMLParser
 
 
-def request(url, close=True, redirect=True, error=False, proxy=None, post=None, headers=None, mobile=False, limit=None, referer=None, cookie=None, output='', timeout='30'):
+def request(url, close=True, redirect=True, error=False, proxy=None, post=None, headers=None, mobile=False, limit=None,
+            referer=None, cookie=None, output='', timeout='30'):
 
     try:
         handlers = []
@@ -372,16 +373,6 @@ def mobile_agent():
 
 def ios_agent():
     return 'Mozilla/5.0 (iPhone; CPU iPhone OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25'
-
-
-def spoofer(_agent=True, age_str=randomagent(), referer=False, ref_str=''):
-
-    if _agent and referer:
-        return '|User-Agent=' + urllib.quote_plus(age_str) + '&Referer=' + urllib.quote_plus(ref_str)
-    elif _agent:
-        return '|User-Agent=' + urllib.quote_plus(age_str)
-    elif referer:
-        return '|Referer=' + urllib.quote_plus(ref_str)
 
 
 def cfcookie(netloc, ua, timeout):

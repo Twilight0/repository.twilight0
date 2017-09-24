@@ -97,3 +97,7 @@ msgstr ""
 msgctxt "#30021"
 msgid "Run youtube's setup wizard after successful key application"
 msgstr ""
+
+msgctxt "#30022"
+msgid "Use plugin route method for setup on Youtube versions 5.4.3 and later"
+msgstr ""

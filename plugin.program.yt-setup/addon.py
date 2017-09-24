@@ -21,43 +21,47 @@ import re
 
 def local(path):
 
-    with open(path) as f:
-        file_ = f.read()
+    with open(path) as txtfile:
+        f = txtfile.read()
 
-    f.close()
-
-    if not file_:
-
+    if not f:
         return
 
-    if path.endswith('.txt') or file_.startswith('true'):
-        keys = file_.splitlines()[1:]
-    elif path.endswith('.xml') or file_.startswith('<?xml'):
-        keys = [
-            client.parseDOM(file_, 'id')[0], client.parseDOM(file_, 'api_key')[0], client.parseDOM(file_, 'secret')[0]
-        ]
+    f = f.strip('\r\n')
+
+    if path.endswith('.txt') or len(f.splitlines()) > 3:
+        keys = f.splitlines()
+    elif path.endswith('.xml') or f.startswith('<?xml'):
+        keys = [client.parseDOM(f, 'id')[0], client.parseDOM(f, 'api_key')[0], client.parseDOM(f, 'secret')[0]]
     else:
         keys = None
 
     return keys
 
 
-def remote(address):
+def remote(url):
 
-    if 'pastebin' in address and not 'raw' in address:
-        url = re.sub(r'(^.+?\.com/)(\w+)', r'\1raw/\2', address)
-    elif 'debian' in address and not 'plain' in address:
-        url = re.sub(r'(^.+?\.net/)(\w+)', r'\1plain/\2',address)
+    if 'pastebin' in url and not 'raw' in url:
+        address = re.sub(r'(^.+?\.com/)(\w+)', r'\1raw/\2', url)
+    elif 'debian' in url and not 'plain' in url:
+        address = re.sub(r'(^.+?\.net/)(\w+)', r'\1plain/\2',url)
     else:
-        url = address
+        address = url
 
-    text = client.request(url)
+    if 'ubuntu' in url and not 'plain' in url:
+        html = client.request(address)
+        text = client.parseDOM(html, 'pre')[1]
+        text = client.replaceHTMLCodes(text)
+    else:
+        text = client.request(address)
 
     if not text:
         return
 
-    if text.startswith('true'):
-        keys = text.splitlines()[1:]
+    text = text.strip('\r\n')
+
+    if len(text.splitlines()) == 3:
+        keys = text.splitlines()
     elif text.startswith('<?xml'):
         keys = [client.parseDOM(text, 'id')[0], client.parseDOM(text, 'api_key')[0], client.parseDOM(text, 'secret')[0]]
     else:
@@ -66,14 +70,34 @@ def remote(address):
     return keys
 
 
-def setup(list_):
+def setup(_list_):
 
-    control.addon('plugin.video.youtube').setSetting('youtube.api.enable', 'true')
-    control.addon('plugin.video.youtube').setSetting('youtube.api.id', list_[0])
-    control.addon('plugin.video.youtube').setSetting('youtube.api.key', list_[1])
-    control.addon('plugin.video.youtube').setSetting('youtube.api.secret', list_[2])
+    def call():
 
-    control.infoDialog(message=control.lang(30015), time=3000)
+        plugin_call = 'plugin://plugin.video.youtube/api/update/?enable=true'
+        route = '{0}&client_id={1}&client_secret={2}&api_key={3}'.format(plugin_call, _list_[0], _list_[2], _list_[1])
+        control.execute('RunPlugin({0})'.format(route))
+
+    yt_version_info = control.infoLabel('System.AddonVersion(plugin.video.youtube)').partition('~')[0].replace('.', '')
+
+    if int(yt_version_info) >= 550 and control.setting('route543') == 'true':
+
+        call()
+
+    elif int(yt_version_info) >= 543 and control.setting('route543') == 'true' and 'English' in control.infoLabel(
+            'System.Language'
+    ):
+
+        call()
+
+    else:
+
+        control.addon('plugin.video.youtube').setSetting('youtube.api.enable', 'true')
+        control.addon('plugin.video.youtube').setSetting('youtube.api.id', _list_[0])
+        control.addon('plugin.video.youtube').setSetting('youtube.api.key', _list_[1])
+        control.addon('plugin.video.youtube').setSetting('youtube.api.secret', _list_[2])
+
+        control.infoDialog(message=control.lang(30015), time=3000)
 
 
 def wizard():
@@ -118,6 +142,7 @@ def seq():
         ):
 
             setup(result)
+
             if control.setting('wizard') == 'true':
                 wizard()
             else:
@@ -128,7 +153,7 @@ def seq():
             control.infoDialog(control.lang(30014))
 
 
-def init():
+def start():
 
     if not bool(control.setting('local')) and not bool(control.setting('remote')):
 
@@ -159,9 +184,10 @@ def init():
 
             pass
 
+
 if __name__ == '__main__':
 
-    init()
+    start()
 
 else:
 

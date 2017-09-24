@@ -14,15 +14,13 @@ Then create a text file to load it locally or use a service like [pastebin.com](
 
 See file.txt `and` file.xml in examples directory, you can use either of the two formats, whichever looks more logical.
 
-Please leave `<enablement>true</enablement>` in xml format and `true` in txt format for detection purposes.
-
 file.txt looks like this:
 
-![](http://i.imgur.com/AFwxvDQ.jpg)
+![](https://i.imgur.com/Uu46OvX.jpg)
 
 file.xml has the info in xml tags already, so pretty self explanatory:
 
-![](http://i.imgur.com/PiY3ZyO.jpg)
+![](https://i.imgur.com/AWUQo4Q.jpg)
 
 License
 -------

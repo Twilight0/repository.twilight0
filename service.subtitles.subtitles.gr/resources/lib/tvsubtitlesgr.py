@@ -16,18 +16,7 @@
 '''
 
 
-from resources.lib import action, query, url, source
-from resources.lib.addon import Search, Download
+class tvsubtitlesgr:
 
-########################################################################################################################
-
-if action is None or action == 'search':
-    Search().run()
-
-elif action == 'manualsearch':
-    Search().run(query)
-
-elif action == 'download':
-    Download().run(url, source)
-
-########################################################################################################################
+    def __init__(self):
+        self.list = []
