@@ -29,7 +29,7 @@ def local(path):
 
     f = f.strip('\r\n')
 
-    if path.endswith('.txt') or len(f.splitlines()) > 3:
+    if path.endswith('.txt') or len(f.splitlines()) >= 3:
         keys = f.splitlines()
     elif path.endswith('.xml') or f.startswith('<?xml'):
         keys = [client.parseDOM(f, 'id')[0], client.parseDOM(f, 'api_key')[0], client.parseDOM(f, 'secret')[0]]
@@ -60,7 +60,7 @@ def remote(url):
 
     text = text.strip('\r\n')
 
-    if len(text.splitlines()) == 3:
+    if len(text.splitlines()) >= 3:
         keys = text.splitlines()
     elif text.startswith('<?xml'):
         keys = [client.parseDOM(text, 'id')[0], client.parseDOM(text, 'api_key')[0], client.parseDOM(text, 'secret')[0]]
