@@ -22,9 +22,9 @@ from tulip import control, client
 import html2text
 
 
-# def description(text):
-#
-#     return control.dialog.textviewer('SomaFM', text)
+def description(text):
+
+    return control.dialog.textviewer('SomaFM', text)
 
 
 def history(url):

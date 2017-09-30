@@ -33,8 +33,10 @@ aac3 = 'AAC 32k'
 
 
 def selector(qofs, lofs, quality=ote):
+
     idx = qofs.index(quality)
     stream = lofs.pop(idx)
+
     return stream
 
 

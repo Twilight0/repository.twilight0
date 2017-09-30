@@ -19,89 +19,53 @@
 """
 
 from tulip import directory, client, cache, control
-from ..modules import syshandle, sysaddon
 from urlparse import urljoin
-import json
+import json, re
+import datetime
 
 
 class Indexer:
 
     def __init__(self):
 
-        self.list = [] ; self.data = [] ; self.groups = [] ; self.qofs = []
-        self.main = 'http://somafm.com'
-        self.index = urljoin(self.main, '/listen/genre.html')
+        self.list = [] ; self.data = []
+        self.main = 'http://somafm.com/'
+        self.index = urljoin(self.main, 'channels.xml')
 
-        if control.setting('group') == 'Name':
-            self.translated = control.lang(30003)
-        elif control.setting('group') == 'Popularity':
-            self.translated = control.lang(30004)
-        elif control.setting('group') == 'Genre':
-            self.translated = control.lang(30005)
+    def get_stations(self):
 
-        self.switch = {'title': control.lang(30006).format(self.translated),
-                       'icon': control.join(control.addonPath, 'resources', 'media', 'selector.png'), 'action': 'switcher'}
-
-    def switcher(self):
-
-        def seq(choose):
-
-            control.setSetting('group', choose)
-            control.idle()
-            # if control.condVisibility('MusicPlayer.HasNext'):
-            #     control.execute('Playlist.Clear')
-            control.sleep(50)
-            control.refresh()
-
-        self.groups = [control.lang(30003), control.lang(30004), control.lang(30005)]
-
-        choice = control.selectDialog(heading=control.lang(30006), list=self.groups)
-
-        if choice == 0:
-            seq('Name')
-        elif choice == 1:
-            seq('Popularity')
-        elif choice == 2:
-            seq('Genre')
-        else:
-            control.execute('Dialog.Close(all)')
-
-    def get_stations(self, url):
-
-        import datetime
         year = datetime.datetime.now().year
 
-        html = client.request(url)
-        main = client.parseDOM(html, 'div', attrs={'id': 'midstations'})[0]
-        items = client.parseDOM(main, 'li')
+        xml = client.request(self.index)
+        stations = client.parseDOM(xml, 'channel')
+        ids = client.parseDOM(xml, 'channel', ret='id')
 
-        for item in items:
+        items = zip(ids, stations)
 
-            name = client.parseDOM(item, 'h3')[0]
-            image = client.parseDOM(item, 'img', ret='src')[0]
-            image = urljoin(self.main, image)
-            urls = client.parseDOM(item, 'a', ret='href')[3:-1]
-            links = [urljoin(self.main, link) for link in urls]
-            streams = json.dumps(links)
-            listeners = client.parseDOM(item, 'dd')[-2]
-            n = client.parseDOM(item, 'span', attrs={'class': 'playing'})[0]
-            now = client.parseDOM(n, 'a')[0]
-            history = client.parseDOM(n, 'a', ret='href')[0]
-            history = urljoin(self.main, history)
-            genre = html.split(item)[0]
-            genre = client.parseDOM(genre, 'h1', attrs={'class': 'GenreHeader'})[-1]
-            description = client.parseDOM(item, 'p', attrs={'class': 'descr'})[0]
+        for sid, item in items:
 
-            if control.setting('caching') == 'false' and control.setting('station') == 'true':
-                title = name + ' ~ ' + now
-            elif control.setting('caching') == 'false' and control.setting('station') == 'false':
-                title = now.partition(' - ')[2]
+            station = client.parseDOM(item, 'title')[0].partition('A[')[2][:-3]
+            image = client.parseDOM(item, 'image')[0]
+            urls = re.findall('<.+?pls.+?>(.+?)</.+?pls>', item)
+            streams = json.dumps(urls)
+            listeners = client.parseDOM(item, 'listeners')[0]
+            now = client.parseDOM(item, 'lastPlaying')[0].partition('A[')[2][:-3]
+            song = now.partition(' - ')[2]
+            artist = now.partition(' - ')[0]
+            history = urljoin(self.main, sid + '/songhistory.html')
+            genre = client.parseDOM(item, 'genre')[0]
+            description = client.parseDOM(item, 'description')[0].partition('A[')[2][:-3]
+
+            if control.setting('caching') == 'false':
+                title = song
             else:
-                title = name
+                title = station
 
-            data = {'title': title, 'image': image, 'url': streams,
-                    'listeners': int(listeners), 'history': history, 'genre': genre, 'artist': now.partition(' - ')[0],
-                    'album': name, 'year': year, 'comment': description, 'mediatype': 'music'}
+            data = {
+                'title': title, 'image': image, 'url': streams, 'listeners': int(listeners), 'history': history,
+                'genre': genre, 'artist': artist, 'album': station, 'year': year, 'comment': description,
+                'mediatype': 'music'
+            }
 
             self.list.append(data)
 
@@ -109,67 +73,29 @@ class Indexer:
 
     def stations(self):
 
-        import itertools
-        from operator import itemgetter
-
-        self.list = cache.get(self.get_stations, 0 if control.setting('caching') == 'false' else int(control.setting('period')), self.index)
+        self.list = cache.get(
+            self.get_stations, 0 if control.setting('caching') == 'false' else int(control.setting('period'))
+        )
 
         if self.list is None:
             return
 
         for item in self.list:
-            item.update({'action': 'play', 'isFolder': 'False'})
 
-        for item in self.list:
             refresh = {'title': 30015, 'query': {'action': 'refresh'}}
             cache_clear = {'title': 30002, 'query': {'action': 'cache_clear'}}
-            # station_info = {'title': 30016, 'query': {'action': 'description', 'text': item['comment']}}
+            station_info = {'title': 30016, 'query': {'action': 'description', 'text': item['comment']}}
             history = {'title': 30017, 'query': {'action': 'history', 'url': item['history']}}
-            item.update({'cm': [refresh, cache_clear, history]})
 
-        if control.setting('switcher') == 'true':
-            if control.setting('group') == 'Name':
-                self.list = sorted(self.list, key=lambda k: k['album'].lower())
-                self.list = itertools.groupby(self.list, key=itemgetter('album'))
-                self.list = [next(item[1]) for item in self.list]
-            elif control.setting('group') == 'Popularity':
-                self.list = sorted(self.list, key=lambda k: str(k['listeners']))
-                self.list = itertools.groupby(self.list, key=itemgetter('album'))
-                self.list = [next(item[1]) for item in self.list]
-            elif control.setting('group') == 'Genre':
-                self.list = sorted(self.list, key=lambda k: k['genre'].lower())
-                self.list = itertools.groupby(self.list, key=itemgetter('album'))
-                self.list = [next(item[1]) for item in self.list]
+            if control.infoLabel('System.AddonVersion(xbmc.python)') == '2.24.0':
+                item.update({'cm': [refresh, cache_clear, history], 'action': 'play', 'isFolder': 'False'})
             else:
-                self.list = self.list
-        elif control.setting('switcher') == 'false' and control.setting('index_method') == '0':
-            self.list = sorted(self.list, key=lambda k: k['album'].lower())
-            self.list = itertools.groupby(self.list, key=itemgetter('album'))
-            self.list = [next(item[1]) for item in self.list]
-        elif control.setting('switcher') == 'false' and control.setting('index_method') == '1':
-            self.list = sorted(self.list, key=lambda k: str(k['listeners']))
-            self.list = itertools.groupby(self.list, key=itemgetter('album'))
-            self.list = [next(item[1]) for item in self.list]
-        elif control.setting('switcher') == 'false' and control.setting('index_method') == '2':
-            self.list = sorted(self.list, key=lambda k: k['genre'].lower())
-            self.list = itertools.groupby(self.list, key=itemgetter('album'))
-            self.list = [next(item[1]) for item in self.list]
-        else:
-            self.list = self.list
+                item.update({'cm': [refresh, cache_clear, history, station_info], 'action': 'play', 'isFolder': 'False'})
 
-        count = 1
-
-        for item in self.list:
+        for count, item in list(enumerate(self.list, start=1)):
             item.setdefault('tracknumber', count)
-            count +=1
 
-        if control.setting('switcher') == 'true':
-            li = control.item(label=self.switch['title'], iconImage=self.switch['icon'])
-            li.setArt({'fanart': control.addonInfo('fanart')})
-            li.setProperty('IsPlayable', 'false')
-            url = '{0}?action={1}'.format(sysaddon, self.switch['action'])
-            control.addItem(syshandle, url, li, isFolder=False)
-        else:
-            pass
-
+        control.sortmethods('album')
+        control.sortmethods('genre')
+        control.sortmethods('listeners')
         directory.add(self.list, infotype='music')

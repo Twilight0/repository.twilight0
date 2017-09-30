@@ -83,23 +83,11 @@ msgid "Song history"
 msgstr ""
 
 msgctxt "#30018"
-msgid "Utilize caching (& hide song info)"
+msgid "Activate caching"
 msgstr ""
 
 msgctxt "#30019"
 msgid "Caching period in hour(s)"
-msgstr ""
-
-msgctxt "#30020"
-msgid "Show station name"
-msgstr ""
-
-msgctxt "#30021"
-msgid "Show index method switcher"
-msgstr ""
-
-msgctxt "#30022"
-msgid "Choose sort method"
 msgstr ""
 
 msgctxt "#30402"

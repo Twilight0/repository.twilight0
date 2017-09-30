@@ -36,17 +36,11 @@ elif action == 'play':
 
     player(url)
 
-elif action == 'switcher':
+elif action == 'description':
 
-    from resources.lib.indexers import radios
+    from resources.lib.modules import text_viewer
 
-    radios.Indexer().switcher()
-
-# elif action == 'description':
-#
-#     from resources.lib.modules import text_viewer
-#
-#     text_viewer.description(text)
+    text_viewer.description(text)
 
 elif action == 'history':
 

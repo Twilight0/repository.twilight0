@@ -83,20 +83,12 @@ msgid "Song history"
 msgstr "Ιστορικό τραγουδιών"
 
 msgctxt "#30018"
-msgid "Utilize caching (& hide song info)"
-msgstr "Κάνε χρήση προσωρινής μνήμης (και κρύψε πληροφορίες τραγουδιού)"
+msgid "Activate caching"
+msgstr "Κάνε χρήση προσωρινής μνήμης"
 
 msgctxt "#30019"
 msgid "Caching period in hour(s)"
 msgstr "Περίοδος προσωρινής μνήμης σε ώρα/ες"
-
-msgctxt "#30020"
-msgid "Show station name"
-msgstr "Δείξε το όνομα του σταθμού"
-
-msgctxt "#30021"
-msgid "Show index method switcher"
-msgstr "Δείξε τον επιλογέα μεθόδου τακτοποίησης"
 
 msgctxt "#30402"
 msgid "Success"
