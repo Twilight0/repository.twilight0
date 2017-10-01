@@ -73,12 +73,15 @@ class Indexer:
 
     def stations(self):
 
-        self.list = cache.get(
-            self.get_stations, 0 if control.setting('caching') == 'false' else int(control.setting('period'))
-        )
+        if control.setting('caching') == 'false':
+            self.list = self.get_stations()
+        else:
+            self.list = cache.get(self.get_stations, int(control.setting('period')))
 
         if self.list is None:
             return
+
+        self.list = sorted(self.list, key=lambda k: k['album'].lower())
 
         for item in self.list:
 
