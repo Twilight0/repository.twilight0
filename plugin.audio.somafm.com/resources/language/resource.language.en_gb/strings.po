@@ -90,6 +90,10 @@ msgctxt "#30019"
 msgid "Caching period in hour(s)"
 msgstr ""
 
+msgctxt "#30020"
+msgid "Item info"
+msgstr ""
+
 msgctxt "#30402"
 msgid "Success"
 msgstr ""

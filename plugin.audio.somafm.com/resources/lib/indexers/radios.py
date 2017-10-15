@@ -87,13 +87,14 @@ class Indexer:
 
             refresh = {'title': 30015, 'query': {'action': 'refresh'}}
             cache_clear = {'title': 30002, 'query': {'action': 'cache_clear'}}
+            info_cm = {'title': 30020, 'query': {'action': 'info_cm'}}
             station_info = {'title': 30016, 'query': {'action': 'description', 'text': item['comment']}}
             history = {'title': 30017, 'query': {'action': 'history', 'url': item['history']}}
 
             if control.infoLabel('System.AddonVersion(xbmc.python)') == '2.24.0':
                 item.update({'cm': [refresh, cache_clear, history], 'action': 'play', 'isFolder': 'False'})
             else:
-                item.update({'cm': [refresh, cache_clear, history, station_info], 'action': 'play', 'isFolder': 'False'})
+                item.update({'cm': [refresh, cache_clear, history, station_info, info_cm], 'action': 'play', 'isFolder': 'False'})
 
         for count, item in list(enumerate(self.list, start=1)):
             item.setdefault('tracknumber', count)

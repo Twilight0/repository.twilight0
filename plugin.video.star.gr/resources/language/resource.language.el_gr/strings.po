@@ -48,6 +48,10 @@ msgctxt "#32008"
 msgid "Episode"
 msgstr "Επεισόδιο"
 
+msgctxt "#32009"
+msgid "Live"
+msgstr "Ζωντανά"
+
 msgctxt "#32500"
 msgid "Next..."
 msgstr "Επόμενα..."

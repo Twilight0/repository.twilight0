@@ -101,3 +101,7 @@ msgstr "Το Eugo24 εκπέμπει ποικίλο ελληνικό περιε�
 msgctxt "#30022"
 msgid "Show Eugo24"
 msgstr "Δείξε το Eugo24"
+
+msgctxt "#30023"
+msgid "Show Voice Life & Style"
+msgstr "Δείξε το Voice Life & Style"

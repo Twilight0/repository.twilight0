@@ -27,6 +27,11 @@ def description(text):
     return control.dialog.textviewer('SomaFM', text)
 
 
+def info_cm():
+
+    control.execute('Action(Info)')
+
+
 def history(url):
 
     html = client.request(url)

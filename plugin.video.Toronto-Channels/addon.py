@@ -34,6 +34,9 @@ endDir = xbmcplugin.endOfDirectory
 transpath = xbmc.translatePath
 datapath = transpath(addon.getAddonInfo("profile")).decode("utf-8")
 dialog = xbmcgui.Dialog()
+infoLabel = xbmc.getInfoLabel
+fp = infoLabel('Container.FolderPath')
+player = xbmc.Player().play
 
 # Misc variables:
 addonicon = join(addonpath, 'icon.png')
@@ -45,6 +48,8 @@ Melodia_img = join(addonart, 'RADIO_MELODIA_TORONTO.png')
 Life_img = join(addonart, 'LIFEHD.png')
 Eugo24_img = join(addonart, 'EUGO24.png')
 Settings_img = join(addonart, 'settings.png')
+Voice_img = join(addonart, 'mag_oct_thumb.jpg')
+Voice_path = join(addonart, 'mag_oct.jpg')
 
 # Links:
 if addon.getSetting('hls') == 'false':
@@ -68,6 +73,16 @@ syshandle = int(sys.argv[1])
 params = dict(urlparse.parse_qsl(sys.argv[2][1:]))
 action = params.get('action', None)
 url = params.get('url')
+
+
+def play_item(path):
+
+    li = xbmcgui.ListItem(path=path)
+    xbmcplugin.setResolvedUrl(syshandle, True, listitem=li)
+
+def display(path):
+
+    return xbmc.executebuiltin('ShowPicture({0})'.format(path))
 
 
 def main_menu():
@@ -140,6 +155,17 @@ def main_menu():
     elif addon.getSetting('melodia') == 'false':
         pass
 
+    # Voice Life & Style
+    if addon.getSetting('voice') == 'true':
+        url7 = '{0}?action=display&url={1}'.format(sysaddon, Voice_path)
+        li7 = xbmcgui.ListItem(label='Voice Life & Style', iconImage=Voice_img)
+        li7.setArt({'poster': Voice_img, 'thumb': Voice_img, 'fanart': addonfanart})
+        li7.setInfo('image', {'title': 'Voice Life & Style', 'picturepath': Voice_path})
+        li7.setProperty('IsPlayable', 'true')
+        addItem(handle=syshandle, url=url7, listitem=li7, isFolder=False)
+    elif addon.getSetting('melodia') == 'false':
+        pass
+
     # Settings
     settings_url = '{0}?action=settings'.format(sysaddon)
     settings_li = xbmcgui.ListItem(label=language(30001), iconImage=Settings_img)
@@ -149,19 +175,24 @@ def main_menu():
     endDir(syshandle)
 
 
-def play_item(path):
-
-    li = xbmcgui.ListItem(path=path)
-    xbmcplugin.setResolvedUrl(syshandle, True, listitem=li)
-
-
 if action is None:
 
-    main_menu()
+    if 'audio' in fp:
+        listitem = xbmcgui.ListItem(thumbnailImage=Melodia_img)
+        listitem.setInfo('music', {'title': 'Radio Melodia Toronto', 'genre': 'Greek Music'})
+        player(item=Melodia_url, listitem=listitem)
+    elif 'image' in fp:
+        display(Voice_path)
+    else:
+        main_menu()
 
 elif action == 'play':
 
     play_item(url)
+
+elif action == 'display':
+
+    display(url)
 
 elif action == 'settings':
 

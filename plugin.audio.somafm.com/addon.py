@@ -38,15 +38,21 @@ elif action == 'play':
 
 elif action == 'description':
 
-    from resources.lib.modules import text_viewer
+    from resources.lib.modules import info
 
-    text_viewer.description(text)
+    info.description(text)
 
 elif action == 'history':
 
-    from resources.lib.modules import text_viewer
+    from resources.lib.modules import info
 
-    text_viewer.history(url)
+    info.history(url)
+
+elif action == 'info_cm':
+
+    from resources.lib.modules import info
+
+    info.info_cm()
 
 elif action == 'cache_clear':
 

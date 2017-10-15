@@ -8,6 +8,7 @@
         <setting id="cannali" type="bool" label="30003" default="true"/>
         <setting id="life" type="bool" label="30004" default="true"/>
         <setting id="melodia" type="bool" label="30005" default="true"/>
+        <setting id="voice" type="bool" label="30005" default="true"/>
     </category>
     <category label="30011">
         <setting label="30012" type="action" action="RunPlugin(plugin://$ID/?action=setup_iptv)"/>

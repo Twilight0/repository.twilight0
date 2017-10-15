@@ -47,6 +47,10 @@ msgctxt "#32008"
 msgid "Episode"
 msgstr ""
 
+msgctxt "#32009"
+msgid "Live"
+msgstr ""
+
 msgctxt "#32500"
 msgid "Next..."
 msgstr ""

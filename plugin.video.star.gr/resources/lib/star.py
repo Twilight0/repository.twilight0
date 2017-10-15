@@ -16,7 +16,7 @@
 '''
 
 import json, re
-# noinspection PyUnresolvedReferences
+
 from tulip import bookmarks, directory, client, cache, workers, youtube, control
 from urlparse import urljoin
 
@@ -33,12 +33,20 @@ class Indexer:
         self.cartoon_link = urljoin(self.base_link, 'tv/el/Pages/StarlandIndex.aspx')
         self.web_tv_link = urljoin(self.base_link, 'webtv/')
         self.play_link = 'http://cdnapi.kaltura.com/p/21154092/sp/2115409200/playManifest/entryId/%s/flavorId/%s/format/url/protocol/http/a.mp4'
+        self.live_link = 'http://klive-a.akamaihd.net/dc-1/live/hls/p/713821/e/1_fp7fyi3j/sd/10000/t/ZA8fcNZ-c0boV5jwPLnSfg/index-s32.m3u8'
         self.youtube_key = 'AIzaSyBOS4uSyd27OU0XV2KSdN3vT2UG_v0g9sI'
         self.youtube_link = 'UCwUNbp_4Y2Ry-asyerw2jew'
 
     def root(self):
 
         self.list = [
+            {
+                'title': 32009,
+                'action': 'play',
+                'url': self.live_link,
+                'icon': 'live.png'
+            }
+            ,
             {
                 'title': 32001,
                 'action': 'tvshows',
