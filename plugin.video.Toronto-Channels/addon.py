@@ -20,6 +20,7 @@
 
 import os, sys, urlparse
 import xbmcaddon, xbmcgui, xbmcplugin, xbmc, xbmcvfs
+from resources.lib.url_opener import open_url
 
 # Addon variables:
 join = os.path.join
@@ -48,17 +49,20 @@ Melodia_img = join(addonart, 'RADIO_MELODIA_TORONTO.png')
 Life_img = join(addonart, 'LIFEHD.png')
 Eugo24_img = join(addonart, 'EUGO24.png')
 Settings_img = join(addonart, 'settings.png')
-Voice_img = join(addonart, 'mag_oct_thumb.jpg')
-Voice_path = join(addonart, 'mag_oct.jpg')
+Voice_img = join(addonart, 'mag_thumb.jpg')
+
 
 # Links:
 if addon.getSetting('hls') == 'false':
+
     NETVToronto_url = 'rtmp://live.netvtoronto.com/NetvToronto/NetvToronto'
     NETV_Toronto_2_url = 'rtmp://162.219.176.210/live/eugo242017p1a'
     Eugo24_url = 'rtmp://162.219.176.210:18935/live/eugo242017p1a'
     Cannali_url = 'rtmp://live.streams.ovh/cannali/cannali'
     Life_url = 'rtmp://live.streams.ovh:1935/LIFEHD/LIFEHD'
+
 else:
+
     NETVToronto_url = 'http://live.netvtoronto.com:1935/NetvToronto/NetvToronto/playlist.m3u8'
     NETV_Toronto_2_url = 'http://162.219.176.210/live/eugo242017p1a/playlist.m3u8'
     Eugo24_url = 'http://162.219.176.210:18935/live/eugo242017p1a/playlist.m3u8'
@@ -66,6 +70,9 @@ else:
     Life_url = 'http://live.streams.ovh:1935/LIFEHD/LIFEHD/playlist.m3u8'
 
 Melodia_url = 'http://149.202.208.214:9086/live'
+YT_Channel = 'UCKXFDK9dRGcnwr7mWmzoY2w'
+base_url = 'http://alivegr.net/bci_mags/'
+index_url = urlparse.urljoin(base_url, 'index.txt')
 
 # Handlers:
 sysaddon = sys.argv[0]
@@ -80,14 +87,81 @@ def play_item(path):
     li = xbmcgui.ListItem(path=path)
     xbmcplugin.setResolvedUrl(syshandle, True, listitem=li)
 
-def display(path):
 
-    return xbmc.executebuiltin('ShowPicture({0})'.format(path))
+def mags_index():
+
+    xbmcplugin.setContent(syshandle, 'images')
+
+    index_txt = open_url(index_url)
+
+    splitted = index_txt.splitlines()
+
+    magazines = []
+
+    for line in splitted:
+
+        title = line.replace('Volume', language(30025))
+
+        image = line.partition(' - ')[0].replace('Volume ', 'vol')
+        image = urlparse.urljoin(base_url, image + '/thumbs' + '/page-01.jpg')
+
+        url = '{0}?action=mag_index&url={1}'.format(sysaddon, image.partition('/thumbs')[0])
+
+        data = {'title': title, 'image': image, 'url': url}
+
+        magazines.append(data)
+
+    for mag in magazines:
+
+        li = xbmcgui.ListItem(label=mag['title'], iconImage=mag['image'])
+        li.setArt({'poster': mag['image'], 'thumb': mag['image'], 'fanart': addonfanart})
+        li.setInfo('image', {'title': mag['title'], 'picturepath': mag['url']})
+        url = mag['url']
+        isFolder = True
+
+        xbmcplugin.addDirectoryItem(syshandle, url, li, isFolder)
+
+    xbmcplugin.endOfDirectory(syshandle)
+
+
+def mag_index(url):
+
+    number = int(open_url(url + '/pages'))
+
+    pages = []
+
+    for page in range(1, number + 1):
+
+        string = str(page)
+
+        title = language(30026) + ' ' + string
+
+        if len(string) == 2:
+            image = url + '/thumbs' + '/page-' + string + '.jpg'
+            link = url + '/' + string + '.jpg'
+        else:
+            image = url + '/thumbs' + '/page-' + '0' + string + '.jpg'
+            link = url + '/' + '0' + string + '.jpg'
+
+        data = {'title': title, 'image': image, 'url': link}
+        pages.append(data)
+
+    for selida in pages:
+
+        li = xbmcgui.ListItem(label=selida['title'], iconImage=selida['image'])
+        li.setArt({'poster': selida['image'], 'thumb': selida['image'], 'fanart': addonfanart})
+        li.setInfo('image', {'title': selida['title'], 'picturepath': selida['url']})
+        path = selida['url']
+        isFolder = False
+
+        xbmcplugin.addDirectoryItem(syshandle, path, li, isFolder)
+
+    xbmcplugin.endOfDirectory(syshandle)
 
 
 def main_menu():
 
-    xbmcplugin.setContent(int(sys.argv[1]), 'movies')
+    xbmcplugin.setContent(syshandle, 'movies')
 
     # NETV Toronto
     if addon.getSetting('netv') == 'true':
@@ -144,6 +218,15 @@ def main_menu():
     elif addon.getSetting('cannali') == 'false':
         pass
 
+    # Youtube Channel
+    if addon.getSetting('youtube') == 'true':
+        url5 = 'plugin://plugin.video.youtube/channel/{0}/'.format(YT_Channel)
+        li5 = xbmcgui.ListItem(label='Youtube Channel', iconImage=addonicon)
+        li5.setArt({'poster': addonicon, 'thumb': addonicon, 'fanart': addonfanart})
+        addItem(handle=syshandle, url=url5, listitem=li5, isFolder=True)
+    elif addon.getSetting('youtube') == 'false':
+        pass
+
     # Radio Melodia Toronto
     if addon.getSetting('melodia') == 'true':
         url6 = '{0}?action=play&url={1}'.format(sysaddon, Melodia_url)
@@ -157,13 +240,12 @@ def main_menu():
 
     # Voice Life & Style
     if addon.getSetting('voice') == 'true':
-        url7 = '{0}?action=display&url={1}'.format(sysaddon, Voice_path)
-        li7 = xbmcgui.ListItem(label='Voice Life & Style', iconImage=Voice_img)
+        url7 = '{0}?action=mags_index'.format(sysaddon)
+        li7 = xbmcgui.ListItem(label='Voice Life & Style Mag', iconImage=Voice_img)
         li7.setArt({'poster': Voice_img, 'thumb': Voice_img, 'fanart': addonfanart})
-        li7.setInfo('image', {'title': 'Voice Life & Style', 'picturepath': Voice_path})
-        li7.setProperty('IsPlayable', 'true')
-        addItem(handle=syshandle, url=url7, listitem=li7, isFolder=False)
-    elif addon.getSetting('melodia') == 'false':
+        li7.setInfo('image', {'title': 'Voice Life & Style', 'picturepath': Voice_img})
+        addItem(handle=syshandle, url=url7, listitem=li7, isFolder=True)
+    elif addon.getSetting('voice') == 'false':
         pass
 
     # Settings
@@ -182,7 +264,7 @@ if action is None:
         listitem.setInfo('music', {'title': 'Radio Melodia Toronto', 'genre': 'Greek Music'})
         player(item=Melodia_url, listitem=listitem)
     elif 'image' in fp:
-        display(Voice_path)
+        mags_index()
     else:
         main_menu()
 
@@ -190,9 +272,13 @@ elif action == 'play':
 
     play_item(url)
 
-elif action == 'display':
+elif action == 'mags_index':
 
-    display(url)
+    mags_index()
+
+elif action == 'mag_index':
+
+    mag_index(url)
 
 elif action == 'settings':
 

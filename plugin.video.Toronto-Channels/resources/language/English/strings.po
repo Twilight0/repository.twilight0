@@ -105,3 +105,15 @@ msgstr ""
 msgctxt "#30023"
 msgid "Show Voice Life & Style"
 msgstr ""
+
+msgctxt "#30024"
+msgid "Show Youtube Channel"
+msgstr ""
+
+msgctxt "#30025"
+msgid "Volume"
+msgstr ""
+
+msgctxt "#30026"
+msgid "Page"
+msgstr ""
