@@ -240,11 +240,11 @@ def main_menu():
 
     # Voice Life & Style
     if addon.getSetting('voice') == 'true':
-        url7 = '{0}?action=mags_index'.format(sysaddon)
+        url7 = '{0}?action={1}'.format(sysaddon, 'mags_addon')
         li7 = xbmcgui.ListItem(label='Voice Life & Style Mag', iconImage=Voice_img)
         li7.setArt({'poster': Voice_img, 'thumb': Voice_img, 'fanart': addonfanart})
         li7.setInfo('image', {'title': 'Voice Life & Style', 'picturepath': Voice_img})
-        addItem(handle=syshandle, url=url7, listitem=li7, isFolder=True)
+        addItem(handle=syshandle, url=url7, listitem=li7, isFolder=False)
     elif addon.getSetting('voice') == 'false':
         pass
 
@@ -257,34 +257,7 @@ def main_menu():
     endDir(syshandle)
 
 
-if action is None:
-
-    if 'audio' in fp:
-        listitem = xbmcgui.ListItem(thumbnailImage=Melodia_img)
-        listitem.setInfo('music', {'title': 'Radio Melodia Toronto', 'genre': 'Greek Music'})
-        player(item=Melodia_url, listitem=listitem)
-    elif 'image' in fp:
-        mags_index()
-    else:
-        main_menu()
-
-elif action == 'play':
-
-    play_item(url)
-
-elif action == 'mags_index':
-
-    mags_index()
-
-elif action == 'mag_index':
-
-    mag_index(url)
-
-elif action == 'settings':
-
-    addon.openSettings()
-
-elif action == 'setup_iptv':
+def setup_iptv():
 
     if not xbmcvfs.exists(datapath):
 
@@ -317,3 +290,135 @@ elif action == 'setup_iptv':
             seq()
         else:
             dialog.notification(addonname, language(30016), sound=False)
+
+
+def melodia_player():
+
+    listitem = xbmcgui.ListItem(thumbnailImage=Melodia_img)
+    listitem.setInfo('music', {'title': 'Radio Melodia Toronto', 'genre': 'Greek Music'})
+    player(item=Melodia_url, listitem=listitem)
+
+
+def mags_addon():
+
+    xbmc.executebuiltin('ActivateWindow(pictures,"plugin://plugin.video.Toronto-Channels/?content_type=image",return)')
+
+
+def keymap_edit():
+
+    location = transpath(join('special://profile', 'keymaps', 'tc.xml'))
+
+    def seq():
+
+        string_start = '<keymap><slideshow><mouse>'
+        string_end = '</mouse></slideshow></keymap>'
+        string_for_left = '<leftclick>NextPicture</leftclick>'
+        string_for_right = '<rightclick>PreviousPicture</rightclick>'
+        string_for_middle = '<middleclick>Rotate</middleclick>'
+        string_for_up = '<wheelup>ZoomIn</wheelup>'
+        string_for_down = '<wheeldown>ZoomOut</wheeldown>'
+
+        strings = [string_for_left, string_for_right, string_for_middle, string_for_up, string_for_down]
+
+        map_left = language(30031)
+        map_right = language(30032)
+        map_middle = language(30033)
+        map_up = language(30034)
+        map_down = language(30035)
+
+        keys = [map_left, map_right, map_middle, map_up, map_down]
+
+        dialog.ok(addonname, language(30030))
+
+        indices = dialog.multiselect(addonname, keys)
+
+        if not indices:
+
+            dialog.notification(addonname, language(30036), time=3, sound=False)
+
+        else:
+
+            finalized = []
+
+            for i in indices:
+                finalized.append(strings[i])
+
+            joined = ''.join(finalized)
+
+            to_write = string_start + joined + string_end
+
+            with open(location, 'w') as f:
+                f.write(to_write)
+
+            xbmc.executebuiltin('Action(reloadkeymaps)')
+
+            dialog.notification(addonname, language(30015), sound=False)
+
+    yes = dialog.yesno(addonname, language(30028), language(30014))
+
+    if yes:
+
+        if xbmcvfs.exists(location):
+
+            choices = [language(30038), language(30039)]
+
+            choice = dialog.select(language(30037), choices)
+
+            if choice == 0:
+
+                seq()
+
+            elif choice == 1:
+
+                xbmcvfs.delete(location)
+                xbmc.executebuiltin('Action(reloadkeymaps)')
+
+            else:
+
+                dialog.notification(addonname, language(30016))
+
+        else:
+
+            seq()
+
+    else:
+
+        dialog.notification(addonname, language(30016))
+
+
+if action is None:
+
+    if 'audio' in fp:
+        melodia_player()
+    elif 'image' in fp:
+        mags_index()
+    else:
+        main_menu()
+
+elif action == 'play':
+
+    play_item(url)
+
+elif action == 'mags_index':
+
+    mags_index()
+
+elif action == 'mags_addon':
+
+    mags_addon()
+
+elif action == 'mag_index':
+
+    mag_index(url)
+
+elif action == 'settings':
+
+    addon.openSettings()
+
+elif action == 'setup_iptv':
+
+    setup_iptv()
+
+elif action == 'keymap_edit':
+
+    keymap_edit()

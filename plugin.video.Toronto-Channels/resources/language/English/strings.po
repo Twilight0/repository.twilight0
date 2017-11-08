@@ -117,3 +117,59 @@ msgstr ""
 msgctxt "#30026"
 msgid "Page"
 msgstr ""
+
+msgctxt "#30027"
+msgid "Behaviour"
+msgstr ""
+
+msgctxt "#30028"
+msgid "Activate single left click image/page switching"
+msgstr ""
+
+msgctxt "#30028"
+msgid "This action will modify existing keymap (pictures window only)"
+msgstr ""
+
+msgctxt "#30029"
+msgid "Miscellaneous"
+msgstr ""
+
+msgctxt "#30030"
+msgid "In the following dialog you can select one or more options"
+msgstr ""
+
+msgctxt "#30031"
+msgid "Map left mouse click for next slide"
+msgstr ""
+
+msgctxt "#30032"
+msgid "Map right mouse click for previous slide"
+msgstr ""
+
+msgctxt "#30033"
+msgid "Map middle mouse click for clockwise rotation"
+msgstr ""
+
+msgctxt "#30034"
+msgid "Map mouse wheel up for zooming in"
+msgstr ""
+
+msgctxt "#30035"
+msgid "Map mouse wheel up for zooming out"
+msgstr ""
+
+msgctxt "#30036"
+msgid "No mapping selected"
+msgstr ""
+
+msgctxt "#30037"
+msgid "Caution: Existing settings detected"
+msgstr ""
+
+msgctxt "#30038"
+msgid "Overwrite"
+msgstr ""
+
+msgctxt "#30039"
+msgid "Reset"
+msgstr ""

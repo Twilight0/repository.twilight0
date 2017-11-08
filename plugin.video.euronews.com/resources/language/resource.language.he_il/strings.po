@@ -1,0 +1,111 @@
+# Kodi Media Center language file
+# Addon Name: Euronews
+# Addon id: plugin.video.euronews.com
+# Addon version: 1.0.0
+# Addon Provider: lambda
+msgid ""
+msgstr ""
+"Project-Id-Version: XBMC Addons\n"
+"Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2017-10-22 10:53+0300\n"
+"Last-Translator: A. Dambledore\n"
+"Language-Team: Eng2Heb\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: he_IL\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+
+msgctxt "#32001"
+msgid "Live"
+msgstr "שידור חי"
+
+msgctxt "#32002"
+msgid "Top Stories"
+msgstr "סיפורים מובילים"
+
+msgctxt "#32003"
+msgid "News"
+msgstr "חדשות"
+
+msgctxt "#32004"
+msgid "Sport"
+msgstr "ספורט"
+
+msgctxt "#32005"
+msgid "Business"
+msgstr "עסקים"
+
+msgctxt "#32006"
+msgid "Europe"
+msgstr "אירופה"
+
+msgctxt "#32007"
+msgid "Culture"
+msgstr "תרבות"
+
+msgctxt "#32008"
+msgid "Sci-tech"
+msgstr "מדע בדיוני"
+
+msgctxt "#32009"
+msgid "Environment"
+msgstr "סביבה"
+
+msgctxt "#32010"
+msgid "Programmes"
+msgstr "תכניות"
+
+msgctxt "#32200"
+msgid "Language"
+msgstr "שפה"
+
+msgctxt "#32201"
+msgid "Automatic"
+msgstr "אוטומטי"
+
+msgctxt "#32202"
+msgid "English"
+msgstr "אנגלית"
+
+msgctxt "#32203"
+msgid "French"
+msgstr "צרפתית"
+
+msgctxt "#32204"
+msgid "German"
+msgstr "גרמנית"
+
+msgctxt "#32205"
+msgid "Greek"
+msgstr "יוונית"
+
+msgctxt "#32206"
+msgid "Hungarian"
+msgstr "הונגרית"
+
+msgctxt "#32207"
+msgid "Italian"
+msgstr "איטלקית"
+
+msgctxt "#32208"
+msgid "Portuguese"
+msgstr "פורטוגזית"
+
+msgctxt "#32209"
+msgid "Russian"
+msgstr "רוסית"
+
+msgctxt "#32210"
+msgid "Spanish"
+msgstr "ספרדית"
+
+msgctxt "#32211"
+msgid "Turkish"
+msgstr "טורקית"
+
+msgctxt "#32212"
+msgid "Ukrainian"
+msgstr "אוקראינית"
