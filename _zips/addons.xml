@@ -915,7 +915,7 @@ Initial Version
 	</extension>
 </addon>
 
-<addon id="plugin.video.star.gr" version="1.2.4" name="STAR Player" provider-name="Twilight0">
+<addon id="plugin.video.star.gr" version="1.2.5" name="STAR Player" provider-name="Twilight0">
 	<requires>
 		<import addon="xbmc.python" version="2.24.0" />
 		<import addon="script.module.tulip" version="1.2.2" />
@@ -936,6 +936,10 @@ Initial Version
 		<website>http://www.star.gr/</website>
 		<size>238009</size>
 		<news>
+[B]1.2.5[/B]
+- Added Hebrew translation by Eng2Heb
+- Cosmetics
+
 [B]1.2.4[/B]
 - Cosmetics
 
