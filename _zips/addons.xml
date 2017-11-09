@@ -225,10 +225,10 @@ Initial Version
     </extension>
 </addon>
 
-<addon id="plugin.video.alphatv.gr" version="1.1.5" name="ALPHA Player" provider-name="Twilight0">
+<addon id="plugin.video.alphatv.gr" version="1.2.0" name="ALPHA Player" provider-name="Twilight0">
 	<requires>
 		<import addon="xbmc.python" version="2.24.0" />
-		<import addon="script.module.tulip" version="1.2.6" />
+		<import addon="script.module.tulip" version="1.2.9" />
 		<import addon="plugin.video.youtube" version="5.4.0" optional="true" />
 	</requires>
 	<extension point="xbmc.python.pluginsource" library="addon.py">
@@ -246,6 +246,11 @@ Initial Version
 		<website>http://www.alphatv.gr/</website>
         <size>598620</size>
 		<news>
+[B]1.2.0[/B]
+- Added Hebrew translation (Eng2Heb@github)
+- Added new try-except block into vod resolver due to new website api
+- Cosmetics
+
 [B]1.1.5[/B]
 - Added spoofed UA for live streams
 
@@ -968,7 +973,7 @@ Initial Version
 	</extension>
 </addon>
 
-<addon id="plugin.video.Toronto-Channels" name="Toronto-Channels" version="1.5.1" provider-name="Twilight0">
+<addon id="plugin.video.Toronto-Channels" name="Toronto-Channels" version="1.5.2" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>
     </requires>
@@ -983,6 +988,9 @@ Initial Version
         <description lang="el">Το πρόσθετο αυτό παρέχει ζωντανό περιεχόμενο κυρίως εις την Ελληνική γλώσσα</description>
         <license>GNU General Public License, v2</license>
         <news>
+1.5.2 (09-11-2017)
+- Translation strings clarification for mouse keys actions
+
 1.5.1 (08-11-2017)
 - Added ability to change images with mouse buttons
 - Voice Life &amp; Style for mags viewing now opens up the addon in pictures mode

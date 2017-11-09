@@ -123,8 +123,8 @@ msgid "Behaviour"
 msgstr "Συμπεριφορά"
 
 msgctxt "#30028"
-msgid "Activate single left click image/page switching"
-msgstr "Ενεργοποίηση αλλαγής σελίδας/εικόνας με αριστερό μονό κλικ"
+msgid "Add enhanced mouse keymap for magazines' pages viewing"
+msgstr "Ενεργοποίηση βελτιωμένου χάρτη για ποντίκι κατά την θέαση σελίδων περιοδικών"
 
 msgctxt "#30028"
 msgid "This action will modify existing keymap (pictures window only)"
@@ -165,3 +165,11 @@ msgstr "Δεν επιλέχθηκε κάποια αντιστοίχιση"
 msgctxt "#30037"
 msgid "Caution: Existing settings detected."
 msgstr "Προσοχή: Ανιχνεύθηκαν προηγούμενες ρυθμίσεις."
+
+msgctxt "#30038"
+msgid "Overwrite"
+msgstr "Εγγραφή από πάνω"
+
+msgctxt "#30039"
+msgid "Reset"
+msgstr "Επαναφορά"

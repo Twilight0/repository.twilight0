@@ -15,8 +15,9 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 '''
 
-import urlparse, json, re
-from tulip import bookmarks, directory, client, cache, workers
+
+import urlparse, json, re, urllib
+from tulip import bookmarks, directory, client, cache, workers, control
 
 
 class indexer:
@@ -28,6 +29,7 @@ class indexer:
         self.tvshows_link = 'http://www.alphatv.gr/shows'
         self.cytvshows_link = 'http://www.alphacyprus.com.cy/shows'
         self.ajax_link = '/views/ajax'
+        self.st_link = '/st/st.php?i='
         self.view_name_link = 'view_name=alpha_shows_category_view&view_display_id=page_3&view_path=shows&view_base_path=shows&page={0}'
         self.shows_popular = 'http://www.alphatv.gr/webtv/all/shows/populars'
         self.episodes_popular = 'http://www.alphatv.gr/webtv/all/episodes/populars'
@@ -161,7 +163,8 @@ class indexer:
 
         self.list = [i for i in self.list if i['filter'] == True]
 
-        for i in self.list: i.update({'action': 'episodes'})
+        for i in self.list:
+            i.update({'action': 'episodes'})
 
         for i in self.list:
             bookmark = dict((k, v) for k, v in i.iteritems() if not k == 'next')
@@ -179,10 +182,12 @@ class indexer:
         if self.list is None:
             return
 
-        for i in self.list: i.update({'action': 'play', 'isFolder': 'False'})
+        for i in self.list:
+            i.update({'action': 'play', 'isFolder': 'False'})
 
         if fulltitle is True:
-            for i in self.list: i.update({'title': '%s - %s' % (i['tvshowtitle'], i['title'])})
+            for i in self.list:
+                i.update({'title': '{0} - {1}'.format(i['tvshowtitle'], i['title'])})
 
         if reverse is True:
             self.list = self.list[::-1]
@@ -210,6 +215,7 @@ class indexer:
     def item_list(self, url):
 
         try:
+
             base_link = re.findall('(http(?:s|)://.+?)/', url)
 
             if base_link:
@@ -221,10 +227,10 @@ class indexer:
 
             result = client.request(url)
 
-            filter = client.parseDOM(result, 'div', attrs={'class': 'panel-row row-.+?'})[0]
-            filter = client.parseDOM(filter, 'div', attrs={'class': 'views.+?limit-'})
-            filter = client.parseDOM(filter, 'a', ret='href')
-            filter = [x for y, x in enumerate(filter) if x not in filter[:y]]
+            filtered = client.parseDOM(result, 'div', attrs={'class': 'panel-row row-.+?'})[0]
+            filtered = client.parseDOM(filtered, 'div', attrs={'class': 'views.+?limit-'})
+            filtered = client.parseDOM(filtered, 'a', ret='href')
+            filtered = [x for y, x in enumerate(filtered) if x not in filtered[:y]]
 
             threads = []
             for i in range(0, 7):
@@ -234,20 +240,25 @@ class indexer:
             [i.join() for i in threads]
 
             items = ''
-            for i in self.data: items += json.loads(i)[1]['data']
+            for i in self.data:
+                items += json.loads(i)[1]['data']
             items = client.parseDOM(items, 'li')
+
         except:
+
             return
 
         for item in items:
+
             try:
+
                 title = client.parseDOM(item, 'div', attrs={'class': 'views-field-title'})[0]
                 title = client.parseDOM(title, 'a')[0]
                 title = client.replaceHTMLCodes(title)
                 title = title.encode('utf-8')
 
                 url = client.parseDOM(item, 'a', ret='href')[0]
-                flt = True if any(url == i for i in filter) else False
+                flt = True if any(url == i for i in filtered) else False
                 url = urlparse.urljoin(base_link, url)
                 url = client.replaceHTMLCodes(url)
                 url = url.encode('utf-8')
@@ -258,7 +269,9 @@ class indexer:
                 image = image.encode('utf-8')
 
                 self.list.append({'title': title, 'url': url, 'image': image, 'filter': flt})
+
             except:
+
                 pass
 
         return self.list
@@ -266,6 +279,7 @@ class indexer:
     def episodes_list(self, url):
 
         try:
+
             base_link = re.findall('(http(?:s|)://.+?)/', url)
 
             if base_link:
@@ -285,12 +299,14 @@ class indexer:
             self.thread(0, url % '0', None)
 
             try:
+
                 result = client.parseDOM(self.data[0], 'div', attrs={'role': 'main'})[0]
                 result = client.parseDOM(result, 'div', attrs={'class': 'view.+?'})[0]
 
                 num = client.parseDOM(result, 'li', attrs={'class': 'pager__item pager__item--last'})[0]
                 num = re.findall('page=(\d+)', num)[0]
-                if num > 9: num = 9
+                if num > 9:
+                    num = 9
                 num = int(num) + 1
 
                 threads = []
@@ -299,7 +315,9 @@ class indexer:
                     threads.append(workers.Thread(self.thread, i, url % str(i), None))
                 [i.start() for i in threads]
                 [i.join() for i in threads]
+
             except:
+
                 pass
 
             items = ''
@@ -309,18 +327,23 @@ class indexer:
             items = [client.parseDOM(i, 'div', attrs={'class': 'view.+?'}) for i in items]
             items = [i[0] for i in items if len(i) > 0]
             items = client.parseDOM(items, 'article')
+
         except:
+
             return
 
         for item in items:
+
             try:
+
                 t = client.parseDOM(item, 'div', attrs={'class': 'itemtitle'})[0]
                 title = client.parseDOM(t, 'span')
                 if title:
                     title = title[0]
                 else:
                     title = t
-                if title == '' or 'sneak preview' in title.lower(): raise Exception()
+                if title == '' or 'sneak preview' in title.lower():
+                    raise Exception()
 
                 tvshowtitle = client.parseDOM(item, 'figcaption', attrs={'class': 'showtitle'})
                 tvshowtitle += client.parseDOM(item, 'div', attrs={'class': 'showtitle'})
@@ -346,7 +369,9 @@ class indexer:
                 image = image.encode('utf-8')
 
                 self.list.append({'title': title, 'url': url, 'image': image, 'tvshowtitle': tvshowtitle})
+
             except:
+
                 pass
 
         return self.list
@@ -361,29 +386,53 @@ class indexer:
         result = result.replace('\n', '')
 
         try:
+
             url = re.findall('sources\s*:\s*\[(.+?)\]', result)[0]
             url = re.findall('"(.+?)"', url)
+            if url[0].startswith('http') and 'cloudskep' in url[0]:
+                return url[0]
             url = [i for i in url if i.startswith('rtmp')][0]
-            p = re.findall('/([a-zA-Z0-9]{3,}\:)', url)
-            if len(p) > 0: url = url.replace(p[0], ' playpath=%s' % p[0])
+            p = re.findall('/([a-zA-Z0-9]{3,}:)', url)
+            if len(p) > 0:
+                url = url.replace(p[0], ' playpath=%s' % p[0])
             url += ' timeout=15'
             return url
+
         except:
+
             pass
 
         try:
+
             url = re.findall('sources\s*:\s*\[(.+?)\]', result)[0]
             url = re.findall('"(.+?)"', url)
             url = [i for i in url if '.m3u8' in i][0]
             return url
+
         except:
+
             pass
 
         try:
+
+            link = re.findall('strlist = .+?"(.+?)"', result)[0]
+            constructed = urlparse.urljoin(self.base_link, self.st_link + urllib.quote_plus(link))
+            json_obj = client.request(constructed)
+            link = json.loads(json_obj)['o0']
+            return link
+
+        except:
+
+            pass
+
+        try:
+
             url = re.findall('(?:youtube.com|youtu.be)/(?:embed/|.+?\?v=|.+?\&v=|v/)([0-9A-Za-z_\-]+)', result)[0]
             url = 'plugin://plugin.video.youtube/play/?video_id=%s' % url
             return url
+
         except:
+
             pass
 
     def resolve_live(self, url):
@@ -394,18 +443,25 @@ class indexer:
             links = links[::-1]
 
         for link in links:
+
             try:
+
                 url = client.request(link)
                 url = re.findall('(?:\"|\')(http(?:s|)://.+?\.m3u8(?:.*?|))(?:\"|\')', url)[-1]
                 url = client.request(url, output='geturl') + client.spoofer()
                 return url
+
             except:
+
                 pass
 
     def thread(self, i, url, post):
 
         try:
+
             result = client.request(url, post=post)
             self.data[i] = result
+
         except:
+
             return
