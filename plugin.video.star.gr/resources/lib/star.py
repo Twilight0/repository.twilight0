@@ -42,8 +42,8 @@ class Indexer:
         self.list = [
             {
                 'title': 32009,
-                'action': 'play',
-                'url': self.live_link,
+                'action': 'live',
+                'isFolder': 'False',
                 'icon': 'live.png'
             }
             ,
@@ -253,6 +253,10 @@ class Indexer:
         else:
 
             directory.resolve(url)
+
+    def live(self):
+
+        directory.resolve(self.live_link, meta={'title': 'STAR HD'}, icon=control.addonInfo('icon'))
 
     def _webtv(self):
 

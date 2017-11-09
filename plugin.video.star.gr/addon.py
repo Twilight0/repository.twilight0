@@ -17,7 +17,6 @@
 
 
 import urlparse,sys
-
 from resources.lib import star
 
 params = dict(urlparse.parse_qsl(sys.argv[2].replace('?','')))
@@ -28,7 +27,7 @@ image = params.get('image')
 title = params.get('title')
 
 
-if action == None:
+if action is None:
     star.Indexer().root()
 
 elif action == 'addBookmark':
@@ -71,6 +70,9 @@ elif action == 'news':
 
 elif action == 'play':
     star.Indexer().play(title, image, url)
+
+elif action == 'live':
+    star.Indexer().live()
 
 elif action == 'cache_clear':
     from tulip import cache
