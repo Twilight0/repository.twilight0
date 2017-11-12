@@ -14,6 +14,9 @@
         <description lang="el">Το πρόσθετο αυτό παρέχει ζωντανό περιεχόμενο κυρίως εις την Ελληνική γλώσσα</description>
         <license>GNU General Public License, v2</license>
         <news>
+1.5.3 (12-11-2017)
+- Added random documentaries playback in place of NETV2 Toronto (temporarily)
+
 1.5.2 (09-11-2017)
 - Translation strings clarification for mouse keys actions
 

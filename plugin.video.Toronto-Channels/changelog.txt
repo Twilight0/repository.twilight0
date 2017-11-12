@@ -1,3 +1,6 @@
+1.5.3 (12-11-2017)
+- Added random documentaries playback in place of NETV2 Toronto (temporarily)
+
 1.5.2 (09-11-2017)
 - Translation strings clarification for mouse keys actions
 

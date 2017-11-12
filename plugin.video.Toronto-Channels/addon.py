@@ -71,6 +71,7 @@ else:
 
 Melodia_url = 'http://149.202.208.214:9086/live'
 YT_Channel = 'UCKXFDK9dRGcnwr7mWmzoY2w'
+YT_Doc_playlist = 'http://alivegr.net/raw/docs.m3u'
 base_url = 'http://alivegr.net/bci_mags/'
 index_url = urlparse.urljoin(base_url, 'index.txt')
 
@@ -86,6 +87,14 @@ def play_item(path):
 
     li = xbmcgui.ListItem(path=path)
     xbmcplugin.setResolvedUrl(syshandle, True, listitem=li)
+
+
+def play_docs():
+
+    from random import randint
+    integer = randint(0, 1054)
+
+    xbmc.executebuiltin('PlayMedia({0},playoffset={1})'.format(YT_Doc_playlist, integer))
 
 
 def mags_index():
@@ -176,7 +185,8 @@ def main_menu():
 
     # NETV Toronto 2
     if addon.getSetting('netv2') == 'true':
-        url2 = '{0}?action=play&url={1}'.format(sysaddon, NETV_Toronto_2_url)
+        # url2 = '{0}?action=play&url={1}'.format(sysaddon, NETV_Toronto_2_url)
+        url2 = '{0}?action=play_docs'.format(sysaddon)
         li2 = xbmcgui.ListItem(label='NETV Toronto 2', iconImage=NETVToronto_2_img)
         li2.setArt({'poster': NETVToronto_2_img, 'thumb': NETVToronto_2_img, 'fanart': addonfanart})
         li2.setInfo('video', {'title': 'NETV Toronto 2', 'plot': language(30019), 'genre': 'Live'})
@@ -391,6 +401,7 @@ if action is None:
     if 'audio' in fp:
         melodia_player()
     elif 'image' in fp:
+        checkpoint()
         mags_index()
     else:
         main_menu()
@@ -398,6 +409,10 @@ if action is None:
 elif action == 'play':
 
     play_item(url)
+
+elif action == 'play_docs':
+
+    play_docs()
 
 elif action == 'mags_index':
 
