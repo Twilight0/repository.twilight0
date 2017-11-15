@@ -49,7 +49,7 @@ Melodia_img = join(addonart, 'RADIO_MELODIA_TORONTO.png')
 Life_img = join(addonart, 'LIFEHD.png')
 Eugo24_img = join(addonart, 'EUGO24.png')
 Settings_img = join(addonart, 'settings.png')
-Voice_img = join(addonart, 'mag_thumb.jpg')
+# Voice_img = join(addonart, 'mag_thumb.jpg')
 
 
 # Links:
@@ -74,6 +74,7 @@ YT_Channel = 'UCKXFDK9dRGcnwr7mWmzoY2w'
 YT_Doc_playlist = 'http://alivegr.net/raw/docs.m3u'
 base_url = 'http://alivegr.net/bci_mags/'
 index_url = urlparse.urljoin(base_url, 'index.txt')
+Voice_img = urlparse.urljoin(base_url, 'mag_thumb.jpg')
 
 # Handlers:
 sysaddon = sys.argv[0]
