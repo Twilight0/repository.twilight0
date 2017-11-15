@@ -401,7 +401,6 @@ if action is None:
     if 'audio' in fp:
         melodia_player()
     elif 'image' in fp:
-        checkpoint()
         mags_index()
     else:
         main_menu()
