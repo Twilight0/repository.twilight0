@@ -15,6 +15,6 @@
         <setting type="lsep" label="30011"/>
         <setting label="30012" type="action" action="RunPlugin(plugin://$ID/?action=setup_iptv)"/>
         <setting type="lsep" label="30027"/>
-        <setting label="30028" type="action" action="RunPlugin(plugin://$ID/?action=keymap_edit)"/>
+        <setting label="30040" type="action" action="RunPlugin(plugin://$ID/?action=keymap_edit)"/>
     </category>
 </settings>

@@ -18,7 +18,7 @@
         along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
 
-import os, sys, urlparse
+import os, sys, urlparse, re
 import xbmcaddon, xbmcgui, xbmcplugin, xbmc, xbmcvfs
 from resources.lib.url_opener import open_url
 
@@ -51,7 +51,6 @@ Eugo24_img = join(addonart, 'EUGO24.png')
 Settings_img = join(addonart, 'settings.png')
 # Voice_img = join(addonart, 'mag_thumb.jpg')
 
-
 # Links:
 if addon.getSetting('hls') == 'false':
 
@@ -74,7 +73,7 @@ YT_Channel = 'UCKXFDK9dRGcnwr7mWmzoY2w'
 YT_Doc_playlist = 'http://alivegr.net/raw/docs.m3u'
 base_url = 'http://alivegr.net/bci_mags/'
 index_url = urlparse.urljoin(base_url, 'index.txt')
-Voice_img = urlparse.urljoin(base_url, 'mag_thumb.jpg')
+
 
 # Handlers:
 sysaddon = sys.argv[0]
@@ -98,13 +97,22 @@ def play_docs():
     xbmc.executebuiltin('PlayMedia({0},playoffset={1})'.format(YT_Doc_playlist, integer))
 
 
-def mags_index():
+def _mags_index():
 
     xbmcplugin.setContent(syshandle, 'images')
 
     index_txt = open_url(index_url)
 
     splitted = index_txt.splitlines()
+
+    number = re.sub(r'Volume (\d{1,3}).+', r'\1', splitted[-1])
+
+    if len(number) == 1:
+        number = '00' + number
+    elif len(number) == 2:
+        number = '0' + number
+
+    voice_img = urlparse.urljoin(base_url, 'mag_thumb_{0}.jpg'.format(number))
 
     magazines = []
 
@@ -113,13 +121,20 @@ def mags_index():
         title = line.replace('Volume', language(30025))
 
         image = line.partition(' - ')[0].replace('Volume ', 'vol')
-        image = urlparse.urljoin(base_url, image + '/thumbs' + '/page-01.jpg')
+        image = urlparse.urljoin(base_url, image + '/thumbs' + '/01.jpg')
 
         url = '{0}?action=mag_index&url={1}'.format(sysaddon, image.partition('/thumbs')[0])
 
         data = {'title': title, 'image': image, 'url': url}
 
         magazines.append(data)
+
+    return magazines, voice_img
+
+
+def mags_index():
+
+    magazines = _mags_index()[0]
 
     for mag in magazines:
 
@@ -147,24 +162,23 @@ def mag_index(url):
         title = language(30026) + ' ' + string
 
         if len(string) == 2:
-            image = url + '/thumbs' + '/page-' + string + '.jpg'
+            image = url + '/thumbs' + '/' + string + '.jpg'
             link = url + '/' + string + '.jpg'
         else:
-            image = url + '/thumbs' + '/page-' + '0' + string + '.jpg'
+            image = url + '/thumbs' + '/' + '0' + string + '.jpg'
             link = url + '/' + '0' + string + '.jpg'
 
         data = {'title': title, 'image': image, 'url': link}
         pages.append(data)
 
-    for selida in pages:
+    for p in pages:
 
-        li = xbmcgui.ListItem(label=selida['title'], iconImage=selida['image'])
-        li.setArt({'poster': selida['image'], 'thumb': selida['image'], 'fanart': addonfanart})
-        li.setInfo('image', {'title': selida['title'], 'picturepath': selida['url']})
-        path = selida['url']
-        isFolder = False
+        li = xbmcgui.ListItem(label=p['title'], iconImage=p['image'])
+        li.setArt({'poster': p['image'], 'thumb': p['image'], 'fanart': addonfanart})
+        li.setInfo('image', {'title': p['title'], 'picturepath': p['url']})
+        path = p['url']
 
-        xbmcplugin.addDirectoryItem(syshandle, path, li, isFolder)
+        xbmcplugin.addDirectoryItem(syshandle, path, li, False)
 
     xbmcplugin.endOfDirectory(syshandle)
 
@@ -252,9 +266,9 @@ def main_menu():
     # Voice Life & Style
     if addon.getSetting('voice') == 'true':
         url7 = '{0}?action={1}'.format(sysaddon, 'mags_addon')
-        li7 = xbmcgui.ListItem(label='Voice Life & Style Mag', iconImage=Voice_img)
-        li7.setArt({'poster': Voice_img, 'thumb': Voice_img, 'fanart': addonfanart})
-        li7.setInfo('image', {'title': 'Voice Life & Style', 'picturepath': Voice_img})
+        li7 = xbmcgui.ListItem(label='Voice Life & Style Mag', iconImage=_mags_index()[1])
+        li7.setArt({'poster': _mags_index()[1], 'thumb': _mags_index()[1], 'fanart': addonfanart})
+        li7.setInfo('image', {'title': 'Voice Life & Style', 'picturepath': _mags_index()[1]})
         addItem(handle=syshandle, url=url7, listitem=li7, isFolder=False)
     elif addon.getSetting('voice') == 'false':
         pass
