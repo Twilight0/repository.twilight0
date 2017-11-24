@@ -18,7 +18,6 @@
         along with this program.  If not, see <http://www.gnu.org/licenses/>.
 '''
 
-
 import re, json, requests
 import workers
 
@@ -140,8 +139,11 @@ class youtube(object):
                 threads.append(workers.Thread(self.thread, u[i], i))
                 self.data.append('')
 
-            [i.start() for i in threads]
-            [i.join() for i in threads]
+            for i in threads:
+                i.start()
+
+            for i in threads:
+                i.join()
 
             items = []
             for i in self.data:

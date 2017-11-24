@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.montreal.greek-tv" name="Montreal Greek TV" version="1.2.0" provider-name="Twilight0">
+<addon id="plugin.video.montreal.greek-tv" name="Montreal Greek TV" version="1.2.1" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.25.0"/>
         <import addon="script.module.requests" version="2.12.4"/>
+        <import addon="script.module.parsedom" version="2.5.2"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="addon.py">
         <provides>video</provides>
@@ -15,7 +16,13 @@
         <description lang="el_gr">Το πρόσθετο Montreal Greek TV για το σύστημα πολυμέσων Kodi προσφέρει ζωντανή τηλεόραση, ραδιόφωνο και ροές κατ' απαίτηση από το Μόντρεαλ, Κεμπέκ, Καναδά. Η Τηλεόραση Montreak Greek εκπέμπει περιεχόμενο τοπικής παραγωγής εις την Ελληνική γλώσσα από την Ελληνική κοινότητα της ευρύτερης περιοχής του Μόντρεαλ.</description>
         <language>en el</language>
         <license>GNU General Public License, v3</license>
+        <size>338115</size>
         <news>
+1.2.1 (16-11-2017)
+- Few minor tweaks here &amp; there
+- Tinified artwork
+- Removed client module &amp; replace it with parsedom
+
 1.2.0 (02-08-2017)
 - Made several changes to comply with Kodi addon submission rules
 - Removed request function from client module, using requests library instead

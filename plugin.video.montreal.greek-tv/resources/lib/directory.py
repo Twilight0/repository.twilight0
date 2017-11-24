@@ -18,10 +18,10 @@
         along with this program.  If not, see <http://www.gnu.org/licenses/>.
 '''
 
-
+import sys
 import urllib
 import control
-from . import sysaddon, syshandle
+
 
 
 def add(items, cacheToDisc=True, content=None, mediatype=None, infotype='video'):
@@ -63,7 +63,7 @@ def add(items, cacheToDisc=True, content=None, mediatype=None, infotype='video')
 
             isFolder = False if 'isFolder' in i and not i['isFolder'] == '0' else True
 
-            url = '%s?action=%s' % (sysaddon, i['action'])
+            url = '%s?action=%s' % (sys.argv[0], i['action'])
 
             try:
                 url += '&url=%s' % urllib.quote_plus(i['url'])
@@ -84,7 +84,7 @@ def add(items, cacheToDisc=True, content=None, mediatype=None, infotype='video')
                     except:
                         tmenu = menu['title']
                     qmenu = urllib.urlencode(menu['query'])
-                    cm.append((tmenu, 'RunPlugin(%s?%s)' % (sysaddon, qmenu)))
+                    cm.append((tmenu, 'RunPlugin(%s?%s)' % (sys.argv[0], qmenu)))
                 except:
                     pass
 
@@ -103,7 +103,7 @@ def add(items, cacheToDisc=True, content=None, mediatype=None, infotype='video')
             if not isFolder:
                 item.setProperty('IsPlayable', 'true')
 
-            control.addItem(handle=syshandle, url=url, listitem=item, isFolder=isFolder)
+            control.addItem(handle=int(sys.argv[1]), url=url, listitem=item, isFolder=isFolder)
         except:
             pass
 
@@ -112,7 +112,7 @@ def add(items, cacheToDisc=True, content=None, mediatype=None, infotype='video')
         if i['next'] == '':
             raise Exception()
 
-        url = '%s?action=%s&url=%s' % (sysaddon, i['nextaction'], urllib.quote_plus(i['next']))
+        url = '%s?action=%s&url=%s' % (sys.argv[0], i['nextaction'], urllib.quote_plus(i['next']))
         icon = i['nexticon'] if 'nexticon' in i else control.join(sysicon, 'next.png')
         fanart = i['nextfanart'] if 'nextfanart' in i else sysfanart
         try:
@@ -123,14 +123,14 @@ def add(items, cacheToDisc=True, content=None, mediatype=None, infotype='video')
         item = control.item(label=label, iconImage=icon, thumbnailImage=icon)
         item.setArt({'icon': icon, 'thumb': icon, 'poster': icon, 'tvshow.poster': icon, 'season.poster': icon, 'banner': icon, 'tvshow.banner': icon, 'season.banner': icon})
         item.setProperty('Fanart_Image', fanart)
-        control.addItem(handle=syshandle, url=url, listitem=item, isFolder=True)
+        control.addItem(handle=int(sys.argv[1]), url=url, listitem=item, isFolder=True)
     except:
         pass
 
     if not content is None:
-        control.content(syshandle, content)
+        control.content(int(sys.argv[1]), content)
 
-    control.directory(syshandle, cacheToDisc=cacheToDisc)
+    control.directory(int(sys.argv[1]), cacheToDisc=cacheToDisc)
 
 
 def resolve(url, meta=None, icon=None):
@@ -143,4 +143,4 @@ def resolve(url, meta=None, icon=None):
     if not meta is None:
         item.setInfo(type='Video', infoLabels=meta)
 
-    control.resolve(syshandle, True, item)
+    control.resolve(int(sys.argv[1]), True, item)

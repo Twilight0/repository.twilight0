@@ -686,10 +686,11 @@ Initial Version
     </extension>
 </addon>
 
-<addon id="plugin.video.montreal.greek-tv" name="Montreal Greek TV" version="1.2.0" provider-name="Twilight0">
+<addon id="plugin.video.montreal.greek-tv" name="Montreal Greek TV" version="1.2.1" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.25.0"/>
         <import addon="script.module.requests" version="2.12.4"/>
+        <import addon="script.module.parsedom" version="2.5.2"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="addon.py">
         <provides>video</provides>
@@ -702,7 +703,13 @@ Initial Version
         <description lang="el_gr">Το πρόσθετο Montreal Greek TV για το σύστημα πολυμέσων Kodi προσφέρει ζωντανή τηλεόραση, ραδιόφωνο και ροές κατ' απαίτηση από το Μόντρεαλ, Κεμπέκ, Καναδά. Η Τηλεόραση Montreak Greek εκπέμπει περιεχόμενο τοπικής παραγωγής εις την Ελληνική γλώσσα από την Ελληνική κοινότητα της ευρύτερης περιοχής του Μόντρεαλ.</description>
         <language>en el</language>
         <license>GNU General Public License, v3</license>
+        <size>338115</size>
         <news>
+1.2.1 (16-11-2017)
+- Few minor tweaks here &amp; there
+- Tinified artwork
+- Removed client module &amp; replace it with parsedom
+
 1.2.0 (02-08-2017)
 - Made several changes to comply with Kodi addon submission rules
 - Removed request function from client module, using requests library instead
@@ -980,7 +987,7 @@ Initial Version
 	</extension>
 </addon>
 
-<addon id="plugin.video.Toronto-Channels" name="Toronto-Channels" version="1.5.4" provider-name="Twilight0">
+<addon id="plugin.video.Toronto-Channels" name="Toronto-Channels" version="1.5.6" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>
     </requires>
@@ -995,6 +1002,10 @@ Initial Version
         <description lang="el">Το πρόσθετο αυτό παρέχει ζωντανό περιεχόμενο κυρίως εις την Ελληνική γλώσσα</description>
         <license>GNU General Public License, v2</license>
         <news>
+1.5.6 (24-11-2017)
+- Changed naming scheme of magazines' filenames (hopefully to fix thumbnails' creation issues)
+- Cosmetics
+
 1.5.5 (16-11-2017)
 - i18n strings fixation
 - Auto load of latest thumbnail for magazine cover
@@ -1058,6 +1069,64 @@ Initial Version
         </news>
         <website>http://netvtoronto.com/</website>
     </extension>
+</addon>
+
+<addon id="plugin.video.vice" version="1.3.0" name="Vice" provider-name="Twilight0">
+	<requires>
+		<import addon="xbmc.python" version="2.24.0" />
+		<import addon="script.module.tulip" version="1.3.2" />
+		<import addon="plugin.video.youtube" version="5.4.0" optional="true" />
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="addon.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Vice addon for Kodi</summary>
+		<description lang="en">Vice changes the way people think about culture, crime, technology, art, sex, music, fashion, sports, and more.[CR]Available countries: Australia, Austria, Belgium, Brazil, Canada, Czech Republic, Colombia, Denmark, France, Germany, Greece, Italy, Mexico, Netherlands, Poland, Portugal, Romania, Russia, Serbia, Spain, Sweden, United Kingdom and United States</description>
+		<disclaimer lang="en">This addon is not published nor endorsed by vice.com</disclaimer>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+		<source>https://github.com/Twilight0/plugin.video.vice</source>
+		<website>http://www.vice.com/</website>
+		<!--<forum></forum>-->
+		<broken>It desperately needs an overhaul</broken>
+		<news>
+[B]1.3.0[/B]
+- Several fixes implemented
+
+[B]1.2.2[/B]
+- Minor tweaks
+
+[B]1.2.1[/B]
+- Rebased to utilize tulip libraries
+
+[B]1.2.0[/B]
+- Fixed all sections (web site change)
+- Added VICE on HBO on main menu
+- Added new add-on screenshots
+
+[B]1.1.1[/B]
+- Fixed issue with regional videos
+- Fixed issue with UK/USA shows
+- Added support for more videos (uplynk)
+
+[B]1.1.0[/B]
+- Added localization of videos
+- Added subtitle support
+
+[B]1.0.0[/B]
+- Initial version
+		</news>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+			<screenshot>resources/screenshots/screenshot-01.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-02.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-03.jpg</screenshot>
+		</assets>
+		<!--<email>dtoumbourou@gmail.com</email>-->
+		<platform>all</platform>
+		<!--<language></language>-->
+	</extension>
 </addon>
 
 <addon id="plugin.video.zouzounia.tv" name="Zouzounia TV" version="1.0.2" provider-name="Twilight0">

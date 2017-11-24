@@ -97,7 +97,7 @@ def play_docs():
     xbmc.executebuiltin('PlayMedia({0},playoffset={1})'.format(YT_Doc_playlist, integer))
 
 
-def _mags_index():
+def magazine_list():
 
     xbmcplugin.setContent(syshandle, 'images')
 
@@ -134,7 +134,7 @@ def _mags_index():
 
 def mags_index():
 
-    magazines = _mags_index()[0]
+    magazines = magazine_list()[0]
 
     for mag in magazines:
 
@@ -162,20 +162,20 @@ def mag_index(url):
         title = language(30026) + ' ' + string
 
         if len(string) == 2:
-            image = url + '/thumbs' + '/' + string + '.jpg'
-            link = url + '/' + string + '.jpg'
+            image = url + '/thumbs' + '/thumb-' + string + '.jpg'
+            link = url + '/page-' + string + '.jpg'
         else:
-            image = url + '/thumbs' + '/' + '0' + string + '.jpg'
-            link = url + '/' + '0' + string + '.jpg'
+            image = url + '/thumbs' + '/thumb-' + '0' + string + '.jpg'
+            link = url + '/page-' + '0' + string + '.jpg'
 
         data = {'title': title, 'image': image, 'url': link}
         pages.append(data)
 
     for p in pages:
 
-        li = xbmcgui.ListItem(label=p['title'], iconImage=p['image'])
+        li = xbmcgui.ListItem(label=p['title'], iconImage=p['image'], thumbnailImage=p['image'])
         li.setArt({'poster': p['image'], 'thumb': p['image'], 'fanart': addonfanart})
-        li.setInfo('image', {'title': p['title'], 'picturepath': p['url']})
+        li.setInfo('image', {'title': p['title'], 'picturepath': p['image']})
         path = p['url']
 
         xbmcplugin.addDirectoryItem(syshandle, path, li, False)
@@ -266,9 +266,9 @@ def main_menu():
     # Voice Life & Style
     if addon.getSetting('voice') == 'true':
         url7 = '{0}?action={1}'.format(sysaddon, 'mags_addon')
-        li7 = xbmcgui.ListItem(label='Voice Life & Style Mag', iconImage=_mags_index()[1])
-        li7.setArt({'poster': _mags_index()[1], 'thumb': _mags_index()[1], 'fanart': addonfanart})
-        li7.setInfo('image', {'title': 'Voice Life & Style', 'picturepath': _mags_index()[1]})
+        li7 = xbmcgui.ListItem(label='Voice Life & Style Mag', iconImage=magazine_list()[1])
+        li7.setArt({'poster': magazine_list()[1], 'thumb': magazine_list()[1], 'fanart': addonfanart})
+        li7.setInfo('image', {'title': 'Voice Life & Style', 'picturepath': magazine_list()[1]})
         addItem(handle=syshandle, url=url7, listitem=li7, isFolder=False)
     elif addon.getSetting('voice') == 'false':
         pass

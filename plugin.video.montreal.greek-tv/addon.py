@@ -19,8 +19,9 @@
 """
 
 import requests
+import CommonFunctions as common
 from base64 import b64decode
-from resources.lib import client, control, youtube, cache, directory, syshandle, sysaddon, action, url
+from resources.lib import control, youtube, cache, directory, syshandle, sysaddon, action, url
 
 
 # Misc variables:
@@ -59,10 +60,10 @@ def main_menu():
 
     xml = requests.get(url='http://www.greekradio.net/mgtv.xml').text
 
-    mgtv = client.parseDOM(xml, 'title')[0]
-    livetv_url = client.parseDOM(xml, 'url')[0]
-    mgr = client.parseDOM(xml, 'title')[1]
-    new_radio_url = client.parseDOM(xml, 'url')[1]
+    mgtv = common.parseDOM(xml, 'title')[0]
+    livetv_url = common.parseDOM(xml, 'url')[0]
+    mgr = common.parseDOM(xml, 'title')[1]
+    new_radio_url = common.parseDOM(xml, 'url')[1]
 
     # Live TV
     url1 = '{0}?action=play&url={1}'.format(sysaddon, livetv_url)
