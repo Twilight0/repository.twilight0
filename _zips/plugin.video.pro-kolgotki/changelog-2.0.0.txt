@@ -1,2 +1,0 @@
-01-09-2017 - [B]2.0.0[/B]
-- Reinstated version of the original

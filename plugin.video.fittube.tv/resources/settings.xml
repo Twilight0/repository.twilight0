@@ -1,6 +1,0 @@
-<settings>
-    <category label="Miscellaneous">
-        <setting id="order" type="enum" label="List order behaviour" values="Ordered|Shuffled" default="0"/>
-        <setting id="filenames" type="bool" label="Show original video filename" default="true"/>
-    </category>
-</settings>
