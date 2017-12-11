@@ -770,7 +770,7 @@ Initial Version
         <import addon="plugin.video.youtube" version="5.4.0"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="addon.py">
-        <provides>video</provides>
+        <provides>video image</provides>
     </extension>
     <extension point="xbmc.addon.metadata">
         <platform>all</platform>
@@ -784,6 +784,10 @@ Initial Version
         <source>https://github.com/Twilight0/plugin.video.pro-kolgotki</source>
     </extension>
     <news>
+11-12-2017 - [B]2.1.0[/B]
+- Removed Jenny Smith's channel (recently she uploads content completely irrelevant to addon's theme)
+- Added random pictures browser of high quality
+
 04-09-2017 - [B]2.0.3[/B]
 - Removed Maria Corazon's channel, she removed all of her content
 - Added two more channels in 3rd party section
@@ -969,7 +973,7 @@ Initial Version
 	</extension>
 </addon>
 
-<addon id="plugin.video.Toronto-Channels" name="Toronto-Channels" version="1.5.7" provider-name="Twilight0">
+<addon id="plugin.video.Toronto-Channels" name="Toronto-Channels" version="1.5.8" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>
     </requires>
@@ -984,6 +988,10 @@ Initial Version
         <description lang="el">Το πρόσθετο αυτό παρέχει ζωντανό περιεχόμενο κυρίως εις την Ελληνική γλώσσα</description>
         <license>GNU General Public License, v2</license>
         <news>
+1.5.8 (11-12-2017)
+- Changed HLS default preference to true
+- Changed NETV2 Docs default preference to true and reversed boolean conditional
+
 1.5.7 (27-11-2017)
 - Utilized different method for playing documentaries
 
