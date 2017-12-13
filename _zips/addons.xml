@@ -973,7 +973,7 @@ Initial Version
 	</extension>
 </addon>
 
-<addon id="plugin.video.Toronto-Channels" name="Toronto-Channels" version="1.5.8" provider-name="Twilight0">
+<addon id="plugin.video.Toronto-Channels" name="Toronto-Channels" version="1.6.0" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>
     </requires>
@@ -988,6 +988,10 @@ Initial Version
         <description lang="el">Το πρόσθετο αυτό παρέχει ζωντανό περιεχόμενο κυρίως εις την Ελληνική γλώσσα</description>
         <license>GNU General Public License, v2</license>
         <news>
+1.6.0 (13-12-2017)
+- Added Cannadian Web Radio
+- Launching as radio addon now lets you choose radio stream
+
 1.5.8 (11-12-2017)
 - Changed HLS default preference to true
 - Changed NETV2 Docs default preference to true and reversed boolean conditional
