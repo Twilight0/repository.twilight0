@@ -271,10 +271,10 @@ Initial Version
 	</extension>
 </addon>
 
-<addon id="plugin.video.antenna.gr" version="1.1.3" name="ANT1 Player" provider-name="Twilight0">
+<addon id="plugin.video.antenna.gr" version="1.2.0" name="ANT1 Player" provider-name="Twilight0">
 	<requires>
 		<import addon="xbmc.python" version="2.24.0" />
-		<import addon="script.module.tulip" version="1.2.5" />
+		<import addon="script.module.tulip" version="1.3.4" />
 	</requires>
 	<extension point="xbmc.python.pluginsource" library="addon.py">
 		<provides>video</provides>
@@ -291,6 +291,11 @@ Initial Version
 		<website>http://www.antenna.gr/</website>
         <size>692701</size>
 		<news>
+[B]1.2.0[/B]
+- Enhanced live stream resolver
+- Added resolver for VOD content when called from other addons
+- Merged Hebrew translation thanks to "Eng2Heb"
+
 [B]1.1.3[/B]
 - Cosmetics
 - Tweaks in addon.xml

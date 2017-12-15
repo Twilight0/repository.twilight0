@@ -1,0 +1,28 @@
+[B]1.2.0[/B]
+- Enhanced live stream resolver
+- Added resolver for VOD content when called from other addons
+- Merged Hebrew translation thanks to "Eng2Heb"
+
+[B]1.1.3[/B]
+- Cosmetics
+- Tweaks in addon.xml
+
+[B]1.1.2[/B]
+- Cosmetics
+
+[B]1.1.1[/B]
+- Rebased to utilize tulip libraries
+
+[B]1.1.0[/B]
+- Tweaked sections
+- Added new add-on screenshots
+
+[B]1.0.2[/B]
+- Re-work of addon (new API)
+- Re-work of artwork (new indent)
+
+[B]1.0.1[/B]
+- Code cosmetics
+
+[B]1.0.0[/B]
+- Initial version
