@@ -766,7 +766,7 @@ Initial Version
 
 <addon id="plugin.video.pro-kolgotki" name="Pro Kolgotki" version="2.0.3" provider-name="Twilight0">
     <requires>
-        <import addon="xbmc.python" version="2.20.0"/>
+        <import addon="xbmc.python" version="2.24.0"/>
         <import addon="plugin.video.youtube" version="5.4.0"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="addon.py">
@@ -784,7 +784,8 @@ Initial Version
         <source>https://github.com/Twilight0/plugin.video.pro-kolgotki</source>
     </extension>
     <news>
-11-12-2017 - [B]2.1.0[/B]
+13-12-2017 - [B]2.1.0[/B]
+- Utilised tulip libraries instead of local
 - Removed Jenny Smith's channel (recently she uploads content completely irrelevant to addon's theme)
 - Added random pictures browser of high quality
 
@@ -973,7 +974,7 @@ Initial Version
 	</extension>
 </addon>
 
-<addon id="plugin.video.Toronto-Channels" name="Toronto-Channels" version="1.6.0" provider-name="Twilight0">
+<addon id="plugin.video.Toronto-Channels" name="Toronto-Channels" version="1.6.1" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>
     </requires>
@@ -988,6 +989,9 @@ Initial Version
         <description lang="el">Το πρόσθετο αυτό παρέχει ζωντανό περιεχόμενο κυρίως εις την Ελληνική γλώσσα</description>
         <license>GNU General Public License, v2</license>
         <news>
+1.6.1 (15-12-2017)
+- Url corrected for thumbs on mags index
+
 1.6.0 (13-12-2017)
 - Added Cannadian Web Radio
 - Launching as radio addon now lets you choose radio stream
