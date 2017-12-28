@@ -706,7 +706,7 @@ Initial Version
     </extension>
 </addon>
 
-<addon id="plugin.video.montreal.greek-tv" name="Montreal Greek TV" version="1.3.0" provider-name="Twilight0">
+<addon id="plugin.video.montreal.greek-tv" name="Montreal Greek TV" version="1.3.1" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.25.0"/>
         <import addon="script.module.requests" version="2.12.4"/>
@@ -725,6 +725,9 @@ Initial Version
         <license>GNU General Public License, v3</license>
         <size>338115</size>
         <news>
+1.3.1 (28-12-2017)
+- Minor name change due to author's request
+
 1.3.0 (27-12-2017)
 - Added newspapers section
 - Changed main xml url
