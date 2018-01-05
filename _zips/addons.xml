@@ -496,15 +496,16 @@ Initial Version
 	</extension>
 </addon>
 
-<addon id="plugin.video.faros.on-air" name="Faros On-Air" version="1.0.0" provider-name="Twilight0">
+<addon id="plugin.video.faros.on-air" name="Faros On-Air" version="1.0.2" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0"/>
-        <import addon="plugin.video.youtube" version="5.4.0"/>
+        <import addon="plugin.video.youtube" version="5.4.5"/>
         <import addon="script.module.tulip" version="1.3.5"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="addon.py">
         <provides>video</provides>
     </extension>
+    <extension point="xbmc.service" library="resources/lib/service.py" start="startup"/>
     <extension point="xbmc.addon.metadata">
         <platform>all</platform>
         <summary lang="en">Faros On-Air addon</summary>
@@ -512,13 +513,30 @@ Initial Version
         <summary lang="el">Πρόσθετο Faros On-Air</summary>
         <description lang="el">Το πρόσθετο αυτό παρέχει βίντεο, ειδήσεις και ζωντανό περιεχόμενο από το Πανκύπριο κανάλι Faros από την Πάφο της Κύπρου</description>
         <license>GNU GPL, version 2 or later</license>
-        <size>133900</size>
+        <size>738082</size>
         <website>https://farosonair.com/</website>
         <source>https://github.com/Twilight0/plugin.video.faros.on-air</source>
     </extension>
+    <!--<extension name="Faros On Air Repo" point="xbmc.addon.repository">-->
+        <!--<info compressed="false">http://alivegr.net/repo/_faros/addons.xml</info>-->
+        <!--<checksum>http://alivegr.net/repo/_faros/addons.xml.md5</checksum>-->
+        <!--<datadir zip="true">http://alivegr.net/repo/_faros/</datadir>-->
+        <!--<hashes>false</hashes>-->
+        <!--<dir>-->
+            <!--<info compressed="false">https://raw.githubusercontent.com/Twilight0/repo.twilight0.libs/master/_zips/addons.xml</info>-->
+            <!--<checksum>https://raw.githubusercontent.com/Twilight0/repo.twilight0.libs/master/_zips/addons.xml.md5</checksum>-->
+            <!--<datadir zip="true">https://raw.githubusercontent.com/Twilight0/repo.twilight0.libs/master/_zips/</datadir>-->
+        <!--</dir>-->
+    <!--</extension>-->
     <news>
-18-12-2017 - [B]1.0.0[/B]
-- Initial Version
+05-01-2018 - [B]1.0.2[/B]
+- Youtube API key is now set in its proper form
+- External links button is now displayed only on Android
+- Added switch in settings to display exit button
+- Merged addon branches, there is no a standalone version anymore
+- Removed force view option
+- ACZG Skin: Tooltip removed from weather window
+- Removed repo extension point, updates will get pushed from play store
     </news>
 </addon>
 
@@ -1026,7 +1044,7 @@ Initial Version
 	</extension>
 </addon>
 
-<addon id="plugin.video.Toronto-Channels" name="Toronto-Channels" version="1.6.1" provider-name="Twilight0">
+<addon id="plugin.video.Toronto-Channels" name="Toronto-Channels" version="1.6.2" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>
     </requires>
@@ -1041,6 +1059,10 @@ Initial Version
         <description lang="el">Το πρόσθετο αυτό παρέχει ζωντανό περιεχόμενο κυρίως εις την Ελληνική γλώσσα</description>
         <license>GNU General Public License, v2</license>
         <news>
+1.6.2 (05-01-2018)
+- Life HD now plays random kids videos from Youtube in the same manner as NETV 2
+- New NETV 2 live channel
+
 1.6.1 (15-12-2017)
 - Url corrected for thumbs on mags index
 
