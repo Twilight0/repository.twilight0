@@ -496,7 +496,7 @@ Initial Version
 	</extension>
 </addon>
 
-<addon id="plugin.video.faros.on-air" name="Faros On-Air" version="1.0.2" provider-name="Twilight0">
+<addon id="plugin.video.faros.on-air" name="Faros On-Air" version="1.0.3" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0"/>
         <import addon="plugin.video.youtube" version="5.4.5"/>
@@ -529,14 +529,11 @@ Initial Version
         <!--</dir>-->
     <!--</extension>-->
     <news>
-05-01-2018 - [B]1.0.2[/B]
-- Youtube API key is now set in its proper form
-- External links button is now displayed only on Android
-- Added switch in settings to display exit button
-- Merged addon branches, there is no a standalone version anymore
-- Removed force view option
-- ACZG Skin: Tooltip removed from weather window
-- Removed repo extension point, updates will get pushed from play store
+08-01-2018 - [B]1.0.3[/B]
+- Re-applied bookmarks function for non-standalone setups
+- Navigator function root menu tweaks
+- Various icon optimizations
+- Cosmetics
     </news>
 </addon>
 
@@ -1044,9 +1041,10 @@ Initial Version
 	</extension>
 </addon>
 
-<addon id="plugin.video.Toronto-Channels" name="Toronto-Channels" version="1.6.3" provider-name="Twilight0">
+<addon id="plugin.video.Toronto-Channels" name="Toronto-Channels" version="1.6.4" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="script.module.pil" version="1.1.7"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="addon.py">
         <provides>video audio image</provides>
@@ -1059,6 +1057,9 @@ Initial Version
         <description lang="el">Το πρόσθετο αυτό παρέχει ζωντανό περιεχόμενο κυρίως εις την Ελληνική γλώσσα</description>
         <license>GNU General Public License, v2</license>
         <news>
+1.6.4 (08-01-2018)
+- Added naming to randomized playlist (minor feature addition)
+
 1.6.3 (06-01-2018)
 - Improved playback behaviour in NETV2 &amp; Life HD, before it always skipped first video
 
