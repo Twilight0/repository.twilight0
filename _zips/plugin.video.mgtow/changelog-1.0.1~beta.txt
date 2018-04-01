@@ -1,0 +1,6 @@
+01-04-2018 - [B]1.0.1~beta[/B]
+- Added Howard Dare's playlists
+- Compressed artwork
+
+30-03-2018 - [B]1.0.0~beta[/B]
+- Initial version
