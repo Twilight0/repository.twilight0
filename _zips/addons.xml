@@ -938,6 +938,32 @@ Initial Version
 	</extension>
 </addon>
 
+<addon id="plugin.video.streamlink-tester" name="Streamlink Tester" version="1.0.0" provider-name="Twilight0">
+    <requires>
+        <import addon="xbmc.python" version="2.24.0"/>
+        <import addon="script.module.tulip" version="1.4.0"/>
+        <import addon="script.module.streamlink.base" version="2018.05.16"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="main.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary lang="en">Streamlink Tester</summary>
+        <description lang="en_GB">None</description>
+        <disclaimer lang="en_GB">None</disclaimer>
+        <language>en</language>
+        <license>GNU GPL, version 2</license>
+        <website>https://twitter.com/TwilightZer0</website>
+        <source>https://github.com/Twilight0/plugin.video.streamlink-tester</source>
+        <size>106257</size>
+        <news>1.0.0 - Initial Version</news>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+    </extension>
+</addon>
+
 <addon id="plugin.video.Toronto-Channels" name="Toronto-Channels" version="1.7.2" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>
