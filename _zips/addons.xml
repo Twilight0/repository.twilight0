@@ -938,26 +938,30 @@ Initial Version
 	</extension>
 </addon>
 
-<addon id="plugin.video.streamlink-tester" name="Streamlink Tester" version="1.0.0" provider-name="Twilight0">
+<addon id="plugin.video.streamlink-tester" name="Streamlink Tester" version="1.1.0" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0"/>
-        <import addon="script.module.tulip" version="1.4.0"/>
-        <import addon="script.module.streamlink.base" version="2018.05.16"/>
+        <import addon="script.module.tulip" version="1.4.1"/>
+        <import addon="script.module.streamlink.base" version="2018.06.01"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="main.py">
         <provides>video</provides>
     </extension>
     <extension point="xbmc.addon.metadata">
         <platform>all</platform>
-        <summary lang="en">Streamlink Tester</summary>
-        <description lang="en_GB">None</description>
-        <disclaimer lang="en_GB">None</disclaimer>
+        <summary lang="en">Streamlink &amp; MPEG-DASH Tester</summary>
+        <description lang="en_GB">This addon can play and test various video and audio content from various sources supported by Streamlink resolver library. It can also playback MPEG-DASH streams.</description>
+        <disclaimer lang="en_GB">This addon does not provide any content, its sole purpose is to resolve web urls with the help of Streamlink resolver library</disclaimer>
         <language>en</language>
         <license>GNU GPL, version 2</license>
         <website>https://twitter.com/TwilightZer0</website>
         <source>https://github.com/Twilight0/plugin.video.streamlink-tester</source>
         <size>106257</size>
-        <news>1.0.0 - Initial Version</news>
+        <news>[B]1.1.0[/B] - 04-06-2018
+- Added &amp;quality= plugin route call for manual quality selection (overrides setting in options)
+- Added MPEG-DASH playback capability
+- Added MPEG-DASH url output for resolved urls through streamlink
+- Improved README.md</news>
         <assets>
             <icon>icon.png</icon>
         </assets>
