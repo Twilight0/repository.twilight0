@@ -938,7 +938,7 @@ Initial Version
 	</extension>
 </addon>
 
-<addon id="plugin.video.streamlink-tester" name="Streamlink Tester" version="1.2.0" provider-name="Twilight0">
+<addon id="plugin.video.streamlink-tester" name="Streamlink Tester" version="1.2.1" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0"/>
         <import addon="script.module.tulip" version="1.4.1"/>
@@ -957,12 +957,9 @@ Initial Version
         <website>https://twitter.com/TwilightZer0</website>
         <source>https://github.com/Twilight0/plugin.video.streamlink-tester</source>
         <size>106257</size>
-        <news>[B]1.2.0[/B] - 10-06-2018
-- Added headers append into stream url when custom args are present in streamlink's stream object
-- Replaced .url property with to_url function call
-- Added context menu item to clear history in main menu
-- Added context menu item to delete individual urls from main menu
-- Do not allow duplicates in history</news>
+        <news>[B]1.2.1[/B] - 12-06-2018
+- Do not allow addition to history when empty string given
+- Fixed removal of new line when removing individual links</news>
         <assets>
             <icon>icon.png</icon>
         </assets>
