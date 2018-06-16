@@ -1,0 +1,17 @@
+15-06-2018 - [B]2.0.0[/B]
+- Added English/Greek Language selector
+- Tulip libraries are now used
+
+19-12-2017 - [B]1.0.3[/B]
+- Minor fix for titles on various skins' shortcuts
+
+19-08-2017 - [B]1.0.2[/B]
+- Fixed cache clear function option inside settings
+- Minor other fixes
+
+22-03-2017 - [B]1.0.1[/B]
+- Small bug fix for 3rd party channels
+- Fix in translation string for 3rd party YT channels
+
+18-03-2017 - [B]1.0.0[/B]
+- Initial version

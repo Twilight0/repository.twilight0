@@ -989,10 +989,11 @@ Initial Version
     </extension>
 </addon>
 
-<addon id="plugin.video.zouzounia.tv" name="Zouzounia TV" version="1.0.2" provider-name="Twilight0">
+<addon id="plugin.video.zouzounia.tv" name="Zouzounia TV" version="2.0.0" provider-name="Twilight0">
     <requires>
-        <import addon="xbmc.python" version="2.20.0"/>
-        <import addon="plugin.video.youtube" version="5.2.1"/>
+        <import addon="xbmc.python" version="2.24.0"/>
+        <import addon="plugin.video.youtube" version="6.0.0"/>
+        <import addon="script.module.tulip" version="2.0.0"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="addon.py">
         <provides>video</provides>
@@ -1006,21 +1007,10 @@ Initial Version
         <license>GNU GPL, version 2 or later</license>
         <website>https://www.youtube.com/channel/UCzsQf6eiWz4gIHgx0oYadXA</website>
     </extension>
-    <news>
-19-12-2017 - [B]1.0.3[/B]
-- Minor fix for titles on various skins' shortcuts
-
-19-08-2017 - [B]1.0.2[/B]
-- Fixed cache clear function option inside settings
-- Minor other fixes
-
-22-03-2017 - [B]1.0.1[/B]
-- Small bug fix for 3rd party channels
-- Fix in translation string for 3rd party YT channels
-
-18-03-2017 - [B]1.0.0[/B]
-- Initial version
-    </news>
+    <news>15-06-2018 - [B]2.0.0[/B]
+- Added English/Greek/Japanese Language selector
+- Tulip libraries are now used
+- Increased number of recent videos due to improvemens on youtube module</news>
 </addon>
 
     <addon id="repository.twilight0" name="Twilight0 Addon Repository" version="1.1.0" provider-name="Twilight0">
