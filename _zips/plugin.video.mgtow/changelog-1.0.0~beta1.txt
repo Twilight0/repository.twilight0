@@ -1,2 +1,0 @@
-30-03-2018 - [B]1.0.0~beta1[/B]
-- Initial version
