@@ -1,2 +1,0 @@
-18-12-2017 - [B]1.0.0[/B]
-- Initial Version

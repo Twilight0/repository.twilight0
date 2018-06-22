@@ -1,7 +1,0 @@
-[B]1.1.0[/B] - 04-06-2018
-- Added &quality= plugin route call for manual quality selection (overrides setting in options)
-- Added MPEG-DASH playback capability
-- Added MPEG-DASH url output for resolved urls through streamlink
-- Improved README.md
-
-[B]1.0.0[/B] - Initial Version

@@ -1,3 +1,13 @@
+[B]1.6.1[/B]
+- A minor "just in case" fix in live resolver
+
+[B]1.6.0[/B]
+- Tweaked live streams' resolver
+- Preliminary support for Python 3
+
+[B]1.5.1[/B]
+- Reverted to utilize youtube_resolver (former behaviour, only a little different)
+
 [B]1.5.0[/B]
 - Replaced youtube resolver with streamlink
 - Cosmetics
