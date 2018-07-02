@@ -1,0 +1,26 @@
+[B]1.2.3[/B] - 02-07-2018
+- Better handling of headers appending
+- Log json objects for debugging purposes
+- Enhanced dash and manifest types conditionals
+
+[B]1.2.2[/B] - 20-06-2018
+- Except gracefull when no args attribute is present.
+
+[B]1.2.1[/B] - 12-06-2018
+- Do not allow addition to history when empty string given
+- Fixed removal of new line when removing individual links
+
+[B]1.2.0[/B] - 10-06-2018
+- Added headers append into stream url when custom args are present in streamlink's stream object
+- Replaced .url property with to_url function call
+- Added context menu item to clear history in main menu
+- Added context menu item to delete individual urls from main menu
+- Do not allow duplicates in history
+
+[B]1.1.0[/B] - 04-06-2018
+- Added &quality= plugin route call for manual quality selection (overrides setting in options)
+- Added MPEG-DASH playback capability
+- Added MPEG-DASH url output for resolved urls through streamlink
+- Improved README.md
+
+[B]1.0.0[/B] - Initial Version

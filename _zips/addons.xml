@@ -853,10 +853,10 @@ Initial Version
 	</extension>
 </addon>
 
-<addon id="plugin.video.streamlink-tester" name="Streamlink Tester" version="1.2.2" provider-name="Twilight0">
+<addon id="plugin.video.streamlink-tester" name="Streamlink Tester" version="1.2.3" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0"/>
-        <import addon="script.module.tulip" version="1.4.1"/>
+        <import addon="script.module.tulip" version="2.0.12"/>
         <import addon="script.module.streamlink.base" version="2018.06.20"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="main.py">
@@ -864,7 +864,7 @@ Initial Version
     </extension>
     <extension point="xbmc.addon.metadata">
         <platform>all</platform>
-        <summary lang="en">Streamlink &amp; MPEG-DASH Tester</summary>
+        <summary lang="en">Streamlink and MPEG-DASH Tester</summary>
         <description lang="en_GB">This addon can play and test various video and audio content from various sources supported by Streamlink resolver library. It can also playback MPEG-DASH streams.</description>
         <disclaimer lang="en_GB">This addon does not provide any content, its sole purpose is to resolve web urls with the help of Streamlink resolver library</disclaimer>
         <language>en</language>
@@ -872,8 +872,10 @@ Initial Version
         <website>https://twitter.com/TwilightZer0</website>
         <source>https://github.com/Twilight0/plugin.video.streamlink-tester</source>
         <size>106257</size>
-        <news>[B]1.2.2[/B] - 20-06-2018
-- Except gracefull when no args attribute is present.</news>
+        <news>[B]1.2.3[/B] - 02-07-2018
+- Better handling of headers appending
+- Log json objects for debugging purposes
+- Enhanced dash and manifest types conditionals</news>
         <assets>
             <icon>icon.png</icon>
         </assets>
