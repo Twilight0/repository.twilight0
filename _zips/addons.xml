@@ -308,10 +308,10 @@ Initial Version
 	</extension>
 </addon>
 
-<addon id="plugin.video.ert.gr" version="1.6.2" name="ERT Player" provider-name="Twilight0">
+<addon id="plugin.video.ert.gr" version="1.6.3" name="ERT Player" provider-name="Twilight0">
 	<requires>
 		<import addon="xbmc.python" version="2.24.0" />
-		<import addon="script.module.tulip" version="2.0.5" />
+		<import addon="script.module.tulip" version="2.0.13" />
 		<import addon="plugin.video.youtube" version="6.0.0"/>
 	</requires>
 	<extension point="xbmc.python.pluginsource" library="addon.py">
@@ -325,9 +325,12 @@ Initial Version
 		<disclaimer lang="el_GR">Το πρόσθετο αυτό προσφέρει περιεχόμενο διαθέσιμο στην Ελλάδα και δεν έχει δημοσιευθεί ούτε εγκριθεί από το ert.gr</disclaimer>
 		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
 		<source>https://github.com/Twilight0/plugin.video.ert.gr</source>
-		<size>416453</size>
+		<size>417205</size>
 		<website>http://www.ert.gr/</website>
 		<news>
+[B]1.6.3[/B]
+- Yet another fix for live resolver
+
 [B]1.6.2[/B]
 - Fix for live resolver
 
