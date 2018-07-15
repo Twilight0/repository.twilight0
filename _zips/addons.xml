@@ -675,7 +675,7 @@ Initial Version
 	</extension>
 </addon>
 
-<addon id="plugin.video.pro-kolgotki" name="Pro Kolgotki" version="2.2.0" provider-name="Twilight0">
+<addon id="plugin.video.pro-kolgotki" name="Pro Kolgotki" version="2.2.1" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0"/>
         <import addon="plugin.video.youtube" version="5.5.1"/>
@@ -695,10 +695,12 @@ Initial Version
         <website>http://pro-kolgotki.com/</website>
         <source>https://github.com/Twilight0/plugin.video.pro-kolgotki</source>
     </extension>
-    <news>28-03-2018 - [B]2.2.0[/B]
-- Added external links menu
-- Added Samira's 3rd part channel
-- Removed playlists item</news>
+    <news>14-07-2018 - [B]2.2.1[/B]
+- Removed Model Zisan's channel (account terminated)
+- Removed My Pantyhose Girl's Channel (recent content irrelevant)
+- Removed My Fashion for Legs's channel (account terminated)
+- Added Vanessa's Pur's English &amp; German channels
+- Added Lingerie Lowdown's channel</news>
 </addon>
 
 <addon id="plugin.video.pylearner" name="PyLearner" version="2.1.1" provider-name="Twilight0">
