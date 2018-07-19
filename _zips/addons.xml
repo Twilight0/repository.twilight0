@@ -675,34 +675,6 @@ Initial Version
 	</extension>
 </addon>
 
-<addon id="plugin.video.pro-kolgotki" name="Pro Kolgotki" version="2.2.1" provider-name="Twilight0">
-    <requires>
-        <import addon="xbmc.python" version="2.24.0"/>
-        <import addon="plugin.video.youtube" version="5.5.1"/>
-        <import addon="script.module.tulip" version="1.4.0"/>
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="addon.py">
-        <provides>video</provides>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <platform>all</platform>
-        <summary lang="en">Pro Kolgotki addon</summary>
-        <description lang="en">This addon may contain videos that are suitable to adults! Please proceed only if you 're over 18 years old</description>
-        <summary lang="el">Πρόσθετο Pro Kolgotki</summary>
-        <description lang="el">Το πρόσθετο αυτό ενδέχεται να περιέχει βίντεο που είναι κατάλληλα μόνο για ενήλικες. Προχωρήστε μόνο αν είστε άνω των 18 ετών</description>
-        <license>GNU GPL, version 2 or later</license>
-        <size>133900</size>
-        <website>http://pro-kolgotki.com/</website>
-        <source>https://github.com/Twilight0/plugin.video.pro-kolgotki</source>
-    </extension>
-    <news>14-07-2018 - [B]2.2.1[/B]
-- Removed Model Zisan's channel (account terminated)
-- Removed My Pantyhose Girl's Channel (recent content irrelevant)
-- Removed My Fashion for Legs's channel (account terminated)
-- Added Vanessa's Pur's English &amp; German channels
-- Added Lingerie Lowdown's channel</news>
-</addon>
-
 <addon id="plugin.video.pylearner" name="PyLearner" version="2.1.1" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.20.0"/>
