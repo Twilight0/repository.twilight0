@@ -526,10 +526,11 @@ Initial Version
     </extension>
 </addon>
 
-<addon id="plugin.video.hng" name="Heroes and Generals" version="1.1.0" provider-name="Twilight0">
+<addon id="plugin.video.hng" name="Heroes and Generals" version="1.2.0" provider-name="Twilight0">
     <requires>
-        <import addon="xbmc.python" version="2.20.0"/>
-        <import addon="plugin.video.youtube" version="5.2.1"/>
+        <import addon="xbmc.python" version="2.24.0"/>
+        <import addon="plugin.video.youtube" version="6.0.2"/>
+        <import addon="script.module.tulip" version="2.0.14"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="hng.py">
         <provides>video</provides>
@@ -539,22 +540,14 @@ Initial Version
         <summary lang="en">Heroes and Generals addon</summary>
         <description lang="en">This addon is not developed, nor endorsed by Reto-Moto ApS</description>
         <summary lang="el">Πρόσθετο Heroes and Generals</summary>
-        <description lang="el">Το πρόσθετο αυτό δεν αναπτύσεται ούτε αναγνωρίζεται από την Reto-Moto ApS</description>
+        <description lang="el">Το πρόσθετο αυτό δεν αναπτύσσεται ούτε αναγνωρίζεται από την Reto-Moto ApS</description>
         <license>GNU GPL, version 2 or later</license>
         <website>https://heroesandgenerals.com</website>
     </extension>
-    <news>
-05-08-2017 - [B]1.1.0[/B]
-- Added OST music menu
-- Code cosmetics
-
-22-03-2017 - [B]1.0.1[/B]
-- Small bug fix for 3rd party channels
-- Fix in translation string for 3rd party YT channels
-
-18-03-2017 - [B]1.0.0[/B]
-- Initial version
-    </news>
+    <news>17-07-2018 - [B]1.2.0[/B]
+- Utilize tulip libraries instead of local copies
+- Bumped dependencies
+- Increased limit to show more recent videos</news>
 </addon>
 
 <addon id="plugin.video.listrunner" name="List Runner" version="4.0.0" provider-name="Twilight0">
@@ -873,12 +866,10 @@ Initial Version
     </extension>
 </addon>
 
-<addon id="plugin.video.Toronto-Channels" name="Toronto-Channels" version="1.7.2" provider-name="Twilight0">
+<addon id="plugin.video.Toronto-Channels" name="Toronto-Channels" version="1.8.0" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>
-        <import addon="script.module.pil" version="1.1.7"/>
         <import addon="service.banners.mod" version="1.9.1"/>
-        <import addon="plugin.video.youtube" version="5.4.5"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="addon.py">
         <provides>video audio image</provides>
@@ -890,8 +881,8 @@ Initial Version
         <summary lang="el">Πρόσθετο Toronto Channels</summary>
         <description lang="el">Το πρόσθετο αυτό παρέχει ζωντανό περιεχόμενο κυρίως εις την Ελληνική γλώσσα</description>
         <license>GNU General Public License, v2</license>
-        <news>1.7.2 (07-05-2018)
-- Removed Eugo24</news>
+        <news>1.8.0 (24-08-2018)
+- Added a few greek channels</news>
         <website>http://netvtoronto.com/</website>
     </extension>
 </addon>
