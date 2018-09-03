@@ -308,47 +308,37 @@ Initial Version
 	</extension>
 </addon>
 
-<addon id="plugin.video.ert.gr" version="1.6.3" name="ERT Player" provider-name="Twilight0">
-	<requires>
-		<import addon="xbmc.python" version="2.24.0" />
-		<import addon="script.module.tulip" version="2.0.13" />
-		<import addon="plugin.video.youtube" version="6.0.0"/>
-	</requires>
-	<extension point="xbmc.python.pluginsource" library="addon.py">
-		<provides>video audio</provides>
-	</extension>
-	<extension point="xbmc.addon.metadata">
-		<summary lang="en_GB">ERT Player addon for Kodi</summary>
-		<description lang="en_GB">ERT live and on-demand broadcasts</description>
-		<description lang="el_GR">Ζωντανές και on demand υπηρεσίες της ΕΡΤ</description>
-		<disclaimer lang="en_GB">This addon offers content available in Greece and is not published nor endorsed by ert.gr</disclaimer>
-		<disclaimer lang="el_GR">Το πρόσθετο αυτό προσφέρει περιεχόμενο διαθέσιμο στην Ελλάδα και δεν έχει δημοσιευθεί ούτε εγκριθεί από το ert.gr</disclaimer>
-		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
-		<source>https://github.com/Twilight0/plugin.video.ert.gr</source>
-		<size>417205</size>
-		<website>http://www.ert.gr/</website>
-		<news>
-[B]1.6.3[/B]
-- Yet another fix for live resolver
-
-[B]1.6.2[/B]
-- Fix for live resolver
-
-[B]1.6.1[/B]
-- A minor "just in case" fix in live resolver
-
-[B]1.6.0[/B]
-- Tweaked live streams' resolver
-- Preliminary support for Python 3
-		</news>
-		<assets>
-			<icon>icon.png</icon>
-			<fanart>fanart.jpg</fanart>
-		</assets>
-		<platform>all</platform>
-		<language>en el</language>
-		<!--<forum></forum>-->
-	</extension>
+<addon id="plugin.video.ert.gr" version="1.7.0" name="ERT Player" provider-name="Twilight0">
+    <requires>
+        <import addon="xbmc.python" version="2.24.0" />
+        <import addon="script.module.tulip" version="2.0.13" />
+        <import addon="plugin.video.youtube" version="6.0.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="addon.py">
+        <provides>video audio</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en_GB">ERT Player addon for Kodi</summary>
+        <description lang="en_GB">ERT live and on-demand broadcasts</description>
+        <description lang="el_GR">Ζωντανές και on demand υπηρεσίες της ΕΡΤ</description>
+        <disclaimer lang="en_GB">This addon offers content available in Greece and is not published nor endorsed by ert.gr</disclaimer>
+        <disclaimer lang="el_GR">Το πρόσθετο αυτό προσφέρει περιεχόμενο διαθέσιμο στην Ελλάδα και δεν έχει δημοσιευθεί ούτε εγκριθεί από το ert.gr</disclaimer>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+        <source>https://github.com/Twilight0/plugin.video.ert.gr</source>
+        <size>417205</size>
+        <website>https://www.ert.gr/</website>
+        <news>[B]1.7.0[/B]
+- VOD resolver overhaul
+- https everywhere by default
+- Various cosmetics</news>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+        <platform>all</platform>
+        <language>en el</language>
+        <!--<forum></forum>-->
+    </extension>
 </addon>
 
 <addon id="plugin.video.euronews.com" version="1.2.1" name="Euronews" provider-name="Twilight0">
