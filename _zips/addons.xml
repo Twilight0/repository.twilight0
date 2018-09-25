@@ -816,7 +816,7 @@ Initial Version
     </extension>
 </addon>
 
-<addon id="plugin.video.Toronto-Channels" name="Toronto-Channels" version="1.8.0" provider-name="Twilight0">
+<addon id="plugin.video.Toronto-Channels" name="Toronto-Channels" version="1.8.1" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>
         <import addon="service.banners.mod" version="1.9.1"/>
@@ -831,8 +831,10 @@ Initial Version
         <summary lang="el">Πρόσθετο Toronto Channels</summary>
         <description lang="el">Το πρόσθετο αυτό παρέχει ζωντανό περιεχόμενο κυρίως εις την Ελληνική γλώσσα</description>
         <license>GNU General Public License, v2</license>
-        <news>1.8.0 (24-08-2018)
-- Added a few greek channels</news>
+        <news>1.8.1 (25-09-2018)
+- Removed ERT World
+- Changed SKAI url and its action
+- Netv Toronto 3 now plays the same url as Energy</news>
         <website>http://netvtoronto.com/</website>
     </extension>
 </addon>
