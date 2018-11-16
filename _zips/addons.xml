@@ -117,6 +117,37 @@ Features:
     </extension>
 </addon>
 
+<addon id="plugin.program.dev_tools" name="Dev's Tools" version="1.0.0~alpha1" provider-name="kharts, twilight0">
+    <requires>
+        <import addon="xbmc.python" version="2.25.0"/>
+        <import addon="script.module.pyxbmct" version="1.2.0"/>
+        <!--<import addon="script.module.tulip" version="2.0.22"/>-->
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="executable.py">
+        <provides>executable</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">Interactive Python console/shell for Kodi</summary>
+        <description lang="en">Allows to execute arbitrary Python code and see the results inside Kodi</description>
+        <disclaimer lang="en">Use at your own risk.</disclaimer>
+        <language>en</language>
+        <platform>all</platform>
+        <license>GNU GPL v2</license>
+        <email>twilight@freemail.gr</email>
+        <source>https://github.com/Twilight0/plugin.program.dev_tools</source>
+        <news>+ 1.0.0 ~ 16-11-2018
+- Initial Release, forked from kharts's konsodi
+- Preliminary support for Python 3 (untested)
+- Reduced artwork size
+- Alpha release, will add more features soon</news>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+            <screenshot>resources/img/konsodi.png</screenshot>
+        </assets>
+    </extension>
+</addon>
+
 <addon id="plugin.program.log-viewer" name="Log Viewer" version="0.1.0~alpha1" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0"/>
