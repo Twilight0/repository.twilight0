@@ -585,7 +585,7 @@ Initial Version
     </extension>
 </addon>
 
-<addon id="plugin.video.montreal.greek-tv" name="Montreal Greek TV" version="2.0.2" provider-name="Twilight0">
+<addon id="plugin.video.montreal.greek-tv" name="Montreal Greek TV" version="2.0.3" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0"/>
         <import addon="script.module.tulip" version="2.0.7"/>
@@ -603,19 +603,8 @@ Initial Version
         <license>GNU General Public License, v3</license>
         <size>633158</size>
         <news>
-[B]2.0.2[/B] - 12-07-2018
-- Fix for audio indexer (podcasts) on Estuary
-- New title for podcasts
-
-[B]2.0.1[/B] - 12-07-2018
-- Revert to client-request for newspaper indexes
-
-[B]2.0.0[/B] - 23-06-2018
-- Rework of modules for dual Python 2/3 compatibility
-- Rework of main menu code
-- Added caching into newspaper section
-- Optimized artwork
-- Added podcasts section</news>
+[B]2.0.3[/B] - 08-12-2018
+- Fixed unicode strings on main menu</news>
         <assets>
             <icon>icon.png</icon>
             <fanart>fanart.jpg</fanart>
