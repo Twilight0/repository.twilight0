@@ -1,3 +1,6 @@
+[B]2.0.5[/B] - 10-12-2018
+- New broadcasts function fetching latest podcast url for playback
+
 [B]2.0.4[/B] - 09-12-2018
 - Added Radio Center Ville
 - Added podcasts fixed link
