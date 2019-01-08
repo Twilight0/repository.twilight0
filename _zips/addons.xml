@@ -927,7 +927,7 @@ Initial Version
 	</extension>
 </addon>
 
-<addon id="service.subtitles.subtitles.gr" name="Subtitles.gr" version="1.5.0" provider-name="Twilight0">
+<addon id="service.subtitles.subtitles.gr" name="Subtitles.gr" version="1.5.1" provider-name="Twilight0">
 	<requires>
 		<import addon="xbmc.python" version="2.24.0"/>
 		<import addon="script.module.tulip" version="2.2.4" />
@@ -947,7 +947,7 @@ Initial Version
 		<platform>all</platform>
 		<language>el</language>
 		<news>
-[B]1.5.0[/B]
+[B]1.5.X[/B]
 - Fixed subz.xyz (by not loading the xbmcvfs module through kodi_six)
 - Subtitles search can also be performed via listitem query (useful when searching via context menu)
 - Tweaked string formatting on all modules
