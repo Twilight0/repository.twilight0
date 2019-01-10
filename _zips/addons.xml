@@ -927,7 +927,7 @@ Initial Version
 	</extension>
 </addon>
 
-<addon id="service.subtitles.subtitles.gr" name="Subtitles.gr" version="1.5.5" provider-name="Twilight0">
+<addon id="service.subtitles.subtitles.gr" name="Subtitles.gr" version="1.5.6" provider-name="Twilight0">
 	<requires>
 		<import addon="xbmc.python" version="2.24.0"/>
 		<import addon="script.module.tulip" version="2.2.4" />
@@ -947,9 +947,8 @@ Initial Version
 		<platform>all</platform>
 		<language>el</language>
 		<news>
-[B]1.5.5[/B]
-- Log exception on failure when downloading a subtitle
-- Log queries for debugging purposes
+[B]1.5.5 - 1.5.6[/B]
+- Log exceptions and queries for debugging purposes
 - Rename subtitle in order to mitigate illegal chars for filesystems that struggle with them
 
 [B]1.5.3 - 1.5.4[/B]
