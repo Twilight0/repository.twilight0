@@ -927,7 +927,7 @@ Initial Version
 	</extension>
 </addon>
 
-<addon id="service.subtitles.subtitles.gr" name="Subtitles.gr" version="1.5.6" provider-name="Twilight0">
+<addon id="service.subtitles.subtitles.gr" name="Subtitles.gr" version="1.5.7" provider-name="Twilight0">
 	<requires>
 		<import addon="xbmc.python" version="2.24.0"/>
 		<import addon="script.module.tulip" version="2.2.4" />
@@ -947,6 +947,15 @@ Initial Version
 		<platform>all</platform>
 		<language>el</language>
 		<news>
+[B]1.5.7[/B]
+- Instantiate query variable in run function
+- Search tv shows/series subtitles with dual queries to maximize subtitles match
+- Add clear cache function
+- Notify user when search term might be too broad or incorrect
+- Increased sleep timeout from 500 ms to 750 for threaded requests
+- Increased number of possible requests before exiting the loop for threaded requests
+- Made regexes less aggressive
+
 [B]1.5.5 - 1.5.6[/B]
 - Log exceptions and queries for debugging purposes
 - Rename subtitle in order to mitigate illegal chars for filesystems that struggle with them

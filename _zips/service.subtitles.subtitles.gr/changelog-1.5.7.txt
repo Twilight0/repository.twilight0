@@ -1,0 +1,75 @@
+[B]1.5.7[/B]
+- Instantiate query variable in run function
+- Search tv shows/series subtitles with dual queries to maximize subtitles match
+- Add clear cache function
+- Notify user when search term might be too broad or incorrect
+- Increased sleep timeout from 500 ms to 750 for threaded requests
+- Increased number of possible requests before exiting the loop for threaded requests
+- Made regexes less aggressive
+
+[B]1.5.5 - 1.5.6[/B]
+- Log exceptions and queries for debugging purposes
+- Rename subtitle in order to mitigate illegal chars for filesystems that struggle with them
+
+[B]1.5.3 - 1.5.4[/B]
+- Improved subtitle search for tv shows
+- Improved handling of subtitles choice on multisubs archives
+- Boolean check of archive format with is_zipfile instead of endswith
+- Various other tweaks
+
+[B]1.5.0 - 1.5.2[/B]
+- Fixed subz.xyz (by not loading the xbmcvfs module through kodi_six)
+- Subtitles search can also be performed via listitem query (useful when searching via context menu)
+- Tweaked string formatting on all modules
+- Added Python 3 compatibility (not yet tested)
+- Implemented capability to select subtitle from rar archives that have multiple subtitles (up to second subdirectory level)
+- Bump dependencies
+
+[B]1.4.1[/B]
+- Fixed subz.xyz
+
+[B]1.4.0[/B]
+- Replaced subztv.club with subz.xyz
+- Minor rework of the addon
+
+[B]1.3.1[/B]
+- Fix for url encoder on Unix-like platforms
+- Cosmetics
+
+[B]1.3.0[/B]
+- Added support for rar archives
+  > Idea was introduced by ratmole
+- Cosmetics
+
+[B]1.2.5[/B]
+- Cosmetics
+
+[B]1.2.4[/B]
+- Updated subztv.gr
+
+[B]1.2.3[/B]
+- Fixed subtitles.gr provider
+- Code cosmetics
+
+[B]1.2.2[/B]
+- Rebased to utilize tulip libraries
+
+[B]1.2.1[/B]
+- Cosmetics
+
+[B]1.2.0[/B]
+- Cosmetics and code simplification
+- Updated subtitles.gr
+- Updated xsubs.tv
+- Added support for xsubs.tv accounts
+- Updated subztv.gr
+
+[B]1.1.1[/B]
+- Fixed issue with subtitle query
+
+[B]1.1.0[/B]
+- Added support for subz.blog-spot.gr
+- Added support for xsubs.tv
+
+[B]1.0.0[/B]
+- Initial version
