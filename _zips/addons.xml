@@ -585,7 +585,7 @@ Initial Version
     </extension>
 </addon>
 
-<addon id="plugin.video.montreal.greek-tv" name="Montreal Greek TV" version="2.1.1" provider-name="Greektimes.ca, Twilight0">
+<addon id="plugin.video.montreal.greek-tv" name="Montreal Greek TV" version="2.1.2" provider-name="Greektimes.ca, Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0"/>
         <import addon="script.module.tulip" version="2.0.24"/>
@@ -602,7 +602,10 @@ Initial Version
         <language>en el</language>
         <license>GNU General Public License, v3</license>
         <size>633158</size>
-        <news>[B]2.1.1[/B] - 27-01-2018
+        <news>[B]2.1.2[/B] - 30-01-2018
+- Updated video stream url
+
+[B]2.1.1[/B] - 27-01-2018
 - Updated radio stream url
 
 [B]2.1.0[/B] - 14-12-2018
