@@ -844,10 +844,11 @@ Initial Version
     </extension>
 </addon>
 
-<addon id="plugin.video.Toronto-Channels" name="Toronto-Channels" version="1.8.4" provider-name="Twilight0">
+<addon id="plugin.video.Toronto-Channels" name="Toronto-Channels" version="1.9.0" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.19.0"/>
         <import addon="service.banners.mod" version="1.9.1"/>
+        <import addon="plugin.video.youtube" version="6.3.1"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="addon.py">
         <provides>video audio image</provides>
@@ -859,13 +860,11 @@ Initial Version
         <summary lang="el">Πρόσθετο Toronto Channels</summary>
         <description lang="el">Το πρόσθετο αυτό παρέχει ζωντανό περιεχόμενο κυρίως εις την Ελληνική γλώσσα</description>
         <license>GNU General Public License, v2</license>
-        <news>1.8.4 (07-02-2019)
-- Re-added voice mag setting
-
-1.8.3 (20-11-2018)
-- Removed greek streams
-- Added Cypriot streams</news>
-        <website>http://netvtoronto.com/</website>
+        <news>1.9.0 (12-02-2019)
+- Add youtube keys when opening youtube channel
+- Add external link opening capability
+- Various other tweaks</news>
+        <website>http://www.bcimedia.net/</website>
     </extension>
 </addon>
 
