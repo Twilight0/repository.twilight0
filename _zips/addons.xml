@@ -844,7 +844,7 @@ Initial Version
     </extension>
 </addon>
 
-<addon id="plugin.video.Toronto-Channels" name="Toronto Channels" version="2.0.0" provider-name="BCI Media Inc.">
+<addon id="plugin.video.Toronto-Channels" name="Toronto Channels" version="2.0.1" provider-name="BCI Media Inc.">
     <requires>
         <import addon="xbmc.python" version="2.24.0"/>
         <import addon="service.banners.mod" version="1.9.1"/>
@@ -863,7 +863,10 @@ Initial Version
         <summary lang="el">Πρόσθετο Toronto Channels</summary>
         <description lang="el">Το πρόσθετο αυτό παρέχει ζωντανό περιεχόμενο κυρίως εις την Ελληνική γλώσσα</description>
         <license>GNU General Public License, v2</license>
-        <news>2.0.0 (20-03-2019)
+        <news>2.0.1 (20-03-2019)
+- Corrected status url
+
+2.0.0 (20-03-2019)
 - Addon code rework
 - Added licence key authorization system for subscribers
 - Bumped lowest supported Kodi version to Jarvis</news>

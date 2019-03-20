@@ -59,3 +59,5 @@ _tools/
 /plugin\.video\.streamlink-tester/
 
 /plugin\.program\.dev_tools/
+
+\.fuse_hidden*
