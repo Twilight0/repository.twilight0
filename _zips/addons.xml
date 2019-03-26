@@ -953,10 +953,10 @@ Initial Version
 	</extension>
 </addon>
 
-<addon id="service.subtitles.subtitles.gr" name="Subtitles.gr" version="1.6.0" provider-name="Twilight0">
+<addon id="service.subtitles.subtitles.gr" name="Subtitles.gr" version="2.0.0" provider-name="Twilight0">
 	<requires>
 		<import addon="xbmc.python" version="2.24.0"/>
-		<import addon="script.module.tulip" version="2.2.4" />
+		<import addon="script.module.tulip" version="2.3.5" />
 	</requires>
 	<extension point="xbmc.subtitle.module" library="service.py">
 	</extension>
@@ -972,14 +972,14 @@ Initial Version
 		<website>http://www.subtitles.gr/</website>
 		<platform>all</platform>
 		<language>el</language>
-		<news>[B]1.6.0[/B]
-- Tweaked conditionals for match on subzxyz
-- Subtitles.gr:
-  > requested html will now replace errors when decoding
-  > query formatting is now a unicode object instead of string
-  > skip items without "flags/el.gif" instead of raising exception
-- Increased urls requested from subz.xyz and reversed order
-- Greatly improved searches with manual queries</news>
+		<news>[B]2.0.Χ[/B]
+- Extraction method for zip files is now performed by python library by default, kodi built-in as fallback
+- Removed notification for broad search terms and tweaked various functions and regexes to allow them
+- Install vfs.libarchive on Leia, whenever possible via builtin command
+- Replaced subtitles.gr domain with an alternative one by default, old one kept as optional
+- Sort subtitles.gr items according to rating (downloads)
+- Various other tweaks
+- Bumped dependencies</news>
 	</extension>
 </addon>
 </addons>
