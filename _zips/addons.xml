@@ -848,12 +848,12 @@ Initial Version
     </extension>
 </addon>
 
-<addon id="plugin.video.Toronto-Channels" name="Toronto Channels" version="2.0.2" provider-name="BCI Media Inc.">
+<addon id="plugin.video.Toronto-Channels" name="BCI Greek TV" version="2.1.0" provider-name="BCI Media Inc.">
     <requires>
         <import addon="xbmc.python" version="2.24.0"/>
         <import addon="service.banners.mod" version="1.9.1"/>
         <import addon="plugin.video.youtube" version="6.4.0"/>
-        <import addon="script.module.tulip" version="2.3.4"/>
+        <import addon="script.module.tulip" version="2.3.5"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="addon.py">
         <provides>video audio image</provides>
@@ -867,18 +867,14 @@ Initial Version
         <summary lang="el">Πρόσθετο Toronto Channels</summary>
         <description lang="el">Το πρόσθετο αυτό παρέχει ζωντανό περιεχόμενο κυρίως εις την Ελληνική γλώσσα</description>
         <license>GNU General Public License, v2</license>
-        <news>2.0.2 (23-03-2019)
+        <news>2.1.0 (03-04-2019)
+- Bug fixes
+- Renamed addon
+
+2.0.2 (23-03-2019)
 - Cache licence key validity for two hours
   > in order to avoid constant requests to the server
-- Added alternative url for validity check
-
-2.0.1 (20-03-2019)
-- Corrected status url
-
-2.0.0 (20-03-2019)
-- Addon code rework
-- Added licence key authorization system for subscribers
-- Bumped lowest supported Kodi version to Jarvis</news>
+- Added alternative url for validity check</news>
         <website>http://www.bcimedia.net/</website>
     </extension>
 </addon>
