@@ -711,7 +711,7 @@ Initial Version
     </extension>
 </addon>
 
-<addon id="plugin.video.skai.gr" version="2.0.0" name="SKAI Player" provider-name="Twilight0">
+<addon id="plugin.video.skai.gr" version="2.0.1" name="SKAI Player" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0" />
         <import addon="script.module.tulip" version="2.3.6" />
@@ -737,6 +737,7 @@ Initial Version
         <news>[B]2.0.0[/B]
 - Rework of the addon with new json API
 - Added live radio
+- Added resolver for html links
 - Added Python 3 compatibility</news>
         <assets>
             <icon>icon.png</icon>
