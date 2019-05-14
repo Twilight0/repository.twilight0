@@ -372,43 +372,49 @@ Initial Version
     </extension>
 </addon>
 
-<addon id="plugin.video.euronews.com" version="1.2.1" name="Euronews" provider-name="Twilight0">
-	<requires>
-		<import addon="xbmc.python" version="2.24.0"/>
-		<import addon="script.module.tulip" version="2.0.17"/>
-	</requires>
-	<extension point="xbmc.python.pluginsource" library="addon.py">
-		<provides>video</provides>
-	</extension>
-	<extension point="xbmc.addon.metadata">
-		<summary lang="en_GB">Euronews addon for Kodi</summary>
-		<summary lang="he_il">הרחבת Euronews עבור קודי</summary>
-		<description lang="en_GB">Euronews, the most watched news channel in Europe, covers international news in various languages.[CR]With 400 journalists from more than 30 nationalities, Euronews offers a unique, independent and totally impartial perspective on world events.[CR]Available languages: English, French, German, Greek, Hungarian, Italian, Portuguese, Russian, Spanish, Turkish and Ukrainian</description>
+<addon id="plugin.video.euronews.com" version="1.3.0" name="Euronews" provider-name="Twilight0">
+    <requires>
+        <import addon="xbmc.python" version="2.24.0"/>
+        <import addon="script.module.tulip" version="2.3.6"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="addon.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <reuselanguageinvoker>false</reuselanguageinvoker>
+        <summary lang="en_GB">Euronews addon for Kodi</summary>
+        <summary lang="he_il">הרחבת Euronews עבור קודי</summary>
+        <description lang="en_GB">Euronews, the most watched news channel in Europe, covers international news in various languages.[CR]With 400 journalists from more than 30 nationalities, Euronews offers a unique, independent and totally impartial perspective on world events.[CR]Available languages: English, French, German, Greek, Hungarian, Italian, Portuguese, Russian, Spanish, Turkish and Ukrainian</description>
         <description lang="he_il">Euronews הוא ערוץ החדשות הפופולרי ביותר באירופה, כולל חדשות בינלאומיות בשפות שונות.[CR]עם 400 עיתונאים מיותר מ -30 לאומים, מציע נקודת מבט ייחודית, עצמאית ונטולת פניות לחלוטין על אירועי העולם .[CR]שפות זמינות: אנגלית, צרפתית, גרמנית, יוונית, הונגרית, איטלקית, פורטוגזית, רוסית, ספרדית, טורקית ואוקראינית</description>
-		<disclaimer lang="en_GB">This addon is not published nor endorsed by euronews.com</disclaimer>
-		<disclaimer lang="he_il">ההרחבה הזו לא פורסמה ולא נתמכת על ידי euronews.com</disclaimer>
-		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
-		<source>https://github.com/Twilight0/plugin.video.euronews.com</source>
-		<website>http://www.euronews.com/</website>
+        <disclaimer lang="en_GB">This addon is not published nor endorsed by euronews.com</disclaimer>
+        <disclaimer lang="he_il">ההרחבה הזו לא פורסמה ולא נתמכת על ידי euronews.com</disclaimer>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+        <source>https://github.com/Twilight0/plugin.video.euronews.com</source>
+        <website>http://www.euronews.com/</website>
         <size>712838</size>
-		<news>[B]1.2.0[/B]
+        <news>[B]1.3.0[/B]
+- Added adaptive quality choice (Leia+ only)
+- Replaced environment main menu item with travel
+- Various other tweaks
+
+[B]1.2.0[/B]
 - Improved Live Resolver
   > Fixed english stream
   > Added ability to open window with various qualities to choose from
 - Added Python 3 support
 - Removed screenshots</news>
-		<assets>
-			<icon>icon.png</icon>
-			<fanart>fanart.jpg</fanart>
-			<!--<screenshot>resources/screenshots/screenshot-01.jpg</screenshot>-->
-			<!--<screenshot>resources/screenshots/screenshot-02.jpg</screenshot>-->
-			<!--<screenshot>resources/screenshots/screenshot-03.jpg</screenshot>-->
-		</assets>
-		<platform>all</platform>
-		<language>en</language>
-		<!--<forum></forum>-->
-		<!--<email></email>-->
-	</extension>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+            <!--<screenshot>resources/screenshots/screenshot-01.jpg</screenshot>-->
+            <!--<screenshot>resources/screenshots/screenshot-02.jpg</screenshot>-->
+            <!--<screenshot>resources/screenshots/screenshot-03.jpg</screenshot>-->
+        </assets>
+        <language>en el fr de hu it pt ru tr es ua</language>
+        <!--<forum></forum>-->
+        <!--<email></email>-->
+    </extension>
 </addon>
 
 <addon id="plugin.video.faros.on-air" name="Faros On-Air" version="1.1.0" provider-name="Twilight0">
