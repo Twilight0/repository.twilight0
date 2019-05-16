@@ -62,4 +62,6 @@ _tools/
 
 \.fuse_hidden*
 
-plugin\.video\.point-femininity/
+/plugin\.video\.point-femininity/
+
+/plugin\.video\.resolveurl-tester/
