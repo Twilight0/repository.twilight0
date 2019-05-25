@@ -1,0 +1,6 @@
+[B]1.0.1[/B] - 25-05-2019
+- Added "set title and play" context menu item
+- Other minor tweaks
+
+[B]1.0.0[/B] - 16-05-2019
+- Initial Version

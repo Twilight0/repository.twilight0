@@ -710,7 +710,7 @@ Initial Version
     </extension>
 </addon>
 
-<addon id="plugin.video.resolveurl-tester" name="ResolveURL Tester" version="1.0.0" provider-name="Twilight0">
+<addon id="plugin.video.resolveurl-tester" name="ResolveURL Tester" version="1.0.1" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0"/>
         <import addon="script.module.tulip" version="2.3.6"/>
@@ -730,7 +730,11 @@ Initial Version
         <website>https://twitter.com/TwilightZer0</website>
         <source>https://github.com/Twilight0/plugin.video.resolveurl-tester</source>
         <size>106257</size>
-        <news>[B]1.0.0[/B] - 16-05-2019
+        <news>[B]1.0.1[/B] - 25-05-2019
+- Added "set title and play" context menu item
+- Other minor tweaks
+
+[B]1.0.0[/B] - 16-05-2019
 - Initial version</news>
         <assets>
             <icon>icon.png</icon>
@@ -738,7 +742,7 @@ Initial Version
     </extension>
 </addon>
 
-<addon id="plugin.video.skai.gr" version="2.0.2" name="SKAI Player" provider-name="Twilight0">
+<addon id="plugin.video.skai.gr" version="2.0.3" name="SKAI Player" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0" />
         <import addon="script.module.tulip" version="2.3.6" />
@@ -843,7 +847,7 @@ Initial Version
 	</extension>
 </addon>
 
-<addon id="plugin.video.streamlink-tester" name="Streamlink Tester" version="1.4.0" provider-name="Twilight0">
+<addon id="plugin.video.streamlink-tester" name="Streamlink Tester" version="1.4.1" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.26.0"/>
         <import addon="script.module.tulip" version="2.3.6"/>
@@ -854,6 +858,7 @@ Initial Version
     </extension>
     <extension point="xbmc.addon.metadata">
         <platform>all</platform>
+        <reuselanguageinvoker>false</reuselanguageinvoker>
         <summary lang="en">Streamlink and MPEG-DASH Tester</summary>
         <description lang="en_GB">This addon can play and test various video and audio content from various sources supported by Streamlink resolver library. It can also playback MPEG-DASH streams.</description>
         <disclaimer lang="en_GB">This addon does not provide any content, its sole purpose is to resolve web urls with the help of Streamlink resolver library</disclaimer>
@@ -862,11 +867,15 @@ Initial Version
         <website>https://twitter.com/TwilightZer0</website>
         <source>https://github.com/Twilight0/plugin.video.streamlink-tester</source>
         <size>106257</size>
-        <news>[B]1.4.0[/B] - 16-11-2018
+        <news>[B]1.4.1[/B] - 25-05-2019
+- Added "set title and play" context menu item
+- Various other tweaks
+
+[B]1.4.0[/B] - 16-05-2019
 - Minimum version 18.0 required (Leia)
 - Various bug fixes
 
-            [B]1.3.0[/B] - 25-11-2018
+[B]1.3.0[/B] - 25-11-2018
 - Added generic plugin, credits go to back-to
 - Removed vidto plugin</news>
         <assets>
