@@ -339,16 +339,19 @@ Initial Version
 	</extension>
 </addon>
 
-<addon id="plugin.video.ert.gr" version="1.7.0" name="ERT Player" provider-name="Twilight0">
+<addon id="plugin.video.ert.gr" version="1.8.0" name="ERT Player" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0" />
-        <import addon="script.module.tulip" version="2.0.13" />
-        <import addon="plugin.video.youtube" version="6.0.0"/>
+        <import addon="script.module.tulip" version="2.3.6" />
+        <import addon="plugin.video.youtube" version="6.4.1"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="addon.py">
         <provides>video audio</provides>
     </extension>
     <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <reuselanguageinvoker>false</reuselanguageinvoker>
+        <language>en el</language>
         <summary lang="en_GB">ERT Player addon for Kodi</summary>
         <description lang="en_GB">ERT live and on-demand broadcasts</description>
         <description lang="el_GR">Ζωντανές και on demand υπηρεσίες της ΕΡΤ</description>
@@ -358,7 +361,13 @@ Initial Version
         <source>https://github.com/Twilight0/plugin.video.ert.gr</source>
         <size>417205</size>
         <website>https://www.ert.gr/</website>
-        <news>[B]1.7.0[/B]
+        <news>[B]1.8.0[/B]
+- Added ERT Play 3, 4 and Sports live channels
+- Updated icons style for live channels
+- Fix resolver for radio stations
+- Various other tweaks
+
+[B]1.7.0[/B]
 - VOD resolver overhaul
 - https everywhere by default
 - Various cosmetics</news>
@@ -366,8 +375,6 @@ Initial Version
             <icon>icon.png</icon>
             <fanart>fanart.jpg</fanart>
         </assets>
-        <platform>all</platform>
-        <language>en el</language>
         <!--<forum></forum>-->
     </extension>
 </addon>
