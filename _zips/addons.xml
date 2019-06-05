@@ -854,10 +854,10 @@ Initial Version
 	</extension>
 </addon>
 
-<addon id="plugin.video.streamlink-tester" name="Streamlink Tester" version="1.4.1" provider-name="Twilight0">
+<addon id="plugin.video.streamlink-tester" name="Streamlink Tester" version="1.4.2" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.26.0"/>
-        <import addon="script.module.tulip" version="2.3.6"/>
+        <import addon="script.module.tulip" version="2.3.7"/>
         <import addon="script.module.streamlink.base" version="2019.05.08"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="main.py">
@@ -874,17 +874,18 @@ Initial Version
         <website>https://twitter.com/TwilightZer0</website>
         <source>https://github.com/Twilight0/plugin.video.streamlink-tester</source>
         <size>106257</size>
-        <news>[B]1.4.1[/B] - 25-05-2019
+        <news>[B]1.4.2[/B] - 05-06-2019
+- Bug fixes
+- Removal of possibly redundant headers
+- Added setting to disable inputstream arguments
+
+[B]1.4.1[/B] - 25-05-2019
 - Added "set title and play" context menu item
 - Various other tweaks
 
 [B]1.4.0[/B] - 16-05-2019
 - Minimum version 18.0 required (Leia)
-- Various bug fixes
-
-[B]1.3.0[/B] - 25-11-2018
-- Added generic plugin, credits go to back-to
-- Removed vidto plugin</news>
+- Various bug fixes</news>
         <assets>
             <icon>icon.png</icon>
         </assets>
