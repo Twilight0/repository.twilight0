@@ -854,7 +854,7 @@ Initial Version
 	</extension>
 </addon>
 
-<addon id="plugin.video.streamlink-tester" name="Streamlink Tester" version="1.4.3" provider-name="Twilight0">
+<addon id="plugin.video.streamlink-tester" name="Streamlink Tester" version="1.4.4" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.26.0"/>
         <import addon="script.module.tulip" version="2.3.7"/>
@@ -874,7 +874,10 @@ Initial Version
         <website>https://twitter.com/TwilightZer0</website>
         <source>https://github.com/Twilight0/plugin.video.streamlink-tester</source>
         <size>106257</size>
-        <news>[B]1.4.3[/B] - 06-06-2019
+        <news>[B]1.4.4[/B] - 06-06-2019
+- Various tweaks for efficiency
+
+[B]1.4.3[/B] - 06-06-2019
 - Added capability to load headers also from stream json object
 
 [B]1.4.2[/B] - 05-06-2019
