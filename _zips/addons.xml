@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="plugin.audio.eradio.gr" version="1.3.0" name="E-Radio" provider-name="Twilight0">
+<addon id="plugin.audio.eradio.gr" version="1.3.1" name="E-Radio" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0" />
         <import addon="script.module.tulip" version="2.3.7" />
@@ -19,7 +19,10 @@
         <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
         <source>https://github.com/Twilight0/plugin.audio.eradio.gr</source>
         <website>http://www.e-radio.gr/</website>
-        <news>[B]1.3.0[/B]
+        <news>[B]1.3.1[/B]
+- Refined radio list function to avoid creating duplicates
+
+[B]1.3.0[/B]
 - Removed screenshots
 - Developer's picks are now inserted to "All stations" menu item as well
 - Stations will now be sorted according to title by default
