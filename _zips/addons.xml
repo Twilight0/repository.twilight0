@@ -1,58 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="plugin.audio.eradio.gr" version="1.2.2" name="E-Radio" provider-name="Twilight0">
-	<requires>
-		<import addon="xbmc.python" version="2.24.0" />
-		<import addon="script.module.tulip" version="1.0.6" />
-	</requires>
-	<extension point="xbmc.python.pluginsource" library="addon.py">
-		<provides>audio</provides>
-	</extension>
-	<extension point="xbmc.addon.metadata">
-		<summary lang="en">E-Radio addon for Kodi</summary>
-		<description lang="en">Tunein to greek radios and listen live</description>
-		<description lang="el">Με το E-Radio ακούτε όλα τα ελληνικά ραδιόφωνα</description>
-		<disclaimer lang="en">This addon is not published nor endorsed by e-radio.gr</disclaimer>
-		<disclaimer lang="el">Το πρόσθετο αυτό δεν έχει δημοσιευθεί ούτε εγκριθεί από το e-radio.gr</disclaimer>
-		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
-		<source>https://github.com/Twilight0/plugin.audio.eradio.gr</source>
-		<website>http://www.e-radio.gr/</website>
-		<news>
-[B]1.2.2[/B]
-- Minor insignificant tweaks here &amp; there.
-
-[B]1.2.1[/B]
-- Minor tweaks in main indexer
-
-[B]1.2.0[/B]
-- Added developer's picks radio stations (outside of eradio's scope)
-- Added link for source code.
-
-[B]1.1.2[/B]
-- Cosmetics
-
-[B]1.1.1[/B]
-- Rebased to used tulip libraries
-
-[B]1.1.0[/B]
-- Tweaked sections
-- Added add-on screenshots
-
-[B]1.0.1[/B]
-- Code cosmetics
-
-[B]1.0.0[/B]
-- Initial version
-		</news>
-		<assets>
-			<icon>icon.png</icon>
-			<fanart>fanart.jpg</fanart>
-			<screenshot>resources/screenshots/screenshot-01.jpg</screenshot>
-			<screenshot>resources/screenshots/screenshot-02.jpg</screenshot>
-			<screenshot>resources/screenshots/screenshot-03.jpg</screenshot>
-		</assets>
-		<platform>all</platform>
-	</extension>
+<addon id="plugin.audio.eradio.gr" version="1.3.0" name="E-Radio" provider-name="Twilight0">
+    <requires>
+        <import addon="xbmc.python" version="2.24.0" />
+        <import addon="script.module.tulip" version="2.3.7" />
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="addon.py">
+        <provides>audio</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <reuselanguageinvoker>false</reuselanguageinvoker>
+        <summary lang="en">E-Radio addon for Kodi</summary>
+        <description lang="en">Tunein to greek radios and listen live</description>
+        <description lang="el">Με το E-Radio ακούτε όλα τα ελληνικά ραδιόφωνα</description>
+        <disclaimer lang="en">This addon is not published nor endorsed by e-radio.gr</disclaimer>
+        <disclaimer lang="el">Το πρόσθετο αυτό δεν έχει δημοσιευθεί ούτε εγκριθεί από το e-radio.gr</disclaimer>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+        <source>https://github.com/Twilight0/plugin.audio.eradio.gr</source>
+        <website>http://www.e-radio.gr/</website>
+        <news>[B]1.3.0[/B]
+- Removed screenshots
+- Developer's picks are now inserted to "All stations" menu item as well
+- Stations will now be sorted according to title by default
+- Added search functionality
+- Cosmetics</news>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+            <!--<screenshot>resources/screenshots/screenshot-01.jpg</screenshot>-->
+            <!--<screenshot>resources/screenshots/screenshot-02.jpg</screenshot>-->
+            <!--<screenshot>resources/screenshots/screenshot-03.jpg</screenshot>-->
+        </assets>
+        <size>175800</size>
+    </extension>
 </addon>
 
 <addon id="plugin.audio.somafm.com" name="SomaFM Radio" version="2.0.2" provider-name="Twilight0">
