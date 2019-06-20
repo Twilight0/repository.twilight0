@@ -838,11 +838,12 @@ Initial Version
 	</extension>
 </addon>
 
-<addon id="plugin.video.streamlink-tester" name="Streamlink Tester" version="1.4.4" provider-name="Twilight0">
+<addon id="plugin.video.streamlink-tester" name="Streamlink Tester" version="1.5.0" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.26.0"/>
         <import addon="script.module.tulip" version="2.3.7"/>
         <import addon="script.module.streamlink.base" version="2019.05.08"/>
+        <import addon="script.module.youtube.dl" version="18.619.0" optional="true"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="main.py">
         <provides>video</provides>
@@ -858,24 +859,11 @@ Initial Version
         <website>https://twitter.com/TwilightZer0</website>
         <source>https://github.com/Twilight0/plugin.video.streamlink-tester</source>
         <size>106257</size>
-        <news>[B]1.4.4[/B] - 06-06-2019
-- Various tweaks for efficiency
-
-[B]1.4.3[/B] - 06-06-2019
-- Added capability to load headers also from stream json object
-
-[B]1.4.2[/B] - 05-06-2019
-- Bug fixes
-- Removal of possibly redundant headers
-- Added setting to disable inputstream arguments
-
-[B]1.4.1[/B] - 25-05-2019
-- Added "set title and play" context menu item
-- Various other tweaks
-
-[B]1.4.0[/B] - 16-05-2019
-- Minimum version 18.0 required (Leia)
-- Various bug fixes</news>
+        <news>[B]1.5.0[/B] - 20-06-2019
+- Updated generic plugin (thank you back-to)
+- Added youtube-dl as optional dependency to augment the generic plugin
+- Added ability to set custom title from plugin url
+- Added ability to set custom thumbnail from plugin url (as "image" parameter)</news>
         <assets>
             <icon>icon.png</icon>
         </assets>
