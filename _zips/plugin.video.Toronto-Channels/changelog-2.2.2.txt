@@ -1,3 +1,47 @@
+2.2.2 (10-07-2019)
+- Removed some CY streams
+- Removed banners dependency and accompanying functions
+- Updated radio melodia url
+- Added webcam stream
+
+2.2.1 (24-04-2019)
+- Updated variables import statement
+- Replaced single string stream urls with those from variables module
+
+2.2.0 (23-04-2019)
+- Removed key input system and reverted to older streams urls playback
+
+2.1.2 (06-04-2019)
+- Fixed reissued key input system and check
+
+2.1.1 (03-04-2019)
+- Removed Energy
+- Various minor tweaks
+
+2.1.0 (03-04-2019)
+- Bug fixes
+- Renamed addon
+
+2.0.2 (23-03-2019)
+- Cache licence key validity for two hours
+  > in order to avoid constant requests to the server
+
+2.0.1 (20-03-2019)
+- Corrected status url
+
+2.0.0 (20-03-2019)
+- Addon code rework
+- Added licence key authorization system for subscribers
+- Bumped lowest supported Kodi version to Jarvis
+
+1.9.0 (12-02-2019)
+- Add youtube keys when opening youtube channel
+- Add external link opening capability
+- Various other tweaks
+
+1.8.4 (07-02-2019)
+- Re-added voice mag setting
+
 1.8.3 (20-11-2018)
 - Removed greek streams
 - Added Cypriot streams
