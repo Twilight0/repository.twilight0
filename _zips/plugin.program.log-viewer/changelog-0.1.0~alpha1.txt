@@ -1,2 +1,0 @@
-### [B]0.1.0~alpha1[/B] - 07-Aug-2017
-- Initial Version

@@ -1,5 +1,0 @@
-+ 1.0.0 ~ 16-11-2018
-- Initial Release, forked from kharts's konsodi
-- Preliminary support for Python 3
-- Reduced artwork size
-- Alpha release, will add more features soon
