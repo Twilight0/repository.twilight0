@@ -1,0 +1,10 @@
+[B]1.1.0[/B] - 29-05-2019
+- Added a setting to force a specific host (useful for testing universal resolvers)
+  > As url you must provide media id only
+
+[B]1.0.1[/B] - 25-05-2019
+- Added "set title and play" context menu item
+- Other minor tweaks
+
+[B]1.0.0[/B] - 16-05-2019
+- Initial Version

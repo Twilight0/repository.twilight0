@@ -1,3 +1,12 @@
+[B]1.5.1[/B] - 23-08-2019
+- Add exception to headers object loop finder in case it fails
+
+[B]1.5.0[/B] - 20-06-2019
+- Updated generic plugin (thank you back-to)
+- Added youtube-dl as optional dependency to augment the generic plugin
+- Added ability to set custom title from plugin url
+- Added ability to set custom thumbnail from plugin url (as "image" parameter)
+
 [B]1.4.4[/B] - 06-06-2019
 - Various tweaks for efficiency
 
