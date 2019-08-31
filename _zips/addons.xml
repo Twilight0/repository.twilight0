@@ -719,7 +719,7 @@ Features:
     </extension>
 </addon>
 
-<addon id="plugin.video.skai.gr" version="2.0.3" name="SKAI Player" provider-name="Twilight0">
+<addon id="plugin.video.skai.gr" version="2.0.4" name="SKAI Player" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0" />
         <import addon="script.module.tulip" version="2.3.6" />
