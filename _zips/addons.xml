@@ -396,11 +396,11 @@ Features:
     </extension>
 </addon>
 
-<addon id="plugin.video.faros.on-air" name="Faros On-Air" version="1.1.0" provider-name="Twilight0">
+<addon id="plugin.video.faros.on-air" name="Faros On-Air" version="1.2.0" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0"/>
-        <import addon="plugin.video.youtube" version="6.1.4"/>
-        <import addon="script.module.tulip" version="2.0.21"/>
+        <import addon="plugin.video.youtube" version="6.4.2"/>
+        <import addon="script.module.tulip" version="2.3.13"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="addon.py">
         <provides>video</provides>
@@ -428,7 +428,11 @@ Features:
             <!--<datadir zip="true">https://raw.githubusercontent.com/Twilight0/repo.twilight0.libs/master/_zips/</datadir>-->
         <!--</dir>-->
     <!--</extension>-->
-    <news>15-09-2018 - [B]1.1.0[/B]
+    <news>29-10-2019 - [B]1.1.0[/B]
+- New stream urls
+- Some other minor changes
+
+15-09-2018 - [B]1.1.0[/B]
 - Added the second live stream from Faros
 - New nested menu for choosing Faros live stream</news>
 </addon>
