@@ -687,11 +687,11 @@ Features:
     </extension>
 </addon>
 
-<addon id="plugin.video.resolveurl-tester" name="ResolveURL Tester" version="1.1.0" provider-name="Twilight0">
+<addon id="plugin.video.resolveurl-tester" name="ResolveURL Tester" version="1.1.1" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0"/>
-        <import addon="script.module.tulip" version="2.3.6"/>
-        <import addon="script.module.resolveurl" version="5.0.31"/>
+        <import addon="script.module.tulip" version="2.3.13"/>
+        <import addon="script.module.resolveurl" version="5.0.35"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="main.py">
         <provides>video</provides>
@@ -706,8 +706,13 @@ Features:
         <license>GNU GPL, version 2</license>
         <website>https://twitter.com/TwilightZer0</website>
         <source>https://github.com/Twilight0/plugin.video.resolveurl-tester</source>
-        <size>106257</size>
-        <news>[B]1.1.0[/B] - 29-05-2019
+        <size>111206</size>
+        <news>[B]1.1.1[/B] - 11-11-2019
+- Minor tweaks here and there
+- Enhanced context menu items
+- Add sleep when adding a link to wait for directory refresh
+
+[B]1.1.0[/B] - 29-05-2019
 - Added a setting to force a specific host (useful for testing universal resolvers)
   > As url you must provide media id only
 
@@ -828,7 +833,7 @@ Features:
 	</extension>
 </addon>
 
-<addon id="plugin.video.streamlink-tester" name="Streamlink Tester" version="1.5.0" provider-name="Twilight0">
+<addon id="plugin.video.streamlink-tester" name="Streamlink Tester" version="1.5.2" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.26.0"/>
         <import addon="script.module.tulip" version="2.3.7"/>
@@ -849,7 +854,12 @@ Features:
         <website>https://twitter.com/TwilightZer0</website>
         <source>https://github.com/Twilight0/plugin.video.streamlink-tester</source>
         <size>106257</size>
-        <news>[B]1.5.1[/B] - 23-08-2019
+        <news>[B]1.5.2[/B] - 11-11-2019
+- Enhanced context menu items
+- Added sleep when doing file operations (useful for slower devices)
+- Bug fixes, mostly player related
+
+[B]1.5.1[/B] - 23-08-2019
 - Add exception to headers object loop finder in case it fails
 
 [B]1.5.0[/B] - 20-06-2019
@@ -961,7 +971,7 @@ Features:
 <addon id="service.subtitles.subtitles.gr" name="Subtitles.gr" version="2.0.1" provider-name="Twilight0">
 	<requires>
 		<import addon="xbmc.python" version="2.24.0"/>
-		<import addon="script.module.tulip" version="2.3.5" />
+		<import addon="script.module.tulip" version="2.3.13" />
 	</requires>
 	<extension point="xbmc.subtitle.module" library="service.py">
 	</extension>
