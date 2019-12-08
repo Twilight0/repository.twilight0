@@ -279,16 +279,18 @@ Features:
 	</extension>
 </addon>
 
-<addon id="plugin.video.antenna.gr" version="1.3.0~beta1" name="ANT1 Player" provider-name="Twilight0">
+<addon id="plugin.video.antenna.gr" version="2.0.0" name="ANT1 Player" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0" />
-        <import addon="script.module.tulip" version="2.0.22" />
+        <import addon="script.module.tulip" version="2.4.1" />
+        <import addon="plugin.video.youtube" version="6.5.0"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="addon.py">
         <provides>video</provides>
     </extension>
     <extension point="xbmc.addon.metadata">
         <summary lang="en_GB">ANT1 Player addon for Kodi</summary>
+        <reuselanguageinvoker>false</reuselanguageinvoker>
         <description lang="en_GB">ANT1 live and on-demand broadcasts</description>
         <description lang="el_GR">Ζωντανές και on demand υπηρεσίες του ANT1</description>
         <disclaimer lang="en_GB">This addon offers content available in Greece and is not published nor endorsed by antenna.gr</disclaimer>
@@ -298,12 +300,8 @@ Features:
         <source>https://github.com/Twilight0/plugin.video.antenna.gr</source>
         <website>http://www.antenna.gr/</website>
         <size>692701</size>
-        <news>
-[B]1.3.0[/B]
-- Fixed parsing of TV Shows, Latest, Archive and Recommended episodes
-- Updated liveresolver
-- Removed screenshots to save space
-        </news>
+        <news>[B]2.0.0[/B]
+- Complete addon rework</news>
         <assets>
             <icon>icon.png</icon>
             <fanart>fanart.jpg</fanart>
@@ -313,8 +311,6 @@ Features:
         </assets>
         <platform>all</platform>
         <language>en el</language>
-        <!--<forum></forum>-->
-        <!--<email></email>-->
     </extension>
 </addon>
 
