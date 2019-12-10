@@ -314,10 +314,10 @@ Features:
     </extension>
 </addon>
 
-<addon id="plugin.video.ert.gr" version="1.8.0" name="ERT Player" provider-name="Twilight0">
+<addon id="plugin.video.ert.gr" version="2.0.0" name="ERT Player" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0" />
-        <import addon="script.module.tulip" version="2.3.6" />
+        <import addon="script.module.tulip" version="2.4.1" />
         <import addon="plugin.video.youtube" version="6.4.1"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="addon.py">
@@ -336,16 +336,12 @@ Features:
         <source>https://github.com/Twilight0/plugin.video.ert.gr</source>
         <size>417205</size>
         <website>https://www.ert.gr/</website>
-        <news>[B]1.8.0[/B]
-- Added ERT Play 3, 4 and Sports live channels
-- Updated icons style for live channels
-- Fix resolver for radio stations
-- Various other tweaks
-
-[B]1.7.0[/B]
-- VOD resolver overhaul
-- https everywhere by default
-- Various cosmetics</news>
+        <news>[B]2.0.0[/B]
+- Rework of most aspects and sections of the addon
+- Revamped sports section
+- Categories list is now populated from different source (index)
+- Added movies and tv series section
+- Tweaked resolvers</news>
         <assets>
             <icon>icon.png</icon>
             <fanart>fanart.jpg</fanart>
