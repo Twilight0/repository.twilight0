@@ -279,7 +279,7 @@ Features:
 	</extension>
 </addon>
 
-<addon id="plugin.video.antenna.gr" version="2.0.0" name="ANT1 Player" provider-name="Twilight0">
+<addon id="plugin.video.antenna.gr" version="2.0.1" name="ANT1 Player" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0" />
         <import addon="script.module.tulip" version="2.4.1" />
@@ -300,7 +300,11 @@ Features:
         <source>https://github.com/Twilight0/plugin.video.antenna.gr</source>
         <website>http://www.antenna.gr/</website>
         <size>692701</size>
-        <news>[B]2.0.0[/B]
+        <news>[B]2.0.1[/B]
+- Webtv/Archive section "more" indexer fixed
+- Added episodes' sorting by title
+
+[B]2.0.0[/B]
 - Complete addon rework</news>
         <assets>
             <icon>icon.png</icon>
