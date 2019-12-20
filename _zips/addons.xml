@@ -201,7 +201,7 @@ Features:
     </extension>
 </addon>
 
-<addon id="plugin.video.alphatv.gr" version="2.0.0" name="ALPHA Player" provider-name="Twilight0">
+<addon id="plugin.video.alphatv.gr" version="2.0.1" name="ALPHA Player" provider-name="Twilight0">
 	<requires>
 		<import addon="xbmc.python" version="2.24.0" />
 		<import addon="script.module.tulip" version="2.4.1" />
@@ -221,7 +221,10 @@ Features:
 		<source>https://github.com/Twilight0/plugin.video.alphatv.gr</source>
 		<website>http://www.alphatv.gr/</website>
         <size>598620</size>
-		<news>[B]2.0.0[/B]
+		<news>[B]2.0.1[/B]
+- Minor fix for cypriot episode indexers
+
+[B]2.0.0[/B]
 - Rework of the addon, new indexers, new stream resolver
 - Replaced item based selection of country with a selector to switch between regions
 - Bumped dependencies</news>
@@ -237,7 +240,7 @@ Features:
 	</extension>
 </addon>
 
-<addon id="plugin.video.antenna.gr" version="2.0.2" name="ANT1 Player" provider-name="Twilight0">
+<addon id="plugin.video.antenna.gr" version="2.0.3" name="ANT1 Player" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0" />
         <import addon="script.module.tulip" version="2.4.1" />
@@ -258,7 +261,11 @@ Features:
         <source>https://github.com/Twilight0/plugin.video.antenna.gr</source>
         <website>http://www.antenna.gr/</website>
         <size>692701</size>
-        <news>[B]2.0.2[/B]
+        <news>[B]2.0.3[/B]
+- Remove forgotten print statement
+- Replace control.sleep with native sleep of 50ms between requests
+
+[B]2.0.2[/B]
 - Added the "unsorted" method as default instead of title
 
 [B]2.0.1[/B]
