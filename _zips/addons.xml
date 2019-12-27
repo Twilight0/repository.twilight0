@@ -676,7 +676,7 @@ Features:
     </extension>
 </addon>
 
-<addon id="plugin.video.skai.gr" version="3.0.1" name="SKAI Player" provider-name="Twilight0">
+<addon id="plugin.video.skai.gr" version="3.0.2" name="SKAI Player" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0" />
         <import addon="script.module.tulip" version="2.4.1" />
@@ -699,7 +699,7 @@ Features:
         <source>https://github.com/Twilight0/plugin.video.skai.gr</source>
         <website>http://www.skai.gr/</website>
         <size>226000</size>
-        <news>[B]3.0.0[/B]
+        <news>[B]3.0.X[/B]
 - Rework of the addon for website redesign and deprecation of older APIs
 - Removed news in sign language
 - Added the entertainment section
