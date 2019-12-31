@@ -719,16 +719,17 @@ Features:
     </extension>
 </addon>
 
-<addon id="plugin.video.star.gr" version="1.2.5" name="STAR Player" provider-name="Twilight0">
+<addon id="plugin.video.star.gr" version="2.0.0" name="STAR Player" provider-name="Twilight0">
 	<requires>
 		<import addon="xbmc.python" version="2.24.0" />
-		<import addon="script.module.tulip" version="1.2.2" />
-		<import addon="plugin.video.youtube" version="5.4.0"/>
+		<import addon="script.module.tulip" version="2.4.2" />
+		<import addon="plugin.video.youtube" version="6.4.0"/>
 	</requires>
 	<extension point="xbmc.python.pluginsource" library="addon.py">
 		<provides>video</provides>
 	</extension>
 	<extension point="xbmc.addon.metadata">
+		<reuselanguageinvoker>false</reuselanguageinvoker>
 		<summary lang="en_GB">STAR Player addon for Kodi</summary>
         <summary lang="en_GR">Πρόσθετο STAR Player για το Kodi</summary>
 		<description lang="en_GB">STAR live and on-demand broadcasts</description>
@@ -739,40 +740,9 @@ Features:
 		<source>https://github.com/Twilight0/plugin.video.star.gr</source>
 		<website>http://www.star.gr/</website>
 		<size>238009</size>
-		<news>
-[B]1.2.5[/B]
-- Added Hebrew translation by Eng2Heb
-- Cosmetics
-
-[B]1.2.4[/B]
-- Cosmetics
-
-[B]1.2.3[/B]
-- Added Live stream
-
-[B]1.2.2[/B]
-- Cosmetics
-- Various tweaks in addon.xml
-
-[B]1.2.1[/B]
-- Fixed playback for youtube, web tv videos
-- Made youtube addon mandatory
-
-[B]1.2.0[/B]
-- Added Web TV section
-- Added context menu with clear cache function (root menu only)
-- Misc code tweaks here &amp; there
-
-[B]1.1.1[/B]
-- Rebased to utilize tulip libraries
-
-[B]1.1.0[/B]
-- Tweaked sections
-- Added add-on screenshots
-
-[B]1.0.0[/B]
-- Initial version
-		</news>
+		<news>[B]2.0.0[/B]
+- Complete addon rework
+- Changed artwork</news>
 		<assets>
 			<icon>icon.png</icon>
 			<fanart>fanart.jpg</fanart>
