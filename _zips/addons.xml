@@ -125,7 +125,7 @@ Features:
     </extension>
 </addon>
 
-<addon id="plugin.program.reddit_navigator" name="Reddit Navigator" version="1.0.0" provider-name="Twilight0">
+<addon id="plugin.program.reddit_navigator" name="Reddit Navigator" version="1.0.1" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0"/>
         <import addon="script.module.tulip" version="2.4.1"/>
@@ -143,12 +143,12 @@ Features:
         <summary lang="el_GR">Πρόσθετο Reddit Navigator</summary>
         <description lang="en_GB">Reddit Navigator is an addon able to browse Reddit and play various forms of media and show text comments</description>
         <description lang="el_GR">Το πρόσθετο Reddit Navigator είναι μια μικροεφαρμογή πλοήγησης του Reddit που επιτρέπει την αναπαραγωγή διαφόρων ειδών πολυμέσων και προβολή σχολίων και νημάτων</description>
-        <disclaimer lang="en_GB">Kodi is a registered trademark of the XBMC Foundation.[CR]We are not connected to or in any other way affiliated with Kodi - DMCA: legal@tvaddons.co</disclaimer>
+        <disclaimer lang="en_GB">Kodi is a registered trademark of the XBMC Foundation.</disclaimer>
         <language>en</language>
         <license>GNU GPL, version 2</license>
         <source>https://github.com/Twilight0/plugin.program.reddit_navigator</source>
         <size>1711463</size>
-        <news>1.0.0 ~ 02-01-2020
+        <news>1.0.X ~ 02-01-2020
 - Initial Version
 - Forked from Reddit Browser
 - Replaced urlresolver with resolveurl
