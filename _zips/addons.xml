@@ -125,7 +125,7 @@ Features:
     </extension>
 </addon>
 
-<addon id="plugin.program.reddit_navigator" name="Reddit Navigator" version="1.0.2" provider-name="Twilight0">
+<addon id="plugin.program.reddit_navigator" name="Reddit Navigator" version="1.0.3" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0"/>
         <import addon="script.module.tulip" version="2.4.1"/>
@@ -148,7 +148,7 @@ Features:
         <license>GNU GPL, version 2</license>
         <source>https://github.com/Twilight0/plugin.program.reddit_navigator</source>
         <size>1711463</size>
-        <news>1.0.X ~ 02-01-2020
+        <news>1.0.X ~ 04-01-2020
 - Initial Version
 - Forked from Reddit Browser
 - Replaced urlresolver with resolveurl
@@ -157,7 +157,11 @@ Features:
 - Changed artwork
 - Changed user agent string
 - Changed app token
-- Restored a window call function which didn't work on Leia</news>
+- Restored a window call function which didn't work on Leia
+- Removed "depth" variable because it was supposed to be used on flat comments tree
+- Fixed saved items menu
+- Fixed user icon for my account menu
+- Removed capability to install plexus</news>
         <assets>
             <icon>icon.png</icon>
             <fanart>fanart.jpg</fanart>
