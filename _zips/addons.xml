@@ -867,7 +867,7 @@ Features:
 	</extension>
 </addon>
 
-<addon id="service.subtitles.subtitles.gr" name="Subtitles.gr" version="3.0.1" provider-name="Twilight0">
+<addon id="service.subtitles.subtitles.gr" name="Subtitles.gr" version="3.0.2" provider-name="Twilight0">
 	<requires>
 		<import addon="xbmc.python" version="2.24.0"/>
 		<import addon="script.module.tulip" version="2.4.2" />
@@ -898,16 +898,7 @@ Features:
 - Improved debug logging
 - Regex pattern tweaks for queries
 - Performance tweaks
-- Various other tweaks
-
-[B]2.0.Χ[/B]
-- Extraction method for zip files is now performed by python library by default, kodi built-in as fallback
-- Removed notification for broad search terms and tweaked various functions and regexes to allow them
-- Install vfs.libarchive on Leia, whenever possible via builtin command
-- Replaced subtitles.gr domain with an alternative one by default, old one kept as optional
-- Sort subtitles.gr items according to rating (downloads)
-- Various other tweaks
-- Bumped dependencies</news>
+- Various other tweaks</news>
 	</extension>
 </addon>
 </addons>
