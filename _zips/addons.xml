@@ -214,10 +214,10 @@ Features:
 	</extension>
 </addon>
 
-<addon id="plugin.video.antenna.gr" version="2.0.3" name="ANT1 Player" provider-name="Twilight0">
+<addon id="plugin.video.antenna.gr" version="2.1.0" name="ANT1 Player" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0" />
-        <import addon="script.module.tulip" version="2.4.1" />
+        <import addon="script.module.tulip" version="2.5.2" />
         <import addon="plugin.video.youtube" version="6.5.0"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="addon.py">
@@ -234,8 +234,16 @@ Features:
         <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
         <source>https://github.com/Twilight0/plugin.video.antenna.gr</source>
         <website>http://www.antenna.gr/</website>
-        <size>692701</size>
-        <news>[B]2.0.3[/B]
+        <size>204493</size>
+        <news>[B]2.1.0[/B]
+- Improved WebTV indexers
+- Increased timeout for requests
+- Add label for live stream
+- Added "more videos" item on web tv indexers
+- Added the web tv item nesting various video categories
+- Allow m3u8/hls dash on Leia+
+
+[B]2.0.3[/B]
 - Remove forgotten print statement
 - Replace control.sleep with native sleep of 50ms between requests
 
