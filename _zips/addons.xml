@@ -534,15 +534,17 @@ Features:
     </extension>
 </addon>
 
-<addon id="plugin.video.novasports.gr" version="1.1.3" name="Novasports.gr" provider-name="Twilight0">
+<addon id="plugin.video.novasports.gr" version="2.0.0" name="Novasports.gr" provider-name="Twilight0">
 	<requires>
 		<import addon="xbmc.python" version="2.24.0" />
-		<import addon="script.module.tulip" version="1.2.5"/>
+		<import addon="script.module.tulip" version="2.5.5"/>
 	</requires>
 	<extension point="xbmc.python.pluginsource" library="addon.py">
 		<provides>video</provides>
 	</extension>
 	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+        <reuselanguageinvoker>false</reuselanguageinvoker>
 		<summary lang="en_GB">Novasports.gr addon for Kodi</summary>
         <summary lang="en_GR">Πρόσθετο Novasports.gr για το Kodi</summary>
 		<description lang="en_GB">On-demand Videos and TV Shows from novasports.gr</description>
@@ -553,7 +555,9 @@ Features:
 		<source>https://github.com/Twilight0/plugin.video.novasports.gr</source>
 		<website>http://www.novasports.gr/</website>
         <size>815135</size>
-		<news>
+		<news>[B]2.0.0[/B]
+- Complete rework of the addon
+
 [B]1.1.3[/B]
 - Cosmetics &amp; tweaks in addon.xml
 
@@ -568,16 +572,14 @@ Features:
 - Added add-on screenshots
 
 [B]1.0.0[/B]
-- Initial version
-		</news>
+- Initial version</news>
 		<assets>
 			<icon>icon.png</icon>
 			<fanart>fanart.jpg</fanart>
-			<screenshot>resources/screenshots/screenshot-01.jpg</screenshot>
-			<screenshot>resources/screenshots/screenshot-02.jpg</screenshot>
-			<screenshot>resources/screenshots/screenshot-03.jpg</screenshot>
+<!--			<screenshot>resources/screenshots/screenshot-01.jpg</screenshot>-->
+<!--			<screenshot>resources/screenshots/screenshot-02.jpg</screenshot>-->
+<!--			<screenshot>resources/screenshots/screenshot-03.jpg</screenshot>-->
 		</assets>
-		<platform>all</platform>
 		<language>en el</language>
 		<!--<forum></forum>-->
 		<!--<email></email>-->
@@ -879,30 +881,30 @@ Features:
 </addon>
 
 <addon id="service.subtitles.subtitles.gr" name="Subtitles.gr" version="3.0.2" provider-name="Twilight0">
-	<requires>
-		<import addon="xbmc.python" version="2.24.0"/>
-		<import addon="script.module.tulip" version="2.4.2" />
-	</requires>
-	<extension point="xbmc.subtitle.module" library="service.py">
-	</extension>
-	<extension point="xbmc.addon.metadata">
-		<reuselanguageinvoker>false</reuselanguageinvoker>
-		<summary lang="en_GB">Subtitle service addon "subtitles.gr"</summary>
-		<summary lang="en_GB">Υπηρεσιακό πρόσθετο υποτίτλων "subtitles.gr"</summary>
+    <requires>
+        <import addon="xbmc.python" version="2.24.0"/>
+        <import addon="script.module.tulip" version="2.4.2" />
+    </requires>
+    <extension point="xbmc.subtitle.module" library="service.py">
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <reuselanguageinvoker>false</reuselanguageinvoker>
+        <summary lang="en_GB">Subtitle service addon "subtitles.gr"</summary>
+        <summary lang="en_GB">Υπηρεσιακό πρόσθετο υποτίτλων "subtitles.gr"</summary>
         <description lang="en_GB">Search and download subtitles from various sites</description>
-		<description lang="el_GR">Εύρεση και λήψη υποτίτλων από διαφόρους ιστοτόπους</description>
-		<disclaimer lang="en_GB">This service is only for Greek subtitles. It is not published nor endorsed by any of the sites supported</disclaimer>
-		<disclaimer lang="el_GR">Υπηρεσία μόνο ελληνικών υποτίτλων. Δεν έχει δημοσιευθεί ούτε εγκριθεί από οποιοδήποτε υποστηριζόμενο ιστότοπο</disclaimer>
-		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
-		<website>http://www.subtitles.gr/</website>
-		<platform>all</platform>
-		<language>el</language>
-		<news>[B]3.0.X[/B]
+        <description lang="el_GR">Εύρεση και λήψη υποτίτλων από διαφόρους ιστοτόπους</description>
+        <disclaimer lang="en_GB">This service is only for Greek subtitles. It is not published nor endorsed by any of the sites supported</disclaimer>
+        <disclaimer lang="el_GR">Υπηρεσία μόνο ελληνικών υποτίτλων. Δεν έχει δημοσιευθεί ούτε εγκριθεί από οποιοδήποτε υποστηριζόμενο ιστότοπο</disclaimer>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+        <website>http://www.subtitles.gr/</website>
+        <platform>all</platform>
+        <language>el</language>
+        <news>[B]3.0.X[/B]
 - Removed subzxyz (subtitles were moved to opensubtitles.org)
 - Bypassed subtitles.gr/findsubtitles.eu domain completely and removed its setting
 - Added support for subs4free/subs4series, podnapisi
 - Added boolean setting for each site supported
-    > disable for faster searches (subs4free disabled by default)
+> disable for faster searches (subs4free disabled by default)
 - Applied unicode ascii normalization
 - Added setting to sort subs by either subtitle name, source, rating, downloads
 - Results are now cached for two hours in order to reduce subsequent requests
@@ -910,6 +912,6 @@ Features:
 - Regex pattern tweaks for queries
 - Performance tweaks
 - Various other tweaks</news>
-	</extension>
+    </extension>
 </addon>
 </addons>
