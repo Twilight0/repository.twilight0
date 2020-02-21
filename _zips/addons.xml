@@ -268,7 +268,7 @@ Features:
     </extension>
 </addon>
 
-<addon id="plugin.video.ert.gr" version="2.0.3" name="ERT Player" provider-name="Twilight0">
+<addon id="plugin.video.ert.gr" version="2.0.4" name="ERT Player" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0" />
         <import addon="script.module.tulip" version="2.4.1" />
@@ -290,7 +290,10 @@ Features:
         <source>https://github.com/Twilight0/plugin.video.ert.gr</source>
         <size>417205</size>
         <website>https://www.ert.gr/</website>
-        <news>[B]2.0.3[/B]
+        <news>[B]2.0.4[/B]
+- Minor tweak to prioritize Greek live stream over worldwide one
+
+[B]2.0.3[/B]
 - Fix live resolver
 
 [B]2.0.2[/B]
