@@ -754,7 +754,7 @@ Features:
     </extension>
 </addon>
 
-<addon id="plugin.video.star.gr" version="2.1.1" name="STAR Player" provider-name="Twilight0">
+<addon id="plugin.video.star.gr" version="2.1.2" name="STAR Player" provider-name="Twilight0">
 	<requires>
 		<import addon="xbmc.python" version="2.24.0" />
 		<import addon="script.module.tulip" version="2.4.2" />
@@ -775,7 +775,11 @@ Features:
 		<source>https://github.com/Twilight0/plugin.video.star.gr</source>
 		<website>http://www.star.gr/</website>
 		<size>228454</size>
-		<news>[B]2.1.1[/B]
+		<news>[B]2.1.2[/B]
+- Point to a blank video if live stream is offline
+- Fix resolver for some older videos
+
+[B]2.1.1[/B]
 - Fixed player links on main indexers
 
 [B]2.1.0[/B]
@@ -796,11 +800,11 @@ Features:
 	</extension>
 </addon>
 
-<addon id="plugin.video.streamlink-tester" name="Streamlink Tester" version="1.5.2" provider-name="Twilight0">
+<addon id="plugin.video.streamlink-tester" name="Streamlink Tester" version="1.5.3" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.26.0"/>
-        <import addon="script.module.tulip" version="2.3.7"/>
-        <import addon="script.module.streamlink.base" version="2019.05.08"/>
+        <import addon="script.module.tulip" version="2.5.10"/>
+        <import addon="script.module.streamlink.base" version="2020.02.22"/>
         <import addon="script.module.youtube.dl" version="18.619.0" optional="true"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="main.py">
@@ -817,7 +821,10 @@ Features:
         <website>https://twitter.com/TwilightZer0</website>
         <source>https://github.com/Twilight0/plugin.video.streamlink-tester</source>
         <size>106257</size>
-        <news>[B]1.5.2[/B] - 11-11-2019
+        <news>[B]1.5.3[/B] - 01-03-2020
+- Some logging tweaks
+
+[B]1.5.2[/B] - 11-11-2019
 - Enhanced context menu items
 - Added sleep when doing file operations (useful for slower devices)
 - Bug fixes, mostly player related
