@@ -938,10 +938,10 @@ Features:
 	</extension>
 </addon>
 
-<addon id="service.subtitles.subtitles.gr" name="Subtitles.gr" version="3.0.2" provider-name="Twilight0">
+<addon id="service.subtitles.subtitles.gr" name="Subtitles.gr" version="3.1.0" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0"/>
-        <import addon="script.module.tulip" version="2.4.2" />
+        <import addon="script.module.tulip" version="2.5.10" />
     </requires>
     <extension point="xbmc.subtitle.module" library="service.py">
     </extension>
@@ -957,7 +957,13 @@ Features:
         <website>http://www.subtitles.gr/</website>
         <platform>all</platform>
         <language>el</language>
-        <news>[B]3.0.X[/B]
+        <news>[B]3.1.X[/B]
+- Tweaked regexes for searches
+- Added a setting allowing users to set search and download timeouts
+- Added visual feedback when deleting function cache
+- Disabled subs4free.info
+
+[B]3.0.X[/B]
 - Removed subzxyz (subtitles were moved to opensubtitles.org)
 - Bypassed subtitles.gr/findsubtitles.eu domain completely and removed its setting
 - Added support for subs4free/subs4series, podnapisi
