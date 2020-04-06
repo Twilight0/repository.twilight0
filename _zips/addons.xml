@@ -358,7 +358,7 @@ Features:
     </extension>
 </addon>
 
-<addon id="plugin.video.euronews.com" version="1.4.0" name="Euronews" provider-name="Twilight0">
+<addon id="plugin.video.euronews.com" version="1.4.1" name="Euronews" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0"/>
         <import addon="script.module.tulip" version="2.5.10"/>
@@ -385,7 +385,12 @@ Features:
         <source>https://github.com/Twilight0/plugin.video.euronews.com</source>
         <website>http://www.euronews.com/</website>
         <size>351600</size>
-        <news>[B]1.4.0[/B]
+        <news>[B]1.4.1[/B]
+- Add de_DE translation (contrib. horstle)
+- Add hr_HR translation (contrib. arvvoid)
+- Add no_NO translation (contrib. solbu)
+
+[B]1.4.0[/B]
 - Add es_ES translation (contrib. roliverosc)
 - Add ro_RO translation (contrib. tmihai20)
 - Add nl_NL translation (contrib. dagwieers)
@@ -719,11 +724,11 @@ Features:
     </extension>
 </addon>
 
-<addon id="plugin.video.skai.gr" version="3.0.4" name="SKAI Player" provider-name="Twilight0">
+<addon id="plugin.video.skai.gr" version="3.0.5" name="SKAI Player" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0" />
         <import addon="script.module.tulip" version="2.4.1" />
-        <import addon="plugin.video.youtube" version="6.5.0"/>
+        <import addon="plugin.video.youtube" version="6.7.0"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="addon.py">
         <provides>video audio</provides>
