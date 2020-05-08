@@ -861,11 +861,11 @@ Features:
     </extension>
 </addon>
 
-<addon id="plugin.video.Toronto-Channels" name="BCI Greek TV" version="2.4.0" provider-name="BCI Media Inc.">
+<addon id="plugin.video.Toronto-Channels" name="BCI Greek TV" version="2.4.1" provider-name="BCI Media Inc.">
     <requires>
         <import addon="xbmc.python" version="2.24.0"/>
-        <import addon="plugin.video.youtube" version="6.4.0"/>
-        <import addon="script.module.tulip" version="2.3.11"/>
+        <import addon="plugin.video.youtube" version="6.7.0"/>
+        <import addon="script.module.tulip" version="2.5.10"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="addon.py">
         <provides>video audio image</provides>
@@ -878,7 +878,11 @@ Features:
         <summary lang="el">Πρόσθετο BCI Greek TV</summary>
         <description lang="el">Το πρόσθετο αυτό παρέχει ζωντανό περιεχόμενο κυρίως εις την Ελληνική γλώσσα</description>
         <license>GNU General Public License, v2</license>
-        <news>2.4.0 (28-10-2019)
+        <news>2.4.1 (08-05-2019)
+- Update BCI news link
+- Update README
+
+2.4.0 (28-10-2019)
 - Renamed menu item "Webcam" to "BCI 24 News"
 - Removed some comments served as reserved code
 - Made BCI news url also changeable to rtmp</news>
