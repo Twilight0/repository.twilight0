@@ -918,25 +918,31 @@ Features:
     </extension>
 </addon>
 
-<addon id="plugin.video.zouzounia.tv" name="Zouzounia TV" version="2.0.0" provider-name="Twilight0">
+<addon id="plugin.video.zouzounia.tv" name="Zouzounia TV" version="3.0.0" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0"/>
-        <import addon="plugin.video.youtube" version="6.0.0"/>
-        <import addon="script.module.tulip" version="2.0.0"/>
+        <import addon="plugin.video.youtube" version="6.8.2"/>
+        <import addon="script.module.tulip" version="2.5.11"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="addon.py">
         <provides>video</provides>
     </extension>
     <extension point="xbmc.addon.metadata">
         <platform>all</platform>
+        <reuselanguageinvoker>false</reuselanguageinvoker>
         <summary lang="en">Zouzounia TV addon</summary>
         <description lang="en">Zouzounia TV addon</description>
         <summary lang="el">Πρόσθετο Zouzounia TV</summary>
         <description lang="el">Πρόσθετο Zouzounia TV</description>
-        <license>GNU GPL, version 2 or later</license>
+        <license>GNU GPL, version 3</license>
         <website>https://www.youtube.com/channel/UCzsQf6eiWz4gIHgx0oYadXA</website>
     </extension>
-    <news>15-06-2018 - [B]2.0.0[/B]
+    <news>29-06-2020 - [B]3.0.0[/B]
+- Addon rework
+- New youtube api keys
+- Removed third party content
+
+15-06-2018 - [B]2.0.0[/B]
 - Added English/Greek/Japanese Language selector
 - Tulip libraries are now used
 - Increased number of recent videos due to improvemens on youtube module</news>
