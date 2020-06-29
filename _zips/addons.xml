@@ -414,11 +414,11 @@ Features:
     </extension>
 </addon>
 
-<addon id="plugin.video.faros.on-air" name="Faros On-Air" version="1.2.0" provider-name="Twilight0">
+<addon id="plugin.video.faros.on-air" name="Faros On-Air" version="1.3.0" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0"/>
-        <import addon="plugin.video.youtube" version="6.4.2"/>
-        <import addon="script.module.tulip" version="2.3.13"/>
+        <import addon="plugin.video.youtube" version="6.8.2"/>
+        <import addon="script.module.tulip" version="2.5.11"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="addon.py">
         <provides>video</provides>
@@ -426,11 +426,12 @@ Features:
     <extension point="xbmc.service" library="resources/lib/service.py" start="startup"/>
     <extension point="xbmc.addon.metadata">
         <platform>all</platform>
+        <reuselanguageinvoker>false</reuselanguageinvoker>
         <summary lang="en">Faros On-Air addon</summary>
         <description lang="en">This addon features video content and Live stream from the PanCypriot channel Faros from Pafos, Cyprus</description>
         <summary lang="el">Πρόσθετο Faros On-Air</summary>
         <description lang="el">Το πρόσθετο αυτό παρέχει βίντεο, ειδήσεις και ζωντανό περιεχόμενο από το Πανκύπριο κανάλι Faros από την Πάφο της Κύπρου</description>
-        <license>GNU GPL, version 2 or later</license>
+        <license>GNU GPL, version 3</license>
         <size>738082</size>
         <website>https://farosonair.com/</website>
         <source>https://github.com/Twilight0/plugin.video.faros.on-air</source>
@@ -446,7 +447,11 @@ Features:
             <!--<datadir zip="true">https://raw.githubusercontent.com/Twilight0/repo.twilight0.libs/master/_zips/</datadir>-->
         <!--</dir>-->
     <!--</extension>-->
-    <news>29-10-2019 - [B]1.1.0[/B]
+    <news>29-06-2020 - [B]1.3.0[/B]
+- New youtube api key
+- Various other bug fixes
+
+29-10-2019 - [B]1.2.0[/B]
 - New stream urls
 - Some other minor changes
 
@@ -560,7 +565,7 @@ Features:
     </extension>
 </addon>
 
-<addon id="plugin.video.montreal.greek-tv" name="Montreal Greek TV" version="2.1.4" provider-name="Greektimes.ca, Twilight0">
+<addon id="plugin.video.montreal.greek-tv" name="Montreal Greek TV" version="2.1.5" provider-name="Greektimes.ca, Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0"/>
         <import addon="script.module.tulip" version="2.3.4"/>
@@ -577,7 +582,10 @@ Features:
         <language>en el</language>
         <license>GNU General Public License, v3</license>
         <size>633158</size>
-        <news>[B]2.1.4[/B] - 25-03-2019
+        <news>[B]2.1.5[/B] - 29-06-2020
+- Updated youtube api key
+
+[B]2.1.4[/B] - 25-03-2019
 - Bumped dependencies
 - Added sort method for youtube videos
 
@@ -867,10 +875,10 @@ Features:
     </extension>
 </addon>
 
-<addon id="plugin.video.Toronto-Channels" name="BCI Greek TV" version="2.5.0" provider-name="BCI Media Inc.">
+<addon id="plugin.video.Toronto-Channels" name="BCI Greek TV" version="2.5.1" provider-name="BCI Media Inc.">
     <requires>
         <import addon="xbmc.python" version="2.24.0"/>
-        <import addon="plugin.video.youtube" version="6.7.0"/>
+        <import addon="plugin.video.youtube" version="6.8.2"/>
         <import addon="script.module.tulip" version="2.5.10"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="addon.py">
@@ -883,8 +891,11 @@ Features:
         <description lang="en">This addon offers live streaming content mainly in Greek language</description>
         <summary lang="el">Πρόσθετο BCI Greek TV</summary>
         <description lang="el">Το πρόσθετο αυτό παρέχει ζωντανό περιεχόμενο κυρίως εις την Ελληνική γλώσσα</description>
-        <license>GNU General Public License, v2</license>
-        <news>2.5.0 (22-05-2019)
+        <license>GNU General Public License, v3</license>
+        <news>2.5.1 (29-06-2020)
+- Updated youtube api key
+
+2.5.0 (22-05-2019)
 - Re-addition of RIK live streams
 
 2.4.1 (08-05-2019)

@@ -52,6 +52,8 @@ _tools/
 
 /plugin\.video\.faros\.on-air/
 
+/plugin\.video\.fashiontv\.com/
+
 /plugin\.program\.pair_tool/
 
 /plugin\.video\.mgtow/
@@ -69,3 +71,5 @@ _tools/
 /plugin\.video\.tvopen\.gr/
 
 /plugin\.program\.reddit_navigator/
+
+/service\.streamlink\.proxy/
