@@ -743,7 +743,7 @@ Features:
     </extension>
 </addon>
 
-<addon id="plugin.video.skai.gr" version="3.0.5" name="SKAI Player" provider-name="Twilight0">
+<addon id="plugin.video.skai.gr" version="3.0.6" name="SKAI Player" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0" />
         <import addon="script.module.tulip" version="2.4.1" />
@@ -786,11 +786,11 @@ Features:
     </extension>
 </addon>
 
-<addon id="plugin.video.star.gr" version="2.1.2" name="STAR Player" provider-name="Twilight0">
+<addon id="plugin.video.star.gr" version="2.2.0" name="STAR Player" provider-name="Twilight0">
 	<requires>
 		<import addon="xbmc.python" version="2.24.0" />
-		<import addon="script.module.tulip" version="2.4.2" />
-		<import addon="plugin.video.youtube" version="6.4.0"/>
+		<import addon="script.module.tulip" version="2.5.11" />
+		<import addon="plugin.video.youtube" version="6.8.2"/>
 	</requires>
 	<extension point="xbmc.python.pluginsource" library="addon.py">
 		<provides>video</provides>
@@ -807,7 +807,11 @@ Features:
 		<source>https://github.com/Twilight0/plugin.video.star.gr</source>
 		<website>http://www.star.gr/</website>
 		<size>228454</size>
-		<news>[B]2.1.2[/B]
+		<news>[B]2.2.0[/B]
+- Updated youtube api key
+- Updated indexing functions
+
+[B]2.1.2[/B]
 - Point to a blank video if live stream is offline
 - Fix resolver for some older videos
 
@@ -978,6 +982,34 @@ Features:
         <disclaimer>Icon theme provided by Greek Voice TV administrator</disclaimer>
 		<platform>all</platform>
 	</extension>
+</addon>
+
+<addon id="service.streamlink.proxy" name="Streamlink Proxy" version="4.1.2" provider-name="Twilight0">
+    <requires>
+        <import addon="xbmc.python" version="2.24.0"/>
+        <import addon="script.module.streamlink.base" version="2018.06.12"/>
+        <!--<import addon="script.module.streamlink.plugins" version="1.0.3"/>-->
+    </requires>
+    <extension point="xbmc.service" library="resources/lib/service.py" start="login"/>
+    <extension point="xbmc.python.pluginsource" library="options.py">
+        <provides>executable</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <language>en de el</language>
+        <summary>Streamlink Proxy</summary>
+        <description>Streamlink Proxy for Kodi</description>
+        <platform>all</platform>
+        <license>GPLv3</license>
+        <source>https://github.com/Twilight0/service.streamlink.proxy</source>
+        <size>172839</size>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+        <news>+ 4.1.2
+- Removed plugins dependency
+- Bumped base module dependency to latest</news>
+    </extension>
 </addon>
 
 <addon id="service.subtitles.subtitles.gr" name="Subtitles.gr" version="3.1.0" provider-name="Twilight0">
