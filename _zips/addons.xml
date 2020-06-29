@@ -264,7 +264,7 @@ Features:
 	</extension>
 </addon>
 
-<addon id="plugin.video.antenna.gr" version="2.1.0" name="ANT1 Player" provider-name="Twilight0">
+<addon id="plugin.video.antenna.gr" version="2.1.1" name="ANT1 Player" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0" />
         <import addon="script.module.tulip" version="2.5.2" />
@@ -285,7 +285,11 @@ Features:
         <source>https://github.com/Twilight0/plugin.video.antenna.gr</source>
         <website>http://www.antenna.gr/</website>
         <size>204493</size>
-        <news>[B]2.1.0[/B]
+        <news>[B]2.1.1[/B]
+- Updated youtube api key
+- Minor bug fix in the main indexing function
+
+[B]2.1.0[/B]
 - Improved WebTV indexers
 - Increased timeout for requests
 - Add label for live stream
