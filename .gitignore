@@ -1,66 +1,77 @@
-
 *\.idea/
+
 _tools/
-\.fuse_hidden*
 
-/plugin\.audio\.eradio\.gr/	
+/plugin\.audio\.eradio\.gr/
 
-/plugin\.audio\.somafm\.com/	
+/plugin\.audio\.somafm\.com/
 
-/plugin\.audio\.tuneinradio/	
+/plugin\.audio\.tuneinradio/
 
-/plugin\.program\.log-viewer/	
+/plugin\.program\.log-viewer/
 
-/plugin\.program\.yt-setup/	
+/plugin\.program\.yt-setup/
 
-/plugin\.video\.Toronto-Channels/	
+/plugin\.video\.Toronto-Channels/
 
-/plugin\.video\.alphatv\.gr/	
+/plugin\.video\.alphatv\.gr/
 
-/plugin\.video\.antenna\.gr/	
+/plugin\.video\.antenna\.gr/
 
-/plugin\.video\.ert\.gr/	
+/plugin\.video\.ert\.gr/
 
-/plugin\.video\.euronews\.com/	
+/plugin\.video\.euronews\.com/
 
-/service\.subtitles\.subtitles\.gr/	
+/service\.subtitles\.subtitles\.gr/
 
-/script\.greekvoice\.artwork/	
+/script\.greekvoice\.artwork/
 
-/repository\.twilight0\.libs/	
+/repository\.twilight0\.libs/
 
-/repository\.twilight0/	
+/repository\.twilight0/
 
-/plugin\.video\.zouzounia\.tv/	
+/plugin\.video\.zouzounia\.tv/
 
-/plugin\.video\.star\.gr/	
+/plugin\.video\.star\.gr/
 
-/plugin\.video\.skai\.gr/	
+/plugin\.video\.skai\.gr/
 
-/plugin\.video\.pylearner/	
+/plugin\.video\.pylearner/
 
-/plugin\.video\.novasports\.gr/	
+/plugin\.video\.novasports\.gr/
 
-/plugin\.video\.montreal\.greek-tv/	
+/plugin\.video\.montreal\.greek-tv/
 
-/plugin\.video\.listrunner/	
+/plugin\.video\.listrunner/
 
-/plugin\.video\.hng/	
+/plugin\.video\.hng/
 
-/plugin\.video\.greekvoice/	
+/plugin\.video\.greekvoice/
 
-/plugin\.video\.fittube\.tv/	
+/plugin\.video\.fittube\.tv/
 
-/plugin\.video\.faros\.on-air/	
+/plugin\.video\.faros\.on-air/
 
-/plugin\.program\.pair_tool/	
+/plugin\.video\.fashiontv\.com/
 
-/plugin\.video\.mgtow/	
+/plugin\.program\.pair_tool/
 
-/plugin\.video\.streamlink-tester/	
+/plugin\.video\.mgtow/
+
+/plugin\.video\.streamlink-tester/
 
 /plugin\.program\.dev_tools/
 
-/plugin\.video\.point-femininity/	
+\.fuse_hidden*
+
+/plugin\.video\.point-femininity/
 
 /plugin\.video\.resolveurl-tester/
+
+/plugin\.video\.tvopen\.gr/
+
+/plugin\.program\.reddit_navigator/
+
+/service\.streamlink\.proxy/
+
+/plugin\.video\.AliveGR/
