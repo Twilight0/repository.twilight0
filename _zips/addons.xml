@@ -1107,6 +1107,30 @@ Kindly note that AliveGR is not an official part of the media player you are run
     </extension>
 </addon>
 
+<addon id="resource.images.alivegr.artwork" name="AliveGR Artwork" version="3.0.5" provider-name="Twilight0">
+	<extension point="kodi.resource.images" compile="false" type="AliveGR" />
+	<requires>
+		<import addon="kodi.resource" version="1.0.0"/>
+	</requires>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">AliveGR's main artwork</summary>
+		<description lang="en">Artwork is distributed separately to allow easier maintenance and consume less bandwidth</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="resource.images.alivegr.logos" name="AliveGR TV Logos" version="1.0.2" provider-name="Twilight0">
+	<extension point="kodi.resource.images" compile="false" type="AliveGR" />
+	<requires>
+		<import addon="kodi.resource" version="1.0.0"/>
+	</requires>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">AliveGR's TV channels logos</summary>
+		<description lang="en">Logos are provided separately to allow easier distribution</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
 <addon id="script.greekvoice.artwork" version="1.2.0" name="Greek Voice Artwork" provider-name="Twilight0">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0"/>

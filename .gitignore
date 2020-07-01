@@ -75,3 +75,7 @@ _tools/
 /service\.streamlink\.proxy/
 
 /plugin\.video\.AliveGR/
+
+/resource\.images\.alivegr\.artwork
+
+/resource\.images\.alivegr\.logos
