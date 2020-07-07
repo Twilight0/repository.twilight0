@@ -1,0 +1,5 @@
+[B]1.0.0[/B]
+- Final stable version
+
+[B]0.0.1~alpha1[/B]
+- Initial version
