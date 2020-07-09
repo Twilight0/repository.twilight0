@@ -125,13 +125,13 @@ Features:
     </extension>
 </addon>
 
-<addon id="plugin.program.reddit_navigator" name="Reddit Navigator" version="1.0.5" provider-name="Twilight0">
+<addon id="plugin.program.reddit_navigator" name="Reddit Navigator" version="1.0.6" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0"/>
-        <import addon="script.module.tulip" version="2.4.1"/>
+        <import addon="script.module.tulip" version="2.6.1"/>
         <import addon="script.module.pyxbmct" version="1.2.0"/>
-        <import addon="script.module.resolveurl" version="5.0.37"/>
-        <import addon="plugin.video.youtube" version="6.5.0"/>
+        <import addon="script.module.resolveurl" version="5.1.0"/>
+        <import addon="plugin.video.youtube" version="6.8.2"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="main.py">
         <provides>video audio image executable</provides>
@@ -167,6 +167,7 @@ Features:
 - Added a cancellation button and exception handling on wrong username/password
 - Optionally notify user on token refresh, now defaults to off
 - Optionally open the first time prompt (read me)
+- Removed the authorization options except the login with user/pass
 - Various other minor tweaks</news>
         <assets>
             <icon>icon.png</icon>
