@@ -1,0 +1,9 @@
+[B]1.0.1[/B]
+- Removed unsupported streams
+- Check if Kodi Leia+ for asking about inputstream addon
+
+[B]1.0.0[/B]
+- Final stable version
+
+[B]0.0.1~alpha1[/B]
+- Initial version
