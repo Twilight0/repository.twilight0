@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="plugin.video.hng" name="Heroes and Generals" version="1.2.0" provider-name="Twilight0">
+<addon id="plugin.video.hng" name="Heroes and Generals" version="2.0.0" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0"/>
-        <import addon="plugin.video.youtube" version="6.0.2"/>
-        <import addon="script.module.tulip" version="2.0.14"/>
+        <import addon="plugin.video.youtube" version="6.8.2"/>
+        <import addon="script.module.tulip" version="2.6.1"/>
     </requires>
-    <extension point="xbmc.python.pluginsource" library="hng.py">
+    <extension point="xbmc.python.pluginsource" library="addon.py">
         <provides>video</provides>
     </extension>
     <extension point="xbmc.addon.metadata">
         <platform>all</platform>
+        <reuselanguageinvoker>false</reuselanguageinvoker>
         <summary lang="en">Heroes and Generals addon</summary>
         <description lang="en">This addon is not developed, nor endorsed by Reto-Moto ApS</description>
         <summary lang="el">Πρόσθετο Heroes and Generals</summary>
