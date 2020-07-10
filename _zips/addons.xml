@@ -525,7 +525,7 @@ Kindly note that AliveGR is not an official part of the media player you are run
 - New nested menu for choosing Faros live stream</news>
 </addon>
 
-<addon id="plugin.video.fashiontv.com" version="1.0.1" name="Fashion TV Player" provider-name="Twilight0">
+<addon id="plugin.video.fashiontv.com" version="1.0.2" name="Fashion TV Player" provider-name="Twilight0">
 	<requires>
 		<import addon="xbmc.python" version="2.24.0" />
 		<import addon="script.module.tulip" version="2.6.1" />
@@ -546,7 +546,11 @@ Kindly note that AliveGR is not an official part of the media player you are run
 		<source>https://github.com/Twilight0/plugin.video.fashiontv.com</source>
 		<website>https://www.fashiontv.com/</website>
 		<size>228454</size>
-		<news>[B]1.0.1[/B]
+		<news>[B]1.0.2[/B]
+- Re-addition of previously unsupported streams
+- Properly check for stream m3u8/mpd and dash activation
+
+[B]1.0.1[/B]
 - Removed unsupported streams
 - Check if Kodi Leia+ for asking about inputstream addon
 
