@@ -293,11 +293,10 @@ Kindly note that AliveGR is not an official part of the media player you are run
     </extension>
 </addon>
 
-<addon id="plugin.video.alphatv.gr" version="2.0.1" name="ALPHA Player" provider-name="Twilight0">
+<addon id="plugin.video.alphatv.gr" version="2.1.0" name="ALPHA Player" provider-name="Twilight0">
 	<requires>
 		<import addon="xbmc.python" version="2.24.0" />
-		<import addon="script.module.tulip" version="2.4.1" />
-<!--		<import addon="plugin.video.youtube" version="6.4.0" optional="true" />-->
+		<import addon="script.module.tulip" version="2.6.4" />
 	</requires>
 	<extension point="xbmc.python.pluginsource" library="addon.py">
 		<provides>video</provides>
@@ -309,11 +308,17 @@ Kindly note that AliveGR is not an official part of the media player you are run
 		<description lang="el_GR">Ζωντανές και on demand υπηρεσίες του ALPHA</description>
 		<disclaimer lang="en_GB">This addon offers content available in Greece and is not published nor endorsed by alphatv.gr</disclaimer>
 		<disclaimer lang="el_GR">Το πρόσθετο αυτό προσφέρει περιεχόμενο διαθέσιμο στην Ελλάδα και δεν έχει δημοσιευθεί ούτε εγκριθεί από το alphatv.gr</disclaimer>
-		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+		<license>GPL-3.0-only</license>
 		<source>https://github.com/Twilight0/plugin.video.alphatv.gr</source>
 		<website>http://www.alphatv.gr/</website>
         <size>598620</size>
-		<news>[B]2.0.1[/B]
+		<news>[B]2.1.0[/B]
+- Update youtube api key
+- Update indexers
+- Update resolvers
+- Add input date prompt for past webtv news on cypriot indexer
+
+[B]2.0.1[/B]
 - Minor fix for cypriot episode indexers
 
 [B]2.0.0[/B]
