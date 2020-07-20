@@ -584,12 +584,12 @@ Kindly note that AliveGR is not an official part of the media player you are run
 	</extension>
 </addon>
 
-<addon id="plugin.video.greekvoice" name="Greek Voice" version="2.0.2" provider-name="Twilight0">
+<addon id="plugin.video.greekvoice" name="Greek Voice" version="3.0.0" provider-name="Twilight0">
     <requires>
-        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="xbmc.python" version="2.24.0"/>
         <import addon="script.greekvoice.artwork" version="1.1.0"/>
-        <import addon="plugin.video.youtube" version="5.2.1"/>
-        <import addon="script.module.tulip" version="1.1.4"/>
+        <import addon="plugin.video.youtube" version="6.8.2"/>
+        <import addon="script.module.tulip" version="2.6.5"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="addon.py">
         <provides>video</provides>
@@ -600,10 +600,14 @@ Kindly note that AliveGR is not an official part of the media player you are run
         <description lang="en_GB">This addon offers live streaming content from the WPSO website</description>
         <summary lang="el_GR">Πρόσθετο Greek Voice Live, ζωντανή Ελληνική φωνή</summary>
         <description lang="el_GR">Το πρόσθετο αυτό προσφέρει ζωντανές ροές από το site WPSO</description>
-        <license>GNU General Public License, v2</license>
+        <license>GPL-3.0-only</license>
         <website>http://wpso.com/</website>
         <email>angelo@greekvoice.us</email>
-        <news>
+        <news>[B]3.0.0 (20-Jul-2020)[/B]
+- Reworked addon for Python 3
+- Removed youtube setup function &amp; added private api keys
+- Bumped dependencies' versions
+
 [B]2.0.2 (19-Aug-2018)[/B]
 - Tweaked icon method call
 
