@@ -395,11 +395,11 @@ Kindly note that AliveGR is not an official part of the media player you are run
     </extension>
 </addon>
 
-<addon id="plugin.video.ert.gr" version="2.0.4" name="ERT Player" provider-name="Twilight0">
+<addon id="plugin.video.ert.gr" version="3.0.0~beta1" name="ERTflix" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0" />
-        <import addon="script.module.tulip" version="2.4.1" />
-        <import addon="plugin.video.youtube" version="6.4.1"/>
+        <import addon="script.module.tulip" version="2.6.7" />
+        <import addon="plugin.video.youtube" version="6.8.2"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="addon.py">
         <provides>video audio</provides>
@@ -408,16 +408,27 @@ Kindly note that AliveGR is not an official part of the media player you are run
         <platform>all</platform>
         <reuselanguageinvoker>false</reuselanguageinvoker>
         <language>en el</language>
-        <summary lang="en_GB">ERT Player addon for Kodi</summary>
+        <summary lang="en_GB">ERTflix addon for Kodi</summary>
+        <summary lang="el_GR">Πρόσθετο ERTflix για το Kodi</summary>
         <description lang="en_GB">ERT live and on-demand broadcasts</description>
         <description lang="el_GR">Ζωντανές και on demand υπηρεσίες της ΕΡΤ</description>
         <disclaimer lang="en_GB">This addon offers content available in Greece and is not published nor endorsed by ert.gr</disclaimer>
         <disclaimer lang="el_GR">Το πρόσθετο αυτό προσφέρει περιεχόμενο διαθέσιμο στην Ελλάδα και δεν έχει δημοσιευθεί ούτε εγκριθεί από το ert.gr</disclaimer>
-        <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+        <license>GPL-3.0-only</license>
         <source>https://github.com/Twilight0/plugin.video.ert.gr</source>
         <size>417205</size>
         <website>https://www.ert.gr/</website>
-        <news>[B]2.0.4[/B]
+        <news>[B]3.0.0[/B]
+- Reworked addon for new website design
+- New artwork
+- Renamed to ERTflix
+- Updated resolver
+- Reworked strings.po to be in range 30000+
+- Removed weather menu item as content is not present on the main website
+- Removed Hebrew translation (it hasn't been updated properly for long time)
+- Bumped dependencies
+
+[B]2.0.4[/B]
 - Minor tweak to prioritize Greek live stream over worldwide one
 
 [B]2.0.3[/B]

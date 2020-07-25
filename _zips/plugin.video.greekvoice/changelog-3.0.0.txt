@@ -1,6 +1,6 @@
 [B]3.0.0 (20-Jul-2020)[/B]
 - Reworked addon for Python 3
-- Removed youtube setup function &amp; added private api keys
+- Removed youtube setup function & added private api keys
 - Bumped dependencies' versions
 
 [B]2.0.2 (19-Aug-2018)[/B]
