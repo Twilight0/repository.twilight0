@@ -395,7 +395,7 @@ Kindly note that AliveGR is not an official part of the media player you are run
     </extension>
 </addon>
 
-<addon id="plugin.video.ert.gr" version="3.0.0~beta4" name="ERTflix" provider-name="Twilight0">
+<addon id="plugin.video.ert.gr" version="3.0.0~beta5" name="ERTflix" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0" />
         <import addon="script.module.tulip" version="2.6.9" />
@@ -410,7 +410,9 @@ Kindly note that AliveGR is not an official part of the media player you are run
             <item library="resources/lib/youtube_bookmark.py">
                 <label>30006</label>
                 <visible>
-                    String.StartsWith(Container.FolderPath,plugin://plugin.video.youtube/channel/UC0jVU-mK53vDQZcSZB5mVHg/)
+                    String.StartsWith(Container.FolderPath,plugin://plugin.video.youtube/channel/UC0jVU-mK53vDQZcSZB5mVHg/) +
+                    !String.Contains(ListItem.Art(thumb),resources/media) +
+                    !String.Contains(ListItem.FolderPath,page_token)
                 </visible>
             </item>
         </menu>
