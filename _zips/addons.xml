@@ -227,7 +227,7 @@ Features:
     </extension>
 </addon>
 
-<addon id="plugin.video.AliveGR" name="AliveGR" version="2.3.6" provider-name="Twilight0">
+<addon id="plugin.video.AliveGR" name="AliveGR" version="2.3.7" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.26.0"/>
         <import addon="resource.images.alivegr.artwork" version="3.0.5"/>
@@ -264,6 +264,7 @@ Kindly note that AliveGR is not an official part of the media player you are run
 - Added screenshots
 - Added a way for the developer to disable caching entirely on the fly
 - Added a new set of youtube api keys for kids &amp; miscellany section
+- Added a way to clear all bookmarks at once
 - New resolvers for alternative streams
 - Updated various kids movies indexer and added multi choice of streams
 - Removed alivegr:// urls from live playlist mode
@@ -395,7 +396,7 @@ Kindly note that AliveGR is not an official part of the media player you are run
     </extension>
 </addon>
 
-<addon id="plugin.video.ert.gr" version="3.0.0~beta5" name="ERTflix" provider-name="Twilight0">
+<addon id="plugin.video.ert.gr" version="3.0.0~beta6" name="ERTflix" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0" />
         <import addon="script.module.tulip" version="2.6.9" />
