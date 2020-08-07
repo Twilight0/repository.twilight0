@@ -177,10 +177,10 @@ Features:
     </extension>
 </addon>
 
-<addon id="plugin.program.yt-setup" name="Youtube Setup" version="2.0.2" provider-name="Twilight0">
+<addon id="plugin.program.yt-setup" name="Youtube Setup" version="2.1.0" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0"/>
-        <import addon="plugin.video.youtube" version="6.6.0"/>
+        <import addon="plugin.video.youtube" version="6.8.3"/>
         <import addon="script.module.tulip" version="2.6.11"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="addon.py">
@@ -202,7 +202,13 @@ Features:
         <license>GNU GPL, version 2</license>
         <website>https://twitter.com/TwilightZer0</website>
         <source>https://github.com/Twilight0/plugin.program.yt-setup</source>
-        <news>[B]+ 2.0.2[/B] ~ (22-04-2020)
+        <news>[B]+ 2.1.0[/B] ~ (07-08-2020)
+- Add support for past.osmc.tv
+- Added hindi support (contrib: spyderboy92)
+- Added swedish support (contrib: Sopor)
+- Clean up
+
+[B]+ 2.0.2[/B] ~ (22-04-2020)
 - Minor tweak for yesno dialog (for Kodi 19)
 
 [B]+ 2.0.1[/B] ~ (22-04-2020)
