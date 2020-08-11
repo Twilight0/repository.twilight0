@@ -203,7 +203,7 @@ Features:
         <website>https://twitter.com/TwilightZer0</website>
         <source>https://github.com/Twilight0/plugin.program.yt-setup</source>
         <news>[B]+ 2.1.0[/B] ~ (07-08-2020)
-- Add support for past.osmc.tv
+- Add support for paste.osmc.tv
 - Added hindi support (contrib: spyderboy92)
 - Added swedish support (contrib: Sopor)
 - Clean up
@@ -405,7 +405,7 @@ Kindly note that AliveGR is not an official part of the media player you are run
     </extension>
 </addon>
 
-<addon id="plugin.video.ert.gr" version="3.0.0~beta10" name="ERTflix" provider-name="Twilight0">
+<addon id="plugin.video.ert.gr" version="3.0.0~beta11" name="ERTflix" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0" />
         <import addon="script.module.tulip" version="2.6.11" />
@@ -414,6 +414,7 @@ Kindly note that AliveGR is not an official part of the media player you are run
     <extension point="xbmc.python.pluginsource" library="addon.py">
         <provides>video audio</provides>
     </extension>
+    <extension point="xbmc.service" library="resources/lib/service.py" start="login"/>
     <extension point="kodi.context.item">
         <menu id="kodi.core.main">
             <label>30006</label>
@@ -446,10 +447,14 @@ Kindly note that AliveGR is not an official part of the media player you are run
 - New artwork
 - Renamed to ERTflix
 - Updated resolver
+- Added search menu
+- Reworked pagination system
+- Added multithreading capabilities for items list formation
 - Reworked strings.po to be in range 30000+
 - Removed weather menu item as content is not present on the main website
 - Removed Hebrew translation (it hasn't been updated properly for long time)
 - Bumped dependencies
+
 
 [B]2.0.4[/B]
 - Minor tweak to prioritize Greek live stream over worldwide one

@@ -1,5 +1,5 @@
 [B]+ 2.1.0[/B] ~ (07-08-2020)
-- Add support for past.osmc.tv
+- Add support for paste.osmc.tv
 - Added hindi support (contrib: spyderboy92)
 - Added swedish support (contrib: Sopor)
 - Clean up
