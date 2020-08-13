@@ -64,10 +64,10 @@
     </extension>
 </addon>
 
-<addon id="plugin.audio.somafm.com" name="SomaFM Radio" version="2.0.2" provider-name="Twilight0">
+<addon id="plugin.audio.somafm.com" name="SomaFM Radio" version="3.0.0~alpha1" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0"/>
-        <import addon="script.module.tulip" version="1.2.6"/>
+        <import addon="script.module.tulip" version="2.6.11"/>
         <import addon="script.module.html2text"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="addon.py">
@@ -75,54 +75,17 @@
     </extension>
     <extension point="xbmc.addon.metadata">
         <platform>all</platform>
-        <summary lang="en">SomaFM music addon</summary>
-        <description lang="en">What exactly is SomaFM? We're a listener-supported, commercial-free internet-only radio station. This means no advertising or annoying commercial interruptions. Our mission is to search out and expose great new music to people who otherwise may never encounter it. Over 20 unique channels of listener-supported, commercial-free, underground/alternative radio broadcasting from San Francisco. All music hand-picked by SomaFM's award-winning DJs and music directors. Please consider donating at https://somafm.com to keep this service alive!Please consider donating by visiting http://somafm.com</description>
-        <summary lang="el">Πρόσθετο μουσικής SomaFM</summary>
-        <description lang="el">Το ραδιόφωνο SomaFM είναι μια υπηρεσία μουσικής και ραδιοφώνου που υποστηρίζεται πλήρως από τους ακροατές της. Παρακαλώ επισκευθείτε την σελίδα http://somafm.com και πραγματοποιήστε μία δωρεά για την υποστήριξη της υπηρεσίας.</description>
-        <disclaimer lang="en">This addon is not developed nor endorsed by SomaFM webmasters/authors/owners/directors</disclaimer>
-        <disclaimer lang="el">Η παρούσα μικροεφαρμογή δεν αναπτύσεται ούτε έχει εγκριθεί από τους διαχειριστές/υπεύθυνους/ιδιοκτήτες της υπηρεσίας SomaFM.</disclaimer>
-        <license>GNU GPL, version 2 or later</license>
-        <website>http://somafm.com</website>
-        <news>
-2.0.2 (02-10-2017)
-- Added info context menu option
-
-2.0.1 (01-10-2017)
-- Minor fix for station numbering
-- Changed method of getting stations when caching is disabled
-
-2.0.0 (30-09-2017)
-- Re-work of addon pulling info from somafm's channels.xml
-- Removed "switcher" trigger as it created some playback issues
-- Removed station info option
-- Sort options have now been moved to the sidebar
-
-1.1.1 (19-08-2017)
-- Fix for indexer switcher when playling a station
-- Added option for disable switcher in stations' index
-- Added option for setting indexer method from settings
-
-1.1.0 (23-07-2017)
-- Removed station info context menu (choose song info instead)
-- Option to hide song info &amp; utilize caching
-- Option to hide station name
-
-1.0.2 (04-Jul-2017)
-- Fix for forgotten key in indexer's list &amp; sort method
-
-1.0.1 (03-Jul-2017)
-- Fix for sort method
-- Info meta changes
-
-1.0.0 (02-Jul-2017)
-- Initial Version
-Features:
-- All stations by SomaFM
-- Quality selector... prompt, auto, highest/lowest mp3, highest/lowest aac
-- Sort by name, popularity, genre
-- Station info
-        </news>
-        <!-- <broken>Addon not ready yet.</broken> -->
+        <summary lang="en_GB">SomaFM music addon</summary>
+        <description lang="en_GB">What exactly is SomaFM? We're a listener-supported, commercial-free internet-only radio station. This means no advertising or annoying commercial interruptions. Our mission is to search out and expose great new music to people who otherwise may never encounter it. Over 20 unique channels of listener-supported, commercial-free, underground/alternative radio broadcasting from San Francisco. All music hand-picked by SomaFM's award-winning DJs and music directors. Please consider donating at https://somafm.com to keep this service alive!Please consider donating by visiting http://somafm.com</description>
+        <summary lang="el_GR">Πρόσθετο μουσικής SomaFM</summary>
+        <description lang="el_GR">Το ραδιόφωνο SomaFM είναι μια υπηρεσία μουσικής και ραδιοφώνου που υποστηρίζεται πλήρως από τους ακροατές της. Παρακαλώ επισκευθείτε την σελίδα http://somafm.com και πραγματοποιήστε μία δωρεά για την υποστήριξη της υπηρεσίας.</description>
+        <disclaimer lang="en_GB">This addon is not developed nor endorsed by SomaFM webmasters/authors/owners/directors</disclaimer>
+        <disclaimer lang="el_GR">Η παρούσα μικροεφαρμογή δεν αναπτύσεται ούτε έχει εγκριθεί από τους διαχειριστές/υπεύθυνους/ιδιοκτήτες της υπηρεσίας SomaFM.</disclaimer>
+        <license>GPL-3.0-only</license>
+        <website>https://somafm.com</website>
+        <news>3.0.0 (13-08-2020)
+- Add compatibility for Python 3
+- Rework of some modules</news>
     </extension>
 </addon>
 
@@ -405,7 +368,7 @@ Kindly note that AliveGR is not an official part of the media player you are run
     </extension>
 </addon>
 
-<addon id="plugin.video.ert.gr" version="3.0.0" name="ERTflix" provider-name="Twilight0">
+<addon id="plugin.video.ert.gr" version="3.0.1" name="ERTflix" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0" />
         <import addon="script.module.tulip" version="2.6.11" />
@@ -440,9 +403,14 @@ Kindly note that AliveGR is not an official part of the media player you are run
         <disclaimer lang="el_GR">Το πρόσθετο αυτό προσφέρει περιεχόμενο διαθέσιμο στην Ελλάδα και δεν έχει δημοσιευθεί ούτε εγκριθεί από το ert.gr</disclaimer>
         <license>GPL-3.0-only</license>
         <source>https://github.com/Twilight0/plugin.video.ert.gr</source>
-        <size>399800</size>
+        <size>460600</size>
         <website>https://www.ertflix.gr/</website>
-        <news>[B]3.0.0[/B]
+        <news>[B]3.0.1[/B]
+- New info function (via context menu)
+- Increased cache timeout
+- Add settings main menu item (optional, default is enabled)
+
+[B]3.0.0[/B]
 - Reworked addon for new website design
 - New artwork
 - Renamed to ERTflix
