@@ -1,0 +1,79 @@
+[B]1.5.4[/B] - 15-08-2020
+- Minor tweak in the addon.xml
+
+[B]1.5.3[/B] - 01-03-2020
+- Some logging tweaks
+
+[B]1.5.2[/B] - 11-11-2019
+- Enhanced context menu items
+- Added sleep when doing file operations (useful for slower devices)
+- Bug fixes, mostly player related
+
+[B]1.5.1[/B] - 23-08-2019
+- Add exception to headers object loop finder in case it fails
+
+[B]1.5.0[/B] - 20-06-2019
+- Updated generic plugin (thank you back-to)
+- Added youtube-dl as optional dependency to augment the generic plugin
+- Added ability to set custom title from plugin url
+- Added ability to set custom thumbnail from plugin url (as "image" parameter)
+
+[B]1.4.4[/B] - 06-06-2019
+- Various tweaks for efficiency
+
+[B]1.4.3[/B] - 06-06-2019
+- Added capability to load headers also from stream json object
+
+[B]1.4.2[/B] - 05-06-2019
+- Bug fixes
+- Removal of possibly redundant headers
+- Added setting to disable inputstream arguments
+
+[B]1.4.1[/B] - 25-05-2019
+- Added "set title and play" context menu item
+- Various other tweaks
+
+[B]1.4.0[/B] - 16-05-2019
+- Minimum version 18.0 required (Leia)
+- Various bug fixes
+
+[B]1.3.0[/B] - 25-11-2018
+- Added generic plugin, credits go to back-to
+- Removed vidto plugin
+
+[B]1.2.6[/B] - 24-11-2018
+- Removed kineskop.tv test plugin
+- Made exception broader when trying to load json object as it may not exist
+
+[B]1.2.5[/B] - 03-09-2018
+- Various fixes
+
+[B]1.2.3[/B] - 03-07-2018
+- Do not use quote for building custom headers
+
+[B]1.2.3[/B] - 02-07-2018
+- Better handling of headers appending
+- Log json objects for debugging purposes
+- Enhanced dash and manifest types conditionals
+
+[B]1.2.2[/B] - 20-06-2018
+- Except gracefull when no args attribute is present.
+
+[B]1.2.1[/B] - 12-06-2018
+- Do not allow addition to history when empty string given
+- Fixed removal of new line when removing individual links
+
+[B]1.2.0[/B] - 10-06-2018
+- Added headers append into stream url when custom args are present in streamlink's stream object
+- Replaced .url property with to_url function call
+- Added context menu item to clear history in main menu
+- Added context menu item to delete individual urls from main menu
+- Do not allow duplicates in history
+
+[B]1.1.0[/B] - 04-06-2018
+- Added &quality= plugin route call for manual quality selection (overrides setting in options)
+- Added MPEG-DASH playback capability
+- Added MPEG-DASH url output for resolved urls through streamlink
+- Improved README.md
+
+[B]1.0.0[/B] - Initial Version

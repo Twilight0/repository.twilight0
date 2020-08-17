@@ -64,7 +64,7 @@
     </extension>
 </addon>
 
-<addon id="plugin.audio.somafm.com" name="SomaFM Radio" version="3.0.0~alpha1" provider-name="Twilight0">
+<addon id="plugin.audio.somafm.com" name="SomaFM Radio" version="3.0.0~alpha2" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0"/>
         <import addon="script.module.tulip" version="2.6.11"/>
@@ -77,15 +77,23 @@
         <platform>all</platform>
         <summary lang="en_GB">SomaFM music addon</summary>
         <description lang="en_GB">What exactly is SomaFM? We're a listener-supported, commercial-free internet-only radio station. This means no advertising or annoying commercial interruptions. Our mission is to search out and expose great new music to people who otherwise may never encounter it. Over 20 unique channels of listener-supported, commercial-free, underground/alternative radio broadcasting from San Francisco. All music hand-picked by SomaFM's award-winning DJs and music directors. Please consider donating at https://somafm.com to keep this service alive!Please consider donating by visiting http://somafm.com</description>
+        <disclaimer lang="en_GB">This addon is not developed nor endorsed by SomaFM webmasters/authors/owners/directors</disclaimer>
         <summary lang="el_GR">Πρόσθετο μουσικής SomaFM</summary>
         <description lang="el_GR">Το ραδιόφωνο SomaFM είναι μια υπηρεσία μουσικής και ραδιοφώνου που υποστηρίζεται πλήρως από τους ακροατές της. Παρακαλώ επισκευθείτε την σελίδα http://somafm.com και πραγματοποιήστε μία δωρεά για την υποστήριξη της υπηρεσίας.</description>
-        <disclaimer lang="en_GB">This addon is not developed nor endorsed by SomaFM webmasters/authors/owners/directors</disclaimer>
         <disclaimer lang="el_GR">Η παρούσα μικροεφαρμογή δεν αναπτύσεται ούτε έχει εγκριθεί από τους διαχειριστές/υπεύθυνους/ιδιοκτήτες της υπηρεσίας SomaFM.</disclaimer>
+        <summary lang="de_DE">SomaFM Musik Addon</summary>
+        <description lang="de_DE">Was ist SomaFM genau? Wir sind ein Hörer-unterstützter, werbefreier, reiner Internet-Radiosender. Das bedeutet keine Werbung oder nervige Werbeunterbrechungen. Unsere Mission ist das Suchen und Herausstellen toller neuer Musik, die die Leute sonst womöglich nie erleben würden. Über 20 einzigartige Kanäle mit Hörer-unterstützterm werbefreiem Untergrund/alternativem Rundfunk aus San Francisco. Die gesamte Musik wird von SomaFMs preisgekrönten DJs und Musikdirektoren von Hand gewählt. Bitte denkt über eine Spende unter https://somafm.com nach um den Service am Leben zu halten! Bitte zieht eine Spende in Betracht, indem ihr http://somafm.com besucht</description>
+        <summary lang="ro_RO">Addon muzică SomaFM</summary>
+        <description lang="ro_RO">Ce este SomaFM? SomaFM reprezintă o stație radio care există doar pe Internet, fără reclame sau publicitate și care este susținută de ascultători. Aceasta înseamnă că muzica nu este întreruptă de reclame sau de publicitate. Misiunea noastră este să căutăm și să expunem muzică nouă și bună către oameni care nu ar fi putut s-o audă vreodată. Peste 20 de canale unice susținute de ascultători, fără reclame sau publicitate, din genul underground/alternativ sunt difuzate din San Francisco. Toată muzica este aleasă de DJ-ii și de muzicienii premiați de la SomaFM. Vă rugăm să donați la https://somafm.com pentru a menține serviciul activ! Vp rugă să donați vizitând http://somafm.com</description>
+        <disclaimer lang="ro_RO">Acest addon nu este creat și nici sprijinit de programatorii, autorii, proprietarii sau administratorii SomaFM.</disclaimer>
         <license>GPL-3.0-only</license>
         <website>https://somafm.com</website>
-        <news>3.0.0 (13-08-2020)
+        <news>3.0.0 (13-Aug-2020)
 - Add compatibility for Python 3
-- Rework of some modules</news>
+- Rework of some modules
+- Add Romanian translation (contrib. tmihai20)
+- Add German translation (contrib. horstle)
+- Add Dutch translation (contrib. dagwieers)</news>
     </extension>
 </addon>
 
@@ -199,15 +207,15 @@
     </extension>
 </addon>
 
-<addon id="plugin.video.AliveGR" name="AliveGR" version="2.3.10" provider-name="Twilight0">
+<addon id="plugin.video.AliveGR" name="AliveGR" version="2.3.11" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.26.0"/>
         <import addon="resource.images.alivegr.artwork" version="3.0.5"/>
         <import addon="resource.images.alivegr.logos" version="1.0.2"/>
         <import addon="script.module.resolveurl" version="5.1.0" optional="true"/>
-        <import addon="script.module.streamlink.base" version="2020.06.21"/>
-        <import addon="script.module.tulip" version="2.6.11"/>
-        <import addon="plugin.video.youtube" version="6.8.2"/>
+        <import addon="script.module.streamlink.base" version="2020.08.09"/>
+        <import addon="script.module.tulip" version="2.6.12"/>
+        <import addon="plugin.video.youtube" version="6.8.3"/>
         <import addon="script.module.pyxbmct" version="1.3.0"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="main.py">
@@ -380,7 +388,6 @@ Kindly note that AliveGR is not an official part of the media player you are run
     <extension point="xbmc.service" library="resources/lib/service.py" start="login"/>
     <extension point="kodi.context.item">
         <menu id="kodi.core.main">
-            <label>30006</label>
             <item library="resources/lib/youtube_bookmark.py">
                 <label>30006</label>
                 <visible>
@@ -447,10 +454,10 @@ Kindly note that AliveGR is not an official part of the media player you are run
     </extension>
 </addon>
 
-<addon id="plugin.video.euronews.com" version="1.4.1" name="Euronews" provider-name="Twilight0">
+<addon id="plugin.video.euronews.com" version="1.4.2" name="Euronews" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0"/>
-        <import addon="script.module.tulip" version="2.5.10"/>
+        <import addon="script.module.tulip" version="2.6.11"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="addon.py">
         <provides>video</provides>
@@ -470,11 +477,16 @@ Kindly note that AliveGR is not an official part of the media player you are run
         <disclaimer lang="he_il">ההרחבה הזו לא פורסמה ולא נתמכת על ידי euronews.com</disclaimer>
         <disclaimer lang="ru_RU">Это дополнение не опубликовано и не одобрено euronews.com</disclaimer>
         <disclaimer lang="es_ES">Este complemento no está publicado ni respaldado por euronews.com</disclaimer>
-        <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+        <license>GPL-3.0-only</license>
         <source>https://github.com/Twilight0/plugin.video.euronews.com</source>
         <website>http://www.euronews.com/</website>
         <size>351600</size>
-        <news>[B]1.4.1[/B]
+        <news>[B]1.4.2[/B]
+- Bumped dependencies
+- Some minor tweaks here and there
+- Notify if geoblocking is applied by the live stream server
+
+[B]1.4.1[/B]
 - Add de_DE translation (contrib. horstle)
 - Add hr_HR translation (contrib. arvvoid)
 - Add no_NO translation (contrib. solbu)
@@ -544,7 +556,7 @@ Kindly note that AliveGR is not an official part of the media player you are run
 - New nested menu for choosing Faros live stream</news>
 </addon>
 
-<addon id="plugin.video.fashiontv.com" version="1.0.3" name="Fashion TV Player" provider-name="Twilight0">
+<addon id="plugin.video.fashiontv.com" version="1.1.0" name="Fashion TV Player" provider-name="Twilight0">
 	<requires>
 		<import addon="xbmc.python" version="2.24.0" />
 		<import addon="script.module.tulip" version="2.6.10" />
@@ -553,6 +565,23 @@ Kindly note that AliveGR is not an official part of the media player you are run
 	<extension point="xbmc.python.pluginsource" library="addon.py">
 		<provides>video</provides>
 	</extension>
+	<extension point="kodi.context.item">
+        <menu id="kodi.core.main">
+            <item library="resources/lib/youtube_bookmark.py">
+                <label>30004</label>
+                <visible>
+					[String.StartsWith(Container.FolderPath,plugin://plugin.video.youtube/channel/UCqzju-_WMKsgNx8R3QwupQQ/) |
+					String.StartsWith(Container.FolderPath,plugin://plugin.video.youtube/channel/UClnblsrZrugJfFs4ANPgNcA/) |
+					String.StartsWith(Container.FolderPath,plugin://plugin.video.youtube/channel/UCDN6BTcfgHDuBQgCgXkU-cA/) |
+					String.StartsWith(Container.FolderPath,plugin://plugin.video.youtube/channel/UCLiyW3PZFDSxIw6EES8MneQ/) |
+					String.StartsWith(Container.FolderPath,plugin://plugin.video.youtube/channel/UCC2Iic6b-nhY7CSRUm_nyng/) |
+					String.StartsWith(Container.FolderPath,plugin://plugin.video.youtube/channel/UCi12i9eiWFh67T-uCP1y7Gw/)] +
+                    !String.Contains(ListItem.Art(thumb),resources/media) +
+                    !String.Contains(ListItem.FolderPath,page_token)
+                </visible>
+            </item>
+        </menu>
+    </extension>
 	<extension point="xbmc.addon.metadata">
 		<reuselanguageinvoker>false</reuselanguageinvoker>
 		<summary lang="en_GB">Fashion TV Player addon for Kodi</summary>
@@ -561,11 +590,14 @@ Kindly note that AliveGR is not an official part of the media player you are run
 		<description lang="el_GR">Ζωντανές και on demand υπηρεσίες του Fashion TV</description>
 		<disclaimer lang="en_GB">This addon is not published nor endorsed by fashiontv.com</disclaimer>
 		<disclaimer lang="el_GR">Το πρόσθετο αυτό δεν έχει δημοσιευθεί ούτε εγκριθεί από το fashiontv.com</disclaimer>
-		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+		<license>GPL-3.0-only</license>
 		<source>https://github.com/Twilight0/plugin.video.fashiontv.com</source>
 		<website>https://www.fashiontv.com/</website>
 		<size>228454</size>
-		<news>[B]1.0.3[/B]
+		<news>[B]1.1.0[/B]
+- Add bookmarking feature
+
+[B]1.0.3[/B]
 - Added FTV news channel
 
 [B]1.0.2[/B]
@@ -808,11 +840,11 @@ Kindly note that AliveGR is not an official part of the media player you are run
 	</extension>
 </addon>
 
-<addon id="plugin.video.resolveurl-tester" name="ResolveURL Tester" version="1.1.1" provider-name="Twilight0">
+<addon id="plugin.video.resolveurl-tester" name="ResolveURL Tester" version="1.1.2" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0"/>
-        <import addon="script.module.tulip" version="2.3.13"/>
-        <import addon="script.module.resolveurl" version="5.0.35"/>
+        <import addon="script.module.tulip" version="2.6.11"/>
+        <import addon="script.module.resolveurl" version="5.1.0"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="main.py">
         <provides>video</provides>
@@ -820,15 +852,22 @@ Kindly note that AliveGR is not an official part of the media player you are run
     <extension point="xbmc.addon.metadata">
         <platform>all</platform>
         <reuselanguageinvoker>false</reuselanguageinvoker>
-        <summary lang="en">ResolveURL Tester</summary>
+        <summary lang="en_GB">ResolveURL Tester</summary>
         <description lang="en_GB">This addon can play and test various video and audio content from various sources supported by ResolveURL library.</description>
-        <disclaimer lang="en_GB">This addon does not provide any content, its sole purpose is to resolve web urls with the help of ResolveURL library</disclaimer>
+        <disclaimer lang="en_GB">This addon does not provide any content, its sole purpose is to resolve web urls into playable content with the help of ResolveURL library</disclaimer>
+        <summary lang="el_GR">Δοκιμαστής ResolveURL</summary>
+        <description lang="el_GR">Το πρόσθετο αυτό μπορεί να αναπαράξει και να δοκιμάσει περιεχόμενο βίντεο και ήχου από διάφορες πηγές που υποστηρίζονται από την βιβλιοθήκη ResolveURL.</description>
+        <disclaimer lang="el_GR">Το πρόσθετο αυτό δεν παρέχει περιεχόμενο, ο μοναδικός σκοπός είναι να επιλύει ιστοσελίδες σε αναπαράξιμο περιεχόμενο με την βοήθεια του ResolveURL.</disclaimer>
         <language>en</language>
-        <license>GNU GPL, version 2</license>
+        <license>GPL-3.0-only</license>
         <website>https://twitter.com/TwilightZer0</website>
         <source>https://github.com/Twilight0/plugin.video.resolveurl-tester</source>
         <size>111206</size>
-        <news>[B]1.1.1[/B] - 11-11-2019
+        <news>[B]1.1.2[/B] - 15-08-2020
+- Tweaked addon.xml
+- Bumped dependencies
+
+[B]1.1.1[/B] - 11-11-2019
 - Minor tweaks here and there
 - Enhanced context menu items
 - Add sleep when adding a link to wait for directory refresh
@@ -942,12 +981,11 @@ Kindly note that AliveGR is not an official part of the media player you are run
 	</extension>
 </addon>
 
-<addon id="plugin.video.streamlink-tester" name="Streamlink Tester" version="1.5.3" provider-name="Twilight0">
+<addon id="plugin.video.streamlink-tester" name="Streamlink Tester" version="1.5.4" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.26.0"/>
         <import addon="script.module.tulip" version="2.5.10"/>
         <import addon="script.module.streamlink.base" version="2020.02.22"/>
-        <import addon="script.module.youtube.dl" version="18.619.0" optional="true"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="main.py">
         <provides>video</provides>
@@ -955,15 +993,22 @@ Kindly note that AliveGR is not an official part of the media player you are run
     <extension point="xbmc.addon.metadata">
         <platform>all</platform>
         <reuselanguageinvoker>false</reuselanguageinvoker>
-        <summary lang="en">Streamlink and MPEG-DASH Tester</summary>
+        <summary lang="en_GB">Streamlink and MPEG-DASH Tester</summary>
         <description lang="en_GB">This addon can play and test various video and audio content from various sources supported by Streamlink resolver library. It can also playback MPEG-DASH streams.</description>
         <disclaimer lang="en_GB">This addon does not provide any content, its sole purpose is to resolve web urls with the help of Streamlink resolver library</disclaimer>
+        <summary lang="el_GR">Δοκιμαστής για Streamlink και MPEG-DASH</summary>
+        <description lang="el_GR">Το πρόσθετο αυτό μπορεί να αναπαράγει και να δοκιμάσει περιεχόμενο βίντεο και ήχου από διάφορες πηγές μέσω της βιβλιοθήκης streamlink. Επίσης μπορεί να αναπαράξει ροές MPEG-DASH.</description>
+        <disclaimer lang="el_GR">Το πρόσθετο αυτό δεν παρέχει απολύτως κανένα περιεχόμενο, ο μοναδικός σκοπός είναι να επιλύσει ιστοσελίδες με την βοήθεια του streamlink.</disclaimer>
         <language>en</language>
-        <license>GNU GPL, version 2</license>
+        <license>GPL-3.0-only</license>
         <website>https://twitter.com/TwilightZer0</website>
         <source>https://github.com/Twilight0/plugin.video.streamlink-tester</source>
         <size>106257</size>
-        <news>[B]1.5.3[/B] - 01-03-2020
+        <news>[B]1.5.4[/B] - 15-08-2020
+- Minor tweak in the addon.xml
+- Removed optional dependency of youtube-dl
+
+[B]1.5.3[/B] - 01-03-2020
 - Some logging tweaks
 
 [B]1.5.2[/B] - 11-11-2019
