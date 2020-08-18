@@ -931,11 +931,11 @@ Kindly note that AliveGR is not an official part of the media player you are run
     </extension>
 </addon>
 
-<addon id="plugin.video.star.gr" version="2.2.0" name="STAR Player" provider-name="Twilight0">
+<addon id="plugin.video.star.gr" version="2.3.0" name="STAR Player" provider-name="Twilight0">
 	<requires>
 		<import addon="xbmc.python" version="2.24.0" />
-		<import addon="script.module.tulip" version="2.5.11" />
-		<import addon="plugin.video.youtube" version="6.8.2"/>
+		<import addon="script.module.tulip" version="2.6.12" />
+		<import addon="plugin.video.youtube" version="6.8.3"/>
 	</requires>
 	<extension point="xbmc.python.pluginsource" library="addon.py">
 		<provides>video</provides>
@@ -952,7 +952,11 @@ Kindly note that AliveGR is not an official part of the media player you are run
 		<source>https://github.com/Twilight0/plugin.video.star.gr</source>
 		<website>http://www.star.gr/</website>
 		<size>228454</size>
-		<news>[B]2.2.0[/B]
+		<news>[B]2.3.0[/B]
+- Minor fix for video thumbnails
+- Performance optimizations
+
+[B]2.2.0[/B]
 - Updated youtube api key
 - Updated indexing functions
 
