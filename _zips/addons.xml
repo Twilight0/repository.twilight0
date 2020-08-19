@@ -97,10 +97,10 @@
     </extension>
 </addon>
 
-<addon id="plugin.program.reddit_navigator" name="Reddit Navigator" version="1.0.6" provider-name="Twilight0">
+<addon id="plugin.program.reddit_navigator" name="Reddit Navigator" version="1.0.7" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0"/>
-        <import addon="script.module.tulip" version="2.6.1"/>
+        <import addon="script.module.tulip" version="2.6.14"/>
         <import addon="script.module.pyxbmct" version="1.2.0"/>
         <import addon="script.module.resolveurl" version="5.1.0"/>
         <import addon="plugin.video.youtube" version="6.8.2"/>
