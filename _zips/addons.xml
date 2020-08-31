@@ -513,7 +513,7 @@ Kindly note that AliveGR is not an official part of the media player you are run
     </extension>
 </addon>
 
-<addon id="plugin.video.faros.on-air" name="Faros On-Air" version="1.3.0" provider-name="Twilight0">
+<addon id="plugin.video.faros.on-air" name="Faros On-Air" version="1.3.1" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0"/>
         <import addon="plugin.video.youtube" version="6.8.2"/>
@@ -546,7 +546,10 @@ Kindly note that AliveGR is not an official part of the media player you are run
             <!--<datadir zip="true">https://raw.githubusercontent.com/Twilight0/repo.twilight0.libs/master/_zips/</datadir>-->
         <!--</dir>-->
     <!--</extension>-->
-    <news>29-06-2020 - [B]1.3.0[/B]
+    <news>31-08-2020 - [B]1.3.1[/B]
+- ReplaceHTML codes for listitems
+
+29-06-2020 - [B]1.3.0[/B]
 - New youtube api key
 - Various other bug fixes
 
