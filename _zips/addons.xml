@@ -25,6 +25,32 @@
 - Updated main artwork</news>
 </addon>
 
+<addon id="context.subtitles.gr" version="0.0.1" name="Subtitles.gr menu item" provider-name="Twilight0">
+    <requires>
+        <import addon="xbmc.python" version="2.26.0"/>
+        <import addon="service.subtitles.subtitles.gr"/>
+    </requires>
+    <extension point="kodi.context.item">
+        <menu id="kodi.core.main">
+            <item library="resources/lib/context_menu.py">
+                <label>30001</label>
+                <visible>String.Contains(ListItem.FileNameAndPath,?action=play)</visible>
+            </item>
+        </menu>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+        <summary lang="en_gb">Subtitles.gr global context menu item</summary>
+        <summary lang="el_gr">Στοιχείο αντικειμένου για το ολικό μενού του Kodi</summary>
+        <platform>all</platform>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+        <website>https://alivegr.net</website>
+        <source>https://github.com/Twilight0/context.subtitles.gr</source>
+    </extension>
+</addon>
+
 <addon id="plugin.audio.eradio.gr" version="1.3.1" name="E-Radio" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0" />

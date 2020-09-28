@@ -1,6 +1,14 @@
 *\.idea/
 
+*\.vscode/
+
+*.pyo
+
+*.pyc
+
 _tools/
+
+/context\.subtitles\.gr/
 
 /plugin\.audio\.eradio\.gr/
 
