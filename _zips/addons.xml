@@ -406,10 +406,10 @@ Kindly note that AliveGR is not an official part of the media player you are run
     </extension>
 </addon>
 
-<addon id="plugin.video.ert.gr" version="3.0.4" name="ERTflix" provider-name="Twilight0">
+<addon id="plugin.video.ert.gr" version="3.0.5" name="ERTflix" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0" />
-        <import addon="script.module.tulip" version="2.6.11" />
+        <import addon="script.module.tulip" version="2.6.20" />
         <import addon="plugin.video.youtube" version="6.8.2"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="addon.py">
@@ -442,7 +442,7 @@ Kindly note that AliveGR is not an official part of the media player you are run
         <source>https://github.com/Twilight0/plugin.video.ert.gr</source>
         <size>460600</size>
         <website>https://www.ertflix.gr/</website>
-        <news>[B]3.0.2, 3.0.3 &amp; 3.0.4[/B]
+        <news>[B]3.0.X[/B]
 - Fixes for indexers due to website changes
 
 [B]3.0.1[/B]
