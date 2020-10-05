@@ -25,17 +25,24 @@
 - Updated main artwork</news>
 </addon>
 
-<addon id="context.subtitles.gr" version="0.0.2" name="Subtitles.gr menu item" provider-name="Twilight0">
+<addon id="context.subtitles.gr" version="0.0.3" name="Subtitles.gr menu item" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0"/>
         <import addon="service.subtitles.subtitles.gr"/>
     </requires>
     <extension point="kodi.context.item">
         <menu id="kodi.core.main">
-            <item library="resources/lib/context_menu.py">
-                <label>30001</label>
-                <visible>!ListItem.IsFolder</visible>
-            </item>
+            <menu>
+                <label>30003</label>
+                <item library="resources/lib/check_sub.py">
+                    <label>30002</label>
+                    <visible>!ListItem.IsFolder</visible>
+                </item>
+                <item library="resources/lib/options.py">
+                    <label>30001</label>
+                    <visible>!ListItem.IsFolder</visible>
+                </item>
+            </menu>
         </menu>
     </extension>
     <extension point="xbmc.addon.metadata">
