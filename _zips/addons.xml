@@ -1282,44 +1282,35 @@ Kindly note that AliveGR is not an official part of the media player you are run
     </extension>
 </addon>
 
-<addon id="service.subtitles.subtitles.gr" name="Subtitles.gr" version="3.1.0" provider-name="Twilight0">
+<addon id="service.subtitles.subtitles.gr" name="Subtitles.gr" version="3.2.0" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0"/>
-        <import addon="script.module.tulip" version="2.5.10" />
+        <import addon="script.module.tulip" version="2.7.1" />
     </requires>
     <extension point="xbmc.subtitle.module" library="service.py">
     </extension>
     <extension point="xbmc.addon.metadata">
         <reuselanguageinvoker>false</reuselanguageinvoker>
         <summary lang="en_GB">Subtitle service addon "subtitles.gr"</summary>
-        <summary lang="en_GB">Υπηρεσιακό πρόσθετο υποτίτλων "subtitles.gr"</summary>
+        <summary lang="el_GR">Υπηρεσιακό πρόσθετο υποτίτλων "subtitles.gr"</summary>
         <description lang="en_GB">Search and download subtitles from various sites</description>
         <description lang="el_GR">Εύρεση και λήψη υποτίτλων από διαφόρους ιστοτόπους</description>
-        <disclaimer lang="en_GB">This service is only for Greek subtitles. It is not published nor endorsed by any of the sites supported</disclaimer>
-        <disclaimer lang="el_GR">Υπηρεσία μόνο ελληνικών υποτίτλων. Δεν έχει δημοσιευθεί ούτε εγκριθεί από οποιοδήποτε υποστηριζόμενο ιστότοπο</disclaimer>
-        <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+        <disclaimer lang="en_GB">This service is only for Greek subtitles. It is not published nor endorsed by any of the sites supported.</disclaimer>
+        <disclaimer lang="el_GR">Υπηρεσία μόνο ελληνικών υποτίτλων. Δεν έχει δημοσιευθεί ούτε εγκριθεί από οποιοδήποτε υποστηριζόμενο ιστότοπο.</disclaimer>
+        <license>GPL-3.0-only</license>
         <website>http://www.subtitles.gr/</website>
         <platform>all</platform>
-        <language>el</language>
-        <news>[B]3.1.X[/B]
+        <news>[B]3.2.X[/B]
+- Bumped dependencies
+- Improved cache clear function
+- Added vipsubs.gr
+- Lots of bug fixes
+
+[B]3.1.X[/B]
 - Tweaked regexes for searches
 - Added a setting allowing users to set search and download timeouts
 - Added visual feedback when deleting function cache
-- Disabled subs4free.info
-
-[B]3.0.X[/B]
-- Removed subzxyz (subtitles were moved to opensubtitles.org)
-- Bypassed subtitles.gr/findsubtitles.eu domain completely and removed its setting
-- Added support for subs4free/subs4series, podnapisi
-- Added boolean setting for each site supported
-> disable for faster searches (subs4free disabled by default)
-- Applied unicode ascii normalization
-- Added setting to sort subs by either subtitle name, source, rating, downloads
-- Results are now cached for two hours in order to reduce subsequent requests
-- Improved debug logging
-- Regex pattern tweaks for queries
-- Performance tweaks
-- Various other tweaks</news>
+- Disabled subs4free.info</news>
     </extension>
 </addon>
 </addons>
