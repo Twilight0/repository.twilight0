@@ -1282,7 +1282,7 @@ Kindly note that AliveGR is not an official part of the media player you are run
     </extension>
 </addon>
 
-<addon id="service.subtitles.subtitles.gr" name="Subtitles.gr" version="3.2.2" provider-name="Twilight0">
+<addon id="service.subtitles.subtitles.gr" name="Subtitles.gr" version="3.2.3" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0"/>
         <import addon="script.module.tulip" version="2.7.1" />
@@ -1300,7 +1300,10 @@ Kindly note that AliveGR is not an official part of the media player you are run
         <license>GPL-3.0-only</license>
         <website>http://www.subtitles.gr/</website>
         <platform>all</platform>
-        <news>[B]3.2.2[/B]
+        <news>[B]3.2.3[/B]
+- Bug fixes for vipsubs.gr
+
+[B]3.2.2[/B]
 - Do not allow random choice when not necessary
 
 [B]3.2.1[/B]
