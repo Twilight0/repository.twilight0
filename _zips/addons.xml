@@ -776,10 +776,10 @@ Kindly note that AliveGR is not an official part of the media player you are run
     </extension>
 </addon>
 
-<addon id="plugin.video.montreal.greek-tv" name="Montreal Greek TV" version="2.1.5" provider-name="Greektimes.ca, Twilight0">
+<addon id="plugin.video.montreal.greek-tv" name="Montreal Greek TV" version="2.1.6" provider-name="Greektimes.ca, Twilight0">
     <requires>
-        <import addon="xbmc.python" version="2.24.0"/>
-        <import addon="script.module.tulip" version="2.3.4"/>
+        <import addon="xbmc.addon" version="16.1.000"/>
+        <import addon="script.module.tulip" version="2.8.1"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="addon.py">
         <provides>video image audio</provides>
@@ -793,7 +793,10 @@ Kindly note that AliveGR is not an official part of the media player you are run
         <language>en el</language>
         <license>GNU General Public License, v3</license>
         <size>633158</size>
-        <news>[B]2.1.5[/B] - 29-06-2020
+        <news>[B]2.1.6[/B] - 29-11-2020
+- Updated youtube api key
+
+[B]2.1.5[/B] - 29-06-2020
 - Updated youtube api key
 
 [B]2.1.4[/B] - 25-03-2019
