@@ -101,10 +101,10 @@
     </extension>
 </addon>
 
-<addon id="plugin.audio.somafm.com" name="SomaFM Radio" version="3.0.0~alpha2" provider-name="Twilight0">
+<addon id="plugin.audio.somafm.com" name="SomaFM Radio" version="3.0.0" provider-name="Twilight0">
     <requires>
-        <import addon="xbmc.python" version="2.24.0"/>
-        <import addon="script.module.tulip" version="2.6.11"/>
+        <import addon="xbmc.addon" version="16.1.000"/>
+        <import addon="script.module.tulip" version="2.8.1"/>
         <import addon="script.module.html2text"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="addon.py">
@@ -123,14 +123,22 @@
         <summary lang="ro_RO">Addon muzică SomaFM</summary>
         <description lang="ro_RO">Ce este SomaFM? SomaFM reprezintă o stație radio care există doar pe Internet, fără reclame sau publicitate și care este susținută de ascultători. Aceasta înseamnă că muzica nu este întreruptă de reclame sau de publicitate. Misiunea noastră este să căutăm și să expunem muzică nouă și bună către oameni care nu ar fi putut s-o audă vreodată. Peste 20 de canale unice susținute de ascultători, fără reclame sau publicitate, din genul underground/alternativ sunt difuzate din San Francisco. Toată muzica este aleasă de DJ-ii și de muzicienii premiați de la SomaFM. Vă rugăm să donați la https://somafm.com pentru a menține serviciul activ! Vp rugă să donați vizitând http://somafm.com</description>
         <disclaimer lang="ro_RO">Acest addon nu este creat și nici sprijinit de programatorii, autorii, proprietarii sau administratorii SomaFM.</disclaimer>
+        <summary lang="ru_RU">Дополнение SomaFM music</summary>
+        <description lang="ru_RU">Что такое SomaFM? SomaFM - радиостанция, которая существует только в интернете, без рекламы и поддерживается слушателями. Это означает, что музыка не прерывается рекламой. Наша миссия - искать и знакомить с новой музыкой людей, которые иначе никогда с ней не столкнулись бы. Из Сан-Франциско транслируются более 20 уникальных каналов андеграундного/альтернативного жанра, поддерживаемых слушателями, без рекламы. Всю музыку выбирают ди-джеи и отмеченные наградами музыканты из SomaFM. Пожалуйста, рассмотрите возможность пожертвования на https://somafm.com, чтобы этот сервис продолжал работать! Пожалуйста, рассмотрите возможность пожертвования, посетив http://somafm.com</description>
+        <disclaimer lang="ru_RU">Это дополнение не разработано и не одобрен веб-мастерами/авторами/владельцами/администраторами SomaFM</disclaimer>
+        <summary lang="es_ES">Complemento de música SomaFM</summary>
+        <description lang="es_ES">¿Qué es exactamente SomaFM? Somos una estación de radio solo por Internet, sin comerciales y compatible con oyentes. Esto significa que no hay publicidad ni interrupciones comerciales molestas. Nuestra misión es buscar y exponer buena música nueva a personas que de otro modo nunca la encontrarían. Más de 20 canales únicos de transmisión de radio alternativa / underground sin comerciales, respaldada por oyentes desde San Francisco. Toda la música seleccionada por los galardonados DJ y directores musicales de SomaFM. Por favor, considere donar en https://somafm.com para mantener vivo este servicio! Considere donar visitando http://somafm.com</description>
+        <disclaimer lang="es_ES">Este complemento no está desarrollado ni respaldado por webmasters / autores / propietarios / directores de SomaFM</disclaimer>
         <license>GPL-3.0-only</license>
         <website>https://somafm.com</website>
-        <news>3.0.0 (13-Aug-2020)
+        <news>3.0.0 (30-Nov-2020)
 - Add compatibility for Python 3
 - Rework of some modules
 - Add Romanian translation (contrib. tmihai20)
 - Add German translation (contrib. horstle)
-- Add Dutch translation (contrib. dagwieers)</news>
+- Add Dutch translation (contrib. dagwieers)
+- Add Spanish translation (contrib. roliverosc)
+- Add Russian translation (contrib. vlmaksime)</news>
     </extension>
 </addon>
 
