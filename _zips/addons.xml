@@ -364,11 +364,11 @@ Kindly note that AliveGR is not an official part of the media player you are run
 	</extension>
 </addon>
 
-<addon id="plugin.video.antenna.gr" version="2.1.1" name="ANT1 Player" provider-name="Twilight0">
+<addon id="plugin.video.antenna.gr" version="2.2.0" name="ANT1 Player" provider-name="Twilight0">
     <requires>
-        <import addon="xbmc.python" version="2.24.0" />
+        <import addon="xbmc.addon" version="16.1.000"/>
         <import addon="script.module.tulip" version="2.5.2" />
-        <import addon="plugin.video.youtube" version="6.5.0"/>
+        <import addon="plugin.video.youtube" version="6.8.1"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="addon.py">
         <provides>video</provides>
@@ -385,7 +385,12 @@ Kindly note that AliveGR is not an official part of the media player you are run
         <source>https://github.com/Twilight0/plugin.video.antenna.gr</source>
         <website>http://www.antenna.gr/</website>
         <size>204493</size>
-        <news>[B]2.1.1[/B]
+        <news>[B]2.2.0[/B]
+- Updated youtube api key
+- Added pagination function for long lists
+- A few other tweaks here and there
+
+[B]2.1.1[/B]
 - Updated youtube api key
 - Minor bug fix in the main indexing function
 
