@@ -624,10 +624,10 @@ Kindly note that AliveGR is not an official part of the media player you are run
 - New nested menu for choosing Faros live stream</news>
 </addon>
 
-<addon id="plugin.video.fashiontv.com" version="1.1.0" name="Fashion TV Player" provider-name="Twilight0">
+<addon id="plugin.video.fashiontv.com" version="1.2.0" name="Fashion TV Player" provider-name="Twilight0">
 	<requires>
-		<import addon="xbmc.python" version="2.24.0" />
-		<import addon="script.module.tulip" version="2.6.10" />
+		<import addon="xbmc.addon" version="16.1.000"/>
+		<import addon="script.module.tulip" version="2.8.1" />
 		<import addon="plugin.video.youtube" version="6.8.2"/>
 	</requires>
 	<extension point="xbmc.python.pluginsource" library="addon.py">
@@ -651,7 +651,7 @@ Kindly note that AliveGR is not an official part of the media player you are run
         </menu>
     </extension>
 	<extension point="xbmc.addon.metadata">
-		<reuselanguageinvoker>false</reuselanguageinvoker>
+		<reuselanguageinvoker>true</reuselanguageinvoker>
 		<summary lang="en_GB">Fashion TV Player addon for Kodi</summary>
         <summary lang="en_GR">Πρόσθετο Fashion TV Player για το Kodi</summary>
 		<description lang="en_GB">Fashion TV live and on-demand broadcasts</description>
@@ -662,7 +662,12 @@ Kindly note that AliveGR is not an official part of the media player you are run
 		<source>https://github.com/Twilight0/plugin.video.fashiontv.com</source>
 		<website>https://www.fashiontv.com/</website>
 		<size>228454</size>
-		<news>[B]1.1.0[/B]
+		<news>[B]1.2.0[/B]
+- Update youtube api keys
+- Rework of router scheme
+- Tweaks for Matrix
+
+[B]1.1.0[/B]
 - Add bookmarking feature
 
 [B]1.0.3[/B]
