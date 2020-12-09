@@ -252,7 +252,7 @@
     </extension>
 </addon>
 
-<addon id="plugin.video.AliveGR" name="AliveGR" version="2.5.2" provider-name="Twilight0">
+<addon id="plugin.video.AliveGR" name="AliveGR" version="2.5.3" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.addon" version="18.0.000"/>
         <import addon="resource.images.alivegr.artwork" version="3.0.5"/>
