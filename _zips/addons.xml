@@ -427,7 +427,7 @@ Kindly note that AliveGR is not an official part of the media player you are run
     </extension>
 </addon>
 
-<addon id="plugin.video.ert.gr" version="3.1.1" name="ERTflix" provider-name="Twilight0">
+<addon id="plugin.video.ert.gr" version="3.1.2" name="ERTflix" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0" />
         <import addon="script.module.tulip" version="2.6.20" />
@@ -463,7 +463,10 @@ Kindly note that AliveGR is not an official part of the media player you are run
         <source>https://github.com/Twilight0/plugin.video.ert.gr</source>
         <size>460600</size>
         <website>https://www.ertflix.gr/</website>
-        <news>[B]3.1.1[/B]
+        <news>[B]3.1.2[/B]
+- Apply threads lists higher in the execution order
+
+[B]3.1.1[/B]
 - Added greek tv series menu item for quicker access
 
 [B]3.1.0[/B]
