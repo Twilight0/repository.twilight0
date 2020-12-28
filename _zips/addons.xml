@@ -973,11 +973,11 @@ Kindly note that AliveGR is not an official part of the media player you are run
     </extension>
 </addon>
 
-<addon id="plugin.video.skai.gr" version="3.0.7" name="SKAI Player" provider-name="Twilight0">
+<addon id="plugin.video.skai.gr" version="3.1.0" name="SKAI Player" provider-name="Twilight0">
     <requires>
-        <import addon="xbmc.python" version="2.24.0" />
-        <import addon="script.module.tulip" version="2.4.1" />
-        <import addon="plugin.video.youtube" version="6.7.0"/>
+        <import addon="xbmc.addon" version="16.1.000"/>
+        <import addon="script.module.tulip" version="2.8.2" />
+        <import addon="plugin.video.youtube" version="6.8.2"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="addon.py">
         <provides>video audio</provides>
@@ -996,7 +996,11 @@ Kindly note that AliveGR is not an official part of the media player you are run
         <source>https://github.com/Twilight0/plugin.video.skai.gr</source>
         <website>http://www.skai.gr/</website>
         <size>226000</size>
-        <news>[B]3.0.X[/B]
+        <news>[B]3.1.0[/B]
+- Updated youtube api key
+- Bumped dependencies
+
+[B]3.0.X[/B]
 - Rework of the addon for website redesign and deprecation of older APIs
 - Removed news in sign language
 - Added the entertainment section
@@ -1016,10 +1020,10 @@ Kindly note that AliveGR is not an official part of the media player you are run
     </extension>
 </addon>
 
-<addon id="plugin.video.star.gr" version="2.3.1" name="STAR Player" provider-name="Twilight0">
+<addon id="plugin.video.star.gr" version="2.3.2" name="STAR Player" provider-name="Twilight0">
 	<requires>
-		<import addon="xbmc.python" version="2.24.0" />
-		<import addon="script.module.tulip" version="2.6.13" />
+		<import addon="xbmc.addon" version="16.1.000"/>
+		<import addon="script.module.tulip" version="2.8.2" />
 		<import addon="plugin.video.youtube" version="6.8.3"/>
 	</requires>
 	<extension point="xbmc.python.pluginsource" library="addon.py">
@@ -1038,6 +1042,10 @@ Kindly note that AliveGR is not an official part of the media player you are run
 		<website>http://www.star.gr/</website>
 		<size>228454</size>
 		<news>[B]2.3.1[/B]
+- Bumped dependencies
+- Updated youtube api key
+
+[B]2.3.1[/B]
 - Fix for unicode characters in thumbnail paths
 - Fix into the resolver for some older videos
 
@@ -1123,11 +1131,11 @@ Kindly note that AliveGR is not an official part of the media player you are run
     </extension>
 </addon>
 
-<addon id="plugin.video.Toronto-Channels" name="BCI Greek TV" version="2.6.0" provider-name="BCI Media Inc.">
+<addon id="plugin.video.Toronto-Channels" name="BCI Greek TV" version="2.7.0" provider-name="BCI Media Inc.">
     <requires>
-        <import addon="xbmc.python" version="2.24.0"/>
+        <import addon="xbmc.addon" version="16.1.000"/>
         <import addon="plugin.video.youtube" version="6.8.2"/>
-        <import addon="script.module.tulip" version="2.5.10"/>
+        <import addon="script.module.tulip" version="2.8.1"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="addon.py">
         <provides>video audio image</provides>
@@ -1140,7 +1148,11 @@ Kindly note that AliveGR is not an official part of the media player you are run
         <summary lang="el">Πρόσθετο BCI Greek TV</summary>
         <description lang="el">Το πρόσθετο αυτό παρέχει ζωντανό περιεχόμενο κυρίως εις την Ελληνική γλώσσα</description>
         <license>GNU General Public License, v3</license>
-        <news>2.6.0 (10-11-2020)
+        <news>2.7.0 (28-12-2020)
+- Updated youtube api keys
+- Bumped dependencies
+
+2.6.0 (10-11-2020)
 - Updated some icons &amp; artwork
 
 2.5.1 (29-06-2020)
@@ -1194,11 +1206,11 @@ Kindly note that AliveGR is not an official part of the media player you are run
 	</extension>
 </addon>
 
-<addon id="plugin.video.zouzounia.tv" name="Zouzounia TV" version="3.0.1" provider-name="Twilight0">
+<addon id="plugin.video.zouzounia.tv" name="Zouzounia TV" version="3.1.0" provider-name="Twilight0">
     <requires>
-        <import addon="xbmc.python" version="2.24.0"/>
+        <import addon="xbmc.addon" version="16.1.000"/>
         <import addon="plugin.video.youtube" version="6.8.2"/>
-        <import addon="script.module.tulip" version="2.5.11"/>
+        <import addon="script.module.tulip" version="2.8.1"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="addon.py">
         <provides>video</provides>
@@ -1213,7 +1225,11 @@ Kindly note that AliveGR is not an official part of the media player you are run
         <license>GNU GPL, version 3</license>
         <website>https://www.youtube.com/channel/UCzsQf6eiWz4gIHgx0oYadXA</website>
     </extension>
-    <news>29-06-2020 - [B]3.0.0[/B]
+    <news>28-12-2020 - [B]3.1.0[/B]
+- Updated youtube api key
+- Bumped dependencies
+
+29-06-2020 - [B]3.0.0[/B]
 - Addon rework
 - New youtube api keys
 - Removed third party content
