@@ -1341,7 +1341,7 @@ Kindly note that AliveGR is not an official part of the media player you are run
     </extension>
 </addon>
 
-<addon id="service.subtitles.subtitles.gr" name="Subtitles.gr" version="3.3.0" provider-name="Twilight0">
+<addon id="service.subtitles.subtitles.gr" name="Subtitles.gr" version="3.3.1" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.addon" version="16.1.000"/>
         <import addon="script.module.tulip" version="2.8.1" />
@@ -1358,8 +1358,12 @@ Kindly note that AliveGR is not an official part of the media player you are run
         <disclaimer lang="el_GR">Υπηρεσία μόνο ελληνικών υποτίτλων. Δεν έχει δημοσιευθεί ούτε εγκριθεί από οποιοδήποτε υποστηριζόμενο ιστότοπο.</disclaimer>
         <license>GPL-3.0-only</license>
         <website>http://www.subtitles.gr/</website>
+        <source>https://github.com/Twilight0/service.subtitles.subtitles.gr/</source>
         <platform>all</platform>
-        <news>[B]3.3.0[/B]
+        <news>[B]3.3.1[/B]
+- Added the forgotten string
+
+[B]3.3.0[/B]
 - Improved search query function, added accompanying option
 
 [B]3.2.5[/B]
