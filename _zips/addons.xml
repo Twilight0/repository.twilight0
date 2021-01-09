@@ -25,7 +25,7 @@
 - Updated main artwork</news>
 </addon>
 
-<addon id="context.subtitles.gr" version="0.0.4" name="Subtitles.gr menu item" provider-name="Twilight0">
+<addon id="context.subtitles.gr" version="0.0.5" name="Subtitles.gr menu item" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0"/>
         <import addon="service.subtitles.subtitles.gr"/>
@@ -54,7 +54,7 @@
             <icon>icon.png</icon>
         </assets>
         <summary lang="en_gb">Subtitles.gr global context menu item</summary>
-        <summary lang="el_gr">Ενιαίο στοιχείο για το κοντέξτ μενού του Kodi για το Subtitles.gr</summary>
+        <summary lang="el_gr">Ενιαίο στοιχείο για το κόντεξτ (εναλλακτικό) μενού του Kodi για το Subtitles.gr</summary>
         <platform>all</platform>
         <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
         <website>https://alivegr.net</website>
@@ -1347,7 +1347,7 @@ Kindly note that AliveGR is not an official part of the media player you are run
     </extension>
 </addon>
 
-<addon id="service.subtitles.subtitles.gr" name="Subtitles.gr" version="3.3.1" provider-name="Twilight0">
+<addon id="service.subtitles.subtitles.gr" name="Subtitles.gr" version="3.4.0" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.addon" version="16.1.000"/>
         <import addon="script.module.tulip" version="2.8.1" />
@@ -1366,7 +1366,11 @@ Kindly note that AliveGR is not an official part of the media player you are run
         <website>http://www.subtitles.gr/</website>
         <source>https://github.com/Twilight0/service.subtitles.subtitles.gr/</source>
         <platform>all</platform>
-        <news>[B]3.3.1[/B]
+        <news>[B]3.4.0[/B]
+- Code related tweaks, particularly how routing is handled
+- Added ability to save locally subtitles and/or zips from sources
+
+[B]3.3.1[/B]
 - Added the forgotten string
 
 [B]3.3.0[/B]
