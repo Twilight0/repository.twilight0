@@ -432,10 +432,10 @@ Kindly note that AliveGR is not an official part of the media player you are run
     </extension>
 </addon>
 
-<addon id="plugin.video.ert.gr" version="3.1.2" name="ERTflix" provider-name="Twilight0">
+<addon id="plugin.video.ert.gr" version="3.2.0" name="ERTflix" provider-name="Twilight0">
     <requires>
-        <import addon="xbmc.python" version="2.24.0" />
-        <import addon="script.module.tulip" version="2.6.20" />
+        <import addon="xbmc.addon" version="16.1.000"/>
+        <import addon="script.module.tulip" version="2.8.2" />
         <import addon="plugin.video.youtube" version="6.8.4"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="addon.py">
@@ -456,7 +456,7 @@ Kindly note that AliveGR is not an official part of the media player you are run
     </extension>
     <extension point="xbmc.addon.metadata">
         <platform>all</platform>
-        <reuselanguageinvoker>false</reuselanguageinvoker>
+        <reuselanguageinvoker>true</reuselanguageinvoker>
         <language>en el</language>
         <summary lang="en_GB">ERTflix addon for Kodi</summary>
         <summary lang="el_GR">Πρόσθετο ERTflix για το Kodi</summary>
@@ -466,9 +466,14 @@ Kindly note that AliveGR is not an official part of the media player you are run
         <disclaimer lang="el_GR">Το πρόσθετο αυτό προσφέρει περιεχόμενο διαθέσιμο στην Ελλάδα και δεν έχει δημοσιευθεί ούτε εγκριθεί από το ert.gr</disclaimer>
         <license>GPL-3.0-only</license>
         <source>https://github.com/Twilight0/plugin.video.ert.gr</source>
-        <size>460600</size>
+        <size>1153434</size>
         <website>https://www.ertflix.gr/</website>
-        <news>[B]3.1.2[/B]
+        <news>[B]3.2.0[/B]
+- Add exit button (defaults to off)
+- Improve kids menu
+- Improve performance by enabling "reuse language invoker"
+
+[B]3.1.2[/B]
 - Apply threads lists higher in the execution order
 
 [B]3.1.1[/B]
