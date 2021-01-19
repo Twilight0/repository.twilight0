@@ -1,0 +1,44 @@
+[B]1.4.2[/B]
+- Bumped dependencies
+- Some minor tweaks here and there
+- Notify if geoblocking is applied by the live stream server
+
+[B]1.4.1[/B]
+- Add de_DE translation (contrib. horstle)
+- Add hr_HR translation (contrib. arvvoid)
+- Add no_NO translation (contrib. solbu)
+
+[B]1.4.0[/B]
+- Add es_ES translation (contrib. roliverosc)
+- Add ro_RO translation (contrib. tmihai20)
+- Add nl_NL translation (contrib. dagwieers)
+- Add ru_RU translation (contrib. vlmaksime)
+- Kodi version conditional check via a different method
+
+[B]1.3.0[/B]
+- Added adaptive quality choice (Leia+ only)
+- Replaced environment main menu item with travel
+- Various other tweaks
+
+[B]1.2.0[/B]
+- Improved Live Resolver
+  > Fixed english stream
+  > Added ability to open window with various qualities to choose from
+- Added Python 3 support
+- Removed screenshots
+
+[B]1.1.3[/B]
+- Various cosmetics & tweaks in addon.xml
+
+[B]1.1.2[/B]
+- Fixed Live Resolver
+
+[B]1.1.1[/B]
+- Rebased to utilize tulip libraries
+
+[B]1.1.0[/B]
+- Tweaked sections
+- Added add-on screenshots
+
+[B]1.0.0[/B]
+- Initial version
