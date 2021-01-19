@@ -883,10 +883,10 @@ Kindly note that AliveGR is not an official part of the media player you are run
     </extension>
 </addon>
 
-<addon id="plugin.video.novasports.gr" version="2.0.2" name="Novasports.gr" provider-name="Twilight0">
+<addon id="plugin.video.novasports.gr" version="2.1.0" name="Novasports.gr" provider-name="Twilight0">
 	<requires>
-		<import addon="xbmc.python" version="2.24.0" />
-		<import addon="script.module.tulip" version="2.6.1"/>
+		<import addon="xbmc.addon" version="16.1.000"/>
+		<import addon="script.module.tulip" version="2.8.2"/>
 	</requires>
 	<extension point="xbmc.python.pluginsource" library="addon.py">
 		<provides>video</provides>
@@ -904,7 +904,11 @@ Kindly note that AliveGR is not an official part of the media player you are run
 		<source>https://github.com/Twilight0/plugin.video.novasports.gr</source>
 		<website>http://www.novasports.gr/</website>
         <size>815135</size>
-		<news>[B]2.0.2[/B]
+		<news>[B]2.1.0[/B]
+- Various fixes
+- Tweaked imports for Matrix
+
+[B]2.0.2[/B]
 - Fix in webtv's latest videos indexer (additional to the main feed)
 
 [B]2.0.1[/B]
