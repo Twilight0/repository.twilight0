@@ -814,31 +814,6 @@ Kindly note that AliveGR is not an official part of the media player you are run
     </extension>
 </addon>
 
-<addon id="plugin.video.listrunner" name="List Runner" version="4.1.0" provider-name="Twilight0">
-    <requires>
-        <import addon="xbmc.python" version="2.24.0"/>
-        <import addon="script.module.tulip" version="2.0.11"/>
-        <import addon="script.module.youtube.dl" optional="true"/>
-        <import addon="script.module.resolveurl" version="5.0.06" optional="true"/>
-        <import addon="script.module.streamlink.base" version="2018.06.20" optional="true"/>
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="addon.py">
-        <provides>video</provides>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <platform>all</platform>
-        <reuselanguageinvoker>false</reuselanguageinvoker>
-        <summary lang="en">List Runner addon</summary>
-        <description lang="en">List Runner is an addon capable of loading custom m3u or youtube playlists. Can utilize youtube-dl, resolveurl or streamlink for streams that need resolving (both are optional, installable through the addon's settings menu).</description>
-        <summary lang="el">Πρόσθετο List Runner</summary>
-        <description lang="el">Το πρόσθετο List Runner έχει την δυνατότητα αναπαραγωγής βίντεο μέσω λιστών αναπαραγωγής, της μορφής m3u ή λίστας αναπαραγωγής Youtube. Χρησιμοποιεί τα πρόσθετα youtube-dl, resolveurl ή streamlink όπου χρειαστεί (και τα δύο είναι προαιρετικά, με δυνατότητα εγκατάστασης μέσω των ρυθμίσεων του προσθέτου).</description>
-        <source>https://github.com/Twilight0/plugin.video.listrunner</source>
-        <news>+ 4.1.0 (26-11-2018)
-- Moved indexer functions into lib directory</news>
-        <license>GNU GPL, version 2 or later</license>
-    </extension>
-</addon>
-
 <addon id="plugin.video.montreal.greek-tv" name="Montreal Greek TV" version="2.1.6" provider-name="Greektimes.ca, Twilight0">
     <requires>
         <import addon="xbmc.addon" version="16.1.000"/>
@@ -1363,34 +1338,6 @@ Kindly note that AliveGR is not an official part of the media player you are run
         <disclaimer>Icon theme provided by Greek Voice TV administrator</disclaimer>
 		<platform>all</platform>
 	</extension>
-</addon>
-
-<addon id="service.streamlink.proxy" name="Streamlink Proxy" version="4.1.2" provider-name="Twilight0">
-    <requires>
-        <import addon="xbmc.python" version="2.24.0"/>
-        <import addon="script.module.streamlink.base" version="2018.06.12"/>
-        <!--<import addon="script.module.streamlink.plugins" version="1.0.3"/>-->
-    </requires>
-    <extension point="xbmc.service" library="resources/lib/service.py" start="login"/>
-    <extension point="xbmc.python.pluginsource" library="options.py">
-        <provides>executable</provides>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <platform>all</platform>
-        <language>en de el</language>
-        <summary>Streamlink Proxy</summary>
-        <description>Streamlink Proxy for Kodi</description>
-        <platform>all</platform>
-        <license>GPLv3</license>
-        <source>https://github.com/Twilight0/service.streamlink.proxy</source>
-        <size>172839</size>
-        <assets>
-            <icon>icon.png</icon>
-        </assets>
-        <news>+ 4.1.2
-- Removed plugins dependency
-- Bumped base module dependency to latest</news>
-    </extension>
 </addon>
 
 <addon id="service.subtitles.subtitles.gr" name="Subtitles.gr" version="3.4.2" provider-name="Twilight0">
