@@ -1140,11 +1140,11 @@ Kindly note that AliveGR is not an official part of the media player you are run
     </extension>
 </addon>
 
-<addon id="plugin.video.Toronto-Channels" name="BCI Greek TV" version="2.7.1" provider-name="BCI Media Inc.">
+<addon id="plugin.video.Toronto-Channels" name="BCI Greek TV" version="2.8.0" provider-name="BCI Media Inc.">
     <requires>
         <import addon="xbmc.addon" version="16.1.000"/>
-        <import addon="plugin.video.youtube" version="6.8.2"/>
-        <import addon="script.module.tulip" version="2.8.1"/>
+        <import addon="plugin.video.youtube" version="6.8.8"/>
+        <import addon="script.module.tulip" version="2.8.6"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="addon.py">
         <provides>video audio image</provides>
@@ -1157,27 +1157,14 @@ Kindly note that AliveGR is not an official part of the media player you are run
         <summary lang="el">Πρόσθετο BCI Greek TV</summary>
         <description lang="el">Το πρόσθετο αυτό παρέχει ζωντανό περιεχόμενο κυρίως εις την Ελληνική γλώσσα</description>
         <license>GNU General Public License, v3</license>
-        <news>2.7.0 (28-12-2020)
+        <news>2.8.0 (10-02-2021)
+- Added new streams (Food channel, cetn, health channel), updated others
+- Removed rtmp urls and accompanying setting
+- Disabled radio choice
+
+2.7.0 (28-12-2020)
 - Updated youtube api keys
-- Bumped dependencies
-
-2.6.0 (10-11-2020)
-- Updated some icons &amp; artwork
-
-2.5.1 (29-06-2020)
-- Updated youtube api key
-
-2.5.0 (22-05-2019)
-- Re-addition of RIK live streams
-
-2.4.1 (08-05-2019)
-- Update BCI news link
-- Update README
-
-2.4.0 (28-10-2019)
-- Renamed menu item "Webcam" to "BCI 24 News"
-- Removed some comments served as reserved code
-- Made BCI news url also changeable to rtmp</news>
+- Bumped dependencies</news>
         <website>http://www.bcimedia.net/</website>
         <assets>
             <icon>icon.png</icon>
