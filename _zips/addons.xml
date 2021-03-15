@@ -265,7 +265,7 @@
     </extension>
 </addon>
 
-<addon id="plugin.video.AliveGR" name="AliveGR" version="2.7.1" provider-name="Twilight0">
+<addon id="plugin.video.AliveGR" name="AliveGR" version="2.7.2" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.addon" version="18.0.000"/>
         <import addon="resource.images.alivegr.artwork" version="3.0.5"/>
@@ -327,7 +327,7 @@ Kindly note that AliveGR is not an official part of the media player you are run
     </extension>
 </addon>
 
-<addon id="plugin.video.alphatv.gr" version="2.2.2" name="ALPHA Player" provider-name="Twilight0">
+<addon id="plugin.video.alphatv.gr" version="2.3.0" name="ALPHA Player" provider-name="Twilight0">
 	<requires>
 		<import addon="xbmc.addon" version="16.1.000"/>
 		<import addon="script.module.tulip" version="2.8.1" />
@@ -347,7 +347,11 @@ Kindly note that AliveGR is not an official part of the media player you are run
 		<source>https://github.com/Twilight0/plugin.video.alphatv.gr</source>
 		<website>http://www.alphatv.gr/</website>
         <size>598620</size>
-		<news>[B]2.2.2[/B]
+		<news>[B]2.3.0[/B]
+- Utilize function cache instead of traditional get
+- Make youtube API key as text type instead of bytes for Kodi 19+
+
+[B]2.2.2[/B]
 - Fix Alpha CY vod resolver
 
 [B]2.2.1[/B]
@@ -553,11 +557,11 @@ Kindly note that AliveGR is not an official part of the media player you are run
     </extension>
 </addon>
 
-<addon id="plugin.video.faros.on-air" name="Faros On-Air" version="1.3.3" provider-name="Twilight0">
+<addon id="plugin.video.faros.on-air" name="Faros On-Air" version="1.4.0" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.addon" version="16.1.000"/>
-        <import addon="plugin.video.youtube" version="6.8.2"/>
-        <import addon="script.module.tulip" version="2.8.1"/>
+        <import addon="plugin.video.youtube" version="6.8.10"/>
+        <import addon="script.module.tulip" version="2.8.9"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="addon.py">
         <provides>video</provides>
@@ -574,19 +578,11 @@ Kindly note that AliveGR is not an official part of the media player you are run
         <size>738082</size>
         <website>https://farosonair.com/</website>
         <source>https://github.com/Twilight0/plugin.video.faros.on-air</source>
-    </extension>
-    <!--<extension name="Faros On Air Repo" point="xbmc.addon.repository">-->
-        <!--<info compressed="false">http://alivegr.net/repo/_faros/addons.xml</info>-->
-        <!--<checksum>http://alivegr.net/repo/_faros/addons.xml.md5</checksum>-->
-        <!--<datadir zip="true">http://alivegr.net/repo/_faros/</datadir>-->
-        <!--<hashes>false</hashes>-->
-        <!--<dir>-->
-            <!--<info compressed="false">https://raw.githubusercontent.com/Twilight0/repo.twilight0.libs/master/_zips/addons.xml</info>-->
-            <!--<checksum>https://raw.githubusercontent.com/Twilight0/repo.twilight0.libs/master/_zips/addons.xml.md5</checksum>-->
-            <!--<datadir zip="true">https://raw.githubusercontent.com/Twilight0/repo.twilight0.libs/master/_zips/</datadir>-->
-        <!--</dir>-->
-    <!--</extension>-->
-    <news>29-11-2020 - [B]1.3.2[/B]
+        <news>16-03-2021 - [B]1.4.0[/B]
+- Utilize function cache instead of get
+- Fixes into addon.xml
+
+29-11-2020 - [B]1.3.2[/B]
 - Update youtube api key
 
 31-08-2020 - [B]1.3.1[/B]
@@ -607,6 +603,18 @@ Kindly note that AliveGR is not an official part of the media player you are run
         <icon>icon.png</icon>
         <fanart>fanart.jpg</fanart>
     </assets>
+    </extension>
+    <!--<extension name="Faros On Air Repo" point="xbmc.addon.repository">-->
+        <!--<info compressed="false">http://alivegr.net/repo/_faros/addons.xml</info>-->
+        <!--<checksum>http://alivegr.net/repo/_faros/addons.xml.md5</checksum>-->
+        <!--<datadir zip="true">http://alivegr.net/repo/_faros/</datadir>-->
+        <!--<hashes>false</hashes>-->
+        <!--<dir>-->
+            <!--<info compressed="false">https://raw.githubusercontent.com/Twilight0/repo.twilight0.libs/master/_zips/addons.xml</info>-->
+            <!--<checksum>https://raw.githubusercontent.com/Twilight0/repo.twilight0.libs/master/_zips/addons.xml.md5</checksum>-->
+            <!--<datadir zip="true">https://raw.githubusercontent.com/Twilight0/repo.twilight0.libs/master/_zips/</datadir>-->
+        <!--</dir>-->
+    <!--</extension>-->
 </addon>
 
 <addon id="plugin.video.fashiontv.com" version="1.2.0" name="Fashion TV Player" provider-name="Twilight0">
@@ -776,10 +784,10 @@ Kindly note that AliveGR is not an official part of the media player you are run
     </extension>
 </addon>
 
-<addon id="plugin.video.montreal.greek-tv" name="Montreal Greek TV" version="2.1.6" provider-name="Greektimes.ca, Twilight0">
+<addon id="plugin.video.montreal.greek-tv" name="Montreal Greek TV" version="2.2.0" provider-name="Greektimes.ca, Twilight0">
     <requires>
         <import addon="xbmc.addon" version="16.1.000"/>
-        <import addon="script.module.tulip" version="2.8.1"/>
+        <import addon="script.module.tulip" version="2.8.9"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="addon.py">
         <provides>video image audio</provides>
@@ -793,7 +801,10 @@ Kindly note that AliveGR is not an official part of the media player you are run
         <language>en el</language>
         <license>GNU General Public License, v3</license>
         <size>633158</size>
-        <news>[B]2.1.6[/B] - 29-11-2020
+        <news>[B]2.2.0[/B] - 16-03-2021
+- Utilize function cache instead of traditional get
+
+[B]2.1.6[/B] - 29-11-2020
 - Updated youtube api key
 
 [B]2.1.5[/B] - 29-06-2020
@@ -1168,11 +1179,11 @@ Kindly note that AliveGR is not an official part of the media player you are run
 	</extension>
 </addon>
 
-<addon id="plugin.video.zouzounia.tv" name="Zouzounia TV" version="3.1.1" provider-name="Twilight0">
+<addon id="plugin.video.zouzounia.tv" name="Zouzounia TV" version="4.0.0" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.addon" version="16.1.000"/>
-        <import addon="plugin.video.youtube" version="6.8.2"/>
-        <import addon="script.module.tulip" version="2.8.1"/>
+        <import addon="plugin.video.youtube" version="6.8.10"/>
+        <import addon="script.module.tulip" version="2.8.9"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="addon.py">
         <provides>video</provides>
@@ -1180,30 +1191,30 @@ Kindly note that AliveGR is not an official part of the media player you are run
     <extension point="xbmc.addon.metadata">
         <platform>all</platform>
         <reuselanguageinvoker>false</reuselanguageinvoker>
-        <summary lang="en">Zouzounia TV addon</summary>
-        <description lang="en">Zouzounia TV addon</description>
-        <summary lang="el">Πρόσθετο Zouzounia TV</summary>
-        <description lang="el">Πρόσθετο Zouzounia TV</description>
+        <summary lang="en_GB">Zouzounia TV addon</summary>
+        <description lang="en_GB">Zouzounia TV addon</description>
+        <summary lang="el_GR">Πρόσθετο Zouzounia TV</summary>
+        <description lang="el_GR">Πρόσθετο Zouzounia TV</description>
         <license>GNU GPL, version 3</license>
         <website>https://www.youtube.com/channel/UCzsQf6eiWz4gIHgx0oYadXA</website>
-    </extension>
-    <news>28-12-2020 - [B]3.1.0[/B]
+        <news>[B]4.0.0[/B]
+- Reworked addon code to use url dispatcher
+- Utilize Function cache instead of legacy cache.get for listings
+
+[B]3.1.X[/B]
 - Updated youtube api key
 - Bumped dependencies
+- Various minor tweaks
 
-29-06-2020 - [B]3.0.0[/B]
+[B]3.0.0[/B]
 - Addon rework
 - New youtube api keys
-- Removed third party content
-
-15-06-2018 - [B]2.0.0[/B]
-- Added English/Greek/Japanese Language selector
-- Tulip libraries are now used
-- Increased number of recent videos due to improvemens on youtube module</news>
-    <assets>
-        <icon>icon.png</icon>
-        <fanart>fanart.jpg</fanart>
-    </assets>
+- Removed third party content</news>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
 </addon>
 
     <addon id="repository.twilight0" name="Twilight0 Addon Repository" version="1.4" provider-name="Twilight0">
