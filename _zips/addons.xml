@@ -327,10 +327,10 @@ Kindly note that AliveGR is not an official part of the media player you are run
     </extension>
 </addon>
 
-<addon id="plugin.video.alphatv.gr" version="2.3.0" name="ALPHA Player" provider-name="Twilight0">
+<addon id="plugin.video.alphatv.gr" version="2.3.1" name="ALPHA Player" provider-name="Twilight0">
 	<requires>
 		<import addon="xbmc.addon" version="16.1.000"/>
-		<import addon="script.module.tulip" version="2.8.1" />
+		<import addon="script.module.tulip" version="2.8.10" />
 		<import addon="script.module.kodi-six" version="0.0.2"/>
 	</requires>
 	<extension point="xbmc.python.pluginsource" library="addon.py">
@@ -347,7 +347,10 @@ Kindly note that AliveGR is not an official part of the media player you are run
 		<source>https://github.com/Twilight0/plugin.video.alphatv.gr</source>
 		<website>http://www.alphatv.gr/</website>
         <size>598620</size>
-		<news>[B]2.3.0[/B]
+		<news>[B]2.3.1[/B]
+- Revert of the function cache back to traditional get
+
+[B]2.3.0[/B]
 - Utilize function cache instead of traditional get
 - Make youtube API key as text type instead of bytes for Kodi 19+
 
@@ -557,7 +560,7 @@ Kindly note that AliveGR is not an official part of the media player you are run
     </extension>
 </addon>
 
-<addon id="plugin.video.faros.on-air" name="Faros On-Air" version="1.4.0" provider-name="Twilight0">
+<addon id="plugin.video.faros.on-air" name="Faros On-Air" version="1.4.1" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.addon" version="16.1.000"/>
         <import addon="plugin.video.youtube" version="6.8.10"/>
@@ -578,7 +581,11 @@ Kindly note that AliveGR is not an official part of the media player you are run
         <size>738082</size>
         <website>https://farosonair.com/</website>
         <source>https://github.com/Twilight0/plugin.video.faros.on-air</source>
-        <news>16-03-2021 - [B]1.4.0[/B]
+        <news>18-03-2021 - [B]1.4.1[/B]
+- Revert function cache
+- Bug fixes
+
+16-03-2021 - [B]1.4.0[/B]
 - Utilize function cache instead of get
 - Fixes into addon.xml
 
@@ -784,7 +791,7 @@ Kindly note that AliveGR is not an official part of the media player you are run
     </extension>
 </addon>
 
-<addon id="plugin.video.montreal.greek-tv" name="Montreal Greek TV" version="2.2.0" provider-name="Greektimes.ca, Twilight0">
+<addon id="plugin.video.montreal.greek-tv" name="Montreal Greek TV" version="2.2.1" provider-name="Greektimes.ca, Twilight0">
     <requires>
         <import addon="xbmc.addon" version="16.1.000"/>
         <import addon="script.module.tulip" version="2.8.9"/>
@@ -801,8 +808,8 @@ Kindly note that AliveGR is not an official part of the media player you are run
         <language>en el</language>
         <license>GNU General Public License, v3</license>
         <size>633158</size>
-        <news>[B]2.2.0[/B] - 16-03-2021
-- Utilize function cache instead of traditional get
+        <news>[B]2.2.X[/B] - 18-03-2021
+- Some code tweaks
 
 [B]2.1.6[/B] - 29-11-2020
 - Updated youtube api key
@@ -999,11 +1006,11 @@ Kindly note that AliveGR is not an official part of the media player you are run
     </extension>
 </addon>
 
-<addon id="plugin.video.star.gr" version="2.3.3" name="STAR Player" provider-name="Twilight0">
+<addon id="plugin.video.star.gr" version="2.3.4" name="STAR Player" provider-name="Twilight0">
 	<requires>
 		<import addon="xbmc.addon" version="16.1.000"/>
-		<import addon="script.module.tulip" version="2.8.2" />
-		<import addon="plugin.video.youtube" version="6.8.3"/>
+		<import addon="script.module.tulip" version="2.8.9" />
+		<import addon="plugin.video.youtube" version="6.8.10"/>
 	</requires>
 	<extension point="xbmc.python.pluginsource" library="addon.py">
 		<provides>video</provides>
@@ -1020,7 +1027,10 @@ Kindly note that AliveGR is not an official part of the media player you are run
 		<source>https://github.com/Twilight0/plugin.video.star.gr</source>
 		<website>http://www.star.gr/</website>
 		<size>228454</size>
-		<news>[B]2.3.3[/B]
+		<news>[B]2.3.4[/B]
+- Some bug fixes
+
+[B]2.3.3[/B]
 - Resolve live tv web page instead or provide live url directly
 
 [B]2.3.2[/B]
@@ -1179,27 +1189,27 @@ Kindly note that AliveGR is not an official part of the media player you are run
 	</extension>
 </addon>
 
-<addon id="plugin.video.zouzounia.tv" name="Zouzounia TV" version="4.0.0" provider-name="Twilight0">
+<addon id="plugin.video.zouzounia.tv" name="Zouzounia TV" version="4.0.1" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.addon" version="16.1.000"/>
         <import addon="plugin.video.youtube" version="6.8.10"/>
-        <import addon="script.module.tulip" version="2.8.9"/>
+        <import addon="script.module.tulip" version="2.8.10"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="addon.py">
         <provides>video</provides>
     </extension>
     <extension point="xbmc.addon.metadata">
         <platform>all</platform>
-        <reuselanguageinvoker>false</reuselanguageinvoker>
+        <reuselanguageinvoker>true</reuselanguageinvoker>
         <summary lang="en_GB">Zouzounia TV addon</summary>
         <description lang="en_GB">Zouzounia TV addon</description>
         <summary lang="el_GR">Πρόσθετο Zouzounia TV</summary>
         <description lang="el_GR">Πρόσθετο Zouzounia TV</description>
         <license>GNU GPL, version 3</license>
         <website>https://www.youtube.com/channel/UCzsQf6eiWz4gIHgx0oYadXA</website>
-        <news>[B]4.0.0[/B]
+        <news>[B]4.0.X[/B]
 - Reworked addon code to use url dispatcher
-- Utilize Function cache instead of legacy cache.get for listings
+- Enable reuse language invoker
 
 [B]3.1.X[/B]
 - Updated youtube api key
