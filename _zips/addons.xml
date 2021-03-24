@@ -396,11 +396,12 @@ Kindly note that AliveGR is not an official part of the media player you are run
 	</extension>
 </addon>
 
-<addon id="plugin.video.antenna.gr" version="2.2.0" name="ANT1 Player" provider-name="Twilight0">
+<addon id="plugin.video.antenna.gr" version="2.3.0" name="ANT1 Player" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.addon" version="16.1.000"/>
-        <import addon="script.module.tulip" version="2.5.2" />
-        <import addon="plugin.video.youtube" version="6.8.1"/>
+        <import addon="script.module.tulip" version="2.8.11" />
+        <import addon="script.module.futures" version="0.0.0.2" />
+        <import addon="plugin.video.youtube" version="6.8.10"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="addon.py">
         <provides>video</provides>
@@ -417,7 +418,11 @@ Kindly note that AliveGR is not an official part of the media player you are run
         <source>https://github.com/Twilight0/plugin.video.antenna.gr</source>
         <website>http://www.antenna.gr/</website>
         <size>204493</size>
-        <news>[B]2.2.0[/B]
+        <news>[B]2.3.0[/B]
+- Change caching method
+- Utilize futures for parallel threading
+
+[B]2.2.0[/B]
 - Updated youtube api key
 - Added pagination function for long lists
 - A few other tweaks here and there
@@ -459,10 +464,10 @@ Kindly note that AliveGR is not an official part of the media player you are run
     </extension>
 </addon>
 
-<addon id="plugin.video.ert.gr" version="3.2.3" name="ERTflix" provider-name="Twilight0">
+<addon id="plugin.video.ert.gr" version="3.3.0" name="ERTflix" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.addon" version="16.1.000"/>
-        <import addon="script.module.tulip" version="2.8.6" />
+        <import addon="script.module.tulip" version="2.8.11" />
         <import addon="plugin.video.youtube" version="6.8.10"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="addon.py">
@@ -495,7 +500,11 @@ Kindly note that AliveGR is not an official part of the media player you are run
         <source>https://github.com/Twilight0/plugin.video.ert.gr</source>
         <size>1153434</size>
         <website>https://www.ertflix.gr/</website>
-        <news>[B]3.2.3[/B]
+        <news>[B]3.3.0[/B]
+- Change caching method
+- Remove debugging option
+
+[B]3.2.3[/B]
 - Fix for foreign documentaries indexers
 
 [B]3.2.2[/B]
