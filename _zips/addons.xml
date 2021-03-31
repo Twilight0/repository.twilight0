@@ -709,7 +709,7 @@ Kindly note that AliveGR is not an official part of the media player you are run
 	</extension>
 </addon>
 
-<addon id="plugin.video.greekvoice" name="Greek Voice" version="3.1.0" provider-name="Twilight0">
+<addon id="plugin.video.greekvoice" name="Greek Voice" version="3.1.1" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.addon" version="16.1.000"/>
         <import addon="resource.images.greekvoice.artwork"/>
@@ -1321,11 +1321,11 @@ Kindly note that AliveGR is not an official part of the media player you are run
 	</extension>
 </addon>
 
-<addon id="service.subtitles.subtitles.gr" name="Subtitles.gr" version="3.5.0" provider-name="Twilight0">
+<addon id="service.subtitles.subtitles.gr" name="Subtitles.gr" version="3.5.1" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.addon" version="16.1.000"/>
         <import addon="script.module.tulip" version="2.8.16" />
-        <import addon="script.module.futures" version="0.0.0.2" />
+        <import addon="script.module.futures" version="0.0.0.2" optional="true" />
     </requires>
     <extension point="xbmc.subtitle.module" library="service.py">
     </extension>
@@ -1341,7 +1341,13 @@ Kindly note that AliveGR is not an official part of the media player you are run
         <website>http://www.subtitles.gr/</website>
         <source>https://github.com/Twilight0/service.subtitles.subtitles.gr/</source>
         <platform>all</platform>
-        <news>[B]3.5.0[/B]
+        <news>[B]3.5.1[/B]
+- Logging tweaks on vipsubs
+- Force unicode search strings
+- Make futures optional to help installation for certain cases (Kodi 19)
+- Reduce number of concurrent threads (max 5)
+
+[B]3.5.0[/B]
 - Change caching method
 - Kodi 19+ related fixes
 - Remove prompt for libarchive installation
