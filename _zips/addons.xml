@@ -1031,10 +1031,10 @@ Kindly note that AliveGR is not an official part of the media player you are run
     </extension>
 </addon>
 
-<addon id="plugin.video.star.gr" version="2.3.4" name="STAR Player" provider-name="Twilight0">
+<addon id="plugin.video.star.gr" version="2.4.0" name="STAR Player" provider-name="Twilight0">
 	<requires>
 		<import addon="xbmc.addon" version="16.1.000"/>
-		<import addon="script.module.tulip" version="2.8.9" />
+		<import addon="script.module.tulip" version="2.8.17" />
 		<import addon="plugin.video.youtube" version="6.8.10"/>
 	</requires>
 	<extension point="xbmc.python.pluginsource" library="addon.py">
@@ -1052,7 +1052,11 @@ Kindly note that AliveGR is not an official part of the media player you are run
 		<source>https://github.com/Twilight0/plugin.video.star.gr</source>
 		<website>http://www.star.gr/</website>
 		<size>228454</size>
-		<news>[B]2.3.4[/B]
+		<news>[B]2.4.0[/B]
+- Change caching method
+- Obtain plot for live tv
+
+[B]2.3.4[/B]
 - Some bug fixes
 
 [B]2.3.3[/B]
