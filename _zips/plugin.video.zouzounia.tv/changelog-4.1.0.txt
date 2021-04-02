@@ -1,0 +1,44 @@
+[B]4.1.0[/B]
+- Change cache method
+- Various other tweaks
+
+[B]4.0.X[/B]
+- Reworked addon code to use url dispatcher
+- Utilize Function cache instead of legacy cache.get for listings
+- Enable reuse language invoker
+
+[B]3.1.0[/B]
+- Updated youtube api key
+- Bumped dependencies
+
+[B]3.0.0[/B]
+- Addon rework
+- New youtube api keys
+- Removed third party content
+
+[B]3.1.0[/B]
+- Updated youtube api key
+- Bumped dependencies
+
+[B]3.0.0[/B]
+- Addon rework
+- New youtube api keys
+- Removed third party content
+
+[B]2.0.0[/B]
+- Added English/Greek/Japanese Language selector
+- Tulip libraries are now used
+
+[B]1.0.3[/B]
+- Minor fix for titles on various skins' shortcuts
+
+[B]1.0.2[/B]
+- Fixed cache clear function option inside settings
+- Minor other fixes
+
+[B]1.0.1[/B]
+- Small bug fix for 3rd party channels
+- Fix in translation string for 3rd party YT channels
+
+[B]1.0.0[/B]
+- Initial version

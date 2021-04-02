@@ -1,0 +1,54 @@
+3.1.0 (02-Apr-2021)
+- Change caching method
+- Bug fixes
+
+3.0.1 (19-Jan-2021)
+- Include assets into addon.xml
+- Minor compatibility fix
+
+3.0.0 (30-Nov-2020)
+- Add compatibility for Python 3
+- Rework of some modules
+- Add Romanian translation (contrib. tmihai20)
+- Add German translation (contrib. horstle)
+- Add Dutch translation (contrib. dagwieers)
+- Add Spanish translation (contrib. roliverosc)
+- Add Russian translation (contrib. vlmaksime)
+
+2.0.2 (02-Oct-2017)
+- Added info context menu option
+
+2.0.1 (01-Oct-2017)
+- Minor fix for station numbering
+- Changed method of getting stations when caching is disabled
+
+2.0.0 (30-Sep-2017)
+- Re-work of addon pulling info from somafm's channels.xml
+- Removed "switcher" trigger as it created some playback issues
+- Removed station info option
+- Sort options have now been moved to the sidebar
+
+1.1.1 (19-Aug-2017)
+- Fix for indexer switcher when playling a station
+- Added option for disable switcher in stations' index
+- Added option for setting indexer method from settings
+
+1.1.0 (23-Jul-2017)
+- Removed station info context menu (choose song info instead)
+- Option to hide song info & utilize caching
+- Option to hide station name
+
+1.0.2 (04-Jul-2017)
+- Fix for forgotten key in indexer's list &amp; sort method
+
+1.0.1 (03-Jul-2017)
+- Fix for sort method
+- Info meta changes
+
+1.0.0 (02-Jul-2017)
+- Initial Version
+Features:
+- All stations by SomaFM
+- Quality selector... prompt, auto, highest/lowest mp3, highest/lowest aac
+- Sort by name, popularity, genre
+- Station info
