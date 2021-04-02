@@ -971,11 +971,11 @@ Kindly note that AliveGR is not an official part of the media player you are run
     </extension>
 </addon>
 
-<addon id="plugin.video.skai.gr" version="3.2.0" name="SKAI Player" provider-name="Twilight0">
+<addon id="plugin.video.skai.gr" version="3.2.1" name="SKAI Player" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.addon" version="16.1.000"/>
-        <import addon="script.module.tulip" version="2.8.2" />
-        <import addon="plugin.video.youtube" version="6.8.2"/>
+        <import addon="script.module.tulip" version="2.8.17" />
+        <import addon="plugin.video.youtube" version="6.8.10"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="addon.py">
         <provides>video audio</provides>
@@ -994,7 +994,11 @@ Kindly note that AliveGR is not an official part of the media player you are run
         <source>https://github.com/Twilight0/plugin.video.skai.gr</source>
         <website>http://www.skai.gr/</website>
         <size>226000</size>
-        <news>[B]3.2.0[/B]
+        <news>[B]3.2.1[/B]
+- Bumped dependencies
+- Tweaked labels and icons on live items
+
+[B]3.2.0[/B]
 - Change caching method
 - Update VOD resolver
 - Tweak string indexes

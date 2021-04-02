@@ -1,0 +1,69 @@
+[B]3.2.1[/B]
+- Bumped dependencies
+- Tweaked labels and icons on live items
+
+[B]3.2.0[/B]
+- Change caching method
+- Update VOD resolver
+- Tweak string indexes
+- Enable "reuse language invoker"
+
+[B]3.1.0[/B]
+- Updated youtube api key
+- Bumped dependencies
+
+[B]3.0.X[/B]
+- Rework of the addon for website redesign and deprecation of older APIs
+- Removed news in sign language
+- Added the entertainment section
+- Added suggested, popular and recent videos on news section
+- Removed sports
+- Bumped dependencies
+- Updated logo
+
+[B]2.1.0 (beta)[/B]
+- Rework of live resolver
+- Bumped dependencies
+- Updated logo
+
+[B]2.0.X[/B]
+- Rework of the addon with new json API
+- Added live radio
+- Added resolver for html links
+- Added Python 3 compatibility
+
+[B]1.3.1[/B]
+- Updated live resolver
+- Bumped dependencies
+
+[B]1.3.0[/B]
+- Merged Hebrew translation thanks to "Eng2Heb" member
+- Utilizing youtube resolver for both Live & VOD streams
+- Cosmetics
+
+[B]1.2.2[/B]
+- Cosmetics
+- Tweaks in addon.xml
+
+[B]1.2.1[/B]
+- Reverted an argument in items_list_2 method to former state
+- Fixed url returns to separate youtube from direct
+- Added audio content parameter for radio vod content (podcasts)
+
+[B]1.2.0[/B]
+- Fixed vod resolver, several new videos are now hosted on youtube
+- Cosmetics
+- Tweaked addon.xml
+
+[B]1.1.2[/B]
+- Cosmetics
+
+[B]1.1.1[/B]
+- Rebased to utilize tulip libraries
+
+[B]1.1.0[/B]
+- Tweaked sections
+- Added add-on screenshots
+
+[B]1.0.0[/B]
+- Initial version
