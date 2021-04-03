@@ -1,0 +1,28 @@
+1.1.0 ~ 03-04-2021
+- Change caching method
+- Utilize another method for indexing images
+- Remove authorization methods except the one that you can enter user/pass and obtain tokens
+- Tweaks on thumbnails and fanarts
+- Remove capability for playing plexus streams
+
+1.0.X ~ 05-01-2020 - 19-01-2021
+- Initial Version, forked from Reddit Browser
+- Replaced urlresolver with resolveurl
+- Changed some default settings
+- Several bug fixes
+- Changed artwork
+- Changed user agent string
+- Changed app token
+- Restored a window call function which didn't work on Leia
+- Removed "depth" variable because it was supposed to be used on flat comments tree
+- Fixed saved items menu
+- Fixed user icon for my account menu
+- Fixed some misbehaviour on search menus
+- Fixed reddit videos playback
+- Removed capability to install plexus
+- Simplified actions on advanced authorization option
+- Added a cancellation button and exception handling on wrong username/password
+- Optionally notify user on token refresh, now defaults to off
+- Optionally open the first time prompt (read me)
+- Removed QRcode authorization option
+- Various other minor tweaks
