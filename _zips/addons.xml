@@ -653,7 +653,7 @@ Kindly note that AliveGR is not an official part of the media player you are run
     <!--</extension>-->
 </addon>
 
-<addon id="plugin.video.fashiontv.com" version="1.3.0" name="Fashion TV Player" provider-name="Twilight0">
+<addon id="plugin.video.fashiontv.com" version="1.3.1" name="Fashion TV Player" provider-name="Twilight0">
 	<requires>
 		<import addon="xbmc.addon" version="16.1.000"/>
 		<import addon="script.module.tulip" version="2.8.17" />
@@ -691,7 +691,7 @@ Kindly note that AliveGR is not an official part of the media player you are run
 		<source>https://github.com/Twilight0/plugin.video.fashiontv.com</source>
 		<website>https://www.fashiontv.com/</website>
 		<size>228454</size>
-		<news>[B]1.3.0[/B]
+		<news>[B]1.3.0 - 1.3.1[/B]
 - Change cache method
 - Place youtube channels on submenu
 - Change main label from "Live" to "Fashion TV Live"
