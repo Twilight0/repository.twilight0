@@ -1449,4 +1449,36 @@ Kindly note that AliveGR is not an official part of the media player you are run
         </assets>
     </extension>
 </addon>
+
+<addon id="weather.gismeteo" version="0.5.2.1" name="Gismeteo" provider-name="vl.maksime">
+	<requires>
+		<import addon="xbmc.addon" version="16.1.000"/>
+		<import addon="script.module.future" version="0.16.0.4"/>
+		<import addon="script.module.requests" version="2.15.1"/>
+	</requires>
+	<extension point="xbmc.python.weather" library="default.py"/>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">Gismeteo Weather Forecast. Real time weather and detailed forecast all round the world</summary>
+		<summary lang="el_GR">Υπηρεσία πρόγνωσης καιρού Gismeteo. Λεπτομερείς πληροφορίες πρόγνωσης σε πραγματικό χρόνο από όλο τον κόσμο</summary>
+		<summary lang="ru_RU">Прогноз погоды от ведущего погодного сервиса Gismeteo</summary>
+		<summary lang="es_ES">Pronóstico del tiempo Gismeteo. Clima en tiempo real y pronóstico detallado en todo el mundo</summary>
+		<description lang="en_GB">The weather is provided solely for personal non-commercial use</description>
+		<description lang="el_GR">Ο καιρός παρέχεται αυστηρά για προσωπική μη-εμπορική χρήση.</description>
+		<description lang="ru_RU">Погода предоставлена исключительно для личного некоммерческого использования</description>
+		<description lang="es_ES">El clima se proporciona únicamente para su uso personal y no comercial</description>
+		<disclaimer lang="en_GB">The weather forecast has been prepared by MapMakers Group Ltd</disclaimer>
+		<disclaimer lang="ru_RU">Прогноз погоды подготовлен НПЦ "Мэп Мейкер"</disclaimer>
+		<disclaimer lang="es_ES">El pronóstico del tiempo ha sido preparado por MapMakers Group Ltd</disclaimer>
+		<platform>all</platform>
+		<license>GPL-3.0-only</license>
+		<forum>https://forum.kodi.tv/showthread.php?tid=323624</forum>
+		<website>https://www.gismeteo.com/</website>
+		<email>vl.maksime@gmail.com</email>
+		<source>https://github.com/vlmaksime/weather.gismeteo</source>
+		<news>v0.5.2 (2020-10-15)[CR]- Fixed bug with parsing XML data[CR][CR]v0.5.1 (2020-06-01)[CR]- Added the ability to display Gismeteo icons</news>
+		<assets>
+			<icon>icon.png</icon>
+		</assets>
+	</extension>
+</addon>
 </addons>
