@@ -276,12 +276,12 @@
     </extension>
 </addon>
 
-<addon id="plugin.video.AliveGR" name="AliveGR" version="2.8.1" provider-name="Twilight0">
+<addon id="plugin.video.AliveGR" name="AliveGR" version="2.8.2" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.addon" version="18.0.000"/>
         <import addon="resource.images.alivegr.artwork" version="3.0.5"/>
         <import addon="resource.images.alivegr.logos" version="1.0.2"/>
-        <import addon="script.module.resolveurl" version="5.1.18"/>
+        <import addon="script.module.resolveurl" version="5.1.28"/>
         <import addon="script.module.resolveurl.pluginsgr" version="0.0.5"/>
         <import addon="script.module.tulip" version="2.8.17"/>
         <import addon="plugin.video.youtube" version="6.8.10"/>
@@ -653,11 +653,11 @@ Kindly note that AliveGR is not an official part of the media player you are run
     <!--</extension>-->
 </addon>
 
-<addon id="plugin.video.fashiontv.com" version="1.2.0" name="Fashion TV Player" provider-name="Twilight0">
+<addon id="plugin.video.fashiontv.com" version="1.3.0" name="Fashion TV Player" provider-name="Twilight0">
 	<requires>
 		<import addon="xbmc.addon" version="16.1.000"/>
-		<import addon="script.module.tulip" version="2.8.1" />
-		<import addon="plugin.video.youtube" version="6.8.2"/>
+		<import addon="script.module.tulip" version="2.8.17" />
+		<import addon="plugin.video.youtube" version="6.8.10"/>
 	</requires>
 	<extension point="xbmc.python.pluginsource" library="addon.py">
 		<provides>video</provides>
@@ -691,7 +691,13 @@ Kindly note that AliveGR is not an official part of the media player you are run
 		<source>https://github.com/Twilight0/plugin.video.fashiontv.com</source>
 		<website>https://www.fashiontv.com/</website>
 		<size>228454</size>
-		<news>[B]1.2.0[/B]
+		<news>[B]1.3.0[/B]
+- Change cache method
+- Place youtube channels on submenu
+- Change main label from "Live" to "Fashion TV Live"
+- Remove check for inputstream addon
+
+[B]1.2.0[/B]
 - Update youtube api keys
 - Rework of router scheme
 - Tweaks for Matrix
@@ -875,10 +881,10 @@ Kindly note that AliveGR is not an official part of the media player you are run
     </extension>
 </addon>
 
-<addon id="plugin.video.novasports.gr" version="2.1.0" name="Novasports.gr" provider-name="Twilight0">
+<addon id="plugin.video.novasports.gr" version="2.2.0" name="Novasports.gr" provider-name="Twilight0">
 	<requires>
 		<import addon="xbmc.addon" version="16.1.000"/>
-		<import addon="script.module.tulip" version="2.8.2"/>
+		<import addon="script.module.tulip" version="2.8.17"/>
 	</requires>
 	<extension point="xbmc.python.pluginsource" library="addon.py">
 		<provides>video</provides>
@@ -892,11 +898,15 @@ Kindly note that AliveGR is not an official part of the media player you are run
 		<description lang="el_GR">Βίντεο on demand και εκπομπές από το novasports.gr</description>
 		<disclaimer lang="en_GB">This addon offers content available in Greece and is not published nor endorsed by novasports.gr</disclaimer>
 		<disclaimer lang="el_GR">Το πρόσθετο αυτό προσφέρει περιεχόμενο διαθέσιμο στην Ελλάδα και δεν έχει δημοσιευθεί ούτε εγκριθεί από το novasports.gr</disclaimer>
-		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+		<license>GPL-3.0-only</license>
 		<source>https://github.com/Twilight0/plugin.video.novasports.gr</source>
 		<website>http://www.novasports.gr/</website>
-        <size>815135</size>
-		<news>[B]2.1.0[/B]
+        <size>460800</size>
+		<news>[B]2.2.0[/B]
+- Change cache method
+- Tweak label indexes
+
+[B]2.1.0[/B]
 - Various fixes
 - Tweaked imports for Matrix
 

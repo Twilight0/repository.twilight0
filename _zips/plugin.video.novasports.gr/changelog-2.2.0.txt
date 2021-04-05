@@ -1,0 +1,35 @@
+[B]2.2.0[/B]
+- Change cache method
+- Tweak label indexes
+
+[B]2.1.0[/B]
+- Various fixes
+- Tweaked imports for Matrix
+
+[B]2.0.2[/B]
+- Fix in webtv's latest videos indexer (additional to the main feed)
+
+[B]2.0.1[/B]
+- Added the date for live streams items (helps navigation)
+
+[B]2.0.0[/B]
+- Complete rework of the addon
+
+[B]1.2.0[/B]
+- Updated for website changes
+
+[B]1.1.3[/B]
+- Cosmetics & tweaks in addon.xml
+
+[B]1.1.2[/B]
+- Cosmetics
+
+[B]1.1.1[/B]
+- Rebased to utilize tulip libraries
+
+[B]1.1.0[/B]
+- Tweaked sections
+- Added add-on screenshots
+
+[B]1.0.0[/B]
+- Initial version
