@@ -1,0 +1,85 @@
+[B]2.4.0[/B]
+- Revert of cache change back to traditional get
+- Bug fixes accross the board
+- Utilize youtube addon for resolving some videos
+
+[B]2.3.2[/B]
+- Bug fix
+
+[B]2.3.1[/B]
+- Revert of the function cache back to traditional get
+
+[B]2.3.0[/B]
+- Utilize function cache instead of traditional get
+- Make youtube API key as text type instead of bytes for Kodi 19+
+
+[B]2.2.2[/B]
+- Fix Alpha CY vod resolver
+
+[B]2.2.1[/B]
+- Tweak pagination function
+
+[B]2.2.0[/B]
+- Add pagination for long lists (# items per page are selectable)
+- Tweaked strings integers
+- Tweaked imports for Matrix
+- Updated youtube api key
+- Episode order in now by default reversed (greek website provides new episodes on top)
+- Various other tweaks
+
+[B]2.1.0[/B]
+- Update youtube api key
+- Update indexers
+- Update resolvers
+- Add input date prompt for past webtv news on cypriot indexer
+
+[B]2.0.1[/B]
+- Minor fix for cypriot episode indexers
+
+[B]2.0.0[/B]
+- Rework of the addon, new indexers, new stream resolver
+- Replaced item based selection of country with a selector to switch between regions
+- Bumped dependencies
+
+[B]1.2.1[/B]
+- Fixed resolver to always choose HLS stream and fallback to rtmp
+
+[B]1.2.0[/B]
+- Added Hebrew translation (Eng2Heb@github)
+- Added new try-except block into vod resolver due to new website api
+- Cosmetics
+
+[B]1.1.5[/B]
+- Added spoofed UA for live streams
+
+[B]1.1.4[/B]
+- Code cosmetics
+
+[B]1.1.3[/B]
+- Minor regex fix on live resolver
+- Code cosmetics
+
+[B]1.1.2[/B]
+- Minor fix on live resolver
+- Code cosmetics
+
+[B]1.1.1[/B]
+- Rebased to use tulip libraries
+
+[B]1.1.0[/B]
+- Re-work of main menu
+- Added sections for ALPHA CYPRUS
+- Fixed all issues related with web site changes
+- Added add-on screenshots
+
+[B]1.0.2[/B]
+- Fixed issue with tv shows
+- Fixed issue with archive
+- Tweaked live stream
+
+[B]1.0.1[/B]
+- Filter previews of episodes
+- Code cosmetics
+
+[B]1.0.0[/B]
+- Initial version
