@@ -1046,7 +1046,7 @@ Kindly note that AliveGR is not an official part of the media player you are run
     </extension>
 </addon>
 
-<addon id="plugin.video.star.gr" version="2.4.1" name="STAR Player" provider-name="Twilight0">
+<addon id="plugin.video.star.gr" version="2.4.2" name="STAR Player" provider-name="Twilight0">
 	<requires>
 		<import addon="xbmc.addon" version="16.1.000"/>
 		<import addon="script.module.tulip" version="2.8.17" />
@@ -1067,7 +1067,10 @@ Kindly note that AliveGR is not an official part of the media player you are run
 		<source>https://github.com/Twilight0/plugin.video.star.gr</source>
 		<website>http://www.star.gr/</website>
 		<size>228454</size>
-		<news>[B]2.4.1[/B]
+		<news>[B]2.4.2[/B]
+- Bug fixes for live resolver
+
+[B]2.4.1[/B]
 - Bug fix
 
 [B]2.4.0[/B]
