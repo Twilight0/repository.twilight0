@@ -1363,10 +1363,10 @@ Kindly note that AliveGR is not an official part of the media player you are run
 	</extension>
 </addon>
 
-<addon id="service.subtitles.subtitles.gr" name="Subtitles.gr" version="3.5.1" provider-name="Twilight0">
+<addon id="service.subtitles.subtitles.gr" name="Subtitles.gr" version="3.6.0" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.addon" version="16.1.000"/>
-        <import addon="script.module.tulip" version="2.8.16" />
+        <import addon="script.module.tulip" version="2.8.19" />
         <import addon="script.module.futures" version="0.0.0.2" optional="true" />
     </requires>
     <extension point="xbmc.subtitle.module" library="service.py">
@@ -1383,7 +1383,14 @@ Kindly note that AliveGR is not an official part of the media player you are run
         <website>http://www.subtitles.gr/</website>
         <source>https://github.com/Twilight0/service.subtitles.subtitles.gr/</source>
         <platform>all</platform>
-        <news>[B]3.5.1[/B]
+        <news>[B]3.6.0[/B]
+- Allow download of the subtitle next to the playing item (for locally saved videos)
+- Extract zips upon save
+- Fix for saved files
+- Improve results for locally saved files
+- Some bug fixes (xsubs.tv)
+
+[B]3.5.1[/B]
 - Logging tweaks on vipsubs
 - Force unicode search strings
 - Make futures optional to help installation for certain cases (Kodi 19)
@@ -1394,46 +1401,7 @@ Kindly note that AliveGR is not an official part of the media player you are run
 - Kodi 19+ related fixes
 - Remove prompt for libarchive installation
 - Increased cache durations for the given functions
-- Improve performance with futures instead of arbitrary ranges on workers
-
-[B]3.4.0 - 3.4.1[/B]
-- Code related tweaks, particularly how routing is handled
-- Added ability to save locally subtitles and/or zips from sources
-
-[B]3.3.1[/B]
-- Added the forgotten string
-
-[B]3.3.0[/B]
-- Improved search query function, added accompanying option
-
-[B]3.2.5[/B]
-- Tweaked imports
-
-[B]3.2.4[/B]
-- More bug fixes for vipsubs.gr (failure to load nested zip on Android)
-- Removed builtin methods from other provides
-
-[B]3.2.3[/B]
-- Bug fixes for vipsubs.gr
-
-[B]3.2.2[/B]
-- Do not allow random choice when not necessary
-
-[B]3.2.1[/B]
-- Added capability for nested zips on vipsubs.gr
-- Skip certain results not containing subtitles on vipsubs.gr
-
-[B]3.2.0[/B]
-- Bumped dependencies
-- Improved cache clear function
-- Added vipsubs.gr
-- Lots of bug fixes
-
-[B]3.1.X[/B]
-- Tweaked regexes for searches
-- Added a setting allowing users to set search and download timeouts
-- Added visual feedback when deleting function cache
-- Disabled subs4free.info</news>
+- Improve performance with futures instead of arbitrary ranges on workers</news>
         <assets>
             <icon>icon.png</icon>
             <fanart>fanart.jpg</fanart>
