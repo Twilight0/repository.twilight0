@@ -1363,10 +1363,10 @@ Kindly note that AliveGR is not an official part of the media player you are run
 	</extension>
 </addon>
 
-<addon id="service.subtitles.subtitles.gr" name="Subtitles.gr" version="3.6.1" provider-name="Twilight0">
+<addon id="service.subtitles.subtitles.gr" name="Subtitles.gr" version="3.6.2" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.addon" version="16.1.000"/>
-        <import addon="script.module.tulip" version="2.8.19" />
+        <import addon="script.module.tulip" version="2.9.0" />
         <import addon="script.module.futures" version="0.0.0.2" optional="true" />
     </requires>
     <extension point="xbmc.subtitle.module" library="service.py">
@@ -1383,7 +1383,10 @@ Kindly note that AliveGR is not an official part of the media player you are run
         <website>http://www.subtitles.gr/</website>
         <source>https://github.com/Twilight0/service.subtitles.subtitles.gr/</source>
         <platform>all</platform>
-        <news>[B]3.6.1[/B]
+        <news>[B]3.6.2[/B]
+- Bug fixes for subtitles save function on vipsubs
+
+[B]3.6.1[/B]
 - Broaden search results for vipsubs.gr
 - Allow subtitle to be saved both locally and within the manual choice
 - Ask before overwriting existing subs
