@@ -933,57 +933,6 @@ Kindly note that AliveGR is not an official part of the media player you are run
 	</extension>
 </addon>
 
-<addon id="plugin.video.resolveurl-tester" name="ResolveURL Tester" version="1.1.3" provider-name="Twilight0">
-    <requires>
-        <import addon="xbmc.python" version="2.24.0"/>
-        <import addon="script.module.tulip" version="2.6.11"/>
-        <import addon="script.module.resolveurl" version="5.1.0"/>
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="main.py">
-        <provides>video</provides>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <platform>all</platform>
-        <reuselanguageinvoker>false</reuselanguageinvoker>
-        <summary lang="en_GB">ResolveURL Tester</summary>
-        <description lang="en_GB">This addon can play and test various video and audio content from various sources supported by ResolveURL library.</description>
-        <disclaimer lang="en_GB">This addon does not provide any content, its sole purpose is to resolve web urls into playable content with the help of ResolveURL library</disclaimer>
-        <summary lang="el_GR">Δοκιμαστής ResolveURL</summary>
-        <description lang="el_GR">Το πρόσθετο αυτό μπορεί να αναπαράξει και να δοκιμάσει περιεχόμενο βίντεο και ήχου από διάφορες πηγές που υποστηρίζονται από την βιβλιοθήκη ResolveURL.</description>
-        <disclaimer lang="el_GR">Το πρόσθετο αυτό δεν παρέχει περιεχόμενο, ο μοναδικός σκοπός είναι να επιλύει ιστοσελίδες σε αναπαράξιμο περιεχόμενο με την βοήθεια του ResolveURL.</disclaimer>
-        <language>en</language>
-        <license>GPL-3.0-only</license>
-        <website>https://twitter.com/TwilightZer0</website>
-        <source>https://github.com/Twilight0/plugin.video.resolveurl-tester</source>
-        <size>111206</size>
-        <news>[B]1.1.3[/B] - 15-09-2020
-- Raise history limits
-
-[B]1.1.2[/B] - 15-08-2020
-- Tweaked addon.xml
-- Bumped dependencies
-
-[B]1.1.1[/B] - 11-11-2019
-- Minor tweaks here and there
-- Enhanced context menu items
-- Add sleep when adding a link to wait for directory refresh
-
-[B]1.1.0[/B] - 29-05-2019
-- Added a setting to force a specific host (useful for testing universal resolvers)
-  > As url you must provide media id only
-
-[B]1.0.1[/B] - 25-05-2019
-- Added "set title and play" context menu item
-- Other minor tweaks
-
-[B]1.0.0[/B] - 16-05-2019
-- Initial version</news>
-        <assets>
-            <icon>icon.png</icon>
-        </assets>
-    </extension>
-</addon>
-
 <addon id="plugin.video.skai.gr" version="3.2.1" name="SKAI Player" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.addon" version="16.1.000"/>
@@ -1117,55 +1066,6 @@ Kindly note that AliveGR is not an official part of the media player you are run
 		<!--<forum></forum>-->
 		<!--<email></email>-->
 	</extension>
-</addon>
-
-<addon id="plugin.video.streamlink-tester" name="Streamlink Tester" version="1.5.4" provider-name="Twilight0">
-    <requires>
-        <import addon="xbmc.python" version="2.26.0"/>
-        <import addon="script.module.tulip" version="2.5.10"/>
-        <import addon="script.module.streamlink.base" version="2020.02.22"/>
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="main.py">
-        <provides>video</provides>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <platform>all</platform>
-        <reuselanguageinvoker>false</reuselanguageinvoker>
-        <summary lang="en_GB">Streamlink and MPEG-DASH Tester</summary>
-        <description lang="en_GB">This addon can play and test various video and audio content from various sources supported by Streamlink resolver library. It can also playback MPEG-DASH streams.</description>
-        <disclaimer lang="en_GB">This addon does not provide any content, its sole purpose is to resolve web urls with the help of Streamlink resolver library</disclaimer>
-        <summary lang="el_GR">Δοκιμαστής για Streamlink και MPEG-DASH</summary>
-        <description lang="el_GR">Το πρόσθετο αυτό μπορεί να αναπαράγει και να δοκιμάσει περιεχόμενο βίντεο και ήχου από διάφορες πηγές μέσω της βιβλιοθήκης streamlink. Επίσης μπορεί να αναπαράξει ροές MPEG-DASH.</description>
-        <disclaimer lang="el_GR">Το πρόσθετο αυτό δεν παρέχει απολύτως κανένα περιεχόμενο, ο μοναδικός σκοπός είναι να επιλύσει ιστοσελίδες με την βοήθεια του streamlink.</disclaimer>
-        <language>en</language>
-        <license>GPL-3.0-only</license>
-        <website>https://twitter.com/TwilightZer0</website>
-        <source>https://github.com/Twilight0/plugin.video.streamlink-tester</source>
-        <size>106257</size>
-        <news>[B]1.5.4[/B] - 15-08-2020
-- Minor tweak in the addon.xml
-- Removed optional dependency of youtube-dl
-
-[B]1.5.3[/B] - 01-03-2020
-- Some logging tweaks
-
-[B]1.5.2[/B] - 11-11-2019
-- Enhanced context menu items
-- Added sleep when doing file operations (useful for slower devices)
-- Bug fixes, mostly player related
-
-[B]1.5.1[/B] - 23-08-2019
-- Add exception to headers object loop finder in case it fails
-
-[B]1.5.0[/B] - 20-06-2019
-- Updated generic plugin (thank you back-to)
-- Added youtube-dl as optional dependency to augment the generic plugin
-- Added ability to set custom title from plugin url
-- Added ability to set custom thumbnail from plugin url (as "image" parameter)</news>
-        <assets>
-            <icon>icon.png</icon>
-        </assets>
-    </extension>
 </addon>
 
 <addon id="plugin.video.Toronto-Channels" name="BCI Greek TV" version="2.8.1" provider-name="BCI Media Inc.">
