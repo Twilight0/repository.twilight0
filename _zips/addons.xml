@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="service.subtitles.subtitles.gr" name="Subtitles.gr" version="3.6.2" provider-name="Twilight0">
+<addon id="service.subtitles.subtitles.gr" name="Subtitles.gr" version="3.7.0" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.addon" version="16.1.000"/>
-        <import addon="script.module.tulip" version="2.9.0" />
-        <import addon="script.module.futures" version="0.0.0.2" optional="true" />
+        <import addon="script.module.tulip" version="2.9.8" />
     </requires>
     <extension point="xbmc.subtitle.module" library="service.py">
     </extension>
@@ -15,38 +14,25 @@
         <description lang="en_GB">Search and download subtitles from various sites</description>
         <description lang="el_GR">Εύρεση και λήψη υποτίτλων από διαφόρους ιστοτόπους</description>
         <disclaimer lang="en_GB">This service is only for Greek subtitles. It is not published nor endorsed by any of the sites supported.</disclaimer>
-        <disclaimer lang="el_GR">Υπηρεσία μόνο ελληνικών υποτίτλων. Δεν έχει δημοσιευθεί ούτε εγκριθεί από οποιοδήποτε υποστηριζόμενο ιστότοπο.</disclaimer>
+        <disclaimer lang="el_GR">Υπηρεσία μόνο ελληνικών υποτίτλων. Δεν έχει δημοσιευθεί, ούτε εγκριθεί από οποιοδήποτε υποστηριζόμενο ιστότοπο.</disclaimer>
         <license>GPL-3.0-only</license>
         <website>http://www.subtitles.gr/</website>
         <source>https://github.com/Twilight0/service.subtitles.subtitles.gr/</source>
         <platform>all</platform>
-        <news>[B]3.6.2[/B]
+        <news>[B]3.7.0[/B]
+- Increase maximum possible timeout for search requests
+- Add separate setting for subtitles.gr sub download timeout
+- Utilize fuzzywuzzy to find synced subtitles (minimum match ratio 50, default 75, max 100)
+- Replace futures module with tulip solution
+- Various other tweaks
+
+[B]3.6.2[/B]
 - Bug fixes for subtitles save function on vipsubs
 
 [B]3.6.1[/B]
 - Broaden search results for vipsubs.gr
 - Allow subtitle to be saved both locally and within the manual choice
-- Ask before overwriting existing subs
-
-[B]3.6.0[/B]
-- Allow download of the subtitle next to the playing item (for locally saved videos)
-- Extract zips upon save
-- Fix for saved files
-- Improve results for locally saved files
-- Some bug fixes (xsubs.tv)
-
-[B]3.5.1[/B]
-- Logging tweaks on vipsubs
-- Force unicode search strings
-- Make futures optional to help installation for certain cases (Kodi 19)
-- Reduce number of concurrent threads (max 5)
-
-[B]3.5.0[/B]
-- Change caching method
-- Kodi 19+ related fixes
-- Remove prompt for libarchive installation
-- Increased cache durations for the given functions
-- Improve performance with futures instead of arbitrary ranges on workers</news>
+- Ask before overwriting existing subs</news>
         <assets>
             <icon>icon.png</icon>
             <fanart>fanart.jpg</fanart>
