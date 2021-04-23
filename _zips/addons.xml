@@ -373,11 +373,10 @@ Kindly note that AliveGR is not an official part of the media player you are run
 	</extension>
 </addon>
 
-<addon id="plugin.video.antenna.gr" version="2.3.0" name="ANT1 Player" provider-name="Twilight0">
+<addon id="plugin.video.antenna.gr" version="2.3.1" name="ANT1 Player" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.addon" version="16.1.000"/>
-        <import addon="script.module.tulip" version="2.8.11" />
-        <import addon="script.module.futures" version="0.0.0.2" />
+        <import addon="script.module.tulip" version="2.9.10" />
         <import addon="plugin.video.youtube" version="6.8.10"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="addon.py">
@@ -395,7 +394,11 @@ Kindly note that AliveGR is not an official part of the media player you are run
         <source>https://github.com/Twilight0/plugin.video.antenna.gr</source>
         <website>http://www.antenna.gr/</website>
         <size>204493</size>
-        <news>[B]2.3.0[/B]
+        <news>[B]2.3.1[/B]
+- Replace futures with tulip's own method
+- Pagination now disabled by default
+
+[B]2.3.0[/B]
 - Change caching method
 - Utilize futures for parallel threading
 
