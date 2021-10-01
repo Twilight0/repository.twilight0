@@ -947,10 +947,10 @@ Kindly note that AliveGR is not an official part of the media player you are run
 	</extension>
 </addon>
 
-<addon id="plugin.video.skai.gr" version="3.2.1" name="SKAI Player" provider-name="Twilight0">
+<addon id="plugin.video.skai.gr" version="3.2.2" name="SKAI Player" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.addon" version="16.1.000"/>
-        <import addon="script.module.tulip" version="2.8.17" />
+        <import addon="script.module.tulip" version="2.9.10" />
         <import addon="plugin.video.youtube" version="6.8.10"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="addon.py">
@@ -966,11 +966,14 @@ Kindly note that AliveGR is not an official part of the media player you are run
         <disclaimer lang="en_GB">This addon offers content available in Greece and is not published nor endorsed by skai.gr</disclaimer>
         <disclaimer lang="el_GR">Το πρόσθετο αυτό προσφέρει περιεχόμενο διαθέσιμο στην Ελλάδα και δεν έχει δημοσιευθεί ούτε εγκριθεί από το skai.gr</disclaimer>
         <language>en el</language>
-        <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+        <license>GPL-3.0-only</license>
         <source>https://github.com/Twilight0/plugin.video.skai.gr</source>
         <website>http://www.skai.gr/</website>
         <size>226000</size>
-        <news>[B]3.2.1[/B]
+        <news>[B]3.2.2[/B]
+- Updated news links
+
+[B]3.2.1[/B]
 - Bumped dependencies
 - Tweaked labels and icons on live items
 
