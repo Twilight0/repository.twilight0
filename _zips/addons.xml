@@ -235,21 +235,21 @@
     </extension>
 </addon>
 
-<addon id="plugin.video.AliveGR" name="AliveGR" version="2.9.2" provider-name="Twilight0">
+<addon id="plugin.video.AliveGR" name="AliveGR" version="2.9.3~beta1" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.addon" version="18.0.000"/>
         <import addon="resource.images.alivegr.artwork" version="3.0.5"/>
         <import addon="resource.images.alivegr.logos" version="1.0.2"/>
-        <import addon="script.module.resolveurl" version="5.1.28"/>
+        <import addon="script.module.resolveurl" version="5.1.49"/>
         <import addon="script.module.resolveurl.pluginsgr" version="0.0.13"/>
         <import addon="script.module.tulip" version="2.9.10"/>
-        <import addon="plugin.video.youtube" version="6.8.10"/>
+        <import addon="plugin.video.youtube" version="6.8.18"/>
         <import addon="script.module.pyxbmct" version="1.3.0"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="main.py">
         <provides>video audio image executable</provides>
     </extension>
-    <extension point="xbmc.service" library="resources/lib/modules/service.py" start="login"/>
+    <extension point="xbmc.service" library="resources/lib/modules/service.py"/>
     <extension point="xbmc.addon.metadata">
         <platform>all</platform>
         <reuselanguageinvoker>false</reuselanguageinvoker>
@@ -269,10 +269,11 @@ Kindly note that AliveGR is not an official part of the media player you are run
         <source>https://github.com/Twilight0/plugin.video.AliveGR</source>
         <website>https://alivegr.net/</website>
         <size>1500240</size>
-        <news>+ [COLOR green]2.9.X[/COLOR] [I]27-04-2021 - 03-05-2021[/I]
-- Some bug &amp; labeling fixes
+        <news>+ [COLOR green]2.9.X[/COLOR] [I]27-04-2021 - 04-11-2021[/I]
+- Some bug and labeling fixes
 - Check streams when picking a stream sequentially (default being off)
 - Removed playlist mode from vod stream choices
+- Bump dependencies
 
 + [COLOR red]2.8.X[/COLOR] [I]25-03-2021 - 20-04-2021[/I]
 - Change caching method
@@ -1272,38 +1273,6 @@ Kindly note that AliveGR is not an official part of the media player you are run
 		<description>Artwork for Greek Voice is maintained separately to make distribution of the the addon itself easier/faster.</description>
         <disclaimer>Icon theme provided by Greek Voice TV administrator</disclaimer>
 		<platform>all</platform>
-	</extension>
-</addon>
-
-<addon id="weather.gismeteo" version="0.5.2.1" name="Gismeteo" provider-name="vl.maksime">
-	<requires>
-		<import addon="xbmc.addon" version="16.1.000"/>
-		<import addon="script.module.future" version="0.16.0.4"/>
-		<import addon="script.module.requests" version="2.15.1"/>
-	</requires>
-	<extension point="xbmc.python.weather" library="default.py"/>
-	<extension point="xbmc.addon.metadata">
-		<summary lang="en_GB">Gismeteo Weather Forecast. Real time weather and detailed forecast all round the world</summary>
-		<summary lang="el_GR">Υπηρεσία πρόγνωσης καιρού Gismeteo. Λεπτομερείς πληροφορίες πρόγνωσης σε πραγματικό χρόνο από όλο τον κόσμο</summary>
-		<summary lang="ru_RU">Прогноз погоды от ведущего погодного сервиса Gismeteo</summary>
-		<summary lang="es_ES">Pronóstico del tiempo Gismeteo. Clima en tiempo real y pronóstico detallado en todo el mundo</summary>
-		<description lang="en_GB">The weather is provided solely for personal non-commercial use</description>
-		<description lang="el_GR">Ο καιρός παρέχεται αυστηρά για προσωπική μη-εμπορική χρήση.</description>
-		<description lang="ru_RU">Погода предоставлена исключительно для личного некоммерческого использования</description>
-		<description lang="es_ES">El clima se proporciona únicamente para su uso personal y no comercial</description>
-		<disclaimer lang="en_GB">The weather forecast has been prepared by MapMakers Group Ltd</disclaimer>
-		<disclaimer lang="ru_RU">Прогноз погоды подготовлен НПЦ "Мэп Мейкер"</disclaimer>
-		<disclaimer lang="es_ES">El pronóstico del tiempo ha sido preparado por MapMakers Group Ltd</disclaimer>
-		<platform>all</platform>
-		<license>GPL-3.0-only</license>
-		<forum>https://forum.kodi.tv/showthread.php?tid=323624</forum>
-		<website>https://www.gismeteo.com/</website>
-		<email>vl.maksime@gmail.com</email>
-		<source>https://github.com/vlmaksime/weather.gismeteo</source>
-		<news>v0.5.2 (2020-10-15)[CR]- Fixed bug with parsing XML data[CR][CR]v0.5.1 (2020-06-01)[CR]- Added the ability to display Gismeteo icons</news>
-		<assets>
-			<icon>icon.png</icon>
-		</assets>
 	</extension>
 </addon>
 </addons>
