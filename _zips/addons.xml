@@ -156,10 +156,10 @@
     </extension>
 </addon>
 
-<addon id="plugin.audio.eradio.gr" version="2.1.0" name="E-Radio" provider-name="Twilight0">
+<addon id="plugin.audio.eradio.gr" version="3.0.0" name="E-Radio" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.addon" version="16.1.000"/>
-        <import addon="script.module.tulip" version="2.8.17"/>
+        <import addon="script.module.tulip" version="2.9.10"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="addon.py">
         <provides>audio</provides>
@@ -168,14 +168,20 @@
         <platform>all</platform>
         <reuselanguageinvoker>true</reuselanguageinvoker>
         <summary lang="en">E-Radio addon for Kodi</summary>
-        <description lang="en">Tunein to greek radios and listen live</description>
+        <description lang="en">Tune-in to greek radios and listen live</description>
         <description lang="el">Με το E-Radio ακούτε όλα τα ελληνικά ραδιόφωνα</description>
         <disclaimer lang="en">This addon is not published nor endorsed by e-radio.gr</disclaimer>
-        <disclaimer lang="el">Το πρόσθετο αυτό δεν έχει δημοσιευθεί ούτε εγκριθεί από το e-radio.gr</disclaimer>
+        <disclaimer lang="el">Το πρόσθετο αυτό δεν έχει δημοσιευθεί, ούτε εγκριθεί από το e-radio.gr</disclaimer>
         <license>GPL-3.0-only</license>
         <source>https://github.com/Twilight0/plugin.audio.eradio.gr</source>
         <website>http://www.e-radio.gr/</website>
-        <news>[B]2.1.0[/B]
+        <news>[B]3.0.0[/B]
+- Rework of main module and replace routing method with urldispatcher
+- Enhance search function with fuzzywuzzy
+- Caching tweaks
+- Various bug fixes
+
+[B]2.1.0[/B]
 - Change cache method
 
 [B]2.0.0[/B]
