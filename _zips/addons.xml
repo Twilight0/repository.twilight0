@@ -1,44 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="plugin.video.fashiontv.com" version="1.3.4" name="Fashion TV Player" provider-name="Twilight0">
-	<requires>
-		<import addon="xbmc.addon" version="16.1.000"/>
-		<import addon="script.module.tulip" version="2.9.10" />
-		<import addon="plugin.video.youtube" version="6.8.10"/>
-	</requires>
-	<extension point="xbmc.python.pluginsource" library="addon.py">
-		<provides>video</provides>
-	</extension>
-	<extension point="kodi.context.item">
+<addon id="plugin.video.fashiontv.com" version="2.0.0" name="Fashion TV Player" provider-name="Twilight0">
+    <requires>
+        <import addon="xbmc.addon" version="16.1.000"/>
+        <import addon="script.module.tulip" version="2.9.10" />
+        <import addon="plugin.video.youtube" version="6.8.10"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="addon.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="kodi.context.item">
         <menu id="kodi.core.main">
             <item library="resources/lib/youtube_bookmark.py">
                 <label>30004</label>
                 <visible>
-					[String.StartsWith(Container.FolderPath,plugin://plugin.video.youtube/channel/UCqzju-_WMKsgNx8R3QwupQQ/) |
-					String.StartsWith(Container.FolderPath,plugin://plugin.video.youtube/channel/UClnblsrZrugJfFs4ANPgNcA/) |
-					String.StartsWith(Container.FolderPath,plugin://plugin.video.youtube/channel/UCDN6BTcfgHDuBQgCgXkU-cA/) |
-					String.StartsWith(Container.FolderPath,plugin://plugin.video.youtube/channel/UCLiyW3PZFDSxIw6EES8MneQ/) |
-					String.StartsWith(Container.FolderPath,plugin://plugin.video.youtube/channel/UCC2Iic6b-nhY7CSRUm_nyng/) |
-					String.StartsWith(Container.FolderPath,plugin://plugin.video.youtube/channel/UCi12i9eiWFh67T-uCP1y7Gw/)] +
+                    [String.StartsWith(Container.FolderPath,plugin://plugin.video.youtube/channel/UCqzju-_WMKsgNx8R3QwupQQ/) |
+                    String.StartsWith(Container.FolderPath,plugin://plugin.video.youtube/channel/UClnblsrZrugJfFs4ANPgNcA/) |
+                    String.StartsWith(Container.FolderPath,plugin://plugin.video.youtube/channel/UCDN6BTcfgHDuBQgCgXkU-cA/) |
+                    String.StartsWith(Container.FolderPath,plugin://plugin.video.youtube/channel/UCLiyW3PZFDSxIw6EES8MneQ/) |
+                    String.StartsWith(Container.FolderPath,plugin://plugin.video.youtube/channel/UCC2Iic6b-nhY7CSRUm_nyng/) |
+                    String.StartsWith(Container.FolderPath,plugin://plugin.video.youtube/channel/UCi12i9eiWFh67T-uCP1y7Gw/)] +
                     !String.Contains(ListItem.Art(thumb),resources/media) +
                     !String.Contains(ListItem.FolderPath,page_token)
                 </visible>
             </item>
         </menu>
     </extension>
-	<extension point="xbmc.addon.metadata">
-		<reuselanguageinvoker>true</reuselanguageinvoker>
-		<summary lang="en_GB">Fashion TV Player addon for Kodi</summary>
+    <extension point="xbmc.addon.metadata">
+        <reuselanguageinvoker>true</reuselanguageinvoker>
+        <summary lang="en_GB">Fashion TV Player addon for Kodi</summary>
         <summary lang="en_GR">Πρόσθετο Fashion TV Player για το Kodi</summary>
-		<description lang="en_GB">Fashion TV live and on-demand broadcasts</description>
-		<description lang="el_GR">Ζωντανές και on demand υπηρεσίες του Fashion TV</description>
-		<disclaimer lang="en_GB">This addon is not published nor endorsed by fashiontv.com</disclaimer>
-		<disclaimer lang="el_GR">Το πρόσθετο αυτό δεν έχει δημοσιευθεί ούτε εγκριθεί από το fashiontv.com</disclaimer>
-		<license>GPL-3.0-only</license>
-		<source>https://github.com/Twilight0/plugin.video.fashiontv.com</source>
-		<website>https://www.fashiontv.com/</website>
-		<size>228454</size>
-		<news>[B]1.3.X[/B]
+        <description lang="en_GB">Fashion TV live and on-demand broadcasts</description>
+        <description lang="el_GR">Ζωντανές και on demand υπηρεσίες του Fashion TV</description>
+        <disclaimer lang="en_GB">This addon is not published nor endorsed by fashiontv.com</disclaimer>
+        <disclaimer lang="el_GR">Το πρόσθετο αυτό δεν έχει δημοσιευθεί ούτε εγκριθεί από το fashiontv.com</disclaimer>
+        <license>GPL-3.0-only</license>
+        <source>https://github.com/Twilight0/plugin.video.fashiontv.com</source>
+        <website>https://www.fashiontv.com/</website>
+        <size>149300</size>
+        <news>[B]2.0.X[/B]
+- Update for new website design
+- Add search function
+- Add shortcut to live channels
+- New Youtube API keys
+
+[B]1.3.X[/B]
 - Change cache method
 - Place youtube channels on submenu
 - Change main label from "Live" to "Fashion TV Live"
@@ -68,15 +74,15 @@
 
 [B]0.0.1~alpha1[/B]
 - Initial version</news>
-		<assets>
-			<icon>icon.png</icon>
-			<fanart>fanart.jpg</fanart>
-		</assets>
-		<platform>all</platform>
-		<language>en</language>
-		<!--<forum></forum>-->
-		<!--<email></email>-->
-	</extension>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+        <platform>all</platform>
+        <language>en</language>
+        <!--<forum></forum>-->
+        <!--<email></email>-->
+    </extension>
 </addon>
 
 <addon id="service.subtitles.subtitles.gr" name="Subtitles.gr" version="3.7.0" provider-name="Twilight0">
@@ -156,7 +162,7 @@
     </extension>
 </addon>
 
-<addon id="plugin.audio.eradio.gr" version="3.0.0" name="E-Radio" provider-name="Twilight0">
+<addon id="plugin.audio.eradio.gr" version="3.0.1" name="E-Radio" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.addon" version="16.1.000"/>
         <import addon="script.module.tulip" version="2.9.10"/>
@@ -175,7 +181,7 @@
         <license>GPL-3.0-only</license>
         <source>https://github.com/Twilight0/plugin.audio.eradio.gr</source>
         <website>http://www.e-radio.gr/</website>
-        <news>[B]3.0.0[/B]
+        <news>[B]3.0.X[/B]
 - Rework of main module and replace routing method with urldispatcher
 - Enhance search function with fuzzywuzzy
 - Caching tweaks

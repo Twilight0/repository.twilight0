@@ -1,0 +1,49 @@
+[B]3.0.X[/B]
+- Rework of main module and replace routing method with urldispatcher
+- Enhance search function with fuzzywuzzy
+- Caching tweaks
+- Various bug fixes
+
+[B]2.1.0[/B]
+- Change cache method
+
+[B]2.0.0[/B]
+- Version made to be compatible with Kodi Matrix (& Python 3.X)
+- Improved performance by enabling reuse language invoker
+- Various minor tweaks
+
+[B]1.3.1[/B]
+- Refined radio list function to avoid creating duplicates
+
+[B]1.3.0[/B]
+- Removed screenshots
+- Developer's picks are now inserted to "All stations" menu item as well
+- Stations will now be sorted according to title by default
+- Added search functionality
+- Cosmetics
+
+[B]1.2.2[/B]
+- Minor insignificant tweaks here & there.
+
+[B]1.2.1[/B]
+- Minor tweaks in main indexer
+
+[B]1.2.0[/B]
+- Added developer's picks radio stations (outside of eradio's scope)
+- Added link for source code.
+
+[B]1.1.2[/B]
+- Cosmetics
+
+[B]1.1.1[/B]
+- Rebased to used tulip libraries
+
+[B]1.1.0[/B]
+- Tweaked sections
+- Added add-on screenshots
+
+[B]1.0.1[/B]
+- Code cosmetics
+
+[B]1.0.0[/B]
+- Initial version
