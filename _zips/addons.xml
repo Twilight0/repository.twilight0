@@ -536,16 +536,15 @@ Kindly note that AliveGR is not an official part of the media player you are run
     </extension>
 </addon>
 
-<addon id="plugin.video.ert.gr" version="3.5.1" name="ERTflix" provider-name="Twilight0">
+<addon id="plugin.video.ert.gr" version="4.0.0~alpha1" name="ERTflix" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.addon" version="16.1.000"/>
         <import addon="script.module.tulip" version="2.9.10" />
-        <import addon="plugin.video.youtube" version="6.8.10"/>
+        <import addon="plugin.video.youtube" version="6.8.18"/>
     </requires>
-    <extension point="xbmc.python.pluginsource" library="addon.py">
+    <extension point="xbmc.python.pluginsource" library="router.py">
         <provides>video audio</provides>
     </extension>
-    <extension point="xbmc.service" library="resources/lib/service.py" start="login"/>
     <extension point="kodi.context.item">
         <menu id="kodi.core.main">
             <item library="resources/lib/youtube_bookmark.py">
@@ -572,7 +571,13 @@ Kindly note that AliveGR is not an official part of the media player you are run
         <source>https://github.com/Twilight0/plugin.video.ert.gr</source>
         <size>1153434</size>
         <website>https://www.ertflix.gr/</website>
-        <news>[B]3.5.1[/B]
+        <news>[B]4.0.0[/B]
+- Reworked addon for new website design
+- Rework routing scheme with url dispatcher
+- Remove service module, no longer needed
+- Bug fixes
+
+[B]3.5.1[/B]
 - Various fixes
 
 [B]3.5.0[/B]
