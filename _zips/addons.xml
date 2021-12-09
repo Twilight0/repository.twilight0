@@ -536,7 +536,7 @@ Kindly note that AliveGR is not an official part of the media player you are run
     </extension>
 </addon>
 
-<addon id="plugin.video.ert.gr" version="4.0.0~beta3" name="ERTflix" provider-name="Twilight0">
+<addon id="plugin.video.ert.gr" version="4.0.0" name="ERTflix" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.addon" version="16.1.000"/>
         <import addon="script.module.tulip" version="2.9.10" />
@@ -572,9 +572,11 @@ Kindly note that AliveGR is not an official part of the media player you are run
         <size>1153434</size>
         <website>https://www.ertflix.gr/</website>
         <news>[B]4.0.0[/B]
-- Reworked addon for new website design
+- Reworked addon for new website design, with API usage (when necessary)
+- Reworked index from another source
 - Rework routing scheme with url dispatcher
 - Remove service module, no longer needed
+- Added zeppelin radio station
 - Bug fixes
 
 [B]3.5.1[/B]
