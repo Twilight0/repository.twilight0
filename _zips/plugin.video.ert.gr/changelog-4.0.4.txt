@@ -1,0 +1,220 @@
+[B]4.0.X[/B]
+- Reworked addon for new website design, with API usage (when necessary)
+- Reworked index from another source
+- Rework routing scheme with url dispatcher
+- Remove service module, no longer needed
+- Added zeppelin radio station
+- Bug fixes
+
+[B]3.5.1[/B]
+- Various fixes
+
+[B]3.5.0[/B]
+- Mitigate live resolver
+- New YT API key
+
+[B]3.4.0[/B]
+- Populate live channels according to main webpage
+- Add music content
+
+[B]3.3.4[/B]
+- Fix regarding some kids content indexers
+
+[B]3.3.3[/B]
+- Minor fix for the iframe resolver
+- Remove old api key check
+
+[B]3.3.2[/B]
+- Some minor bug fixes
+- Add more live channels as per ERTflix webpage
+- Replace workers with concurrent futures
+
+[B]3.3.1[/B]
+- Bug fixes for caching
+- Tweak routing
+
+[B]3.3.0[/B]
+- Change caching method
+- Remove debugging option
+
+[B]3.2.3[/B]
+- Fix for foreign documentaries indexers
+
+[B]3.2.2[/B]
+- Fix for some tv series indexers
+
+[B]3.2.1[/B]
+- Minor fix for kids section
+- Removed prompt for inputstream addon
+
+[B]3.2.0[/B]
+- Add exit button (defaults to off)
+- Improve kids menu
+- Improve performance by enabling "reuse language invoker"
+
+[B]3.1.2[/B]
+- Apply threads lists higher in the execution order
+
+[B]3.1.1[/B]
+- Added greek tv series menu item for quicker access
+
+[B]3.1.0[/B]
+- New artwork for live channels
+- Updated youtube api key
+- A few other minor tweaks
+
+[B]3.0.X[/B]
+- Fixes for indexers due to website changes
+
+[B]3.0.1[/B]
+- New info function (via context menu)
+- Increased cache timeout
+- Add settings main menu item (optional, default is enabled)
+
+[B]3.0.0[/B]
+- Reworked addon for new website design
+- New artwork
+- Renamed to ERTflix
+- Updated resolver
+- Added search menu
+- Reworked pagination system
+- Added multithreading capabilities for items list formation
+- Reworked strings.po to be in range 30000+
+- Removed weather menu item as content is not present on the main website
+- Removed Hebrew translation (it hasn't been updated properly for long time)
+- Bumped dependencies
+
+[B]2.0.4[/B]
+- Minor tweak to prioritize Greek live stream over worldwide one
+
+[B]2.0.3[/B]
+- Fix live resolver
+
+[B]2.0.2[/B]
+- Non-playable items will now inform user of their availability
+
+[B]2.0.0[/B]
+- Rework of most aspects and sections of the addon
+- Revamped sports section
+- Categories list is now populated from different source (index)
+- Added movies and tv series section
+- Tweaked resolvers
+
+[B]2.0.3[/B]
+- Fix live resolver
+
+[B]2.0.2[/B]
+- Non-playable items will now inform user of their availability
+
+[B]2.0.0[/B]
+- Rework of most aspects and sections of the addon
+- Revamped sports section
+- Categories list is now populated from different source (index)
+- Added movies and tv series section
+- Tweaked resolvers
+
+[B]1.8.0[/B]
+- Added ERT Play 3, 4 and Sports live channels
+- Updated icons style for live channels
+- Fix resolver for radio stations
+- Various other tweaks
+
+[B]1.7.0[/B]
+- VOD resolver overhaul
+- https everywhere by default
+- Various cosmetics
+
+[B]1.6.3[/B]
+- Yet another fix for live resolver
+
+[B]1.6.2[/B]
+- Fix for live resolver
+
+[B]1.6.1[/B]
+- A minor "just in case" fix in live resolver
+
+[B]1.6.0[/B]
+- Tweaked live streams' resolver
+- Preliminary support for Python 3
+
+[B]1.5.1[/B]
+- Reverted to utilize youtube_resolver (former behaviour, only a little different)
+
+[B]1.5.0[/B]
+- Replaced youtube resolver with streamlink
+- Cosmetics
+
+[B]1.4.1[/B]
+- Ammended live resolver point to non-dash streams (newer google url)
+
+[B]1.4.0[/B]
+- Merged Hebrew translation from contributor "Eng2Heb"
+- Added ERT Play 2 and respective artwork
+- Choose 720p live stream by default to retain compatibility and simplify addon setup in both Jarvis & Krypton
+- Changed geo_loc provider
+
+[B]1.3.4[/B]
+- Cosmetics & tweaks in addon.xml
+
+[B]1.3.3[/B]
+- Fixed link for documentaries
+
+[B]1.3.2[/B]
+- Fixed a few links for videos categories
+
+[B]1.3.1[/B]
+- Minor tweak in radios indexer when behaving as music addon
+- Added logos for live tv stations (override those in directory)
+- Added fanart in live tv channels similar to ert's web site
+
+[B]1.3.0[/B]
+- Fix for live resolvers (both internal & youtube's)
+- Fixed some indexers' links
+
+[B]1.2.6[/B]
+- Minor tweak in indexer for main radio stations
+
+[B]1.2.5[/B]
+- Various tweaks here & there
+- Tweaked live resolver
+
+[B]1.2.4[/B]
+- Minor tweak in main indexer
+- Minor code cosmetics
+
+[B]1.2.3[/B]
+- Re-work on main radio streams' resolvers
+
+[B]1.2.2[/B]
+- Rework of web tv urls
+- Clear cache function (root context menu only)
+- Added ability to bookmark radio stations
+
+[B]1.2.1[/B]
+- Added audio content type parameter
+- Implemented corresponding code accordingly
+
+[B]1.2.0[/B]
+- New artwork
+- Added ERT Play
+- Added radio stations
+- Code cosmetics
+
+[B]1.1.1[/B]
+- Reworked to utilized tulip libraries
+
+[B]1.1.0[/B]
+- Re-work of main menu
+- Fixed issue with geoblocked videos (failed everywhere)
+- Added new artwork and screenshots
+
+[B]1.0.2[/B]
+- Tweaked ERT live channels
+- Code cosmetics
+
+[B]1.0.1[/B]
+- Tweaked ERT live channels
+- Code cosmetics
+
+[B]1.0.0[/B]
+- Initial version
