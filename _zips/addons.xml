@@ -968,7 +968,7 @@ Kindly note that AliveGR is not an official part of the media player you are run
 	</extension>
 </addon>
 
-<addon id="plugin.video.skai.gr" version="3.2.2" name="SKAI Player" provider-name="Twilight0">
+<addon id="plugin.video.skai.gr" version="3.2.3" name="SKAI Player" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.addon" version="16.1.000"/>
         <import addon="script.module.tulip" version="2.9.10" />
@@ -991,7 +991,11 @@ Kindly note that AliveGR is not an official part of the media player you are run
         <source>https://github.com/Twilight0/plugin.video.skai.gr</source>
         <website>http://www.skai.gr/</website>
         <size>226000</size>
-        <news>[B]3.2.2[/B]
+        <news>[B]3.2.3[/B]
+- Update indexers
+- Increase cache durations
+
+[B]3.2.2[/B]
 - Updated news links
 
 [B]3.2.1[/B]
