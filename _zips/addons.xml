@@ -466,65 +466,49 @@ Kindly note that AliveGR is not an official part of the media player you are run
 	</extension>
 </addon>
 
-<addon id="plugin.video.antenna.gr" version="2.3.1" name="ANT1 Player" provider-name="Twilight0">
+<addon id="plugin.video.antenna.gr" version="3.0.0" name="ANT1 Player" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.addon" version="16.1.000"/>
         <import addon="script.module.tulip" version="2.9.10" />
-        <import addon="plugin.video.youtube" version="6.8.10"/>
+        <import addon="plugin.video.youtube" version="6.8.18"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="addon.py">
-        <provides>video</provides>
+        <provides>video audio</provides>
+    </extension>
+    <extension point="kodi.context.item">
+        <menu id="kodi.core.main">
+            <item library="resources/lib/youtube_bookmark.py">
+                <label>30004</label>
+                <visible>
+                    String.StartsWith(Container.FolderPath,plugin://plugin.video.youtube/channel/UC0smvAbfczoN75dP0Hw4Pzw/) +
+                    !String.Contains(ListItem.Art(thumb),resources/media) +
+                    !String.Contains(ListItem.FolderPath,page_token)
+                </visible>
+            </item>
+        </menu>
     </extension>
     <extension point="xbmc.addon.metadata">
         <summary lang="en_GB">ANT1 Player addon for Kodi</summary>
-        <reuselanguageinvoker>false</reuselanguageinvoker>
+        <reuselanguageinvoker>true</reuselanguageinvoker>
         <description lang="en_GB">ANT1 live and on-demand broadcasts</description>
         <description lang="el_GR">Ζωντανές και on demand υπηρεσίες του ANT1</description>
         <disclaimer lang="en_GB">This addon offers content available in Greece and is not published nor endorsed by antenna.gr</disclaimer>
         <disclaimer lang="el_GR">Το πρόσθετο αυτό προσφέρει περιεχόμενο διαθέσιμο στην Ελλάδα και δεν έχει δημοσιευθεί ούτε εγκριθεί από το antenna.gr</disclaimer>
         <language>en el</language>
-        <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+        <license>GPL-3.0-only</license>
         <source>https://github.com/Twilight0/plugin.video.antenna.gr</source>
         <website>http://www.antenna.gr/</website>
         <size>204493</size>
-        <news>[B]2.3.1[/B]
+        <news>[B]3.0.0[/B]
+- Rework addon due to website changes
+
+[B]2.3.1[/B]
 - Replace futures with tulip's own method
 - Pagination now disabled by default
 
 [B]2.3.0[/B]
 - Change caching method
-- Utilize futures for parallel threading
-
-[B]2.2.0[/B]
-- Updated youtube api key
-- Added pagination function for long lists
-- A few other tweaks here and there
-
-[B]2.1.1[/B]
-- Updated youtube api key
-- Minor bug fix in the main indexing function
-
-[B]2.1.0[/B]
-- Improved WebTV indexers
-- Increased timeout for requests
-- Add label for live stream
-- Added "more videos" item on web tv indexers
-- Added the web tv item nesting various video categories
-- Allow m3u8/hls dash on Leia+
-
-[B]2.0.3[/B]
-- Remove forgotten print statement
-- Replace control.sleep with native sleep of 50ms between requests
-
-[B]2.0.2[/B]
-- Added the "unsorted" method as default instead of title
-
-[B]2.0.1[/B]
-- Webtv/Archive section "more" indexer fixed
-- Added episodes' sorting by title
-
-[B]2.0.0[/B]
-- Complete addon rework</news>
+- Utilize futures for parallel threading</news>
         <assets>
             <icon>icon.png</icon>
             <fanart>fanart.jpg</fanart>
@@ -534,11 +518,10 @@ Kindly note that AliveGR is not an official part of the media player you are run
         </assets>
         <platform>all</platform>
         <language>en el</language>
-        <broken>Website changed significantly</broken>
     </extension>
 </addon>
 
-<addon id="plugin.video.ert.gr" version="4.0.5" name="ERTflix" provider-name="Twilight0">
+<addon id="plugin.video.ert.gr" version="4.0.6" name="ERTflix" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.addon" version="16.1.000"/>
         <import addon="script.module.tulip" version="2.9.10" />
