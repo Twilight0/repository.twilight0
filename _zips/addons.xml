@@ -466,7 +466,7 @@ Kindly note that AliveGR is not an official part of the media player you are run
 	</extension>
 </addon>
 
-<addon id="plugin.video.antenna.gr" version="3.0.0" name="ANT1 Player" provider-name="Twilight0">
+<addon id="plugin.video.antenna.gr" version="3.0.1" name="ANT1 Player" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.addon" version="16.1.000"/>
         <import addon="script.module.tulip" version="2.9.10" />

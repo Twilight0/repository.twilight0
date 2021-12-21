@@ -1,0 +1,83 @@
+[B]3.0.0[/B]
+- Rework addon due to website changes
+
+[B]2.3.1[/B]
+- Replace futures with tulip's own method
+- Pagination now disabled by default
+
+[B]2.2.0[/B]
+- Updated youtube api key
+- Added pagination function for long lists
+- A few other tweaks here and there
+
+[B]2.1.1[/B]
+- Updated youtube api key
+- Minor bug fix in the main indexing function
+
+[B]2.1.0[/B]
+- Improved WebTV indexers
+- Increased timeout for requests
+- Add label for live stream
+- Added "more videos" item on web tv indexers
+- Added the web tv item nesting various video categories
+- Allow m3u8/hls dash on Leia+
+
+[B]2.0.3[/B]
+- Remove forgotten print statement
+- Replace control.sleep with native sleep of 50ms between requests
+
+[B]2.0.2[/B]
+- Added the "unsorted" method as default instead of title
+
+[B]2.0.1[/B]
+- Webtv/Archive section "more" indexer fixed
+- Added episodes' sorting by title
+
+[B]2.0.0[/B]
+- Complete addon rework
+
+[B]1.3.0[/B]
+- Fixed parsing of TV Shows, Latest, Archive and Recommended episodes
+- Updated liveresolver
+- Removed screenshots to save space
+
+[B]1.2.3[/B]
+- Added new fallback urls for live
+
+[B]1.2.2[/B]
+- Strengthened live resolver with direct urls as fallback
+- Option available to utilize web page resolver for live stream
+- Clear function cache action
+- Various cosmetics
+
+[B]1.2.1[/B]
+- Minor correction in live resolver
+
+[B]1.2.0[/B]
+- Enhanced live stream resolver
+- Added resolver for VOD content when called from other addons
+- Merged Hebrew translation thanks to "Eng2Heb"
+
+[B]1.1.3[/B]
+- Cosmetics
+- Tweaks in addon.xml
+
+[B]1.1.2[/B]
+- Cosmetics
+
+[B]1.1.1[/B]
+- Rebased to utilize tulip libraries
+
+[B]1.1.0[/B]
+- Tweaked sections
+- Added new add-on screenshots
+
+[B]1.0.2[/B]
+- Re-work of addon (new API)
+- Re-work of artwork (new indent)
+
+[B]1.0.1[/B]
+- Code cosmetics
+
+[B]1.0.0[/B]
+- Initial version
