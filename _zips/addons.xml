@@ -930,13 +930,13 @@ Kindly note that AliveGR is not an official part of the media player you are run
     </extension>
 </addon>
 
-<addon id="plugin.video.star.gr" version="2.4.3" name="STAR Player" provider-name="Twilight0">
+<addon id="plugin.video.star.gr" version="2.4.4" name="STAR Player" provider-name="Twilight0">
 	<requires>
 		<import addon="xbmc.addon" version="16.1.000"/>
 		<import addon="script.module.tulip" version="2.9.10" />
 		<import addon="plugin.video.youtube" version="6.8.18"/>
 	</requires>
-	<extension point="xbmc.python.pluginsource" library="addon.py">
+	<extension point="xbmc.python.pluginsource" library="router.py">
 		<provides>video</provides>
 	</extension>
 	<extension point="xbmc.addon.metadata">
@@ -947,11 +947,16 @@ Kindly note that AliveGR is not an official part of the media player you are run
 		<description lang="el_GR">Ζωντανές και on demand υπηρεσίες του STAR</description>
 		<disclaimer lang="en_GB">This addon offers content available in Greece and is not published nor endorsed by star.gr</disclaimer>
 		<disclaimer lang="el_GR">Το πρόσθετο αυτό προσφέρει περιεχόμενο διαθέσιμο στην Ελλάδα και δεν έχει δημοσιευθεί ούτε εγκριθεί από το star.gr</disclaimer>
-		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+		<language>en el</language>
+		<license>GPL-3.0-only</license>
 		<source>https://github.com/Twilight0/plugin.video.star.gr</source>
 		<website>http://www.star.gr/</website>
-		<size>228454</size>
-		<news>[B]2.4.3[/B]
+		<size>226300</size>
+		<news>[B]2.4.4[/B]
+- Bug fixes
+- Increase cache durations
+
+[B]2.4.3[/B]
 - Indexers and resolver bug fixes
 - New Youtube API key
 
