@@ -1,0 +1,91 @@
+[B]2.5.0[/B]
+- Add starland
+
+[B]2.4.4[/B]
+- Bug fixes
+- Increase cache durations
+
+[B]2.4.3[/B]
+- Indexers and resolver bug fixes
+- New Youtube API key
+
+[B]2.4.2[/B]
+- Bug fixes for live resolver
+
+[B]2.4.1[/B]
+- Bug fix
+
+[B]2.4.0[/B]
+- Change caching method
+- Obtain plot for live tv
+
+[B]2.3.4[/B]
+- Some bug fixes
+
+[B]2.3.3[/B]
+- Resolve live tv web page instead or provide live url directly
+
+[B]2.3.2[/B]
+- Bumped dependencies
+- Updated youtube api key
+
+[B]2.3.1[/B]
+- Fix for unicode characters in thumbnail paths
+- Fix into the resolver for some older videos
+
+[B]2.3.0[/B]
+- Minor fix for video thumbnails
+- Performance optimizations
+
+[B]2.2.0[/B]
+- Updated youtube api key
+- Updated indexing functions
+
+[B]2.1.2[/B]
+- Point to a blank video if live stream is offline
+- Fix resolver for some older videos
+
+[B]2.1.1[/B]
+- Fixed player links on main indexers
+
+[B]2.1.0[/B]
+- Added news item
+- Minor other tweaks
+
+[B]2.0.X[/B]
+- Complete addon rework
+- Changed artwork
+
+[B]1.2.5[/B]
+- Added Hebrew translation by Eng2Heb
+- Cosmetics
+
+[B]1.2.4[/B]
+- Cosmetics
+
+[B]1.2.3[/B]
+- Added Live stream
+
+[B]1.2.2[/B]
+- Cosmetics
+- Various tweaks in addon.xml
+
+[B]1.2.1[/B]
+- Fixed playback for youtube, web tv videos
+- Made youtube addon mandatory
+
+[B]1.2.0[/B]
+- Added Web TV section
+- Added context menu with clear cache function (root menu only)
+- Misc code tweaks here & there
+- Removed screenshots
+
+[B]1.1.1[/B]
+- Rebased to utilize tulip libraries
+
+[B]1.1.0[/B]
+- Tweaked sections
+- Added add-on screenshots
+
+[B]1.0.0[/B]
+- Initial version
