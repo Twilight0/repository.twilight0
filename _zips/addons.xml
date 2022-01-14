@@ -645,12 +645,12 @@ Kindly note that AliveGR is not an official part of the media player you are run
     <!--</extension>-->
 </addon>
 
-<addon id="plugin.video.greekvoice" name="Greek Voice" version="3.1.1" provider-name="Twilight0">
+<addon id="plugin.video.greekvoice" name="Greek Voice" version="3.1.2" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.addon" version="16.1.000"/>
         <import addon="resource.images.greekvoice.artwork"/>
         <import addon="plugin.video.youtube" version="6.8.9"/>
-        <import addon="script.module.tulip" version="2.8.6"/>
+        <import addon="script.module.tulip" version="2.9.10"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="addon.py">
         <provides>video</provides>
@@ -664,7 +664,12 @@ Kindly note that AliveGR is not an official part of the media player you are run
         <license>GPL-3.0-only</license>
         <website>http://wpso.com/</website>
         <email>angelo@greekvoice.us</email>
-        <news>[B]3.1.0 (04-Mar-2021)[/B]
+        <news>[B]3.1.1 (14-Jan-2022)[/B]
+- Bug fixes
+- Change youtube ID
+- Remove WZRA KIDS 2
+
+[B]3.1.0 (04-Mar-2021)[/B]
 - Replaced artwork from "module" to a resource one
 
 [B]3.0.1 (29-Nov-2020)[/B]
@@ -673,65 +678,7 @@ Kindly note that AliveGR is not an official part of the media player you are run
 [B]3.0.0 (20-Jul-2020)[/B]
 - Reworked addon for Python 3
 - Removed youtube setup function &amp; added private api keys
-- Bumped dependencies' versions
-
-[B]2.0.2 (19-Aug-2018)[/B]
-- Tweaked icon method call
-
-[B]2.0.1 (03-Aug-2018)[/B]
-- Updated stream url for tilemousiki
-- Minor code cosmetics
-
-[B]2.0.0 (30-Jun-2017)[/B]
-- Simplified Youtube setup function
-- Re-organized main menu
-- Utilizing tulip libraries
-
-[B]1.1.1 (27-Apr-2017)[/B]
-- New stream urls
-
-[B]1.1.0 (06-Mar-2017)[/B]
-- Removed greek voice 2
-- Fixed guide
-- Fixed compatibility with older versions of Kodi
-
-[B]1.0.8 (06-Jan-2017)[/B]
-- Fixed error in addon.xml
-
-[B]1.0.7 (29-Dec-2016)[/B]
-- Improved youtube setup function
-
-[B]1.0.6.1 (20-Dec-2016)[/B]
-- Minor fix for artwork dependency
-
-[B]1.0.6 (19-Dec-2016)[/B]
-- New Youtube API keys setup function
-- Localized a lot of strings
-
-[B]1.0.6 (08-Dec-2016)[/B]
-- Update link for Tilemousiki 2 HD
-
-[B]1.0.5 (29-Oct-2016)[/B]
-- Removed requests dependency
-- Several other insignificant changes
-
-[B]1.0.4 (27-Sep-2016)[/B]
-- Fixed typeerror in code
-
-[B]1.0.3 (23-Sep-2016)[/B]
-- New link Tilemousiki 2 HD
-
-[B]1.0.2 (11-Sep-2016)[/B]
-- Aligned some tv guide text to left
-
-[B]1.0.1 (11-Sep-2016)[/B]
-- Weekend TV guide shift to next "paragraph"
-
-[B]1.0.0 (11-Sep-2016)[/B]
-- Initial Version
-- Featuring 5 main Live TV &amp; 3 Live Radio Channels
-- TV Guide parsed from the website
-        </news>
+- Bumped dependencies' versions</news>
         <assets>
             <icon>icon.png</icon>
             <fanart>fanart.jpg</fanart>
