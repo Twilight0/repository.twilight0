@@ -700,7 +700,7 @@ Additions:
     </extension>
 </addon>
 
-<addon id="plugin.video.montreal.greek-tv" name="Montreal Greek TV" version="3.0.1" provider-name="Greektimes.ca, Twilight0">
+<addon id="plugin.video.montreal.greek-tv" name="Montreal Greek TV" version="3.0.2" provider-name="Greektimes.ca, Twilight0">
     <requires>
         <import addon="xbmc.addon" version="16.1.000"/>
         <import addon="script.module.tulip" version="3.0.1"/>
@@ -720,6 +720,7 @@ Additions:
         <size>633158</size>
         <news>[B]3.0.X[/B] - 22-07-2022
 - Update live urls
+- Add radio fanart
 - Remove non working items
 
 [B]2.3.X[/B] - 02-04-2021
@@ -920,48 +921,6 @@ Additions:
 - Updated youtube api keys
 - Bumped dependencies</news>
         <website>http://www.bcimedia.net/</website>
-        <assets>
-            <icon>icon.png</icon>
-            <fanart>fanart.jpg</fanart>
-        </assets>
-    </extension>
-</addon>
-
-<addon id="plugin.video.zouzounia.tv" name="Zouzounia TV" version="4.1.0" provider-name="Twilight0">
-    <requires>
-        <import addon="xbmc.addon" version="16.1.000"/>
-        <import addon="plugin.video.youtube" version="6.8.10"/>
-        <import addon="script.module.tulip" version="2.8.17"/>
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="addon.py">
-        <provides>video</provides>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <platform>all</platform>
-        <reuselanguageinvoker>true</reuselanguageinvoker>
-        <summary lang="en_GB">Zouzounia TV addon</summary>
-        <description lang="en_GB">Zouzounia TV addon</description>
-        <summary lang="el_GR">Πρόσθετο Zouzounia TV</summary>
-        <description lang="el_GR">Πρόσθετο Zouzounia TV</description>
-        <license>GNU GPL, version 3</license>
-        <website>https://www.youtube.com/channel/UCzsQf6eiWz4gIHgx0oYadXA</website>
-        <news>[B]4.1.0[/B]
-- Change cache method
-- Various other tweaks
-
-[B]4.0.X[/B]
-- Reworked addon code to use url dispatcher
-- Enable reuse language invoker
-
-[B]3.1.X[/B]
-- Updated youtube api key
-- Bumped dependencies
-- Various minor tweaks
-
-[B]3.0.0[/B]
-- Addon rework
-- New youtube api keys
-- Removed third party content</news>
         <assets>
             <icon>icon.png</icon>
             <fanart>fanart.jpg</fanart>
