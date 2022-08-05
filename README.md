@@ -6,7 +6,7 @@
 * Click on "Add source"
 * The path for the source is `https://alivegr.net/master` or alternatively `https://twilight0.github.io/repo.twilight0/` (Give it the name "Twilight0" or "AliveGR").
 * Go to "Addons"
-* In Addons, install an addon from zip.  When it asks for the location, select "Twilight0", and install [repository.twilight0](https://raw.githubusercontent.com/Twilight0/repo.twilight0/master/_zips/repository.twilight0/repository.twilight0-1.4.zip "repository.twilight0")
+* In Addons, install an addon from zip.  When it asks for the location, select "Twilight0", and install [repository.twilight0-1.4.zip](repository.twilight0-1.4.zip)
 * Go back to Addons install, but this time, select "Install from repository"
 * Select the "Twilight0 Repository"
 * Go into the "Video add-ons" section in the repo, and install the addon of your choice
