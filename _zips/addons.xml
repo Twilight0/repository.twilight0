@@ -700,7 +700,7 @@ Additions:
     </extension>
 </addon>
 
-<addon id="plugin.video.montreal.greek-tv" name="Montreal Greek TV" version="3.0.2" provider-name="Greektimes.ca, Twilight0">
+<addon id="plugin.video.montreal.greek-tv" name="Montreal Greek TV" version="3.1.0" provider-name="Greektimes.ca, Twilight0">
     <requires>
         <import addon="xbmc.addon" version="16.1.000"/>
         <import addon="script.module.tulip" version="3.0.1"/>
@@ -718,7 +718,11 @@ Additions:
         <language>en el</language>
         <license>GNU General Public License, v3</license>
         <size>633158</size>
-        <news>[B]3.0.X[/B] - 22-07-2022
+        <news>[B]3.1.X[/B] - 06-08-2022
+- New artwork
+- Utilize url dispatcher
+
+[B]3.0.X[/B] - 22-07-2022
 - Update live urls
 - Add radio fanart
 - Remove non working items
