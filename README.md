@@ -8,10 +8,7 @@
 * Go to "Addons"
 * In Addons, install an addon from zip.  When it asks for the location, select "Twilight0", and install
 
-|File|Date|Size|
-| :------------ | :------------ |
-|[repository.twilight0-1.4.zip](repository.twilight0-1.4.zip)|18-Jul-2020 09:51|113000|
-
+<table><a href="repository.twilight0.zip">repository.twilight0.zip</a></table>
 
 * Go back to Addons install, but this time, select "Install from repository"
 * Select the "Twilight0 Repository"
