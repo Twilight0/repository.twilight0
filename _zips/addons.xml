@@ -1,123 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="plugin.video.fashiontv.com" version="2.0.4" name="Fashion TV Player" provider-name="Twilight0">
+<addon id="plugin.video.greekvoice" name="Greek Voice" version="3.1.2" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.addon" version="16.1.000"/>
-        <import addon="script.module.tulip" version="2.9.10" />
-        <import addon="plugin.video.youtube" version="6.8.18"/>
+        <import addon="resource.images.greekvoice.artwork"/>
+        <import addon="plugin.video.youtube" version="6.8.9"/>
+        <import addon="script.module.tulip" version="2.9.10"/>
     </requires>
-    <extension point="xbmc.python.pluginsource" library="router.py">
+    <extension point="xbmc.python.pluginsource" library="addon.py">
         <provides>video</provides>
     </extension>
-    <extension point="kodi.context.item">
-        <menu id="kodi.core.main">
-            <item library="resources/lib/youtube_bookmark.py">
-                <label>30004</label>
-                <visible>
-                    [String.StartsWith(Container.FolderPath,plugin://plugin.video.youtube/channel/UCqzju-_WMKsgNx8R3QwupQQ/) |
-                    String.StartsWith(Container.FolderPath,plugin://plugin.video.youtube/channel/UClnblsrZrugJfFs4ANPgNcA/) |
-                    String.StartsWith(Container.FolderPath,plugin://plugin.video.youtube/channel/UCDN6BTcfgHDuBQgCgXkU-cA/) |
-                    String.StartsWith(Container.FolderPath,plugin://plugin.video.youtube/channel/UCLiyW3PZFDSxIw6EES8MneQ/) |
-                    String.StartsWith(Container.FolderPath,plugin://plugin.video.youtube/channel/UCC2Iic6b-nhY7CSRUm_nyng/) |
-                    String.StartsWith(Container.FolderPath,plugin://plugin.video.youtube/channel/UCi12i9eiWFh67T-uCP1y7Gw/)] +
-                    !String.Contains(ListItem.Art(thumb),resources/media) +
-                    !String.Contains(ListItem.FolderPath,page_token)
-                </visible>
-            </item>
-        </menu>
-    </extension>
     <extension point="xbmc.addon.metadata">
-        <reuselanguageinvoker>true</reuselanguageinvoker>
-        <summary lang="en_GB">Fashion TV Player addon for Kodi</summary>
-        <summary lang="en_GR">Πρόσθετο Fashion TV Player για το Kodi</summary>
-        <description lang="en_GB">Fashion TV live and on-demand broadcasts</description>
-        <description lang="el_GR">Ζωντανές και on demand υπηρεσίες του Fashion TV</description>
-        <disclaimer lang="en_GB">This addon is not published nor endorsed by fashiontv.com</disclaimer>
-        <disclaimer lang="el_GR">Το πρόσθετο αυτό δεν έχει δημοσιευθεί ούτε εγκριθεί από το fashiontv.com</disclaimer>
-        <license>GPL-3.0-only</license>
-        <source>https://github.com/Twilight0/plugin.video.fashiontv.com</source>
-        <website>https://www.fashiontv.com/</website>
-        <size>149300</size>
-        <news>[B]2.0.X[/B]
-- Update for new website design
-- Add search function
-- Add shortcut to live channels
-- New YouTube API keys
-
-[B]1.3.X[/B]
-- Change cache method
-- Place youtube channels on submenu
-- Change main label from "Live" to "Fashion TV Live"
-- Remove check for inputstream addon
-
-[B]1.2.0[/B]
-- Update youtube api keys
-- Rework of router scheme
-- Tweaks for Matrix
-
-[B]1.1.0[/B]
-- Add bookmarking feature
-
-[B]1.0.3[/B]
-- Added FTV news channel
-
-[B]1.0.2[/B]
-- Re-addition of previously unsupported streams
-- Properly check for stream m3u8/mpd and dash activation
-
-[B]1.0.1[/B]
-- Removed unsupported streams
-- Check if Kodi Leia+ for asking about inputstream addon
-
-[B]1.0.0[/B]
-- Final stable version
-
-[B]0.0.1~alpha1[/B]
-- Initial version</news>
-        <assets>
-            <icon>icon.png</icon>
-            <fanart>fanart.jpg</fanart>
-        </assets>
         <platform>all</platform>
-        <language>en</language>
-        <!--<forum></forum>-->
-        <!--<email></email>-->
-    </extension>
-</addon>
-
-<addon id="service.subtitles.subtitles.gr" name="Subtitles.gr" version="3.7.0" provider-name="Twilight0">
-    <requires>
-        <import addon="xbmc.addon" version="16.1.000"/>
-        <import addon="script.module.tulip" version="2.9.8" />
-    </requires>
-    <extension point="xbmc.subtitle.module" library="service.py">
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <reuselanguageinvoker>false</reuselanguageinvoker>
-        <summary lang="en_GB">Subtitle service addon "subtitles.gr"</summary>
-        <summary lang="el_GR">Υπηρεσιακό πρόσθετο υποτίτλων "subtitles.gr"</summary>
-        <description lang="en_GB">Search and download subtitles from various sites</description>
-        <description lang="el_GR">Εύρεση και λήψη υποτίτλων από διαφόρους ιστοτόπους</description>
-        <disclaimer lang="en_GB">This service is only for Greek subtitles. It is not published nor endorsed by any of the sites supported.</disclaimer>
-        <disclaimer lang="el_GR">Υπηρεσία μόνο ελληνικών υποτίτλων. Δεν έχει δημοσιευθεί, ούτε εγκριθεί από οποιοδήποτε υποστηριζόμενο ιστότοπο.</disclaimer>
+        <summary lang="en_GB">Greek Voice Live addon</summary>
+        <description lang="en_GB">This addon offers live streaming content from the WPSO website</description>
+        <summary lang="el_GR">Πρόσθετο Greek Voice Live, ζωντανή Ελληνική φωνή</summary>
+        <description lang="el_GR">Το πρόσθετο αυτό προσφέρει ζωντανές ροές από το site WPSO</description>
         <license>GPL-3.0-only</license>
-        <website>http://www.subtitles.gr/</website>
-        <source>https://github.com/Twilight0/service.subtitles.subtitles.gr/</source>
-        <platform>all</platform>
-        <news>[B]3.7.0[/B]
-- Increase maximum possible timeout for search requests
-- Add separate setting for subtitles.gr sub download timeout
-- Utilize fuzzywuzzy to find synced subtitles (minimum match ratio 50, default 75, max 100)
-- Replace futures module with tulip solution
-- Various other tweaks
+        <website>http://wpso.com/</website>
+        <email>angelo@greekvoice.us</email>
+        <news>[B]3.1.1 (14-Jan-2022)[/B]
+- Bug fixes
+- Change youtube ID
+- Remove WZRA KIDS 2
 
-[B]3.6.2[/B]
-- Bug fixes for subtitles save function on vipsubs
+[B]3.1.0 (04-Mar-2021)[/B]
+- Replaced artwork from "module" to a resource one
 
-[B]3.6.1[/B]
-- Broaden search results for vipsubs.gr
-- Allow subtitle to be saved both locally and within the manual choice
-- Ask before overwriting existing subs</news>
+[B]3.0.1 (29-Nov-2020)[/B]
+- Updated youtube api keys
+
+[B]3.0.0 (20-Jul-2020)[/B]
+- Reworked addon for Python 3
+- Removed youtube setup function &amp; added private api keys
+- Bumped dependencies' versions</news>
         <assets>
             <icon>icon.png</icon>
             <fanart>fanart.jpg</fanart>
@@ -326,9 +242,9 @@
     </extension>
 </addon>
 
-<addon id="plugin.video.AliveGR" name="AliveGR" version="2.10.6" provider-name="Twilight0">
+<addon id="plugin.video.AliveGR" name="AliveGR" version="2.10.7" provider-name="Twilight0">
     <requires>
-        <import addon="xbmc.addon" version="18.0.000"/>
+        <import addon="xbmc.addon" version="17.9.910"/>
         <import addon="resource.images.alivegr.artwork" version="3.0.5"/>
         <import addon="resource.images.alivegr.logos" version="1.0.2"/>
         <import addon="script.module.resolveurl" version="5.1.49"/>
@@ -350,8 +266,8 @@
 On demand content is scraped from various websites and is freely available on the internet on public domains. This software acts only as a search engine.
 Kindly note that AliveGR is not an official part of the media player you are running, and therefore not to be mentioned within official support channels, this addon has nothing to do with the media player itself, nor it’s intended use, it is simply a third party plugin which has been added to your system and it is provided "as is" with no warranty.</disclaimer>
         <summary lang="el_GR">Πρόσθετο AliveGR</summary>
-        <description lang="el_GR">Το πρόσθετο AliveGR επιτρέπει την θέαση ροών με περιεχόμενο κυρίως εις την Ελληνική γλώσσα.</description>
-        <disclaimer lang="el_GR">Ο δημιουργός του AliveGR δεν φιλοξενεί ή παρέχει οποιοδήποτε από τα απεικονιζόμενα πολυμέσα και περιεχόμένο εντός του μενού του και δεν μπορεί να θεωρηθεί υπεύθυνος για την ποιότητα ή την διαθεσιμότητα των ροών.
+        <description lang="el_GR">Το πρόσθετο AliveGR επιτρέπει τη θέαση ροών με περιεχόμενο κυρίως εις την Ελληνική γλώσσα.</description>
+        <disclaimer lang="el_GR">Ο δημιουργός του AliveGR δε φιλοξενεί ή παρέχει οποιοδήποτε από τα απεικονιζόμενα πολυμέσα και περιεχόμένο εντός του μενού του και δεν μπορεί να θεωρηθεί υπεύθυνος για την ποιότητα ή την διαθεσιμότητα των ροών.
 Το περιεχόμενο αναπαραγωγής κατά βούληση φιλτράρεται από διάφορες ιστοσελίδες ελεύθερα διαθέσιμες στο διαδίκτυο σε δημόσιους ιστότοπους. Το παρόν λογισμικό ενεργεί μόνο ως μηχανή αναζήτησης.
 Παρακαλώ προσέξτε ότι το AliveGR δεν είναι επίσημο κομμάτι του αναπαραγωγέα πολυμέσων Kodi ή της καθορισμένης χρήσης του, είναι απλά μία μικροεφαρμογή που προστέθηκε στο σύστημά σας και που παρέχεται "όπως είναι" χωρίς καμία εγγύηση καλής λειτουργίας.</disclaimer>
         <language>en el</language>
@@ -359,8 +275,7 @@ Kindly note that AliveGR is not an official part of the media player you are run
         <forum>https://github.com/Twilight0/plugin.video.AliveGR/issues</forum>
         <source>https://github.com/Twilight0/plugin.video.AliveGR</source>
         <website>https://alivegr.net/</website>
-        <size>1500240</size>
-        <news>+ [COLOR green]2.10.X series[/COLOR] [I]18-07-2022 - 19-07-2022[/I]
+        <news>+ [COLOR green]2.10.X series[/COLOR] [I]18-07-2022 - 11-09-2022[/I]
 
 Fixes:
 - GM music indexer playback
@@ -659,44 +574,88 @@ Additions:
     <!--</extension>-->
 </addon>
 
-<addon id="plugin.video.greekvoice" name="Greek Voice" version="3.1.2" provider-name="Twilight0">
+<addon id="plugin.video.fashiontv.com" version="2.0.4" name="Fashion TV Player" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.addon" version="16.1.000"/>
-        <import addon="resource.images.greekvoice.artwork"/>
-        <import addon="plugin.video.youtube" version="6.8.9"/>
-        <import addon="script.module.tulip" version="2.9.10"/>
+        <import addon="script.module.tulip" version="2.9.10" />
+        <import addon="plugin.video.youtube" version="6.8.18"/>
     </requires>
-    <extension point="xbmc.python.pluginsource" library="addon.py">
+    <extension point="xbmc.python.pluginsource" library="router.py">
         <provides>video</provides>
     </extension>
+    <extension point="kodi.context.item">
+        <menu id="kodi.core.main">
+            <item library="resources/lib/youtube_bookmark.py">
+                <label>30004</label>
+                <visible>
+                    [String.StartsWith(Container.FolderPath,plugin://plugin.video.youtube/channel/UCqzju-_WMKsgNx8R3QwupQQ/) |
+                    String.StartsWith(Container.FolderPath,plugin://plugin.video.youtube/channel/UClnblsrZrugJfFs4ANPgNcA/) |
+                    String.StartsWith(Container.FolderPath,plugin://plugin.video.youtube/channel/UCDN6BTcfgHDuBQgCgXkU-cA/) |
+                    String.StartsWith(Container.FolderPath,plugin://plugin.video.youtube/channel/UCLiyW3PZFDSxIw6EES8MneQ/) |
+                    String.StartsWith(Container.FolderPath,plugin://plugin.video.youtube/channel/UCC2Iic6b-nhY7CSRUm_nyng/) |
+                    String.StartsWith(Container.FolderPath,plugin://plugin.video.youtube/channel/UCi12i9eiWFh67T-uCP1y7Gw/)] +
+                    !String.Contains(ListItem.Art(thumb),resources/media) +
+                    !String.Contains(ListItem.FolderPath,page_token)
+                </visible>
+            </item>
+        </menu>
+    </extension>
     <extension point="xbmc.addon.metadata">
-        <platform>all</platform>
-        <summary lang="en_GB">Greek Voice Live addon</summary>
-        <description lang="en_GB">This addon offers live streaming content from the WPSO website</description>
-        <summary lang="el_GR">Πρόσθετο Greek Voice Live, ζωντανή Ελληνική φωνή</summary>
-        <description lang="el_GR">Το πρόσθετο αυτό προσφέρει ζωντανές ροές από το site WPSO</description>
+        <reuselanguageinvoker>true</reuselanguageinvoker>
+        <summary lang="en_GB">Fashion TV Player addon for Kodi</summary>
+        <summary lang="en_GR">Πρόσθετο Fashion TV Player για το Kodi</summary>
+        <description lang="en_GB">Fashion TV live and on-demand broadcasts</description>
+        <description lang="el_GR">Ζωντανές και on demand υπηρεσίες του Fashion TV</description>
+        <disclaimer lang="en_GB">This addon is not published nor endorsed by fashiontv.com</disclaimer>
+        <disclaimer lang="el_GR">Το πρόσθετο αυτό δεν έχει δημοσιευθεί ούτε εγκριθεί από το fashiontv.com</disclaimer>
         <license>GPL-3.0-only</license>
-        <website>http://wpso.com/</website>
-        <email>angelo@greekvoice.us</email>
-        <news>[B]3.1.1 (14-Jan-2022)[/B]
-- Bug fixes
-- Change youtube ID
-- Remove WZRA KIDS 2
+        <source>https://github.com/Twilight0/plugin.video.fashiontv.com</source>
+        <website>https://www.fashiontv.com/</website>
+        <size>149300</size>
+        <news>[B]2.0.X[/B]
+- Update for new website design
+- Add search function
+- Add shortcut to live channels
+- New YouTube API keys
 
-[B]3.1.0 (04-Mar-2021)[/B]
-- Replaced artwork from "module" to a resource one
+[B]1.3.X[/B]
+- Change cache method
+- Place youtube channels on submenu
+- Change main label from "Live" to "Fashion TV Live"
+- Remove check for inputstream addon
 
-[B]3.0.1 (29-Nov-2020)[/B]
-- Updated youtube api keys
+[B]1.2.0[/B]
+- Update youtube api keys
+- Rework of router scheme
+- Tweaks for Matrix
 
-[B]3.0.0 (20-Jul-2020)[/B]
-- Reworked addon for Python 3
-- Removed youtube setup function &amp; added private api keys
-- Bumped dependencies' versions</news>
+[B]1.1.0[/B]
+- Add bookmarking feature
+
+[B]1.0.3[/B]
+- Added FTV news channel
+
+[B]1.0.2[/B]
+- Re-addition of previously unsupported streams
+- Properly check for stream m3u8/mpd and dash activation
+
+[B]1.0.1[/B]
+- Removed unsupported streams
+- Check if Kodi Leia+ for asking about inputstream addon
+
+[B]1.0.0[/B]
+- Final stable version
+
+[B]0.0.1~alpha1[/B]
+- Initial version</news>
         <assets>
             <icon>icon.png</icon>
             <fanart>fanart.jpg</fanart>
         </assets>
+        <platform>all</platform>
+        <language>en</language>
+        <!--<forum></forum>-->
+        <!--<email></email>-->
     </extension>
 </addon>
 
@@ -1012,5 +971,45 @@ Additions:
         <disclaimer>Icon theme provided by Greek Voice TV administrator</disclaimer>
 		<platform>all</platform>
 	</extension>
+</addon>
+
+<addon id="service.subtitles.subtitles.gr" name="Subtitles.gr" version="3.7.0" provider-name="Twilight0">
+    <requires>
+        <import addon="xbmc.addon" version="16.1.000"/>
+        <import addon="script.module.tulip" version="2.9.8" />
+    </requires>
+    <extension point="xbmc.subtitle.module" library="service.py">
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <reuselanguageinvoker>false</reuselanguageinvoker>
+        <summary lang="en_GB">Subtitle service addon "subtitles.gr"</summary>
+        <summary lang="el_GR">Υπηρεσιακό πρόσθετο υποτίτλων "subtitles.gr"</summary>
+        <description lang="en_GB">Search and download subtitles from various sites</description>
+        <description lang="el_GR">Εύρεση και λήψη υποτίτλων από διαφόρους ιστοτόπους</description>
+        <disclaimer lang="en_GB">This service is only for Greek subtitles. It is not published nor endorsed by any of the sites supported.</disclaimer>
+        <disclaimer lang="el_GR">Υπηρεσία μόνο ελληνικών υποτίτλων. Δεν έχει δημοσιευθεί, ούτε εγκριθεί από οποιοδήποτε υποστηριζόμενο ιστότοπο.</disclaimer>
+        <license>GPL-3.0-only</license>
+        <website>http://www.subtitles.gr/</website>
+        <source>https://github.com/Twilight0/service.subtitles.subtitles.gr/</source>
+        <platform>all</platform>
+        <news>[B]3.7.0[/B]
+- Increase maximum possible timeout for search requests
+- Add separate setting for subtitles.gr sub download timeout
+- Utilize fuzzywuzzy to find synced subtitles (minimum match ratio 50, default 75, max 100)
+- Replace futures module with tulip solution
+- Various other tweaks
+
+[B]3.6.2[/B]
+- Bug fixes for subtitles save function on vipsubs
+
+[B]3.6.1[/B]
+- Broaden search results for vipsubs.gr
+- Allow subtitle to be saved both locally and within the manual choice
+- Ask before overwriting existing subs</news>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
 </addon>
 </addons>
