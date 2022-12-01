@@ -1,43 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="plugin.video.greekvoice" name="Greek Voice" version="3.1.2" provider-name="Twilight0">
+<addon id="plugin.video.skai.gr" version="3.2.4" name="SKAI Player" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.addon" version="16.1.000"/>
-        <import addon="resource.images.greekvoice.artwork"/>
-        <import addon="plugin.video.youtube" version="6.8.9"/>
-        <import addon="script.module.tulip" version="2.9.10"/>
+        <import addon="script.module.tulip" version="2.9.10" />
+        <import addon="plugin.video.youtube" version="6.8.10"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="addon.py">
-        <provides>video</provides>
+        <provides>video audio</provides>
     </extension>
     <extension point="xbmc.addon.metadata">
         <platform>all</platform>
-        <summary lang="en_GB">Greek Voice Live addon</summary>
-        <description lang="en_GB">This addon offers live streaming content from the WPSO website</description>
-        <summary lang="el_GR">Πρόσθετο Greek Voice Live, ζωντανή Ελληνική φωνή</summary>
-        <description lang="el_GR">Το πρόσθετο αυτό προσφέρει ζωντανές ροές από το site WPSO</description>
+        <reuselanguageinvoker>true</reuselanguageinvoker>
+        <summary lang="en_GB">SKAI Player addon for Kodi</summary>
+        <summary lang="en_GR">Πρόσθετο SKAI Player για το Kodi</summary>
+        <description lang="en_GB">SKAI live and on-demand broadcasts</description>
+        <description lang="el_GR">Ζωντανές και on demand υπηρεσίες του SKAI</description>
+        <disclaimer lang="en_GB">This addon offers content available in Greece and is not published nor endorsed by skai.gr</disclaimer>
+        <disclaimer lang="el_GR">Το πρόσθετο αυτό προσφέρει περιεχόμενο διαθέσιμο στην Ελλάδα και δεν έχει δημοσιευθεί ούτε εγκριθεί από το skai.gr</disclaimer>
+        <language>en el</language>
         <license>GPL-3.0-only</license>
-        <website>http://wpso.com/</website>
-        <email>angelo@greekvoice.us</email>
-        <news>[B]3.1.1 (14-Jan-2022)[/B]
-- Bug fixes
-- Change youtube ID
-- Remove WZRA KIDS 2
+        <source>https://github.com/Twilight0/plugin.video.skai.gr</source>
+        <website>http://www.skai.gr/</website>
+        <size>226000</size>
+        <news>[B]3.2.4[/B]
+- New youtube API key
 
-[B]3.1.0 (04-Mar-2021)[/B]
-- Replaced artwork from "module" to a resource one
+[B]3.2.3[/B]
+- Update indexers
+- Increase cache durations
 
-[B]3.0.1 (29-Nov-2020)[/B]
-- Updated youtube api keys
+[B]3.2.2[/B]
+- Updated news links
 
-[B]3.0.0 (20-Jul-2020)[/B]
-- Reworked addon for Python 3
-- Removed youtube setup function &amp; added private api keys
-- Bumped dependencies' versions</news>
+[B]3.2.1[/B]
+- Bumped dependencies
+- Tweaked labels and icons on live items
+
+[B]3.2.0[/B]
+- Change caching method
+- Update VOD resolver
+- Tweak string indexes
+- Enable "reuse language invoker"
+
+[B]3.1.0[/B]
+- Updated youtube api key
+- Bumped dependencies
+
+[B]3.0.X[/B]
+- Rework of the addon for website redesign and deprecation of older APIs
+- Removed news in sign language
+- Added the entertainment section
+- Added suggested, popular and recent videos on news section
+- Removed sports
+- Bumped dependencies
+- Updated logo</news>
         <assets>
             <icon>icon.png</icon>
             <fanart>fanart.jpg</fanart>
+<!--            <screenshot>resources/screenshots/screenshot-01.jpg</screenshot>-->
+<!--            <screenshot>resources/screenshots/screenshot-02.jpg</screenshot>-->
+<!--            <screenshot>resources/screenshots/screenshot-03.jpg</screenshot>-->
         </assets>
+        <!--<forum></forum>-->
+        <!--<email></email>-->
     </extension>
 </addon>
 
@@ -242,15 +268,15 @@
     </extension>
 </addon>
 
-<addon id="plugin.video.AliveGR" name="AliveGR" version="2.10.7" provider-name="Twilight0">
+<addon id="plugin.video.AliveGR" name="AliveGR" version="2.11.0~alpha2" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.addon" version="17.9.910"/>
-        <import addon="resource.images.alivegr.artwork" version="3.0.5"/>
+        <import addon="resource.images.alivegr.artwork" version="3.0.6"/>
         <import addon="resource.images.alivegr.logos" version="1.0.2"/>
-        <import addon="script.module.resolveurl" version="5.1.49"/>
+        <import addon="script.module.resolveurl" version="5.1.84"/>
         <import addon="script.module.resolveurl.pluginsgr" version="0.0.13"/>
-        <import addon="script.module.scrapetube" version="2.2.2.1"/>
-        <import addon="script.module.tulip" version="3.0.1"/>
+        <import addon="script.module.scrapetube" version="2.3.1"/>
+        <import addon="script.module.tulip" version="3.0.2"/>
         <import addon="plugin.video.youtube" version="6.8.18"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="main.py">
@@ -275,47 +301,41 @@ Kindly note that AliveGR is not an official part of the media player you are run
         <forum>https://github.com/Twilight0/plugin.video.AliveGR/issues</forum>
         <source>https://github.com/Twilight0/plugin.video.AliveGR</source>
         <website>https://alivegr.net/</website>
-        <news>+ [COLOR green]2.10.X series[/COLOR] [I]18-07-2022 - 11-09-2022[/I]
-
-Fixes:
-- GM music indexer playback
-- Stream choice across all combinations (dialog/catalog/random, either check stream or not)
-- A few other things here and there
-
-Replacements/Substitutions:
-- Youtube module from tulip with scrapetube (which does not require api keys)
-- Pyxbmct related functions and windows with traditional xbmcbui dialogs (lets keep it simple and uniform across skins)
-- Simplify youtube music techno choices indexer
-- Behaviour on how settings.xml is applied for compatibility
-
-Removals:
-- Youtube api related functions (and setup to user)
-- Deprecated "common" resolvers
-- Social &amp; donation links from welcome screen
+        <news>+ [COLOR green]2.11.X series[/COLOR] [I]11-09-2022 - 01-12-2022[/I]
 
 Additions:
-- Add search index and history (You can add items, delete and purge entire history)
-- New keymap: On fullscreen video short return key press stops playback, long press behaves as the default keymap
-- New action: Setup inputstream adaptive with recommended settings
-- Add information when checking streams regarding the host
+- Playback history
+- Add capability to rename/change search history items
+- Add capability of auto container refresh on certain settings change (ie icon theme)
 
-[======]
+Fixes:
+- The usual bug fixes here and there
+- Fixed gamato kids indexer
+- Fixed addon.xml validation
+- Fixed installation failure and Kodi crash on Android
 
-+ [COLOR red]2.9.X series[/COLOR] [I]27-04-2021 - 30-12-2021[/I]
-- Some bug and labeling fixes
-- Check streams when picking a stream sequentially (default being off)
-- Removed playlist mode from vod stream choices
-- Clean up on some indexers
-- Enhance activate other addon function
-- Bump dependencies</news>
+Replacements/Substitutions:
+- Clean up and rearrangement to the tools section/menu/settings (and submenus)
+- Renamed history.csv to search_history.csv (to accommodate naming scheme for playback history)
+- Replace deprecated "client.request" function to net.HTTP_get
+- Get item title for pinning from a query than listitem (fixes behaviour when there are gui delays)
+- Improved screenshots
+
+Removals:
+- Changelog in news section (addon.xml) will contain only the latest version, please refer to changelog.txt for more details about past versions
+- Miscellany section</news>
         <assets>
             <icon>resources/media/icon.png</icon>
             <fanart>resources/media/fanart.jpg</fanart>
             <screenshot>resources/media/main_menu.jpg</screenshot>
             <screenshot>resources/media/live_streams.jpg</screenshot>
+            <screenshot>resources/media/networks.jpg</screenshot>
             <screenshot>resources/media/movies.jpg</screenshot>
             <screenshot>resources/media/tv_series.jpg</screenshot>
-            <screenshot>resources/media/networks.jpg</screenshot>
+            <screenshot>resources/media/kids_movies.jpg</screenshot>
+            <screenshot>resources/media/search.jpg</screenshot>
+            <screenshot>resources/media/newspapers_frontpages.jpg</screenshot>
+            <screenshot>resources/media/music.jpg</screenshot>
         </assets>
     </extension>
 </addon>
@@ -659,115 +679,6 @@ Additions:
     </extension>
 </addon>
 
-<addon id="plugin.video.montreal.greek-tv" name="Montreal Greek TV" version="3.1.0" provider-name="Greektimes.ca, Twilight0">
-    <requires>
-        <import addon="xbmc.addon" version="16.1.000"/>
-        <import addon="script.module.tulip" version="3.0.1"/>
-<!--        <import addon="script.module.scrapetube" version="2.2.2.1"/>-->
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="addon.py">
-        <provides>video image audio</provides>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <platform>all</platform>
-        <summary lang="en_GB">Montreal Greek TV addon</summary>
-        <description lang="en_GB">Montreal Greek TV add-on for Kodi featuring Live TV, Radio and Video on demand streams from Montreal, Quebec, Canada. Montreal Greek Television is broadcasting in-house locally-produced Canadian programming in the Greek language from the Greek Community of Greater Montreal.</description>
-        <summary lang="el_gr">Πρόσθετο Montreal Greek TV</summary>
-        <description lang="el_gr">Το πρόσθετο Montreal Greek TV για το σύστημα πολυμέσων Kodi προσφέρει ζωντανή τηλεόραση, ραδιόφωνο και ροές κατ' απαίτηση από το Μόντρεαλ, Κεμπέκ, Καναδά. Η Τηλεόραση Montreak Greek εκπέμπει περιεχόμενο τοπικής παραγωγής εις την Ελληνική γλώσσα από την Ελληνική κοινότητα της ευρύτερης περιοχής του Μόντρεαλ.</description>
-        <language>en el</language>
-        <license>GNU General Public License, v3</license>
-        <size>633158</size>
-        <news>[B]3.1.X[/B] - 06-08-2022
-- New artwork
-- Utilize url dispatcher
-
-[B]3.0.X[/B] - 22-07-2022
-- Update live urls
-- Add radio fanart
-- Remove non working items
-
-[B]2.3.X[/B] - 02-04-2021
-- Change cache method
-
-[B]2.2.X[/B] - 18-03-2021
-- Some code tweaks</news>
-        <assets>
-            <icon>icon.png</icon>
-            <fanart>fanart.jpg</fanart>
-        </assets>
-        <website>http://greektimes.ca</website>
-        <email>info@greektimes.ca</email>
-        <source>https://github.com/Twilight0/plugin.video.montreal.greek-tv</source>
-    </extension>
-</addon>
-
-<addon id="plugin.video.skai.gr" version="3.2.4" name="SKAI Player" provider-name="Twilight0">
-    <requires>
-        <import addon="xbmc.addon" version="16.1.000"/>
-        <import addon="script.module.tulip" version="2.9.10" />
-        <import addon="plugin.video.youtube" version="6.8.10"/>
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="addon.py">
-        <provides>video audio</provides>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <platform>all</platform>
-        <reuselanguageinvoker>true</reuselanguageinvoker>
-        <summary lang="en_GB">SKAI Player addon for Kodi</summary>
-        <summary lang="en_GR">Πρόσθετο SKAI Player για το Kodi</summary>
-        <description lang="en_GB">SKAI live and on-demand broadcasts</description>
-        <description lang="el_GR">Ζωντανές και on demand υπηρεσίες του SKAI</description>
-        <disclaimer lang="en_GB">This addon offers content available in Greece and is not published nor endorsed by skai.gr</disclaimer>
-        <disclaimer lang="el_GR">Το πρόσθετο αυτό προσφέρει περιεχόμενο διαθέσιμο στην Ελλάδα και δεν έχει δημοσιευθεί ούτε εγκριθεί από το skai.gr</disclaimer>
-        <language>en el</language>
-        <license>GPL-3.0-only</license>
-        <source>https://github.com/Twilight0/plugin.video.skai.gr</source>
-        <website>http://www.skai.gr/</website>
-        <size>226000</size>
-        <news>[B]3.2.4[/B]
-- New youtube API key
-
-[B]3.2.3[/B]
-- Update indexers
-- Increase cache durations
-
-[B]3.2.2[/B]
-- Updated news links
-
-[B]3.2.1[/B]
-- Bumped dependencies
-- Tweaked labels and icons on live items
-
-[B]3.2.0[/B]
-- Change caching method
-- Update VOD resolver
-- Tweak string indexes
-- Enable "reuse language invoker"
-
-[B]3.1.0[/B]
-- Updated youtube api key
-- Bumped dependencies
-
-[B]3.0.X[/B]
-- Rework of the addon for website redesign and deprecation of older APIs
-- Removed news in sign language
-- Added the entertainment section
-- Added suggested, popular and recent videos on news section
-- Removed sports
-- Bumped dependencies
-- Updated logo</news>
-        <assets>
-            <icon>icon.png</icon>
-            <fanart>fanart.jpg</fanart>
-<!--            <screenshot>resources/screenshots/screenshot-01.jpg</screenshot>-->
-<!--            <screenshot>resources/screenshots/screenshot-02.jpg</screenshot>-->
-<!--            <screenshot>resources/screenshots/screenshot-03.jpg</screenshot>-->
-        </assets>
-        <!--<forum></forum>-->
-        <!--<email></email>-->
-    </extension>
-</addon>
-
 <addon id="plugin.video.star.gr" version="2.5.0" name="STAR Player" provider-name="Twilight0">
 	<requires>
 		<import addon="xbmc.addon" version="16.1.000"/>
@@ -937,7 +848,7 @@ Additions:
         </extension>
 </addon>
 
-<addon id="resource.images.alivegr.artwork" name="AliveGR Artwork" version="3.0.5" provider-name="Twilight0">
+<addon id="resource.images.alivegr.artwork" name="AliveGR Artwork" version="3.0.6" provider-name="Twilight0">
 	<extension point="kodi.resource.images" compile="false" type="AliveGR" />
 	<requires>
 		<import addon="kodi.resource" version="1.0.0"/>
@@ -957,18 +868,6 @@ Additions:
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en">AliveGR's TV channels logos</summary>
 		<description lang="en">Logos are provided separately to allow easier distribution</description>
-		<platform>all</platform>
-	</extension>
-</addon>
-
-<addon id="resource.images.greekvoice.artwork" version="1.0.0" name="Greek Voice Artwork" provider-name="Twilight0">
-	<requires>
-		<import addon="kodi.resource" version="1.0.0"/>
-	</requires>
-	<extension point="xbmc.addon.metadata">
-		<summary>Artwork for the Greek Voice Addon</summary>
-		<description>Artwork for Greek Voice is maintained separately to make distribution of the the addon itself easier/faster.</description>
-        <disclaimer>Icon theme provided by Greek Voice TV administrator</disclaimer>
 		<platform>all</platform>
 	</extension>
 </addon>
