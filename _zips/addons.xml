@@ -805,16 +805,19 @@ Removals:
     </extension>
 </addon>
 
-    <addon id="repository.twilight0" name="Twilight0 Addon Repository" version="1.5" provider-name="Twilight0">
+    <addon id="repository.twilight0" name="Twilight0 Addon Repository" version="1.6" provider-name="Twilight0">
         <extension point="xbmc.addon.repository" name="Twilight0 Addon Repository">
-            <info compressed="false">https://raw.githubusercontent.com/Twilight0/repository.twilight0/master/_zips/addons.xml</info>
-            <checksum>https://raw.githubusercontent.com/Twilight0/repository.twilight0/master/_zips/addons.xml.md5</checksum>
-            <datadir zip="true">https://raw.githubusercontent.com/Twilight0/repository.twilight0/master/_zips/</datadir>
-            <hashes>false</hashes>
+            <dir>
+                <info compressed="false">https://raw.githubusercontent.com/Twilight0/repository.twilight0/master/_zips/addons.xml</info>
+                <checksum>https://raw.githubusercontent.com/Twilight0/repository.twilight0/master/_zips/addons.xml.md5</checksum>
+                <datadir zip="true">https://raw.githubusercontent.com/Twilight0/repository.twilight0/master/_zips/</datadir>
+                <hashes>true</hashes>
+            </dir>
             <dir>
                 <info compressed="false">https://raw.githubusercontent.com/Twilight0/repository.twilight0.libs/master/_zips/addons.xml</info>
                 <checksum>https://raw.githubusercontent.com/Twilight0/repository.twilight0.libs/master/_zips/addons.xml.md5</checksum>
                 <datadir zip="true">https://raw.githubusercontent.com/Twilight0/repository.twilight0.libs/master/_zips/</datadir>
+                <hashes>true</hashes>
             </dir>
 			<dir>
 				<info compressed="false">https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml</info>
@@ -833,12 +836,14 @@ Removals:
         </extension>
 </addon>
 
-    <addon id="repository.twilight0.libs" name="Twilight0 Libs Repository" version="1.3" provider-name="Twilight0">
+    <addon id="repository.twilight0.libs" name="Twilight0 Libs Repository" version="1.4" provider-name="Twilight0">
         <extension point="xbmc.addon.repository" name="Twilight0 Libs Repository">
-            <info compressed="false">https://raw.githubusercontent.com/Twilight0/repository.twilight0.libs/master/_zips/addons.xml</info>
-            <checksum>https://raw.githubusercontent.com/Twilight0/repository.twilight0.libs/master/_zips/addons.xml.md5</checksum>
-            <datadir zip="true">https://raw.githubusercontent.com/Twilight0/repository.twilight0.libs/master/_zips/</datadir>
-            <hashes>false</hashes>
+			<dir>
+				<info compressed="false">https://raw.githubusercontent.com/Twilight0/repository.twilight0.libs/master/_zips/addons.xml</info>
+				<checksum>https://raw.githubusercontent.com/Twilight0/repository.twilight0.libs/master/_zips/addons.xml.md5</checksum>
+				<datadir zip="true">https://raw.githubusercontent.com/Twilight0/repository.twilight0.libs/master/_zips/</datadir>
+				<hashes>true</hashes>
+            </dir>
         </extension>
         <extension point="xbmc.addon.metadata">
             <summary>Repository for library addons</summary>
