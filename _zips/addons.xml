@@ -1,5 +1,364 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
+<addon id="plugin.video.faros.on-air" name="Faros On-Air" version="1.4.1" provider-name="Twilight0">
+    <requires>
+        <import addon="xbmc.addon" version="16.1.000"/>
+        <import addon="plugin.video.youtube" version="6.8.10"/>
+        <import addon="script.module.tulip" version="2.8.17"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="addon.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.service" library="resources/lib/service.py" start="startup"/>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <reuselanguageinvoker>false</reuselanguageinvoker>
+        <summary lang="en">Faros On-Air addon</summary>
+        <description lang="en">This addon features video content and Live stream from the PanCypriot channel Faros from Pafos, Cyprus</description>
+        <summary lang="el">Πρόσθετο Faros On-Air</summary>
+        <description lang="el">Το πρόσθετο αυτό παρέχει βίντεο, ειδήσεις και ζωντανό περιεχόμενο από το Πανκύπριο κανάλι Faros από την Πάφο της Κύπρου</description>
+        <license>GNU GPL, version 3</license>
+        <size>738082</size>
+        <website>https://farosonair.com/</website>
+        <source>https://github.com/Twilight0/plugin.video.faros.on-air</source>
+        <news>02-04-2021 - [B]1.5.0[/B]
+- Revert 'revert function cache'
+
+18-03-2021 - [B]1.4.1[/B]
+- Revert function cache
+- Bug fixes
+
+16-03-2021 - [B]1.4.0[/B]
+- Utilize function cache instead of get
+- Fixes into addon.xml
+
+29-11-2020 - [B]1.3.2[/B]
+- Update youtube api key
+
+31-08-2020 - [B]1.3.1[/B]
+- ReplaceHTML codes for listitems
+
+29-06-2020 - [B]1.3.0[/B]
+- New youtube api key
+- Various other bug fixes
+
+29-10-2019 - [B]1.2.0[/B]
+- New stream urls
+- Some other minor changes
+
+15-09-2018 - [B]1.1.0[/B]
+- Added the second live stream from Faros
+- New nested menu for choosing Faros live stream</news>
+    <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+    </assets>
+    </extension>
+    <!--<extension name="Faros On Air Repo" point="xbmc.addon.repository">-->
+        <!--<info compressed="false">http://alivegr.net/repo/_faros/addons.xml</info>-->
+        <!--<checksum>http://alivegr.net/repo/_faros/addons.xml.md5</checksum>-->
+        <!--<datadir zip="true">http://alivegr.net/repo/_faros/</datadir>-->
+        <!--<hashes>false</hashes>-->
+        <!--<dir>-->
+            <!--<info compressed="false">https://raw.githubusercontent.com/Twilight0/repo.twilight0.libs/master/_zips/addons.xml</info>-->
+            <!--<checksum>https://raw.githubusercontent.com/Twilight0/repo.twilight0.libs/master/_zips/addons.xml.md5</checksum>-->
+            <!--<datadir zip="true">https://raw.githubusercontent.com/Twilight0/repo.twilight0.libs/master/_zips/</datadir>-->
+        <!--</dir>-->
+    <!--</extension>-->
+</addon>
+
+<addon id="plugin.video.antenna.gr" version="3.0.1" name="ANT1 Player" provider-name="Twilight0">
+    <requires>
+        <import addon="xbmc.addon" version="16.1.000"/>
+        <import addon="script.module.tulip" version="2.9.10" />
+        <import addon="plugin.video.youtube" version="6.8.18"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="addon.py">
+        <provides>video audio</provides>
+    </extension>
+    <extension point="kodi.context.item">
+        <menu id="kodi.core.main">
+            <item library="resources/lib/youtube_bookmark.py">
+                <label>30004</label>
+                <visible>
+                    String.StartsWith(Container.FolderPath,plugin://plugin.video.youtube/channel/UC0smvAbfczoN75dP0Hw4Pzw/) +
+                    !String.Contains(ListItem.Art(thumb),resources/media) +
+                    !String.Contains(ListItem.FolderPath,page_token)
+                </visible>
+            </item>
+        </menu>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en_GB">ANT1 Player addon for Kodi</summary>
+        <reuselanguageinvoker>true</reuselanguageinvoker>
+        <description lang="en_GB">ANT1 live and on-demand broadcasts</description>
+        <description lang="el_GR">Ζωντανές και on demand υπηρεσίες του ANT1</description>
+        <disclaimer lang="en_GB">This addon offers content available in Greece and is not published nor endorsed by antenna.gr</disclaimer>
+        <disclaimer lang="el_GR">Το πρόσθετο αυτό προσφέρει περιεχόμενο διαθέσιμο στην Ελλάδα και δεν έχει δημοσιευθεί ούτε εγκριθεί από το antenna.gr</disclaimer>
+        <language>en el</language>
+        <license>GPL-3.0-only</license>
+        <source>https://github.com/Twilight0/plugin.video.antenna.gr</source>
+        <website>http://www.antenna.gr/</website>
+        <size>204493</size>
+        <news>[B]3.0.0[/B]
+- Rework addon due to website changes
+
+[B]2.3.1[/B]
+- Replace futures with tulip's own method
+- Pagination now disabled by default
+
+[B]2.3.0[/B]
+- Change caching method
+- Utilize futures for parallel threading</news>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+            <!--<screenshot>resources/screenshots/screenshot-01.jpg</screenshot>-->
+            <!--<screenshot>resources/screenshots/screenshot-02.jpg</screenshot>-->
+            <!--<screenshot>resources/screenshots/screenshot-03.jpg</screenshot>-->
+        </assets>
+        <platform>all</platform>
+        <language>en el</language>
+    </extension>
+</addon>
+
+    <addon id="repository.twilight0" name="Twilight0 Addon Repository" version="1.7" provider-name="Twilight0">
+        <extension point="xbmc.addon.repository" name="Twilight0 Addon Repository">
+            <dir>
+                <info compressed="false">https://raw.githubusercontent.com/Twilight0/repository.twilight0/master/_zips/addons.xml</info>
+                <checksum>https://raw.githubusercontent.com/Twilight0/repository.twilight0/master/_zips/addons.xml.md5</checksum>
+                <datadir zip="true">https://raw.githubusercontent.com/Twilight0/repository.twilight0/master/_zips/</datadir>
+                <hashes>false</hashes>
+            </dir>
+            <dir>
+                <info compressed="false">https://raw.githubusercontent.com/Twilight0/repository.twilight0.libs/master/_zips/addons.xml</info>
+                <checksum>https://raw.githubusercontent.com/Twilight0/repository.twilight0.libs/master/_zips/addons.xml.md5</checksum>
+                <datadir zip="true">https://raw.githubusercontent.com/Twilight0/repository.twilight0.libs/master/_zips/</datadir>
+                <hashes>false</hashes>
+            </dir>
+			<dir>
+				<info compressed="false">https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml</info>
+				<checksum>https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml.md5</checksum>
+				<datadir zip="true">https://raw.githubusercontent.com/Gujal00/smrzips/master/zips/</datadir>
+            </dir>
+        </extension>
+        <extension point="xbmc.addon.metadata">
+            <summary>Repository for various of my add-ons</summary>
+            <description>Repository for various of my add-ons</description>
+            <platform>all</platform>
+            <assets>
+                <icon>icon.png</icon>
+                <fanart>fanart.jpg</fanart>
+            </assets>
+        </extension>
+</addon>
+
+<addon id="plugin.video.alivegr.play" name="AliveGR Play" version="1.0" provider-name="Twilight0">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+        <import addon="script.module.resolveurl" version="5.1.84"/>
+        <import addon="script.module.resolveurl.pluginsgr" version="0.0.13"/>
+        <import addon="script.module.tulip" version="3.0.2"/>
+        <import addon="plugin.video.youtube" version="6.8.18"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="main.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <reuselanguageinvoker>true</reuselanguageinvoker>
+        <summary lang="en_GB">AliveGR Play addon</summary>
+        <summary lang="el_GR">Πρόσθετο AliveGR Play</summary>
+        <language>en el</language>
+        <license>GPL-3.0-only</license>
+        <forum>https://github.com/Twilight0/plugin.video.alivegr.play/issues</forum>
+        <source>https://github.com/Twilight0/plugin.video.alivegr.play</source>
+        <website>https://alivegr.net/</website>
+        <news>+ [COLOR green]Version 1.0[/COLOR] [I]10/12/2022[/I]
+
+Initial Version</news>
+        <assets>
+            <icon>resources/media/icon.png</icon>
+            <fanart>resources/media/fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
+
+<addon id="plugin.video.ert.gr" version="4.0.9" name="ERTflix" provider-name="Twilight0">
+    <requires>
+        <import addon="xbmc.addon" version="16.1.000"/>
+        <import addon="script.module.tulip" version="3.0.1" />
+        <import addon="plugin.video.youtube" version="6.8.18"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="router.py">
+        <provides>video audio</provides>
+    </extension>
+    <extension point="kodi.context.item">
+        <menu id="kodi.core.main">
+            <item library="resources/lib/youtube_bookmark.py">
+                <label>30006</label>
+                <visible>
+                    String.StartsWith(Container.FolderPath,plugin://plugin.video.youtube/channel/UC0jVU-mK53vDQZcSZB5mVHg/) +
+                    !String.Contains(ListItem.Art(thumb),resources/media) +
+                    !String.Contains(ListItem.FolderPath,page_token)
+                </visible>
+            </item>
+        </menu>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <reuselanguageinvoker>true</reuselanguageinvoker>
+        <language>en el</language>
+        <summary lang="en_GB">ERTflix addon for Kodi</summary>
+        <summary lang="el_GR">Πρόσθετο ERTflix για το Kodi</summary>
+        <description lang="en_GB">ERT live and on-demand broadcasts</description>
+        <description lang="el_GR">Ζωντανές και on demand υπηρεσίες της ΕΡΤ</description>
+        <disclaimer lang="en_GB">This addon offers content available in Greece and is not published nor endorsed by ert.gr</disclaimer>
+        <disclaimer lang="el_GR">Το πρόσθετο αυτό προσφέρει περιεχόμενο διαθέσιμο στην Ελλάδα και δεν έχει δημοσιευθεί ούτε εγκριθεί από το ert.gr</disclaimer>
+        <license>GPL-3.0-only</license>
+        <source>https://github.com/Twilight0/plugin.video.ert.gr</source>
+        <size>1153434</size>
+        <website>https://www.ertflix.gr/</website>
+        <news>[B]4.0.X[/B]
+- Reworked addon for new website design, with API usage (when necessary)
+- Reworked index from another source
+- Rework routing scheme with url dispatcher
+- Remove service module, no longer needed
+- Added zeppelin radio station
+- Bug fixes
+
+[B]3.5.1[/B]
+- Various fixes
+
+[B]3.5.0[/B]
+- Mitigate live resolver
+- New YT API key</news>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+        <!--<forum></forum>-->
+    </extension>
+</addon>
+
+<addon id="plugin.video.Toronto-Channels" name="BCI Greek TV" version="2.8.1" provider-name="BCI Media Inc.">
+    <requires>
+        <import addon="xbmc.addon" version="16.1.000"/>
+        <import addon="plugin.video.youtube" version="6.8.8"/>
+        <import addon="script.module.tulip" version="2.8.6"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="addon.py">
+        <provides>video audio image</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <reuselanguageinvoker>false</reuselanguageinvoker>
+        <summary lang="en">BCI Greek TV addon</summary>
+        <description lang="en">This addon offers live streaming content mainly in Greek language</description>
+        <summary lang="el">Πρόσθετο BCI Greek TV</summary>
+        <description lang="el">Το πρόσθετο αυτό παρέχει ζωντανό περιεχόμενο κυρίως εις την Ελληνική γλώσσα</description>
+        <license>GNU General Public License, v3</license>
+        <news>2.8.0 (10-02-2021)
+- Added new streams (Food channel, cetn, health channel), updated others
+- Removed rtmp urls and accompanying setting
+- Disabled radio choice
+
+2.7.0 (28-12-2020)
+- Updated youtube api keys
+- Bumped dependencies</news>
+        <website>http://www.bcimedia.net/</website>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
+
+<addon id="plugin.video.fashiontv.com" version="2.0.4" name="Fashion TV Player" provider-name="Twilight0">
+    <requires>
+        <import addon="xbmc.addon" version="16.1.000"/>
+        <import addon="script.module.tulip" version="2.9.10" />
+        <import addon="plugin.video.youtube" version="6.8.18"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="router.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="kodi.context.item">
+        <menu id="kodi.core.main">
+            <item library="resources/lib/youtube_bookmark.py">
+                <label>30004</label>
+                <visible>
+                    [String.StartsWith(Container.FolderPath,plugin://plugin.video.youtube/channel/UCqzju-_WMKsgNx8R3QwupQQ/) |
+                    String.StartsWith(Container.FolderPath,plugin://plugin.video.youtube/channel/UClnblsrZrugJfFs4ANPgNcA/) |
+                    String.StartsWith(Container.FolderPath,plugin://plugin.video.youtube/channel/UCDN6BTcfgHDuBQgCgXkU-cA/) |
+                    String.StartsWith(Container.FolderPath,plugin://plugin.video.youtube/channel/UCLiyW3PZFDSxIw6EES8MneQ/) |
+                    String.StartsWith(Container.FolderPath,plugin://plugin.video.youtube/channel/UCC2Iic6b-nhY7CSRUm_nyng/) |
+                    String.StartsWith(Container.FolderPath,plugin://plugin.video.youtube/channel/UCi12i9eiWFh67T-uCP1y7Gw/)] +
+                    !String.Contains(ListItem.Art(thumb),resources/media) +
+                    !String.Contains(ListItem.FolderPath,page_token)
+                </visible>
+            </item>
+        </menu>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <reuselanguageinvoker>true</reuselanguageinvoker>
+        <summary lang="en_GB">Fashion TV Player addon for Kodi</summary>
+        <summary lang="en_GR">Πρόσθετο Fashion TV Player για το Kodi</summary>
+        <description lang="en_GB">Fashion TV live and on-demand broadcasts</description>
+        <description lang="el_GR">Ζωντανές και on demand υπηρεσίες του Fashion TV</description>
+        <disclaimer lang="en_GB">This addon is not published nor endorsed by fashiontv.com</disclaimer>
+        <disclaimer lang="el_GR">Το πρόσθετο αυτό δεν έχει δημοσιευθεί ούτε εγκριθεί από το fashiontv.com</disclaimer>
+        <license>GPL-3.0-only</license>
+        <source>https://github.com/Twilight0/plugin.video.fashiontv.com</source>
+        <website>https://www.fashiontv.com/</website>
+        <size>149300</size>
+        <news>[B]2.0.X[/B]
+- Update for new website design
+- Add search function
+- Add shortcut to live channels
+- New YouTube API keys
+
+[B]1.3.X[/B]
+- Change cache method
+- Place youtube channels on submenu
+- Change main label from "Live" to "Fashion TV Live"
+- Remove check for inputstream addon
+
+[B]1.2.0[/B]
+- Update youtube api keys
+- Rework of router scheme
+- Tweaks for Matrix
+
+[B]1.1.0[/B]
+- Add bookmarking feature
+
+[B]1.0.3[/B]
+- Added FTV news channel
+
+[B]1.0.2[/B]
+- Re-addition of previously unsupported streams
+- Properly check for stream m3u8/mpd and dash activation
+
+[B]1.0.1[/B]
+- Removed unsupported streams
+- Check if Kodi Leia+ for asking about inputstream addon
+
+[B]1.0.0[/B]
+- Final stable version
+
+[B]0.0.1~alpha1[/B]
+- Initial version</news>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+        <platform>all</platform>
+        <language>en</language>
+        <!--<forum></forum>-->
+        <!--<email></email>-->
+    </extension>
+</addon>
+
 <addon id="plugin.video.skai.gr" version="3.2.4" name="SKAI Player" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.addon" version="16.1.000"/>
@@ -67,41 +426,297 @@
     </extension>
 </addon>
 
-<addon id="context.subtitles.gr" version="0.0.7" name="Subtitles.gr menu item" provider-name="Twilight0">
+    <addon id="repository.twilight0.libs" name="Twilight0 Libs Repository" version="1.4" provider-name="Twilight0">
+        <extension point="xbmc.addon.repository" name="Twilight0 Libs Repository">
+			<dir>
+				<info compressed="false">https://raw.githubusercontent.com/Twilight0/repository.twilight0.libs/master/_zips/addons.xml</info>
+				<checksum>https://raw.githubusercontent.com/Twilight0/repository.twilight0.libs/master/_zips/addons.xml.md5</checksum>
+				<datadir zip="true">https://raw.githubusercontent.com/Twilight0/repository.twilight0.libs/master/_zips/</datadir>
+				<hashes>false</hashes>
+            </dir>
+        </extension>
+        <extension point="xbmc.addon.metadata">
+            <summary>Repository for library addons</summary>
+            <description>Repository for library addons</description>
+            <platform>all</platform>
+            <assets>
+                <icon>icon.png</icon>
+                <fanart>fanart.jpg</fanart>
+            </assets>
+        </extension>
+</addon>
+
+<addon id="plugin.video.alphatv.gr" version="2.4.0" name="ALPHA Player" provider-name="Twilight0">
+	<requires>
+		<import addon="xbmc.addon" version="16.1.000"/>
+		<import addon="script.module.tulip" version="2.8.17" />
+		<import addon="script.module.kodi-six" version="0.0.2"/>
+		<import addon="plugin.video.youtube" version="6.8.10"/>
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="addon.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">ALPHA Player addon for Kodi</summary>
+		<summary lang="en_GR">Πρόσθετο ALPHA Player για το Kodi</summary>
+		<description lang="en_GB">ALPHA live and on-demand broadcasts</description>
+		<description lang="el_GR">Ζωντανές και on demand υπηρεσίες του ALPHA</description>
+		<disclaimer lang="en_GB">This addon offers content available in Greece and is not published nor endorsed by alphatv.gr</disclaimer>
+		<disclaimer lang="el_GR">Το πρόσθετο αυτό προσφέρει περιεχόμενο διαθέσιμο στην Ελλάδα και δεν έχει δημοσιευθεί ούτε εγκριθεί από το alphatv.gr</disclaimer>
+		<license>GPL-3.0-only</license>
+		<source>https://github.com/Twilight0/plugin.video.alphatv.gr</source>
+		<website>http://www.alphatv.gr/</website>
+        <size>598620</size>
+		<news>[B]2.4.0[/B]
+- Revert of cache change back to traditional get
+- Bug fixes accross the board
+- Utilize youtube addon for resolving some videos
+
+[B]2.3.2[/B]
+- Bug fix
+
+[B]2.3.1[/B]
+- Revert of the function cache back to traditional get
+
+[B]2.3.0[/B]
+- Utilize function cache instead of traditional get
+- Make youtube API key as text type instead of bytes for Kodi 19+
+
+[B]2.2.2[/B]
+- Fix Alpha CY vod resolver
+
+[B]2.2.1[/B]
+- Tweak pagination function
+
+[B]2.2.0[/B]
+- Add pagination for long lists (# items per page are selectable)
+- Tweaked strings integers
+- Tweaked imports for Matrix
+- Updated youtube api key
+- Episode order in now by default reversed (greek website provides new episodes on top)
+- Various other tweaks
+
+[B]2.1.0[/B]
+- Update youtube api key
+- Update indexers
+- Update resolvers
+- Add input date prompt for past webtv news on cypriot indexer
+
+[B]2.0.1[/B]
+- Minor fix for cypriot episode indexers
+
+[B]2.0.0[/B]
+- Rework of the addon, new indexers, new stream resolver
+- Replaced item based selection of country with a selector to switch between regions
+- Bumped dependencies</news>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+<!--			<screenshot>resources/screenshots/screenshot-01.jpg</screenshot>-->
+<!--			<screenshot>resources/screenshots/screenshot-02.jpg</screenshot>-->
+<!--			<screenshot>resources/screenshots/screenshot-03.jpg</screenshot>-->
+		</assets>
+		<platform>all</platform>
+		<language>en el</language>
+	</extension>
+</addon>
+
+<addon id="resource.images.alivegr.artwork" name="AliveGR Artwork" version="3.0.6" provider-name="Twilight0">
+	<extension point="kodi.resource.images" compile="false" type="AliveGR" />
+	<requires>
+		<import addon="kodi.resource" version="1.0.0"/>
+	</requires>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">AliveGR's main artwork</summary>
+		<description lang="en">Artwork is distributed separately to allow easier maintenance and consume less bandwidth</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="service.subtitles.subtitles.gr" name="Subtitles.gr" version="3.7.0" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.addon" version="16.1.000"/>
-        <import addon="service.subtitles.subtitles.gr"/>
+        <import addon="script.module.tulip" version="2.9.8" />
     </requires>
-    <extension point="kodi.context.item">
-        <menu id="kodi.core.main">
-            <menu>
-                <label>30003</label>
-                <item library="resources/lib/check_sub.py">
-                    <label>30002</label>
-                    <visible>!ListItem.IsFolder</visible>
-                </item>
-                <item library="resources/lib/options.py">
-                    <label>30001</label>
-                    <visible>!ListItem.IsFolder</visible>
-                </item>
-                <item library="resources/lib/clear_cache.py">
-                    <label>30004</label>
-                    <visible>!ListItem.IsFolder</visible>
-                </item>
-            </menu>
-        </menu>
+    <extension point="xbmc.subtitle.module" library="service.py">
     </extension>
     <extension point="xbmc.addon.metadata">
+        <reuselanguageinvoker>false</reuselanguageinvoker>
+        <summary lang="en_GB">Subtitle service addon "subtitles.gr"</summary>
+        <summary lang="el_GR">Υπηρεσιακό πρόσθετο υποτίτλων "subtitles.gr"</summary>
+        <description lang="en_GB">Search and download subtitles from various sites</description>
+        <description lang="el_GR">Εύρεση και λήψη υποτίτλων από διαφόρους ιστοτόπους</description>
+        <disclaimer lang="en_GB">This service is only for Greek subtitles. It is not published nor endorsed by any of the sites supported.</disclaimer>
+        <disclaimer lang="el_GR">Υπηρεσία μόνο ελληνικών υποτίτλων. Δεν έχει δημοσιευθεί, ούτε εγκριθεί από οποιοδήποτε υποστηριζόμενο ιστότοπο.</disclaimer>
+        <license>GPL-3.0-only</license>
+        <website>http://www.subtitles.gr/</website>
+        <source>https://github.com/Twilight0/service.subtitles.subtitles.gr/</source>
+        <platform>all</platform>
+        <news>[B]3.7.0[/B]
+- Increase maximum possible timeout for search requests
+- Add separate setting for subtitles.gr sub download timeout
+- Utilize fuzzywuzzy to find synced subtitles (minimum match ratio 50, default 75, max 100)
+- Replace futures module with tulip solution
+- Various other tweaks
+
+[B]3.6.2[/B]
+- Bug fixes for subtitles save function on vipsubs
+
+[B]3.6.1[/B]
+- Broaden search results for vipsubs.gr
+- Allow subtitle to be saved both locally and within the manual choice
+- Ask before overwriting existing subs</news>
         <assets>
             <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
         </assets>
-        <summary lang="en_gb">Subtitles.gr global context menu item</summary>
-        <summary lang="el_gr">Ενιαίο στοιχείο για το κόντεξτ (εναλλακτικό) μενού του Kodi για το Subtitles.gr</summary>
-        <platform>all</platform>
-        <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
-        <website>https://alivegr.net</website>
-        <source>https://github.com/Twilight0/context.subtitles.gr</source>
     </extension>
+</addon>
+
+<addon id="plugin.program.reddit_navigator" name="Reddit Navigator" version="1.1.0" provider-name="Twilight0">
+    <requires>
+        <import addon="xbmc.addon" version="16.1.000"/>
+        <import addon="script.module.tulip" version="2.8.17"/>
+        <import addon="script.module.pyxbmct" version="1.2.0"/>
+        <import addon="script.module.resolveurl" version="5.1.20"/>
+        <import addon="plugin.video.youtube" version="6.8.10"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="main.py">
+        <provides>video audio image executable</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <reuselanguageinvoker>false</reuselanguageinvoker>
+        <platform>all</platform>
+        <summary lang="en_GB">Reddit Navigator addon</summary>
+        <summary lang="el_GR">Πρόσθετο Reddit Navigator</summary>
+        <description lang="en_GB">Reddit Navigator is an addon able to browse Reddit and play various forms of media and show text comments</description>
+        <description lang="el_GR">Το πρόσθετο Reddit Navigator είναι μια μικροεφαρμογή πλοήγησης του Reddit που επιτρέπει την αναπαραγωγή διαφόρων ειδών πολυμέσων και προβολή σχολίων και νημάτων</description>
+        <disclaimer lang="en_GB">Kodi is a registered trademark of the XBMC Foundation.</disclaimer>
+        <language>en</language>
+        <license>GNU GPL, version 2</license>
+        <source>https://github.com/Twilight0/plugin.program.reddit_navigator</source>
+        <size>1711463</size>
+        <news>1.1.0 ~ 03-04-2021
+- Change caching method
+- Utilize another method for indexing images
+- Remove authorization methods except the one that you can enter user/pass and obtain tokens
+- Tweaks on thumbnails and fanarts
+- Remove capability for playing plexus streams
+
+1.0.X ~ 05-01-2020 - 19-01-2021
+- Initial Version, forked from Reddit Browser
+- Replaced urlresolver with resolveurl
+- Changed some default settings
+- Several bug fixes
+- Changed artwork
+- Changed user agent string
+- Changed app token
+- Restored a window call function which didn't work on Leia
+- Removed "depth" variable because it was supposed to be used on flat comments tree
+- Fixed saved items menu
+- Fixed user icon for my account menu
+- Fixed some misbehaviour on search menus
+- Fixed reddit videos playback
+- Removed capability to install plexus
+- Simplified actions on advanced authorization option
+- Added a cancellation button and exception handling on wrong username/password
+- Optionally notify user on token refresh, now defaults to off
+- Optionally open the first time prompt (read me)
+- Removed the authorization options except the login with user/pass
+- Various other minor tweaks</news>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
+
+<addon id="plugin.video.AliveGR" name="AliveGR" version="2.11.2" provider-name="Twilight0">
+    <requires>
+        <import addon="xbmc.addon" version="17.9.910"/>
+        <import addon="resource.images.alivegr.artwork" version="3.0.6"/>
+        <import addon="resource.images.alivegr.logos" version="1.0.2"/>
+        <import addon="script.module.resolveurl" version="5.1.84"/>
+        <import addon="script.module.resolveurl.pluginsgr" version="0.0.13"/>
+        <import addon="script.module.scrapetube" version="2.3.1.1"/>
+        <import addon="script.module.tulip" version="3.1.0"/>
+        <import addon="plugin.video.youtube" version="6.8.18"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="main.py">
+        <provides>video audio image executable</provides>
+    </extension>
+    <extension point="xbmc.service" library="resources/lib/modules/service.py"/>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <reuselanguageinvoker>false</reuselanguageinvoker>
+        <summary lang="en">AliveGR addon</summary>
+        <description lang="en_GB">AliveGR is an addon allowing streaming content available mostly in Greek language.</description>
+        <disclaimer lang="en_GB">AliveGR's author does not host, stream or distribute any of the content displayed inside this software and cannot be held responsible for the quality or availability of the listed streams.
+On demand content is scraped from various websites and is freely available on the internet on public domains. This software acts only as a search engine.
+Kindly note that AliveGR is not an official part of the media player you are running, and therefore not to be mentioned within official support channels, this addon has nothing to do with the media player itself, nor it’s intended use, it is simply a third party plugin which has been added to your system and it is provided "as is" with no warranty.</disclaimer>
+        <summary lang="el_GR">Πρόσθετο AliveGR</summary>
+        <description lang="el_GR">Το πρόσθετο AliveGR επιτρέπει τη θέαση ροών με περιεχόμενο κυρίως εις την Ελληνική γλώσσα.</description>
+        <disclaimer lang="el_GR">Ο δημιουργός του AliveGR δε φιλοξενεί ή παρέχει οποιοδήποτε από τα απεικονιζόμενα πολυμέσα και περιεχόμένο εντός του μενού του και δεν μπορεί να θεωρηθεί υπεύθυνος για την ποιότητα ή την διαθεσιμότητα των ροών.
+Το περιεχόμενο αναπαραγωγής κατά βούληση φιλτράρεται από διάφορες ιστοσελίδες ελεύθερα διαθέσιμες στο διαδίκτυο σε δημόσιους ιστότοπους. Το παρόν λογισμικό ενεργεί μόνο ως μηχανή αναζήτησης.
+Παρακαλώ προσέξτε ότι το AliveGR δεν είναι επίσημο κομμάτι του αναπαραγωγέα πολυμέσων Kodi ή της καθορισμένης χρήσης του, είναι απλά μία μικροεφαρμογή που προστέθηκε στο σύστημά σας και που παρέχεται "όπως είναι" χωρίς καμία εγγύηση καλής λειτουργίας.</disclaimer>
+        <language>en el</language>
+        <license>GPL-3.0-only</license>
+        <forum>https://github.com/Twilight0/plugin.video.AliveGR/issues</forum>
+        <source>https://github.com/Twilight0/plugin.video.AliveGR</source>
+        <website>https://alivegr.net/</website>
+        <news>+ [COLOR green]2.11.X series[/COLOR] [I]11-09-2022 - 15-04-2023[/I]
+
+Additions:
+- Playback history
+- Add capability to rename/change search history items
+- Add capability of auto container refresh on certain settings change (ie icon theme)
+- IPTV Setup client setup reapplied and simplified
+- Add greek iptv m3u list as new menu item (defaults to off)
+
+Fixes:
+- The usual bug fixes here and there
+- Fixed gamato kids indexer
+- Fixed addon.xml validation
+- Fixed installation failure and Kodi crash on Android
+- Added exception for variable quality choice on Montreal Greek TV's stream
+
+Replacements/Substitutions:
+- Clean up and rearrangement to the tools section/menu/settings (and submenus)
+- Renamed history.csv to search_history.csv (to accommodate naming scheme for playback history)
+- Replace deprecated "client.request" function to net.HTTP_get
+- Get item title for pinning from a query than listitem (fixes behaviour when there are gui delays)
+- Rename "Toronto Channels" live group into "Editor's Choice"
+- Improved screenshots
+
+Removals:
+- Changelog in news section (addon.xml) will contain only the latest version, please refer to changelog.txt for more details about past versions
+- Miscellany section</news>
+        <assets>
+            <icon>resources/media/icon.png</icon>
+            <fanart>resources/media/fanart.jpg</fanart>
+            <screenshot>resources/media/main_menu.jpg</screenshot>
+            <screenshot>resources/media/live_streams.jpg</screenshot>
+            <screenshot>resources/media/networks.jpg</screenshot>
+            <screenshot>resources/media/movies.jpg</screenshot>
+            <screenshot>resources/media/tv_series.jpg</screenshot>
+            <screenshot>resources/media/kids_movies.jpg</screenshot>
+            <screenshot>resources/media/search.jpg</screenshot>
+            <screenshot>resources/media/newspapers_frontpages.jpg</screenshot>
+            <screenshot>resources/media/music.jpg</screenshot>
+        </assets>
+    </extension>
+</addon>
+
+<addon id="resource.images.alivegr.logos" name="AliveGR TV Logos" version="1.0.2" provider-name="Twilight0">
+	<extension point="kodi.resource.images" compile="false" type="AliveGR" />
+	<requires>
+		<import addon="kodi.resource" version="1.0.0"/>
+	</requires>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">AliveGR's TV channels logos</summary>
+		<description lang="en">Logos are provided separately to allow easier distribution</description>
+		<platform>all</platform>
+	</extension>
 </addon>
 
 <addon id="plugin.audio.eradio.gr" version="3.0.1" name="E-Radio" provider-name="Twilight0">
@@ -210,475 +825,40 @@
     </extension>
 </addon>
 
-<addon id="plugin.program.reddit_navigator" name="Reddit Navigator" version="1.1.0" provider-name="Twilight0">
+<addon id="context.subtitles.gr" version="0.0.7" name="Subtitles.gr menu item" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.addon" version="16.1.000"/>
-        <import addon="script.module.tulip" version="2.8.17"/>
-        <import addon="script.module.pyxbmct" version="1.2.0"/>
-        <import addon="script.module.resolveurl" version="5.1.20"/>
-        <import addon="plugin.video.youtube" version="6.8.10"/>
+        <import addon="service.subtitles.subtitles.gr"/>
     </requires>
-    <extension point="xbmc.python.pluginsource" library="main.py">
-        <provides>video audio image executable</provides>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <reuselanguageinvoker>false</reuselanguageinvoker>
-        <platform>all</platform>
-        <summary lang="en_GB">Reddit Navigator addon</summary>
-        <summary lang="el_GR">Πρόσθετο Reddit Navigator</summary>
-        <description lang="en_GB">Reddit Navigator is an addon able to browse Reddit and play various forms of media and show text comments</description>
-        <description lang="el_GR">Το πρόσθετο Reddit Navigator είναι μια μικροεφαρμογή πλοήγησης του Reddit που επιτρέπει την αναπαραγωγή διαφόρων ειδών πολυμέσων και προβολή σχολίων και νημάτων</description>
-        <disclaimer lang="en_GB">Kodi is a registered trademark of the XBMC Foundation.</disclaimer>
-        <language>en</language>
-        <license>GNU GPL, version 2</license>
-        <source>https://github.com/Twilight0/plugin.program.reddit_navigator</source>
-        <size>1711463</size>
-        <news>1.1.0 ~ 03-04-2021
-- Change caching method
-- Utilize another method for indexing images
-- Remove authorization methods except the one that you can enter user/pass and obtain tokens
-- Tweaks on thumbnails and fanarts
-- Remove capability for playing plexus streams
-
-1.0.X ~ 05-01-2020 - 19-01-2021
-- Initial Version, forked from Reddit Browser
-- Replaced urlresolver with resolveurl
-- Changed some default settings
-- Several bug fixes
-- Changed artwork
-- Changed user agent string
-- Changed app token
-- Restored a window call function which didn't work on Leia
-- Removed "depth" variable because it was supposed to be used on flat comments tree
-- Fixed saved items menu
-- Fixed user icon for my account menu
-- Fixed some misbehaviour on search menus
-- Fixed reddit videos playback
-- Removed capability to install plexus
-- Simplified actions on advanced authorization option
-- Added a cancellation button and exception handling on wrong username/password
-- Optionally notify user on token refresh, now defaults to off
-- Optionally open the first time prompt (read me)
-- Removed the authorization options except the login with user/pass
-- Various other minor tweaks</news>
-        <assets>
-            <icon>icon.png</icon>
-            <fanart>fanart.jpg</fanart>
-        </assets>
-    </extension>
-</addon>
-
-<addon id="plugin.video.AliveGR" name="AliveGR" version="2.11.1" provider-name="Twilight0">
-    <requires>
-        <import addon="xbmc.addon" version="17.9.910"/>
-        <import addon="resource.images.alivegr.artwork" version="3.0.6"/>
-        <import addon="resource.images.alivegr.logos" version="1.0.2"/>
-        <import addon="script.module.resolveurl" version="5.1.84"/>
-        <import addon="script.module.resolveurl.pluginsgr" version="0.0.13"/>
-        <import addon="script.module.scrapetube" version="2.3.1.1"/>
-        <import addon="script.module.tulip" version="3.1.0"/>
-        <import addon="plugin.video.youtube" version="6.8.18"/>
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="main.py">
-        <provides>video audio image executable</provides>
-    </extension>
-    <extension point="xbmc.service" library="resources/lib/modules/service.py"/>
-    <extension point="xbmc.addon.metadata">
-        <platform>all</platform>
-        <reuselanguageinvoker>false</reuselanguageinvoker>
-        <summary lang="en">AliveGR addon</summary>
-        <description lang="en_GB">AliveGR is an addon allowing streaming content available mostly in Greek language.</description>
-        <disclaimer lang="en_GB">AliveGR's author does not host, stream or distribute any of the content displayed inside this software and cannot be held responsible for the quality or availability of the listed streams.
-On demand content is scraped from various websites and is freely available on the internet on public domains. This software acts only as a search engine.
-Kindly note that AliveGR is not an official part of the media player you are running, and therefore not to be mentioned within official support channels, this addon has nothing to do with the media player itself, nor it’s intended use, it is simply a third party plugin which has been added to your system and it is provided "as is" with no warranty.</disclaimer>
-        <summary lang="el_GR">Πρόσθετο AliveGR</summary>
-        <description lang="el_GR">Το πρόσθετο AliveGR επιτρέπει τη θέαση ροών με περιεχόμενο κυρίως εις την Ελληνική γλώσσα.</description>
-        <disclaimer lang="el_GR">Ο δημιουργός του AliveGR δε φιλοξενεί ή παρέχει οποιοδήποτε από τα απεικονιζόμενα πολυμέσα και περιεχόμένο εντός του μενού του και δεν μπορεί να θεωρηθεί υπεύθυνος για την ποιότητα ή την διαθεσιμότητα των ροών.
-Το περιεχόμενο αναπαραγωγής κατά βούληση φιλτράρεται από διάφορες ιστοσελίδες ελεύθερα διαθέσιμες στο διαδίκτυο σε δημόσιους ιστότοπους. Το παρόν λογισμικό ενεργεί μόνο ως μηχανή αναζήτησης.
-Παρακαλώ προσέξτε ότι το AliveGR δεν είναι επίσημο κομμάτι του αναπαραγωγέα πολυμέσων Kodi ή της καθορισμένης χρήσης του, είναι απλά μία μικροεφαρμογή που προστέθηκε στο σύστημά σας και που παρέχεται "όπως είναι" χωρίς καμία εγγύηση καλής λειτουργίας.</disclaimer>
-        <language>en el</language>
-        <license>GPL-3.0-only</license>
-        <forum>https://github.com/Twilight0/plugin.video.AliveGR/issues</forum>
-        <source>https://github.com/Twilight0/plugin.video.AliveGR</source>
-        <website>https://alivegr.net/</website>
-        <news>+ [COLOR green]2.11.X series[/COLOR] [I]11-09-2022 - 10-01-2023[/I]
-
-Additions:
-- Playback history
-- Add capability to rename/change search history items
-- Add capability of auto container refresh on certain settings change (ie icon theme)
-- IPTV Setup client setup reapplied and simplified
-- Add greek iptv m3u list as new menu item (defaults to off)
-
-Fixes:
-- The usual bug fixes here and there
-- Fixed gamato kids indexer
-- Fixed addon.xml validation
-- Fixed installation failure and Kodi crash on Android
-
-Replacements/Substitutions:
-- Clean up and rearrangement to the tools section/menu/settings (and submenus)
-- Renamed history.csv to search_history.csv (to accommodate naming scheme for playback history)
-- Replace deprecated "client.request" function to net.HTTP_get
-- Get item title for pinning from a query than listitem (fixes behaviour when there are gui delays)
-- Rename "Toronto Channels" live group into "Editor's Choice"
-- Improved screenshots
-
-Removals:
-- Changelog in news section (addon.xml) will contain only the latest version, please refer to changelog.txt for more details about past versions
-- Miscellany section</news>
-        <assets>
-            <icon>resources/media/icon.png</icon>
-            <fanart>resources/media/fanart.jpg</fanart>
-            <screenshot>resources/media/main_menu.jpg</screenshot>
-            <screenshot>resources/media/live_streams.jpg</screenshot>
-            <screenshot>resources/media/networks.jpg</screenshot>
-            <screenshot>resources/media/movies.jpg</screenshot>
-            <screenshot>resources/media/tv_series.jpg</screenshot>
-            <screenshot>resources/media/kids_movies.jpg</screenshot>
-            <screenshot>resources/media/search.jpg</screenshot>
-            <screenshot>resources/media/newspapers_frontpages.jpg</screenshot>
-            <screenshot>resources/media/music.jpg</screenshot>
-        </assets>
-    </extension>
-</addon>
-
-<addon id="plugin.video.alphatv.gr" version="2.4.0" name="ALPHA Player" provider-name="Twilight0">
-	<requires>
-		<import addon="xbmc.addon" version="16.1.000"/>
-		<import addon="script.module.tulip" version="2.8.17" />
-		<import addon="script.module.kodi-six" version="0.0.2"/>
-		<import addon="plugin.video.youtube" version="6.8.10"/>
-	</requires>
-	<extension point="xbmc.python.pluginsource" library="addon.py">
-		<provides>video</provides>
-	</extension>
-	<extension point="xbmc.addon.metadata">
-		<summary lang="en_GB">ALPHA Player addon for Kodi</summary>
-		<summary lang="en_GR">Πρόσθετο ALPHA Player για το Kodi</summary>
-		<description lang="en_GB">ALPHA live and on-demand broadcasts</description>
-		<description lang="el_GR">Ζωντανές και on demand υπηρεσίες του ALPHA</description>
-		<disclaimer lang="en_GB">This addon offers content available in Greece and is not published nor endorsed by alphatv.gr</disclaimer>
-		<disclaimer lang="el_GR">Το πρόσθετο αυτό προσφέρει περιεχόμενο διαθέσιμο στην Ελλάδα και δεν έχει δημοσιευθεί ούτε εγκριθεί από το alphatv.gr</disclaimer>
-		<license>GPL-3.0-only</license>
-		<source>https://github.com/Twilight0/plugin.video.alphatv.gr</source>
-		<website>http://www.alphatv.gr/</website>
-        <size>598620</size>
-		<news>[B]2.4.0[/B]
-- Revert of cache change back to traditional get
-- Bug fixes accross the board
-- Utilize youtube addon for resolving some videos
-
-[B]2.3.2[/B]
-- Bug fix
-
-[B]2.3.1[/B]
-- Revert of the function cache back to traditional get
-
-[B]2.3.0[/B]
-- Utilize function cache instead of traditional get
-- Make youtube API key as text type instead of bytes for Kodi 19+
-
-[B]2.2.2[/B]
-- Fix Alpha CY vod resolver
-
-[B]2.2.1[/B]
-- Tweak pagination function
-
-[B]2.2.0[/B]
-- Add pagination for long lists (# items per page are selectable)
-- Tweaked strings integers
-- Tweaked imports for Matrix
-- Updated youtube api key
-- Episode order in now by default reversed (greek website provides new episodes on top)
-- Various other tweaks
-
-[B]2.1.0[/B]
-- Update youtube api key
-- Update indexers
-- Update resolvers
-- Add input date prompt for past webtv news on cypriot indexer
-
-[B]2.0.1[/B]
-- Minor fix for cypriot episode indexers
-
-[B]2.0.0[/B]
-- Rework of the addon, new indexers, new stream resolver
-- Replaced item based selection of country with a selector to switch between regions
-- Bumped dependencies</news>
-		<assets>
-			<icon>icon.png</icon>
-			<fanart>fanart.jpg</fanart>
-<!--			<screenshot>resources/screenshots/screenshot-01.jpg</screenshot>-->
-<!--			<screenshot>resources/screenshots/screenshot-02.jpg</screenshot>-->
-<!--			<screenshot>resources/screenshots/screenshot-03.jpg</screenshot>-->
-		</assets>
-		<platform>all</platform>
-		<language>en el</language>
-	</extension>
-</addon>
-
-<addon id="plugin.video.antenna.gr" version="3.0.1" name="ANT1 Player" provider-name="Twilight0">
-    <requires>
-        <import addon="xbmc.addon" version="16.1.000"/>
-        <import addon="script.module.tulip" version="2.9.10" />
-        <import addon="plugin.video.youtube" version="6.8.18"/>
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="addon.py">
-        <provides>video audio</provides>
-    </extension>
     <extension point="kodi.context.item">
         <menu id="kodi.core.main">
-            <item library="resources/lib/youtube_bookmark.py">
-                <label>30004</label>
-                <visible>
-                    String.StartsWith(Container.FolderPath,plugin://plugin.video.youtube/channel/UC0smvAbfczoN75dP0Hw4Pzw/) +
-                    !String.Contains(ListItem.Art(thumb),resources/media) +
-                    !String.Contains(ListItem.FolderPath,page_token)
-                </visible>
-            </item>
+            <menu>
+                <label>30003</label>
+                <item library="resources/lib/check_sub.py">
+                    <label>30002</label>
+                    <visible>!ListItem.IsFolder</visible>
+                </item>
+                <item library="resources/lib/options.py">
+                    <label>30001</label>
+                    <visible>!ListItem.IsFolder</visible>
+                </item>
+                <item library="resources/lib/clear_cache.py">
+                    <label>30004</label>
+                    <visible>!ListItem.IsFolder</visible>
+                </item>
+            </menu>
         </menu>
     </extension>
     <extension point="xbmc.addon.metadata">
-        <summary lang="en_GB">ANT1 Player addon for Kodi</summary>
-        <reuselanguageinvoker>true</reuselanguageinvoker>
-        <description lang="en_GB">ANT1 live and on-demand broadcasts</description>
-        <description lang="el_GR">Ζωντανές και on demand υπηρεσίες του ANT1</description>
-        <disclaimer lang="en_GB">This addon offers content available in Greece and is not published nor endorsed by antenna.gr</disclaimer>
-        <disclaimer lang="el_GR">Το πρόσθετο αυτό προσφέρει περιεχόμενο διαθέσιμο στην Ελλάδα και δεν έχει δημοσιευθεί ούτε εγκριθεί από το antenna.gr</disclaimer>
-        <language>en el</language>
-        <license>GPL-3.0-only</license>
-        <source>https://github.com/Twilight0/plugin.video.antenna.gr</source>
-        <website>http://www.antenna.gr/</website>
-        <size>204493</size>
-        <news>[B]3.0.0[/B]
-- Rework addon due to website changes
-
-[B]2.3.1[/B]
-- Replace futures with tulip's own method
-- Pagination now disabled by default
-
-[B]2.3.0[/B]
-- Change caching method
-- Utilize futures for parallel threading</news>
         <assets>
             <icon>icon.png</icon>
-            <fanart>fanart.jpg</fanart>
-            <!--<screenshot>resources/screenshots/screenshot-01.jpg</screenshot>-->
-            <!--<screenshot>resources/screenshots/screenshot-02.jpg</screenshot>-->
-            <!--<screenshot>resources/screenshots/screenshot-03.jpg</screenshot>-->
         </assets>
+        <summary lang="en_gb">Subtitles.gr global context menu item</summary>
+        <summary lang="el_gr">Ενιαίο στοιχείο για το κόντεξτ (εναλλακτικό) μενού του Kodi για το Subtitles.gr</summary>
         <platform>all</platform>
-        <language>en el</language>
-    </extension>
-</addon>
-
-<addon id="plugin.video.ert.gr" version="4.0.9" name="ERTflix" provider-name="Twilight0">
-    <requires>
-        <import addon="xbmc.addon" version="16.1.000"/>
-        <import addon="script.module.tulip" version="3.0.1" />
-        <import addon="plugin.video.youtube" version="6.8.18"/>
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="router.py">
-        <provides>video audio</provides>
-    </extension>
-    <extension point="kodi.context.item">
-        <menu id="kodi.core.main">
-            <item library="resources/lib/youtube_bookmark.py">
-                <label>30006</label>
-                <visible>
-                    String.StartsWith(Container.FolderPath,plugin://plugin.video.youtube/channel/UC0jVU-mK53vDQZcSZB5mVHg/) +
-                    !String.Contains(ListItem.Art(thumb),resources/media) +
-                    !String.Contains(ListItem.FolderPath,page_token)
-                </visible>
-            </item>
-        </menu>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <platform>all</platform>
-        <reuselanguageinvoker>true</reuselanguageinvoker>
-        <language>en el</language>
-        <summary lang="en_GB">ERTflix addon for Kodi</summary>
-        <summary lang="el_GR">Πρόσθετο ERTflix για το Kodi</summary>
-        <description lang="en_GB">ERT live and on-demand broadcasts</description>
-        <description lang="el_GR">Ζωντανές και on demand υπηρεσίες της ΕΡΤ</description>
-        <disclaimer lang="en_GB">This addon offers content available in Greece and is not published nor endorsed by ert.gr</disclaimer>
-        <disclaimer lang="el_GR">Το πρόσθετο αυτό προσφέρει περιεχόμενο διαθέσιμο στην Ελλάδα και δεν έχει δημοσιευθεί ούτε εγκριθεί από το ert.gr</disclaimer>
-        <license>GPL-3.0-only</license>
-        <source>https://github.com/Twilight0/plugin.video.ert.gr</source>
-        <size>1153434</size>
-        <website>https://www.ertflix.gr/</website>
-        <news>[B]4.0.X[/B]
-- Reworked addon for new website design, with API usage (when necessary)
-- Reworked index from another source
-- Rework routing scheme with url dispatcher
-- Remove service module, no longer needed
-- Added zeppelin radio station
-- Bug fixes
-
-[B]3.5.1[/B]
-- Various fixes
-
-[B]3.5.0[/B]
-- Mitigate live resolver
-- New YT API key</news>
-        <assets>
-            <icon>icon.png</icon>
-            <fanart>fanart.jpg</fanart>
-        </assets>
-        <!--<forum></forum>-->
-    </extension>
-</addon>
-
-<addon id="plugin.video.faros.on-air" name="Faros On-Air" version="1.4.1" provider-name="Twilight0">
-    <requires>
-        <import addon="xbmc.addon" version="16.1.000"/>
-        <import addon="plugin.video.youtube" version="6.8.10"/>
-        <import addon="script.module.tulip" version="2.8.17"/>
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="addon.py">
-        <provides>video</provides>
-    </extension>
-    <extension point="xbmc.service" library="resources/lib/service.py" start="startup"/>
-    <extension point="xbmc.addon.metadata">
-        <platform>all</platform>
-        <reuselanguageinvoker>false</reuselanguageinvoker>
-        <summary lang="en">Faros On-Air addon</summary>
-        <description lang="en">This addon features video content and Live stream from the PanCypriot channel Faros from Pafos, Cyprus</description>
-        <summary lang="el">Πρόσθετο Faros On-Air</summary>
-        <description lang="el">Το πρόσθετο αυτό παρέχει βίντεο, ειδήσεις και ζωντανό περιεχόμενο από το Πανκύπριο κανάλι Faros από την Πάφο της Κύπρου</description>
-        <license>GNU GPL, version 3</license>
-        <size>738082</size>
-        <website>https://farosonair.com/</website>
-        <source>https://github.com/Twilight0/plugin.video.faros.on-air</source>
-        <news>02-04-2021 - [B]1.5.0[/B]
-- Revert 'revert function cache'
-
-18-03-2021 - [B]1.4.1[/B]
-- Revert function cache
-- Bug fixes
-
-16-03-2021 - [B]1.4.0[/B]
-- Utilize function cache instead of get
-- Fixes into addon.xml
-
-29-11-2020 - [B]1.3.2[/B]
-- Update youtube api key
-
-31-08-2020 - [B]1.3.1[/B]
-- ReplaceHTML codes for listitems
-
-29-06-2020 - [B]1.3.0[/B]
-- New youtube api key
-- Various other bug fixes
-
-29-10-2019 - [B]1.2.0[/B]
-- New stream urls
-- Some other minor changes
-
-15-09-2018 - [B]1.1.0[/B]
-- Added the second live stream from Faros
-- New nested menu for choosing Faros live stream</news>
-    <assets>
-        <icon>icon.png</icon>
-        <fanart>fanart.jpg</fanart>
-    </assets>
-    </extension>
-    <!--<extension name="Faros On Air Repo" point="xbmc.addon.repository">-->
-        <!--<info compressed="false">http://alivegr.net/repo/_faros/addons.xml</info>-->
-        <!--<checksum>http://alivegr.net/repo/_faros/addons.xml.md5</checksum>-->
-        <!--<datadir zip="true">http://alivegr.net/repo/_faros/</datadir>-->
-        <!--<hashes>false</hashes>-->
-        <!--<dir>-->
-            <!--<info compressed="false">https://raw.githubusercontent.com/Twilight0/repo.twilight0.libs/master/_zips/addons.xml</info>-->
-            <!--<checksum>https://raw.githubusercontent.com/Twilight0/repo.twilight0.libs/master/_zips/addons.xml.md5</checksum>-->
-            <!--<datadir zip="true">https://raw.githubusercontent.com/Twilight0/repo.twilight0.libs/master/_zips/</datadir>-->
-        <!--</dir>-->
-    <!--</extension>-->
-</addon>
-
-<addon id="plugin.video.fashiontv.com" version="2.0.4" name="Fashion TV Player" provider-name="Twilight0">
-    <requires>
-        <import addon="xbmc.addon" version="16.1.000"/>
-        <import addon="script.module.tulip" version="2.9.10" />
-        <import addon="plugin.video.youtube" version="6.8.18"/>
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="router.py">
-        <provides>video</provides>
-    </extension>
-    <extension point="kodi.context.item">
-        <menu id="kodi.core.main">
-            <item library="resources/lib/youtube_bookmark.py">
-                <label>30004</label>
-                <visible>
-                    [String.StartsWith(Container.FolderPath,plugin://plugin.video.youtube/channel/UCqzju-_WMKsgNx8R3QwupQQ/) |
-                    String.StartsWith(Container.FolderPath,plugin://plugin.video.youtube/channel/UClnblsrZrugJfFs4ANPgNcA/) |
-                    String.StartsWith(Container.FolderPath,plugin://plugin.video.youtube/channel/UCDN6BTcfgHDuBQgCgXkU-cA/) |
-                    String.StartsWith(Container.FolderPath,plugin://plugin.video.youtube/channel/UCLiyW3PZFDSxIw6EES8MneQ/) |
-                    String.StartsWith(Container.FolderPath,plugin://plugin.video.youtube/channel/UCC2Iic6b-nhY7CSRUm_nyng/) |
-                    String.StartsWith(Container.FolderPath,plugin://plugin.video.youtube/channel/UCi12i9eiWFh67T-uCP1y7Gw/)] +
-                    !String.Contains(ListItem.Art(thumb),resources/media) +
-                    !String.Contains(ListItem.FolderPath,page_token)
-                </visible>
-            </item>
-        </menu>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <reuselanguageinvoker>true</reuselanguageinvoker>
-        <summary lang="en_GB">Fashion TV Player addon for Kodi</summary>
-        <summary lang="en_GR">Πρόσθετο Fashion TV Player για το Kodi</summary>
-        <description lang="en_GB">Fashion TV live and on-demand broadcasts</description>
-        <description lang="el_GR">Ζωντανές και on demand υπηρεσίες του Fashion TV</description>
-        <disclaimer lang="en_GB">This addon is not published nor endorsed by fashiontv.com</disclaimer>
-        <disclaimer lang="el_GR">Το πρόσθετο αυτό δεν έχει δημοσιευθεί ούτε εγκριθεί από το fashiontv.com</disclaimer>
-        <license>GPL-3.0-only</license>
-        <source>https://github.com/Twilight0/plugin.video.fashiontv.com</source>
-        <website>https://www.fashiontv.com/</website>
-        <size>149300</size>
-        <news>[B]2.0.X[/B]
-- Update for new website design
-- Add search function
-- Add shortcut to live channels
-- New YouTube API keys
-
-[B]1.3.X[/B]
-- Change cache method
-- Place youtube channels on submenu
-- Change main label from "Live" to "Fashion TV Live"
-- Remove check for inputstream addon
-
-[B]1.2.0[/B]
-- Update youtube api keys
-- Rework of router scheme
-- Tweaks for Matrix
-
-[B]1.1.0[/B]
-- Add bookmarking feature
-
-[B]1.0.3[/B]
-- Added FTV news channel
-
-[B]1.0.2[/B]
-- Re-addition of previously unsupported streams
-- Properly check for stream m3u8/mpd and dash activation
-
-[B]1.0.1[/B]
-- Removed unsupported streams
-- Check if Kodi Leia+ for asking about inputstream addon
-
-[B]1.0.0[/B]
-- Final stable version
-
-[B]0.0.1~alpha1[/B]
-- Initial version</news>
-        <assets>
-            <icon>icon.png</icon>
-            <fanart>fanart.jpg</fanart>
-        </assets>
-        <platform>all</platform>
-        <language>en</language>
-        <!--<forum></forum>-->
-        <!--<email></email>-->
+        <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+        <website>https://alivegr.net</website>
+        <source>https://github.com/Twilight0/context.subtitles.gr</source>
     </extension>
 </addon>
 
@@ -770,153 +950,5 @@ Removals:
 		<!--<forum></forum>-->
 		<!--<email></email>-->
 	</extension>
-</addon>
-
-<addon id="plugin.video.Toronto-Channels" name="BCI Greek TV" version="2.8.1" provider-name="BCI Media Inc.">
-    <requires>
-        <import addon="xbmc.addon" version="16.1.000"/>
-        <import addon="plugin.video.youtube" version="6.8.8"/>
-        <import addon="script.module.tulip" version="2.8.6"/>
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="addon.py">
-        <provides>video audio image</provides>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <platform>all</platform>
-        <reuselanguageinvoker>false</reuselanguageinvoker>
-        <summary lang="en">BCI Greek TV addon</summary>
-        <description lang="en">This addon offers live streaming content mainly in Greek language</description>
-        <summary lang="el">Πρόσθετο BCI Greek TV</summary>
-        <description lang="el">Το πρόσθετο αυτό παρέχει ζωντανό περιεχόμενο κυρίως εις την Ελληνική γλώσσα</description>
-        <license>GNU General Public License, v3</license>
-        <news>2.8.0 (10-02-2021)
-- Added new streams (Food channel, cetn, health channel), updated others
-- Removed rtmp urls and accompanying setting
-- Disabled radio choice
-
-2.7.0 (28-12-2020)
-- Updated youtube api keys
-- Bumped dependencies</news>
-        <website>http://www.bcimedia.net/</website>
-        <assets>
-            <icon>icon.png</icon>
-            <fanart>fanart.jpg</fanart>
-        </assets>
-    </extension>
-</addon>
-
-    <addon id="repository.twilight0" name="Twilight0 Addon Repository" version="1.7" provider-name="Twilight0">
-        <extension point="xbmc.addon.repository" name="Twilight0 Addon Repository">
-            <dir>
-                <info compressed="false">https://raw.githubusercontent.com/Twilight0/repository.twilight0/master/_zips/addons.xml</info>
-                <checksum>https://raw.githubusercontent.com/Twilight0/repository.twilight0/master/_zips/addons.xml.md5</checksum>
-                <datadir zip="true">https://raw.githubusercontent.com/Twilight0/repository.twilight0/master/_zips/</datadir>
-                <hashes>false</hashes>
-            </dir>
-            <dir>
-                <info compressed="false">https://raw.githubusercontent.com/Twilight0/repository.twilight0.libs/master/_zips/addons.xml</info>
-                <checksum>https://raw.githubusercontent.com/Twilight0/repository.twilight0.libs/master/_zips/addons.xml.md5</checksum>
-                <datadir zip="true">https://raw.githubusercontent.com/Twilight0/repository.twilight0.libs/master/_zips/</datadir>
-                <hashes>false</hashes>
-            </dir>
-			<dir>
-				<info compressed="false">https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml</info>
-				<checksum>https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml.md5</checksum>
-				<datadir zip="true">https://raw.githubusercontent.com/Gujal00/smrzips/master/zips/</datadir>
-            </dir>
-        </extension>
-        <extension point="xbmc.addon.metadata">
-            <summary>Repository for various of my add-ons</summary>
-            <description>Repository for various of my add-ons</description>
-            <platform>all</platform>
-            <assets>
-                <icon>icon.png</icon>
-                <fanart>fanart.jpg</fanart>
-            </assets>
-        </extension>
-</addon>
-
-    <addon id="repository.twilight0.libs" name="Twilight0 Libs Repository" version="1.4" provider-name="Twilight0">
-        <extension point="xbmc.addon.repository" name="Twilight0 Libs Repository">
-			<dir>
-				<info compressed="false">https://raw.githubusercontent.com/Twilight0/repository.twilight0.libs/master/_zips/addons.xml</info>
-				<checksum>https://raw.githubusercontent.com/Twilight0/repository.twilight0.libs/master/_zips/addons.xml.md5</checksum>
-				<datadir zip="true">https://raw.githubusercontent.com/Twilight0/repository.twilight0.libs/master/_zips/</datadir>
-				<hashes>false</hashes>
-            </dir>
-        </extension>
-        <extension point="xbmc.addon.metadata">
-            <summary>Repository for library addons</summary>
-            <description>Repository for library addons</description>
-            <platform>all</platform>
-            <assets>
-                <icon>icon.png</icon>
-                <fanart>fanart.jpg</fanart>
-            </assets>
-        </extension>
-</addon>
-
-<addon id="resource.images.alivegr.artwork" name="AliveGR Artwork" version="3.0.6" provider-name="Twilight0">
-	<extension point="kodi.resource.images" compile="false" type="AliveGR" />
-	<requires>
-		<import addon="kodi.resource" version="1.0.0"/>
-	</requires>
-	<extension point="xbmc.addon.metadata">
-		<summary lang="en">AliveGR's main artwork</summary>
-		<description lang="en">Artwork is distributed separately to allow easier maintenance and consume less bandwidth</description>
-		<platform>all</platform>
-	</extension>
-</addon>
-
-<addon id="resource.images.alivegr.logos" name="AliveGR TV Logos" version="1.0.2" provider-name="Twilight0">
-	<extension point="kodi.resource.images" compile="false" type="AliveGR" />
-	<requires>
-		<import addon="kodi.resource" version="1.0.0"/>
-	</requires>
-	<extension point="xbmc.addon.metadata">
-		<summary lang="en">AliveGR's TV channels logos</summary>
-		<description lang="en">Logos are provided separately to allow easier distribution</description>
-		<platform>all</platform>
-	</extension>
-</addon>
-
-<addon id="service.subtitles.subtitles.gr" name="Subtitles.gr" version="3.7.0" provider-name="Twilight0">
-    <requires>
-        <import addon="xbmc.addon" version="16.1.000"/>
-        <import addon="script.module.tulip" version="2.9.8" />
-    </requires>
-    <extension point="xbmc.subtitle.module" library="service.py">
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <reuselanguageinvoker>false</reuselanguageinvoker>
-        <summary lang="en_GB">Subtitle service addon "subtitles.gr"</summary>
-        <summary lang="el_GR">Υπηρεσιακό πρόσθετο υποτίτλων "subtitles.gr"</summary>
-        <description lang="en_GB">Search and download subtitles from various sites</description>
-        <description lang="el_GR">Εύρεση και λήψη υποτίτλων από διαφόρους ιστοτόπους</description>
-        <disclaimer lang="en_GB">This service is only for Greek subtitles. It is not published nor endorsed by any of the sites supported.</disclaimer>
-        <disclaimer lang="el_GR">Υπηρεσία μόνο ελληνικών υποτίτλων. Δεν έχει δημοσιευθεί, ούτε εγκριθεί από οποιοδήποτε υποστηριζόμενο ιστότοπο.</disclaimer>
-        <license>GPL-3.0-only</license>
-        <website>http://www.subtitles.gr/</website>
-        <source>https://github.com/Twilight0/service.subtitles.subtitles.gr/</source>
-        <platform>all</platform>
-        <news>[B]3.7.0[/B]
-- Increase maximum possible timeout for search requests
-- Add separate setting for subtitles.gr sub download timeout
-- Utilize fuzzywuzzy to find synced subtitles (minimum match ratio 50, default 75, max 100)
-- Replace futures module with tulip solution
-- Various other tweaks
-
-[B]3.6.2[/B]
-- Bug fixes for subtitles save function on vipsubs
-
-[B]3.6.1[/B]
-- Broaden search results for vipsubs.gr
-- Allow subtitle to be saved both locally and within the manual choice
-- Ask before overwriting existing subs</news>
-        <assets>
-            <icon>icon.png</icon>
-            <fanart>fanart.jpg</fanart>
-        </assets>
-    </extension>
 </addon>
 </addons>
