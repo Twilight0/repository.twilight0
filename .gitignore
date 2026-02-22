@@ -91,3 +91,9 @@ _tools/
 /plugin\.video\.megatv\.com
 
 plugin.video.alivegr.play/
+
+archives/
+
+addons_dir/
+
+create_repository.py
