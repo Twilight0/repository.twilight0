@@ -4,7 +4,7 @@
 
 * Go to the Kodi file manager
 * Click on "Add source"
-* The path for the source is `https://alivegr.net/master` or alternatively `https://twilight0.github.io/repo.twilight0/` (Give it the name "Twilight0" or "AliveGR").
+* The path for the source is `https://twilight0.github.io/repository.twilight0/` (Give it the name "Twilight0" or "AliveGR").
 * Go to "Addons"
 * In Addons, install an addon from zip.  When it asks for the location, select "Twilight0", and install
 
