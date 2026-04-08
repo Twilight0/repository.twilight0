@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.alivegr" name="AliveGR" version="3.0.0~alpha1" provider-name="Twilight0">
+<addon id="plugin.video.alivegr" name="AliveGR" version="3.0.0~alpha2" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="resource.images.alivegr.artwork" version="3.0.6"/>
@@ -11,7 +11,7 @@
         <import addon="script.module.netclient" version="1.0.0"/>
         <import addon="script.module.unicache" version="1.0.0"/>
         <import addon="script.module.parsers" version="1.0.0"/>
-        <import addon="script.module.tulip" version="4.0.0"/>
+        <import addon="script.module.tulip" version="4.0.0~alpha1"/>
         <import addon="script.module.m3u8" version="6.0.0"/>
         <import addon="plugin.video.youtube" version="7.4.0"/>
     </requires>
