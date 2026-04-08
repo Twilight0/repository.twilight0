@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-    <addon id="repository.twilight0.libs" name="Twilight0 Repository" version="2.0.0" provider-name="Twilight0">
-    <requires>
-        <import addon="xbmc.addon" version="20.0.0"/>
-    </requires>
+    <addon id="repository.twilight0.libs" name="Twilight0 Libs Repository" version="2.0.1" provider-name="Twilight0">
     <extension point="xbmc.addon.repository" name="Twilight0 Repository">
         <dir>
 			<info compressed="true">https://raw.githubusercontent.com/Twilight0/repository.twilight0.libs/master/repo_dir/addons.xml.gz</info>
@@ -14,9 +11,8 @@
         <summary>Twilight0 Libs Repository</summary>
         <description>Twilight0 Libs Repository</description>
         <platform>all</platform>
-        <news>2.0
+        <news>2.0.X
 - Update repository format for Kodi v20+ (Nexus/Omega) compatibility
-- Add minimum version requirement (Kodi v20)
         </news>
         <assets>
             <icon>icon.png</icon>
