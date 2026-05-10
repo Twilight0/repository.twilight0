@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.alivegr" name="AliveGR" version="3.0.0~alpha6" provider-name="Twilight0">
+<addon id="plugin.video.alivegr" name="AliveGR" version="3.0.0~alpha7" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="resource.images.alivegr.artwork" version="3.0.6"/>
 <!--        <import addon="resource.images.alivegr.logos" version="1.0.2"/>-->
         <import addon="script.module.resolveurl" version="5.1.192"/>
-        <import addon="script.module.resolveurl.pluginsgr" version="0.0.14"/>
+        <import addon="script.module.resolveurl.pluginsgr" version="0.1.11"/>
 <!--        <import addon="script.module.urldispatcher" version="1.0.0"/>-->
         <import addon="script.module.scrapetube" version="2.6.1"/>
         <import addon="script.module.netclient" version="1.0.0"/>
         <import addon="script.module.unicache" version="1.0.0"/>
         <import addon="script.module.parsers" version="1.0.0"/>
         <import addon="script.module.tulip" version="4.0.0"/>
+        <import addon="script.module.fuzzywuzzy" version="0.0.17"/>
+<!--        <import addon="script.module.websocket" version="1.6.4"/>-->
+<!--        <import addon="script.module.json_repair" version="0.52.5"/>-->
 <!--        <import addon="script.module.m3u8" version="6.0.0"/>-->
         <import addon="plugin.video.youtube" version="7.4.0"/>
     </requires>
@@ -37,48 +40,18 @@ Kindly note that AliveGR is not an official part of the media player you are run
         <forum>https://github.com/Twilight0/plugin.video.alivegr/discussions</forum>
         <source>https://github.com/Twilight0/plugin.video.alivegr</source>
         <website>https://alivegr.net/</website>
-        <news>+ [COLOR green]3.0.X series[/COLOR] [I]10-03-2026 - 11-04-2026[/I]
+        <news>+ [COLOR green]3.0.X series[/COLOR] [I]10-03-2026 - 11-05-2026[/I]
 - Update live TV section with new channels, fewer groups, and new remote source
 - Removed dependency for logos resource addon, logos are now pulled from a network source and cached locally
 - Major refactoring, removed legacy and compatibility code
 - Removed a lot of old and unused code and features, and simplified the overall structure of the addon
 - New artwork and icon theme (gemini)
 - M3U8 module dependency removed and stream choice is now either adaptive or best
-- Added group switcher context menu item when "group switcher" is disabled
-
-+ [COLOR red]2.13.X series[/COLOR] [I]18-02-2026 - 18-02-2026[/I]
-- Too many changes to list, notable changes are:
-+ Utilize m3u playlist temporarily for live streams (until a more permanent solution is implemented)
-+ Fixed greek movies indexers (episodes and movies)
-+ Remove obselete and least used features and folders
-
-+ [COLOR red]2.11.X series[/COLOR] [I]11-09-2022 - 15-04-2023[/I]
-
-Additions:
-- Playback history
-- Add capability to rename/change search history items
-- Add capability of auto container refresh on certain settings change (ie icon theme)
-- IPTV Setup client setup reapplied and simplified
-- Add greek iptv m3u list as new menu item (defaults to off)
-
-Fixes:
-- The usual bug fixes here and there
-- Fixed gamato kids indexer
-- Fixed addon.xml validation
-- Fixed installation failure and Kodi crash on Android
-- Added exception for variable quality choice on Montreal Greek TV's stream
-
-Replacements/Substitutions:
-- Clean up and rearrangement to the tools section/menu/settings (and submenus)
-- Renamed history.csv to search_history.csv (to accommodate naming scheme for playback history)
-- Replace deprecated "client.request" function to net.HTTP_get
-- Get item title for pinning from a query than listitem (fixes behaviour when there are gui delays)
-- Rename "Toronto Channels" live group into "Editor's Choice"
-- Improved screenshots
-
-Removals:
-- Changelog in news section (addon.xml) will contain only the latest version, please refer to changelog.txt for more details about past versions
-- Miscellany section</news>
+- Groups and indexing methods can now be changes from either a context menu or from a dedicated button on top
+- Added the option to autostart the addon on Kodi launch (defaults to off)
+- Added additional source for movies (greekfun)
+- Updated Privacy Policy, DMCA texts
+- Genres are now translated</news>
         <assets>
             <icon>icon.png</icon>
             <fanart>fanart.jpg</fanart>
