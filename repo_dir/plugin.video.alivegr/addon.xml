@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.alivegr" name="AliveGR" version="3.0.0~alpha8" provider-name="Twilight0">
+<addon id="plugin.video.alivegr" name="AliveGR" version="3.0.0~alpha9" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="resource.images.alivegr.artwork" version="3.0.6"/>
@@ -13,7 +13,7 @@
         <import addon="script.module.parsers" version="1.0.0"/>
         <import addon="script.module.tulip" version="4.0.0"/>
         <import addon="script.module.fuzzywuzzy" version="0.0.17"/>
-<!--        <import addon="script.module.websocket" version="1.6.4"/>-->
+        <import addon="script.module.websocket" version="1.6.4"/>
 <!--        <import addon="script.module.json_repair" version="0.52.5"/>-->
 <!--        <import addon="script.module.m3u8" version="6.0.0"/>-->
         <import addon="plugin.video.youtube" version="7.4.0"/>
@@ -51,7 +51,8 @@ Kindly note that AliveGR is not an official part of the media player you are run
 - Added the option to autostart the addon on Kodi launch (defaults to off)
 - Added additional source for movies (greekfun)
 - Updated Privacy Policy, DMCA texts
-- Genres are now translated</news>
+- Genres are now translated
+- Add localhost proxy for tricky url requests and resolving of streams (initially designed to handle websocket streams)</news>
         <assets>
             <icon>icon.png</icon>
             <fanart>fanart.jpg</fanart>
