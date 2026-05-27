@@ -96,4 +96,4 @@ archives/
 
 addons_dir/
 
-create_repository.py
+repository_creator.py
