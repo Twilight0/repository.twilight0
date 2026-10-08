@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.audio.somafm.com" name="SomaFM Radio" version="4.0.0" provider-name="Twilight0">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+        <import addon="script.module.tulip" version="4.1.2"/>
+        <import addon="script.module.urldispatcher" version="1.1.0"/>
+        <import addon="script.module.netclient" version="1.1.2"/>
+        <import addon="script.module.unicache" version="1.0.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="addon.py">
+        <provides>audio</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <reuselanguageinvoker>true</reuselanguageinvoker>
+        <summary lang="en_GB">SomaFM music addon</summary>
+        <description lang="en_GB">What exactly is SomaFM? We're a listener-supported, commercial-free internet-only radio station. This means no advertising or annoying commercial interruptions. Our mission is to search out and expose great new music to people who otherwise may never encounter it. Over 20 unique channels of listener-supported, commercial-free, underground/alternative radio broadcasting from San Francisco. All music hand-picked by SomaFM's award-winning DJs and music directors. Please consider donating at https://somafm.com to keep this service alive!Please consider donating by visiting http://somafm.com</description>
+        <disclaimer lang="en_GB">This addon is not developed nor endorsed by SomaFM webmasters/authors/owners/directors</disclaimer>
+        <summary lang="el_GR">Πρόσθετο μουσικής SomaFM</summary>
+        <description lang="el_GR">Το ραδιόφωνο SomaFM είναι μια υπηρεσία μουσικής και ραδιοφώνου που υποστηρίζεται πλήρως από τους ακροατές της. Παρακαλώ επισκευθείτε την σελίδα http://somafm.com και πραγματοποιήστε μία δωρεά για την υποστήριξη της υπηρεσίας.</description>
+        <disclaimer lang="el_GR">Η παρούσα μικροεφαρμογή δεν αναπτύσεται ούτε έχει εγκριθεί από τους διαχειριστές/υπεύθυνους/ιδιοκτήτες της υπηρεσίας SomaFM.</disclaimer>
+        <summary lang="de_DE">SomaFM Musik Addon</summary>
+        <description lang="de_DE">Was ist SomaFM genau? Wir sind ein Hörer-unterstützter, werbefreier, reiner Internet-Radiosender. Das bedeutet keine Werbung oder nervige Werbeunterbrechungen. Unsere Mission ist das Suchen und Herausstellen toller neuer Musik, die die Leute sonst womöglich nie erleben würden. Über 20 einzigartige Kanäle mit Hörer-unterstützterm werbefreiem Untergrund/alternativem Rundfunk aus San Francisco. Die gesamte Musik wird von SomaFMs preisgekrönten DJs und Musikdirektoren von Hand gewählt. Bitte denkt über eine Spende unter https://somafm.com nach um den Service am Leben zu halten! Bitte zieht eine Spende in Betracht, indem ihr http://somafm.com besucht</description>
+        <summary lang="ro_RO">Addon muzică SomaFM</summary>
+        <description lang="ro_RO">Ce este SomaFM? SomaFM reprezintă o stație radio care există doar pe Internet, fără reclame sau publicitate și care este susținută de ascultători. Aceasta înseamnă că muzica nu este întreruptă de reclame sau de publicitate. Misiunea noastră este să căutăm și să expunem muzică nouă și bună către oameni care nu ar fi putut s-o audă vreodată. Peste 20 de canale unice susținute de ascultători, fără reclame sau publicitate, din genul underground/alternativ sunt difuzate din San Francisco. Toată muzica este aleasă de DJ-ii și de muzicienii premiați de la SomaFM. Vă rugăm să donați la https://somafm.com pentru a menține serviciul activ! Vp rugă să donați vizitând http://somafm.com</description>
+        <disclaimer lang="ro_RO">Acest addon nu este creat și nici sprijinit de programatorii, autorii, proprietarii sau administratorii SomaFM.</disclaimer>
+        <summary lang="ru_RU">Дополнение SomaFM music</summary>
+        <description lang="ru_RU">Что такое SomaFM? SomaFM - радиостанция, которая существует только в интернете, без рекламы и поддерживается слушателями. Это означает, что музыка не прерывается рекламой. Наша миссия - искать и знакомить с новой музыкой людей, которые иначе никогда с ней не столкнулись бы. Из Сан-Франциско транслируются более 20 уникальных каналов андеграундного/альтернативного жанра, поддерживаемых слушателями, без рекламы. Всю музыку выбирают ди-джеи и отмеченные наградами музыканты из SomaFM. Пожалуйста, рассмотрите возможность пожертвования на https://somafm.com, чтобы этот сервис продолжал работать! Пожалуйста, рассмотрите возможность пожертвования, посетив http://somafm.com</description>
+        <disclaimer lang="ru_RU">Это дополнение не разработано и не одобрен веб-мастерами/авторами/владельцами/администраторами SomaFM</disclaimer>
+        <summary lang="es_ES">Complemento de música SomaFM</summary>
+        <description lang="es_ES">¿Qué es exactamente SomaFM? Somos una estación de radio solo por Internet, sin comerciales y compatible con oyentes. Esto significa que no hay publicidad ni interrupciones comerciales molestas. Nuestra misión es buscar y exponer buena música nueva a personas que de otro modo nunca la encontrarían. Más de 20 canales únicos de transmisión de radio alternativa / underground sin comerciales, respaldada por oyentes desde San Francisco. Toda la música seleccionada por los galardonados DJ y directores musicales de SomaFM. Por favor, considere donar en https://somafm.com para mantener vivo este servicio! Considere donar visitando http://somafm.com</description>
+        <disclaimer lang="es_ES">Este complemento no está desarrollado ni respaldado por webmasters / autores / propietarios / directores de SomaFM</disclaimer>
+        <language>en de el es nl ro ru</language>
+        <license>GPL-3.0-only</license>
+        <source>https://github.com/Twilight0/plugin.audio.somafm.com</source>
+        <website>https://somafm.com</website>
+        <news>[B]4.0.0[/B]
+- Port to modern stack: tulip 4.x, urldispatcher, netclient, unicache
+- Replace manual if/elif routing in addon.py with urldispatcher
+- Switch listings to https channels.json, drop brittle channels.xml CDATA parsing
+- Resolve streams by station id instead of passing repr() lists through urls
+- Fix lowest-AAC quality picking the wrong playlist
+- Drop script.module.html2text dependency, parse song history with stdlib
+- Migrate endpoints and artwork to https
+- Kodi 20+ metadata: xbmc.python 3.0.0, reuselanguageinvoker
+- Fix playback loop-fail: title-only resolve meta, signal resolve failure
+- Song history shows clean track table with times in your local timezone
+- Refresh clears the listing cache first, so it shows fresh now-playing titles
+
+[B]3.1.0[/B]
+- Change caching method
+- Bug fixes</news>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
