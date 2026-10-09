@@ -1,0 +1,51 @@
+[B]3.0.0+[/B]
+- Removal of two themes
+- Converted to a resource.image addon
+
+[B]2.2.0+[/B]
+- Artwork compression
+
+[B]2.1.0+[/B]
+- New icons
+
+[B]2.0.0+[/B]
+- New themes and icons
+
+[B]1.0.11[/B]
+- New icons
+
+[B]1.0.10[/B]
+- Fixes
+
+[B]1.0.9[/B]
+- Added icon for group switcher
+
+[B]1.0.8[/B]
+- Added icons for Toronto-Channels
+
+[B]1.0.7[/B]
+- Removed icons for radio stations
+- Added icons for vice "network"
+
+[B]1.0.6[/B]
+- Added icon for "Miscellany" section
+
+[B]1.0.5[/B]
+- Added icons for WZRA's radios
+
+[B]1.0.4[/B]
+- Added icons for WZRA48
+
+[B]1.0.3[/B]
+- Added icons for TV Serries, Movies, Cartoons
+
+[B]1.0.2[/B]
+- Changed some icons
+- Added icon for tv guide
+
+[B]1.0.1[/B]
+- New, more flat & modern icons
+- Added artwork/logos for radios
+
+[B]1.0.0[/B]
+- Initial version
