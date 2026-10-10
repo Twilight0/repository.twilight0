@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.program.devtoolbox" name="Dev ToolBox" version="1.0.0" provider-name="Twilight0">
+<addon id="plugin.program.devtoolbox" name="Dev ToolBox" version="1.1.0" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.qrcode" version="6.1.0"/>
+        <import addon="script.module.urldispatcher" version="1.0.0"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="router.py">
         <provides>executable</provides>
@@ -20,6 +21,22 @@
         <reuselanguageinvoker>false</reuselanguageinvoker>
         <summary lang="en_GB">Swiss army knife for Kodi developers and power users</summary>
         <description lang="en_GB">Dev Toolbox is a modular Kodi development suite featuring an in-GUI code/text editor, live debug toggles (Kodi log, skin debug, reload skin), an addon inspector, a log viewer with QR code upload, and a dedicated custom WindowXML keymap editor.</description>
+        <news>[B]1.1.0[/B]
+- Add Official Kodi Addon &amp; Dependency Installer
+- Add rich editor-styled WindowXML Log Viewer with appearance style toggle
+- Switch QR code generation to script.module.qrcode
+- Integrate script.module.urldispatcher and refactor router.py to lightweight entry point
+- Full British English localization of all custom WindowXML dialogs
+- Add Quit Kodi entry to main menu
+- Remove redundant error-only log viewer entry
+
+[B]1.0.0[/B]
+- Initial release featuring In-GUI Code Editor with syntax styling and test execution
+- Safe WindowXML Addon Inspector with crash-proof details viewer
+- Visual multi-scope WindowXML Keymap Editor
+- Kodi Log Viewer with paste upload &amp; mobile QR code pairing
+- Real-time debug toggles for logging, skin overlay, and instant skin reload
+- Dynamic theme engine with texture cache path isolation</news>
         <license>GPL-3.0-only</license>
         <source>https://github.com/Twilight0/plugin.program.devtoolbox</source>
         <assets>
