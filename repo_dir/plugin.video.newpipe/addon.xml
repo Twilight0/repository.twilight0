@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.newpipe" name="NewPipe" version="1.0.0~beta1" provider-name="Twilight0">
+<addon id="plugin.video.newpipe" name="NewPipe" version="1.1.0" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
-        <import addon="script.module.tulip" version="4.1.2"/>
+        <import addon="script.module.tulip" version="4.1.5"/>
         <import addon="script.module.urldispatcher" version="1.1.0"/>
-        <import addon="script.module.scrapetube" version="2.8.1"/>
+        <import addon="script.module.scrapetube" version="2.8.2"/>
         <import addon="script.module.unicache" version="1.0.0"/>
         <import addon="script.module.resolveurl" version="5.1.210"/>
         <import addon="script.module.resolveurl.pluginsgr" version="0.2.5"/>
+        <import addon="script.module.qrcode" version="6.1.0"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="main.py">
         <provides>video audio</provides>
     </extension>
+    <extension point="xbmc.service" library="resources/service.py" start="login" />
     <extension point="xbmc.addon.metadata">
         <platform>all</platform>
         <summary lang="en">NewPipe: privacy-first YouTube client</summary>
@@ -20,7 +22,17 @@
         <language>en</language>
         <license>GPL-3.0-only</license>
         <source>https://github.com/Twilight0/plugin.video.newpipe</source>
-        <news>[B]1.0.0[/B]
+        <news>[B]1.1.0[/B]
+- Pagination control (Off/show-all, 10/25/50, default off); playlists hard-capped at 300
+- Watch Later list, per-item history removal, subscription channels/feed views, saved playlists, account history
+- YouTube TV device-link login (QR + manual code), personal/brand account switching, background sync service, disconnect
+- Content country/language settings with localized categories, trailer language/version, quality caps, fast start
+- Random music folder with native Kodi queue, trailers browser, live category setting
+- Interface language override incl. full Greek translation, 13 shipped UI languages
+- Arctic Fuse landscape artwork, stable per-video thumbnails
+- HLS streams pin inputstream.adaptive chooser to the configured resolution family
+
+[B]1.0.0[/B]
 - Initial release: search, channels (videos/shorts/live/playlists), playlists, local subscriptions with feed, local watch/search history, audio-only mode</news>
         <assets>
             <icon>icon.png</icon>
