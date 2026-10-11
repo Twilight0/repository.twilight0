@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.twilight0.installer" name="Scripted addon installer" version="1.0.0" provider-name="Twilight0">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+    </requires>
+    <!-- Autoruns immediately on install / startup -->
+    <extension point="xbmc.service" library="service.py"/>
+    <!-- Also allows manual execution from Programs / Addon browser -->
+    <extension point="xbmc.python.script" library="main.py">
+        <provides>executable</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en_GB">Scripted addon installer for Twilight0 addons</summary>
+        <description lang="en_GB">Automated standalone installer for Twilight0 repository, Dev ToolBox, and other Twilight0 addons with automated dependency resolution and activation.</description>
+        <platform>all</platform>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>

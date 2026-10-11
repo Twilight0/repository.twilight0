@@ -1,0 +1,48 @@
+[B]3.0.0[/B]
+- Update to modern stack: tulip 4.x, urldispatcher, netclient, unicache, fuzzywuzzy
+- Kodi 19-21+ Python 3 support (xbmc.python 3.0.0)
+- Support for redesigned website (fashiontv.com)
+- Direct 1080p FHD live stream (FashionTV Paris L'Original)
+- Integrate iptv-org live streams (Secrets, Russia, Ukraine, Europe, Asia, partner channels)
+- Automatic HLS duration probing for videos with missing feed duration metadata
+- Direct CDN streams without SSAI ad-injection wrapper
+- Fix FashionTV Asia YouTube channel mapping
+- Add Country Highlights directory
+
+
+[B]2.0.X[/B]
+- Update for new website design
+- Add search function
+- Add shortcut to live channels
+- New YouTube API keys
+
+[B]1.3.X[/B]
+- Change cache method
+- Place youtube channels on submenu
+- Change main label from "Live" to "Fashion TV Live"
+- Remove check for inputstream addon
+
+[B]1.2.0[/B]
+- Update youtube api keys
+- Rework of router scheme
+- Tweaks for Matrix
+
+[B]1.1.0[/B]
+- Add bookmarking feature
+
+[B]1.0.3[/B]
+- Added FTV news channel
+
+[B]1.0.2[/B]
+- Re-addition of previously unsupported streams
+- Properly check for stream m3u8/mpd and dash activation
+
+[B]1.0.1[/B]
+- Removed unsupported streams
+- Check if Kodi Leia+ for asking about inputstream addon
+
+[B]1.0.0[/B]
+- Final stable version
+
+[B]0.0.1~alpha1[/B]
+- Initial version

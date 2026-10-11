@@ -1,0 +1,21 @@
+[B]1.1.0[/B]
+- Add Official Kodi Addon & Dependency Installer (queries mirrors.kodi.tv against active Kodi codename)
+- Switch QR code generation to script.module.qrcode
+- Add Quit Kodi entry to main menu and settings
+- Integrate script.module.urldispatcher for declarative URL routing
+- Refactor project structure: slim router.py to lightweight entry point, move main menu and route registration to resources/lib/navigator.py
+- Full localization of all custom WindowXML dialogs (editor, keymap, addoninfo, qr) into British English (en_GB)
+- Remove emojis and non-standard symbols to ensure compatibility across all Kodi skin fonts
+- Add rich editor-styled WindowXML Log Viewer with numbered lines, colorized syntax, search, line inspection, and live error toggle
+- Add toggle in Appearance settings to switch between traditional textviewer and rich WindowXML log viewer
+- Remove redundant error-only log viewer entry from main menu (now integrated inside viewer)
+
+[B]1.0.0[/B]
+- Initial release
+- In-GUI Code & Text Editor with syntax styling, snippets, and execution
+- Safe Addon Inspector & Manager (WindowXML)
+- Custom WindowXML Keymap Editor with multi-scope support
+- Kodi Log Viewer and QR Code mobile pairing uploader
+- Live debug toggles (Kodi logging, skin debug, dirty regions, instant skin reload)
+- Multi-theme artwork engine with texture cache isolation
+- Global context menu integration

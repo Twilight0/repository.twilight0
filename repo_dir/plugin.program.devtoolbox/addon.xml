@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.program.devtoolbox" name="Dev ToolBox" version="1.1.0" provider-name="Twilight0">
+<addon id="plugin.program.devtoolbox" name="Dev ToolBox" version="1.2.0" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.qrcode" version="6.1.0"/>
@@ -21,7 +21,10 @@
         <reuselanguageinvoker>false</reuselanguageinvoker>
         <summary lang="en_GB">Swiss army knife for Kodi developers and power users</summary>
         <description lang="en_GB">Dev Toolbox is a modular Kodi development suite featuring an in-GUI code/text editor, live debug toggles (Kodi log, skin debug, reload skin), an addon inspector, a log viewer with QR code upload, and a dedicated custom WindowXML keymap editor.</description>
-        <news>[B]1.1.0[/B]
+        <news>[B]1.2.0[/B]
+- Add cross-platform Backup &amp; Restore engine for addons and userdata with sanitization, database toggle, and version mismatch safety
+
+[B]1.1.0[/B]
 - Add Official Kodi Addon &amp; Dependency Installer
 - Add rich editor-styled WindowXML Log Viewer with appearance style toggle
 - Switch QR code generation to script.module.qrcode
