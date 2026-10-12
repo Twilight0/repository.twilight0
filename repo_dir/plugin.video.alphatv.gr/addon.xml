@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.alphatv.gr" version="3.0.0" name="ALPHA Player" provider-name="Twilight0">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0"/>
+		<import addon="script.module.tulip" version="4.1.5"/>
+		<import addon="script.module.urldispatcher" version="1.1.0"/>
+		<import addon="script.module.netclient" version="1.2.0"/>
+		<import addon="script.module.unicache" version="1.0.1"/>
+		<import addon="script.module.resolveurl" version="5.1.210"/>
+		<import addon="script.module.resolveurl.pluginsgr" version="0.3.2"/>
+		<import addon="script.module.scrapetube" version="2.8.4"/>
+		<import addon="inputstream.adaptive" version="21.0.0" optional="true"/>
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="router.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<reuselanguageinvoker>true</reuselanguageinvoker>
+		<summary lang="en_GB">ALPHA Player addon for Kodi</summary>
+		<summary lang="el_GR">Πρόσθετο ALPHA Player για το Kodi</summary>
+		<description lang="en_GB">ALPHA live and on-demand broadcasts, Greece and Cyprus</description>
+		<description lang="el_GR">Ζωντανές και on demand υπηρεσίες του ALPHA, Ελλάδα και Κύπρος</description>
+		<disclaimer lang="en_GB">This addon offers content available in Greece and Cyprus and is not published nor endorsed by alphatv.gr or alphacyprus.com.cy</disclaimer>
+		<disclaimer lang="el_GR">Το πρόσθετο αυτό προσφέρει περιεχόμενο διαθέσιμο στην Ελλάδα και την Κύπρο και δεν έχει δημοσιευθεί ούτε εγκριθεί από το alphatv.gr ή το alphacyprus.com.cy</disclaimer>
+		<license>GPL-3.0-only</license>
+		<source>https://github.com/Twilight0/plugin.video.alphatv.gr</source>
+		<website>http://www.alphatv.gr/</website>
+		<size>380000</size>
+		<news>[B]3.0.0[/B]
+- Complete rework for the new WordPress based alphatv.gr, whose Isobar ajax endpoints no longer exist and whose REST API is disabled
+- Live, shows, series, news bulletins and article archives rebuilt on the new theme
+- Complete show/series catalogue from the sitemaps, with season browsing for series
+- Cyprus indexer rebuilt on the plain Drupal pages
+- Stream resolution delegated to ResolveURL / the PluginsGR AlphaGR resolver
+- Added Movies section for Greece and Cyprus with concurrent deep scraping of metadata (cast, director, writer, duration, year, tagline, rating)
+- Added movie trailer search via scrapetube with select dialog and native YouTube resolution through ResolveURL
+- Non-blocking page indicator overlay with configurable screen position and margins
+- Separate bookmarks databases per region (Greece and Cyprus)
+- 6-hour function caching for movie catalog listings
+- Modernized stack: tulip 4.x, urldispatcher, netclient, unicache
+
+[B]2.4.0[/B]
+- Revert of cache change back to traditional get
+- Bug fixes accross the board
+- Utilize youtube addon for resolving some videos
+
+[B]2.3.2[/B]
+- Bug fix</news>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+		</assets>
+		<language>en el</language>
+	</extension>
+</addon>

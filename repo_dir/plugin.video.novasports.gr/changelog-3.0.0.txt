@@ -1,0 +1,17 @@
+[B]3.0.0[/B]
+- Complete rework for the new WordPress based novasports.gr
+- Browsing moved to the site REST API (the old /api/v1 endpoints are gone)
+- Browse by sport, competition, team and show, plus search
+- Matchcenter with date navigation, jumping to the competition's videos
+- Paginated listings with a per page setting
+- Stream resolution delegated to the PluginsGR Novasports resolver, which
+  handles all four providers (Kwik, Glomex, FirstView/Connatix, YouTube)
+- External subtitles for Kwik, Glomex and FirstView clips
+- Modernized stack: tulip 4.x, urldispatcher, netclient, unicache
+- Live section restored from the NovaSports YouTube channel (scrapetube),
+  since the site itself no longer offers live streams
+- Scheduled broadcasts show when they start instead of failing to play
+
+[B]2.2.0[/B]
+- Change cache method
+- Tweak label indexes
