@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="service.subtitles.subtitles.gr" name="Subtitles.gr" version="4.1.1" provider-name="Twilight0">
+<addon id="service.subtitles.subtitles.gr" name="Subtitles.gr" version="4.2.0" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.tulip" version="4.1.5" />
@@ -26,9 +26,16 @@
         <website>http://www.subtitles.gr/</website>
         <source>https://github.com/Twilight0/service.subtitles.subtitles.gr/</source>
         <platform>all</platform>
-        <news>[B]4.1.1[/B]
+        <news>[B]4.2.0[/B]
+- Subs4Series captcha-gated downloads complete through a browser hand-off: QR dialog, tick in your browser, subtitle lands in Kodi
+- Served page in Kodi's language, with a one-install Violentmonkey userscript; bookmarklet stays as fallback
+- Listener port fixed at 50190; separate download-timeout setting removed
+
+[B]4.1.1[/B]
 - English results alongside Greek with per-provider tags and flags
 - YIFI English, Addic7ed toggle, Greek-first ranking, translated files keep listing names
+- Failed downloads notify instead of failing silently
+- One-click Subs4Series cookie import through a local bookmarklet page
 
 [B]4.1.0[/B]
 - Machine-translation fallback (opt-in, off by default): when no Greek subtitles are found, English listings are fetched and translated to Greek at download time via Google translate, marked [TR]
