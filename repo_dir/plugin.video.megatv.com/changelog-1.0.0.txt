@@ -1,0 +1,9 @@
+[B]1.0.0[/B]
+- Initial version
+- Live (Vindral, resolved via ResolveURL / PluginsGR MegaTV resolver), TV shows by section, latest videos, Mega Kids, news and programme guide
+- Collections: Mega Classics and Archive tags, Season 2025-2026, Comedy/Drama playlists, Golden Classics videos and MegaNews hub
+- Episode listings cover every video flavor (ftv/fltv/ktvshows, megasports, goldenclassics) and walk the site's episode pagination for long shows, with concurrent page enrichment for faster loading
+- Search through the site's WordPress REST API (shows and episodes)
+- Shows with no published episodes (e.g. older classics like "Το Νησί") fall back to the show trailer
+- Video listings quote the parent show ("Show - Episode"), so date-titled entries are identifiable
+- Stream resolution via ResolveURL / PluginsGR MegaTV resolver

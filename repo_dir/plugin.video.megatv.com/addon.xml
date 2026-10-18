@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.megatv.com" version="1.0.0" name="MEGA Player" provider-name="Twilight0">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0"/>
+		<import addon="script.module.tulip" version="4.1.5"/>
+		<import addon="script.module.urldispatcher" version="1.1.0"/>
+		<import addon="script.module.netclient" version="1.2.0"/>
+		<import addon="script.module.unicache" version="1.0.1"/>
+		<import addon="script.module.resolveurl" version="5.1.210"/>
+		<import addon="script.module.resolveurl.pluginsgr" version="0.3.2"/>
+		<import addon="inputstream.adaptive" version="21.0.0" optional="true"/>
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="router.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<reuselanguageinvoker>true</reuselanguageinvoker>
+		<summary lang="en_GB">MEGA Player addon for Kodi</summary>
+		<summary lang="el_GR">Πρόσθετο MEGA Player για το Kodi</summary>
+		<description lang="en_GB">MEGA live and on-demand broadcasts</description>
+		<description lang="el_GR">Ζωντανές και on demand υπηρεσίες του MEGA</description>
+		<disclaimer lang="en_GB">This addon offers content available in Greece and is not published nor endorsed by megatv.com</disclaimer>
+		<disclaimer lang="el_GR">Το πρόσθετο αυτό προσφέρει περιεχόμενο διαθέσιμο στην Ελλάδα και δεν έχει δημοσιευθεί ούτε εγκριθεί από το megatv.com</disclaimer>
+		<license>GPL-3.0-only</license>
+		<source>https://github.com/Twilight0/plugin.video.megatv.com</source>
+		<website>https://www.megatv.com/</website>
+		<size>380000</size>
+		<news>[B]1.0.0[/B]
+- Initial version
+- Live (Vindral, resolved via ResolveURL / PluginsGR MegaTV resolver), TV shows by section, latest videos, Mega Kids, news and programme guide
+- Collections: Mega Classics and Archive tags, Season 2025-2026, Comedy/Drama playlists, Golden Classics videos and MegaNews hub
+- Episode listings cover every video flavor (ftv/fltv/ktvshows, megasports, goldenclassics) and walk the site's episode pagination for long shows, with concurrent page enrichment for faster loading
+- Search through the site's WordPress REST API (shows and episodes)
+- Shows with no published episodes (e.g. older classics like "Το Νησί") fall back to the show trailer
+- Video listings quote the parent show ("Show - Episode"), so date-titled entries are identifiable
+- Modernized stack: tulip 4.x, urldispatcher, netclient, unicache</news>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+		</assets>
+		<language>en el</language>
+	</extension>
+</addon>
