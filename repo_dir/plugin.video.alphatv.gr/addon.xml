@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.alphatv.gr" version="3.0.0" name="ALPHA Player" provider-name="Twilight0">
+<addon id="plugin.video.alphatv.gr" version="3.0.1" name="ALPHA Player" provider-name="Twilight0">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="script.module.tulip" version="4.1.5"/>
@@ -27,7 +27,10 @@
 		<source>https://github.com/Twilight0/plugin.video.alphatv.gr</source>
 		<website>http://www.alphatv.gr/</website>
 		<size>380000</size>
-		<news>[B]3.0.0[/B]
+		<news>[B]3.0.1[/B]
+- Fix country selector
+
+[B]3.0.0[/B]
 - Complete rework for the new WordPress based alphatv.gr, whose Isobar ajax endpoints no longer exist and whose REST API is disabled
 - Live, shows, series, news bulletins and article archives rebuilt on the new theme
 - Complete show/series catalogue from the sitemaps, with season browsing for series
