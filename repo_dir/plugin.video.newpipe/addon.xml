@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.newpipe" name="NewPipe" version="1.1.1" provider-name="Twilight0">
+<addon id="plugin.video.newpipe" name="NewPipe" version="1.2.0" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.tulip" version="4.1.5"/>
         <import addon="script.module.urldispatcher" version="1.1.0"/>
-        <import addon="script.module.scrapetube" version="2.8.4"/>
+        <import addon="script.module.scrapetube" version="2.8.6"/>
         <import addon="script.module.unicache" version="1.0.0"/>
         <import addon="script.module.resolveurl" version="5.1.210"/>
         <import addon="script.module.resolveurl.pluginsgr" version="0.2.5"/>
@@ -22,7 +22,11 @@
         <language>en</language>
         <license>GPL-3.0-only</license>
         <source>https://github.com/Twilight0/plugin.video.newpipe</source>
-        <news>[B]1.1.0[/B]
+        <news>[B]1.2.0[/B]
+- Main menu rework: My YouTube first, then Search, Trending, Live, Bookmarks and local History; a Menu settings tab toggles every folder (Random music and Trailers are now opt-in), Settings carries a Clear cache context action
+- Scrapetube requirement 2.8.6 (tab-layout churn no longer crashes folders)
+
+[B]1.1.0[/B]
 - Pagination control (Off/show-all, 10/25/50, default off); playlists hard-capped at 300
 - Watch Later list, per-item history removal, subscription channels/feed views, saved playlists, account history
 - YouTube TV device-link login (QR + manual code), personal/brand account switching, My channel entry for own uploads, background sync service, disconnect

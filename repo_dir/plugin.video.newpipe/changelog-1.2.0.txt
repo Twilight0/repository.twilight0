@@ -1,0 +1,19 @@
+[B]1.2.0[/B]
+- Main menu rework: My YouTube first, then Search, Trending, Live, Bookmarks and local History
+- A new Menu tab in settings toggles every folder; Random music and Trailers are now opt-in (off by default)
+- Settings menu item carries a Clear cache context action
+- Requires script.module.scrapetube 2.8.6 (unknown channel tabs yield empty folders instead of crashing)
+
+[B]1.1.0[/B]
+- Pagination control (Off/show-all, 10/25/50, default off); playlists hard-capped at 300
+- Watch Later list, per-item history removal, subscription channels/feed views, saved playlists, account history
+- YouTube TV device-link login (QR + manual code), personal/brand account switching, My channel entry for own uploads, background sync service, disconnect
+- Content country/language settings with localized categories, trailer language/version, quality caps, fast start
+- Random music folder with native Kodi queue, trailers browser, live category setting
+- Interface language override incl. full Greek translation, 13 shipped UI languages
+- Arctic Fuse landscape artwork, stable per-video thumbnails
+- HLS streams pin inputstream.adaptive chooser to the configured resolution family
+- Faster listings (subscriptions resolved once per folder); English-first defaults throughout
+
+[B]1.0.0[/B]
+- Initial release: search, channels (videos/shorts/live/playlists), playlists, local subscriptions with feed, local watch/search history, audio-only mode
